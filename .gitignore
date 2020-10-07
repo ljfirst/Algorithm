@@ -1,0 +1,5 @@
+target
+bin
+.vscode
+goVersion/.idea
+.idea/compiler.xml
