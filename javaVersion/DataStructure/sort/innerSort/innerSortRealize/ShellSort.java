@@ -6,13 +6,17 @@ import DataStructure.sort.innerSort.SortInterface;
  * @author liujun
  * @version 1.0
  * @date 2020/5/2
- * @Email liujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
  * @description
  */
 public class ShellSort implements SortInterface {
     @Override
     public void sortMethod(int[] array) {
+        //判空
+        if (array == null || array.length <= 1) {
+            return ;
+        }
         int length = array.length;
         //间隔gap ，直到gap为1结束
         int gap = length / 2;

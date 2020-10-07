@@ -13,7 +13,7 @@ import java.util.Date;
  * @author liujun
  * @version 1.0
  * @date 2020/3/24
- * @author¡ªEmail  liujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 
  */
@@ -27,12 +27,12 @@ public class Txt2Excel {
     String branchName = "";
     String commitID = "";
     String commit = "";
-    String codeReview = "1¡¢Î´½øĞĞCI£¬Î´ºÏ²¢ÖÁDEV_sprint4·ÖÖ§¡£ \n" +
-            "2¡¢Î´½øĞĞCodeReview¡£\n" +
-            "3¡¢±¾´ÎÈ±ÉÙµ¥Ôª²âÊÔ°¸Àı£¬ĞèÒªºó²¹¡£";
+    String codeReview = "1ã€æœªè¿›è¡ŒCIï¼Œæœªåˆå¹¶è‡³DEV_sprint4åˆ†æ”¯ã€‚ \n" +
+            "2ã€æœªè¿›è¡ŒCodeReviewã€‚\n" +
+            "3ã€æœ¬æ¬¡ç¼ºå°‘å•å…ƒæµ‹è¯•æ¡ˆä¾‹ï¼Œéœ€è¦åè¡¥ã€‚";
     String commitor = "";
-    String deployVersion = "ÎŞ";
-    String buildPath = "ÎŞ";
+    String deployVersion = "æ— ";
+    String buildPath = "æ— ";
 
     boolean flag = true;
     WritableSheet sheetA;
@@ -65,7 +65,7 @@ public class Txt2Excel {
             Excelbook = Workbook.createWorkbook(fileExcel);
             sheetA = Excelbook.createSheet("sheet1", 0);
             //Title
-            String[] Title = {"Ìá½»\nĞòºÅ", "²ÖÃû", "Ìá½»\nÀàĞÍ", "Ìá½»·ÖÖ§ºÍ±àºÅ", "Ìá½»ËµÃ÷", "ÉóºËÇé¿ö", "´úÂë\nÌá½»ÈË", "¿É²¿Êğ\n°æ±¾ºÅ", "ÖÆÆ·¿â"};
+            String[] Title = {"æäº¤\nåºå·", "ä»“å", "æäº¤\nç±»å‹", "æäº¤åˆ†æ”¯å’Œç¼–å·", "æäº¤è¯´æ˜", "å®¡æ ¸æƒ…å†µ", "ä»£ç \næäº¤äºº", "å¯éƒ¨ç½²\nç‰ˆæœ¬å·", "åˆ¶å“åº“"};
             for (int i = 0; i < 9; i++) {
                 Label label = new Label(i + 1, offsite, Title[i]);
                 sheetA.addCell(label);
@@ -81,12 +81,12 @@ public class Txt2Excel {
                     }
                 }
                 //codeing row num static
-                String[] Title1 = {"Ìá½»ÀàĞÍ", "´úÂë×ÜÔöÁ¿", "*.java", "*.cs", "*.js/*.vue/*.css", "*.json/xml/html/htm", "*.ps"};
+                String[] Title1 = {"æäº¤ç±»å‹", "ä»£ç æ€»å¢é‡", "*.java", "*.cs", "*.js/*.vue/*.css", "*.json/xml/html/htm", "*.ps"};
                 for (int i = 0; i < 7; i++) {
                     Label label = new Label(i + 1, 0, Title1[i]);
                     sheetA.addCell(label);
                 }
-                Label label2 = new Label(1, 1, "ĞĞÊı");
+                Label label2 = new Label(1, 1, "è¡Œæ•°");
                 sheetA.addCell(label2);
                 BufferedReader bufferedReader1 = new BufferedReader(new InputStreamReader(new FileInputStream(fileTxt), "UTF-8"));
                 int staticNum = 0;
@@ -94,23 +94,23 @@ public class Txt2Excel {
                 while (null != (strLine = bufferedReader1.readLine())) {
                     staticNum++;
                     if (staticNum >= targetnum) {
-                        if (strLine.startsWith("½ñÈÕ")) {
-                            Label label = new Label(2, 1, strLine.split("£º")[1]);
+                        if (strLine.startsWith("ä»Šæ—¥")) {
+                            Label label = new Label(2, 1, strLine.split("ï¼š")[1]);
                             sheetA.addCell(label);
                         } else if (strLine.startsWith("java")) {
-                            Label label = new Label(3, 1, strLine.split("£º")[1]);
+                            Label label = new Label(3, 1, strLine.split("ï¼š")[1]);
                             sheetA.addCell(label);
                         } else if (strLine.startsWith("cs")) {
-                            Label label = new Label(4, 1, strLine.split("£º")[1]);
+                            Label label = new Label(4, 1, strLine.split("ï¼š")[1]);
                             sheetA.addCell(label);
                         } else if (strLine.startsWith("js_")) {
-                            Label label = new Label(5, 1, strLine.split("£º")[1]);
+                            Label label = new Label(5, 1, strLine.split("ï¼š")[1]);
                             sheetA.addCell(label);
                         } else if (strLine.startsWith("json")) {
-                            Label label = new Label(6, 1, strLine.split("£º")[1]);
+                            Label label = new Label(6, 1, strLine.split("ï¼š")[1]);
                             sheetA.addCell(label);
                         } else if (strLine.startsWith("ps")) {
-                            Label label = new Label(7, 1, strLine.split("£º")[1]);
+                            Label label = new Label(7, 1, strLine.split("ï¼š")[1]);
                             sheetA.addCell(label);
                         }
                     }
@@ -131,7 +131,7 @@ public class Txt2Excel {
         repoName = strLine.replace("=", "").trim();
         while (null != (strLine = bufferedReader.readLine())) {
             length++;
-            if(strLine.startsWith("½ñÈÕ")){
+            if(strLine.startsWith("ä»Šæ—¥")){
                 targetnum = length;
             }
             if (strLine.startsWith("commit")) {
@@ -171,14 +171,14 @@ public class Txt2Excel {
                 dealcommmit(bufferedReader, strLine);
             } else {
                 if (strLine.startsWith("Type")) {
-                    commitType = strLine.replace("Type£º", "").trim();
+                    commitType = strLine.replace("Typeï¼š", "").trim();
                     commitType = commitType.replace("Type:", "");
                 }
                 commit = commit + strLine.trim() + "\n";
             }
             strLine = bufferedReader.readLine();
             length++;
-            if(null != strLine && strLine.startsWith("½ñÈÕ")){
+            if(null != strLine && strLine.startsWith("ä»Šæ—¥")){
                 targetnum = length;
             }
         }
@@ -192,7 +192,7 @@ public class Txt2Excel {
             commitType = "feat";
         }
         Label label3 = new Label(3, id + offsite, commitType);
-        Label label4 = new Label(4, id + offsite, "Branch£º\n" + branchName + "\n SHA£º\n" + commitID);
+        Label label4 = new Label(4, id + offsite, "Branchï¼š\n" + branchName + "\n SHAï¼š\n" + commitID);
         Label label5 = new Label(5, id + offsite, commit);
         Label label6 = new Label(6, id + offsite, codeReview);
         Label label7 = new Label(7, id + offsite, commitor);
@@ -209,15 +209,15 @@ public class Txt2Excel {
         sheetA.addCell(label9);
 
         /*System.out.println("id:" + id
-                + "¡ª¡ª¡¶¡·¡ª¡ª" + "repoName:" + repoName
-                + "¡ª¡ª¡¶¡·¡ª¡ª" + "commitType:" + commitType
-                + "¡ª¡ª¡¶¡·¡ª¡ª" + "branchName:" + branchName
-                + "¡ª¡ª¡¶¡·¡ª¡ª" + "commitID:" + commitID
-                + "¡ª¡ª¡¶¡·¡ª¡ª" + "commit:" + commit
-                + "¡ª¡ª¡¶¡·¡ª¡ª" + "codeReview:" + codeReview
-                + "¡ª¡ª¡¶¡·¡ª¡ª" + "commitor:" + commitor
-                + "¡ª¡ª¡¶¡·¡ª¡ª" + "deployVersion:" + deployVersion
-                + "¡ª¡ª¡¶¡·¡ª¡ª" + "buildPath:" + buildPath);
+                + "â€”â€”ã€Šã€‹â€”â€”" + "repoName:" + repoName
+                + "â€”â€”ã€Šã€‹â€”â€”" + "commitType:" + commitType
+                + "â€”â€”ã€Šã€‹â€”â€”" + "branchName:" + branchName
+                + "â€”â€”ã€Šã€‹â€”â€”" + "commitID:" + commitID
+                + "â€”â€”ã€Šã€‹â€”â€”" + "commit:" + commit
+                + "â€”â€”ã€Šã€‹â€”â€”" + "codeReview:" + codeReview
+                + "â€”â€”ã€Šã€‹â€”â€”" + "commitor:" + commitor
+                + "â€”â€”ã€Šã€‹â€”â€”" + "deployVersion:" + deployVersion
+                + "â€”â€”ã€Šã€‹â€”â€”" + "buildPath:" + buildPath);
         System.out.println("==================================================");*/
     }
 
