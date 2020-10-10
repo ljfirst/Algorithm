@@ -7,7 +7,7 @@ import org.junit.Test;
  * @author liujun
  * @version 1.0
  * @date 2020-01-08 19:50
- * @authorEmail liujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @description 单调数组，返回数组的最值（最大/最小值）
  *  * 存在情况：
  *  * 1、单调递增，

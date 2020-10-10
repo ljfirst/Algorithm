@@ -1,6 +1,6 @@
-package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.findValueTest;
+package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.exclusiveorTest;
 
-import DataStructure.stringANDline.array.findValue.FindSingleValue;
+import DataStructure.stringANDline.array.exclusiveor.FindSingleValue;
 import org.junit.Test;
 
 /**

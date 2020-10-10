@@ -1,6 +1,6 @@
-package UnitTest.DatastructureTest.stringANDlineTest.arrayTest;
+package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.doublePointTest;
 
-import DataStructure.stringANDline.array.OriginLength;
+import DataStructure.stringANDline.array.doublePoint.OriginLength;
 import org.junit.Assert;
 import org.junit.Test;
 

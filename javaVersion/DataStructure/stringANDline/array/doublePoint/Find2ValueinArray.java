@@ -1,4 +1,4 @@
-package DataStructure.stringANDline.array.findValue;
+package DataStructure.stringANDline.array.doublePoint;
 
 import java.util.Arrays;
 
@@ -51,17 +51,7 @@ public class Find2ValueinArray {
                 right--;
             }
             if (array[left] + array[right] == value) {
-                int x = 0;
-                int y = array.length - 1;
-                for (int i = 0; i < array.length; i++) {
-                    if (array[left] == array[i]) {
-                        x = i;
-                    }
-                    if (array[right] == array[i]) {
-                        y = i;
-                    }
-                }
-                return new int[]{x, y};
+                return new int[]{left, right};
             }
         }
         return a;

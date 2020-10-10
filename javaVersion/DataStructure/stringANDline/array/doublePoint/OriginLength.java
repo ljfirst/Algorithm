@@ -1,4 +1,6 @@
-package DataStructure.stringANDline.array;
+package DataStructure.stringANDline.array.doublePoint;
+
+import DataStructure.stringANDline.list.SinglyLinkedNode;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -10,6 +12,7 @@ import java.util.Arrays;
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 给定一个包含重复数字的数组，返回不重复的个数
+ * 找出重复数组中不重复的个数
  */
 public class OriginLength {
 

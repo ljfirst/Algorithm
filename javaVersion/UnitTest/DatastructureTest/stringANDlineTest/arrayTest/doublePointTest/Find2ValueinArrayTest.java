@@ -1,6 +1,6 @@
-package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.findValueTest;
+package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.doublePointTest;
 
-import DataStructure.stringANDline.array.findValue.Find2ValueinArray;
+import DataStructure.stringANDline.array.doublePoint.Find2ValueinArray;
 import org.junit.Test;
 
 import java.util.Arrays;

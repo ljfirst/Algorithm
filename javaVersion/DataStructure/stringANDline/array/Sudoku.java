@@ -8,7 +8,7 @@ import java.util.Scanner;
  *@author liujun
  *@date 2018-9-3 下午08:19:20
  *@author—Email liujunfirst@outlook.com
- *@description 
+ *@description 数独
  *@version 1.0
  */
 public class Sudoku {

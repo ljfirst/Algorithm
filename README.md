@@ -16,7 +16,6 @@
   + java语言的代码入口在[javaVersion](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion)
   + go语言的代码入口在[goVersion](https://github.com/ljfirst/AlgorithmPractice/tree/master/goVersion)
 
-
 ### 目前的代码量
 |             | Total  | Algorithm | DataStructure | DesignPattern |  Logic  |
 | --------  |:-----:   |  :----:   |   :-----:     |    :-----:    | :-----: |
@@ -31,8 +30,10 @@
 + [最长递增子序列的六种解法](https://blog.csdn.net/ljfirst/article/details/106596812)
 + [最热笔试题：利用滑动窗口来解决字符串匹配](https://blog.csdn.net/ljfirst/article/details/106972100)
 + [13道字符串笔试题及答案，总有一道你面试会遇上](https://blog.csdn.net/ljfirst/article/details/106975010)
++ [异或在笔试题中的超神表现](https://blog.csdn.net/ljfirst/article/details/108328921)
 
 # 具体的项目目录结构
+
 # Algorithm 算法专题
  ****
 + <font color=#Af2233 size=4 >**综合题**</font>
@@ -49,6 +50,7 @@
   + recall
   + recall_apply
 + <font color=#Af2233 size=4 >**贪心专题**</font>
+
 # DataStructure 数据结构专题
  ****
 + <font color=#Af2233 size=4 >**图专题**</font>
@@ -60,6 +62,11 @@
   + shortestPath
 + <font color=#Af2233 size=4 >**字符串和数组专题**</font>
     + array
+      + 双指针问题
+      + 异或问题
+      + [大整数乘法]()和[测试案例]()、[根据身高重建队列]()和[测试案例]()、[顺时针打印螺旋矩阵]()和[测试案例]()
+      + [前缀和/差分数组]()和[测试案例]()、[盛水问题]()和[测试案例]()、[矩阵相乘]()和[测试案例]()、[找出重复数组中不重复的个数]()和[测试案例]()
+      + [杨辉三角]()和[测试案例]()
     + hashTable
     + list
     + [序列和字符串题目集锦](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stringANDline/sequenceANDstring)
@@ -67,7 +74,9 @@
 + <font color=#Af2233 size=4 >**排序专题**</font>
     + 外部排序
     + 内部排序
-      + [冒泡排序、堆排序、插入排序、选择排序、桶排序、计数排序、归并排序、基数排序、希尔排序、快排及其改进](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/sort/innerSort/innerSortRealize) [测试案例]()
+      + [冒泡排序、插入排序、选择排序](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/sort/innerSort/innerSortRealize) [测试案例]()
+      + [堆排序、桶排序、计数排序、归并排序、基数排序、希尔排序](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/sort/innerSort/innerSortRealize) [测试案例]()
+      + [快排及其改进](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/sort/innerSort/innerSortRealize) [测试案例]()
       + [内部排序的应用](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/sort/innerSort/innerSortApply)
 + <font color=#Af2233 size=4 >**堆栈队列**</font>
     + [返回最小的第K个值、返回最小的K个值、优先队列](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stackHeapQueue/heap) [测试案例]()
@@ -80,18 +89,29 @@
     + [b树]()
     + [赫夫曼树]() [测试案例]()
     + [红黑树]() [测试案例]()
+
 # Design Pattern 设计模式专题
  ****
-  + [Singleton 单例模式]() [测试案例]()
-  + [Proxy 代理模式]() [测试案例]()
-  + [Strategy 策略模式]() [测试案例]()
-  + [Observer 观察者模式]() [测试案例]()
-  + [Visitor 访问者模式]() [测试案例]()
-  + [Factory 工厂模式]() [测试案例]()
-  + [Delegate 委派模式]() [测试案例]()
-  + [Prototype 原型模式]() [测试案例]()
-  + [Template 模板模式]() [测试案例]()
-  + [Adapter 适配器模式]() [测试案例]()
+  + [Singleton 单例模式](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DesignPattern/single) 
+    + [测试案例](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DesignPatternTest/singleTest)
+  + [Proxy 代理模式](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DesignPattern/proxy) 
+    + [测试案例](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DesignPatternTest/proxyTest)
+  + [Strategy 策略模式](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DesignPattern/strategy) 
+    + [测试案例](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DesignPatternTest/strategyTest)
+  + [Observer 观察者模式](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DesignPattern/observer) 
+    + [测试案例](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DesignPatternTest/observerTest)
+  + [Visitor 访问者模式](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DesignPattern/visitor) 
+    + [测试案例](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DesignPatternTest)
+  + [Factory 工厂模式](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DesignPattern/factory) 
+    + [测试案例](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DesignPatternTest)
+  + [Delegate 委派模式](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DesignPattern) 
+    + [测试案例](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DesignPatternTest)
+  + [Prototype 原型模式](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DesignPattern) 
+    + [测试案例](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DesignPatternTest)
+  + [Template 模板模式](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DesignPattern) 
+    + [测试案例](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DesignPatternTest)
+  + [Adapter 适配器模式](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DesignPattern) 
+    + [测试案例](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DesignPatternTest)
   
 ### 至简尚善，有知仍无畏
 ---

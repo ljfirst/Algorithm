@@ -1,4 +1,6 @@
-package DataStructure.stringANDline.array.findValue;
+package DataStructure.stringANDline.array.doublePoint;
+
+import DataStructure.stringANDline.array.doublePoint.Find2ValueinArray;
 
 import java.util.Arrays;
 
