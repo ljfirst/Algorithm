@@ -4,6 +4,7 @@
 + 本项目通过分解各大厂的常见笔面试题，追本溯源至数据结构和算法的底层实现原理，知其然知其所以然（欢迎关注[我的博客](https://blog.csdn.net/ljfirst)）。通过这种方式建立知识结构体系，方便用时查找，欢迎更多志同道合的朋友加入项目[AlgorithmPractice，](https://github.com/ljfirst/AlgorithmPractice)（欢迎提issue和pull request）。
 + 本项目主要包括五个部分，分别是：算法、数据结构、设计模式、逻辑题，以及上述四个部分的单元测试。
 + 每个部分的细分如图1-1所示：
+
 ![Image text](https://github.com/ljfirst/AlgorithmPractice/blob/master/resource/ProjectArchitecture.png)
 <center>图 1-1 AlgorithmPractice项目结构简图</center>
 
@@ -32,7 +33,7 @@
 + [13道字符串笔试题及答案，总有一道你面试会遇上](https://blog.csdn.net/ljfirst/article/details/106975010)
 
 # 具体的项目目录结构
-#### $\color{7f1A8A}Algorithm 算法专题$
+# Algorithm 算法专题
  ****
 + <font color=#Af2233 size=4 >**综合题**</font>
   + [背包问题](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/Algorithm/comprehensive/backpack) [测试案例]()
@@ -48,7 +49,7 @@
   + recall
   + recall_apply
 + <font color=#Af2233 size=4 >**贪心专题**</font>
-#### $\color{7f1A8A}DataStructure 数据结构专题$
+# DataStructure 数据结构专题
  ****
 + <font color=#Af2233 size=4 >**图专题**</font>
   + BellmanFord.java
@@ -79,7 +80,7 @@
     + [b树]()
     + [赫夫曼树]() [测试案例]()
     + [红黑树]() [测试案例]()
-#### $\color{7f1A8A}Design Pattern 设计模式专题$
+# Design Pattern 设计模式专题
  ****
   + [Singleton 单例模式]() [测试案例]()
   + [Proxy 代理模式]() [测试案例]()
@@ -92,5 +93,5 @@
   + [Template 模板模式]() [测试案例]()
   + [Adapter 适配器模式]() [测试案例]()
   
-$\color{ff1f1f}至简尚善，有知仍无畏$
+### 至简尚善，有知仍无畏
 ---
