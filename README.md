@@ -4,6 +4,7 @@
 + 本项目通过分解各大厂的常见笔面试题，追本溯源至数据结构和算法的底层实现原理，知其然知其所以然（欢迎关注[我的博客](https://blog.csdn.net/ljfirst)）。通过这种方式建立知识结构体系，方便用时查找，欢迎更多志同道合的朋友加入项目[AlgorithmPractice，](https://github.com/ljfirst/AlgorithmPractice)（欢迎提issue和pull request）。
 + 本项目主要包括四个部分，分别是：算法、数据结构、设计模式、以及上述三个部分的单元测试。
 + 每个部分的细分如图1-1所示：
+
 ![AlgorithmPractice项目结构简图](https://img-blog.csdnimg.cn/20201010114057589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xqZmlyc3Q=,size_16,color_FFFFFF,t_70#pic_center)
 <center>图 1-1 AlgorithmPractice项目结构简图</center>
 
@@ -72,8 +73,9 @@
 + <font color=#Af2233 size=4 >**排序专题**</font>
     + 外部排序
     + 内部排序
-      + [冒泡排序、堆排序、插入排序、选择排序、桶排序、计数排序、归并排序、基数排序、希尔排序、快排及其改进](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/sort/innerSort/innerSortRealize)  和 [测试案例]()
-      + [内部排序的应用](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/sort/innerSort/innerSortApply)
+      + [冒泡排序、插入排序、选择排序、堆排序](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/sort/innerSort/innerSortRealize)  和 [测试案例](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/sortTest/innerSortTest/innerSortRealizeTest)
+      + [桶排序、计数排序、归并排序、基数排序、希尔排序、快排及其改进](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/sort/innerSort/innerSortRealize) 和 [测试案例](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/sortTest/innerSortTest/innerSortRealizeTest)
+      + [内部排序的应用](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/sort/innerSort/innerSortApply) 和 [测试案例](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/sortTest/innerSortTest/innerSortApplyTest)
 + <font color=#Af2233 size=4 >**堆栈队列**</font>
     + [返回最小的第K个值、返回最小的K个值、优先队列](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stackHeapQueue/heap)  和 [测试案例]()
     + [链队、数组队、用栈实现队](https://github.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stackHeapQueue/queue)  和 [测试案例]()
