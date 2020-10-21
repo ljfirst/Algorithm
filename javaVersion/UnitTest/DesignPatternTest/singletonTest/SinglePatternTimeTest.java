@@ -1,4 +1,4 @@
-package UnitTest.DesignPatternTest.singleTest;
+package UnitTest.DesignPatternTest.singletonTest;
 
 import DesignPattern.single.*;
 import org.junit.Test;

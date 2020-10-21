@@ -1,4 +1,4 @@
-package UnitTest.DesignPatternTest.singleTest;
+package UnitTest.DesignPatternTest.singletonTest;
 
 import DesignPattern.single.EnumSingletom;
 import org.junit.Test;
