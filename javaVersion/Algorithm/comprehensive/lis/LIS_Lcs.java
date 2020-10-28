@@ -1,6 +1,6 @@
 package Algorithm.comprehensive.lis;
 
-import Algorithm.dynamic.lcs.LCS;
+import Algorithm.dynamic.lcs.LCS_Dynamic;
 import DataStructure.sort.innerSort.innerSortRealize.QuickSortDuplexing;
 
 import java.util.HashMap;
@@ -38,7 +38,7 @@ public class LIS_Lcs implements LisInterface {
         }
         String temp = hashMap.keySet().toString().replace(",", "").replace("[", "").replace("]", "").replace(" ", "");
         //再进行最长子序列比较
-        LCS lcs = new LCS();
+        LCS_Dynamic lcs = new LCS_Dynamic();
         int length = lcs.count(temp, sequence).getCommondLength();
         return length;
     }

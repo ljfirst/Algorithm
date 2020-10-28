@@ -7,11 +7,12 @@ import java.util.List;
  *@author liujun
  *@date 2018-8-23 上午11:59:55
  *@author—Email liujunfirst@outlook.com
- *@description 一个int 数组，里面数据无任何限制，
- *要求求出所有这样的数a[i]，其左边的数都小于等于它，右边的数都大于等于它。
- *能否只用一个额外数组和少量其它空间实现。
+ *@description 左小右大的数
+ * 一个int 数组，里面数据无任何限制，要求求出所有这样的数a[i]，其左边的数都小于等于它，右边的数都大于等于它。
+ * 能否只用一个额外数组和少量其它空间实现。
  *@version 1.0
- *@attention:为什么这个数一定满足：max <= array[i] = min_right[i]?
+ *
+ *@attention 为什么这个数一定满足：max <= array[i] = min_right[i]?
  *answer:
  *1.为什么要定义max？因为他满足其左边的数都小于等于它。
  *2.为什么max <= array[i]？使得array[i]满足其左边的数都小于等于它。

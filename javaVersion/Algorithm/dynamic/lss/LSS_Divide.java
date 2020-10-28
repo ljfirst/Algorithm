@@ -5,12 +5,12 @@ package Algorithm.dynamic.lss;
  * @version 1.0
  * @date 2019-11-30 00:08
  * @author—Email  liujunfirst@outlook.com
- * @description  给定一个数组，求这个数组的连续子数组中，最大的那一段的和
- * 【分治法】
+ * @description  最大字段和 分治法
+ * 给定一个数组，求这个数组的连续子数组中，最大的那一段的和
  * @blogURL
  */
 //LargestSumofSubSequence by divide
-public class LSS_divide {
+public class LSS_Divide {
 
     public int LargestSumofSubSequence(int[] Sequence) {
         if(Sequence == null || Sequence.length == 0){

@@ -13,12 +13,12 @@ public class SelectSort implements SortInterface {
 
     //选择排序
     @Override
-    public void sortMethod(int[] sortNum) {
+    public void sortMethod(int[] array) {
         //输入检查
-        if (sortNum == null || sortNum.length <= 1) {
+        if (!check(array)) {
             return ;
         }
-        int length = sortNum.length;
+        int length = array.length;
         int temp = 0;
         int flag = 0;
         //外部循环从0到n-1
@@ -27,15 +27,15 @@ public class SelectSort implements SortInterface {
             flag = i;
             //从待交换元素的下一个开始查找，直到最后一个元素
             for (int j = i + 1; j <= length - 1; j++) {
-                if (sortNum[j] < sortNum[flag]) {
+                if (array[j] < array[flag]) {
                     flag = j;
                 }
             }
             //元素交换
             if (i != flag) {
-                temp = sortNum[i];
-                sortNum[i] = sortNum[flag];
-                sortNum[flag] = temp;
+                temp = array[i];
+                array[i] = array[flag];
+                array[flag] = temp;
             }
         }
     }

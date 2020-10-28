@@ -6,16 +6,16 @@ import DataStructure.sort.innerSort.SortInterface;
  * @author liujun
  * @version 1.0
  * @date 2019-3-23 ����12:09:48
- * @author��Email liujunfirst@outlook.com
- * @description ��������
+ * @author-Email liujunfirst@outlook.com
+ * @description
  * @URL
  */
 public class RadixSort implements SortInterface {
 
     @Override
     public void sortMethod(int[] array) {
-        //�߽��п�
-        if (array == null || array.length <= 1) {
+        //检查
+        if (!check(array)) {
             return ;
         }
         //�ҳ����λ��

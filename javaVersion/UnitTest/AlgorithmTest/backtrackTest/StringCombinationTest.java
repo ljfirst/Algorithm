@@ -1,8 +1,11 @@
-package UnitTest.AlgorithmTest.recallTest;
+package UnitTest.AlgorithmTest.backtrackTest;
 
-import Algorithm.recall.StringCombination;
+import Algorithm.backtrack.StringCombination;
 import org.junit.Test;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author liujun
@@ -41,7 +44,7 @@ public class StringCombinationTest {
     String demo03 = "abcd";
     String[] answer03 = {
             "abcd", "abdc", "acdb", "acbd", "adcb", "adbc",
-            "bcad", "bcda", "bacd", "badc", "bdac", "dbca",
+            "bcad", "bcda", "bdac", "dbca", "bacd", "badc",
             "cadb", "cabd", "cdab", "cdba", "cbda", "cbad",
             "dadc", "dacb", "dcba", "dcab", "dbca", "dbac",};
     String demo06 = "dcab";

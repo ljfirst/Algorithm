@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author
+ * @author liujun
  * @version 1.0
  * @date 2018-7-19 Time：上午10:15:35
  * @author—Email @mail.ustc.edu.cn
  * @description LCS算法，找出两个字符串最大匹配子串。
  */
 
-public class LCS implements LCS_Interface {
+public class LCS_Dynamic implements LCS_Interface {
 
     //待对比的字符串
     String s1 = null;
@@ -53,7 +53,7 @@ public class LCS implements LCS_Interface {
     }
 
     @Override
-    public LCS count(String source, String pattern) {
+    public LCS_Dynamic count(String source, String pattern) {
 
         if (!check(source, pattern)) {
             return null;

@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *@author 
- *@date 2018-7-19 Time：上午10:15:35
- *@author—Email @mail.ustc.edu.cn
- *@description LCS算法，找出两个字符串最大匹配子串。
+ * @author
+ * @date 2018-7-19 Time：上午10:15:35
+ * @author—Email @mail.ustc.edu.cn
+ * @description LCS算法，找出两个字符串最大匹配子串。
  *@version 1.0
  */
 
-public class LCSforcompare {
+public class LCS_4compare {
 
 	//获取字符串长度,其中在矩阵中n1表示行数,n2表示列数
 	int n1;
@@ -23,7 +23,7 @@ public class LCSforcompare {
 	//找寻匹配上的字符串
 	List <Character> ComparedList = new ArrayList<Character>();
 
-	public LCSforcompare(){
+	public LCS_4compare(){
 	}
 
 	public void Lcsforcompare(String s1, String s2) {
@@ -105,7 +105,7 @@ public class LCSforcompare {
 	}
 
 	public static void main(String[] args) {
-		LCSforcompare l = new LCSforcompare();
+		LCS_4compare l = new LCS_4compare();
 		l.Lcsforcompare("个人客户数据分析应用","2017年度大数据挖掘建模分析");
 		System.out.println(l.getCompareLength());
 		System.out.println(l.getCompareSequence());

@@ -1,6 +1,6 @@
 package UnitTest.AlgorithmTest.combineTest.choirTest;
 
-import Algorithm.comprehensive.choir.Choir_Recall;
+import Algorithm.comprehensive.choir.Choir_Backtrack;
 import org.junit.Test;
 
 /**
@@ -11,10 +11,10 @@ import org.junit.Test;
  * @description 
  * @blogURL
  */
-public class Choir_RecallTest extends ChoirTestDemo{
+public class Choir_BacktrackTest extends ChoirTestDemo{
 
     @Test
     public void TestgetMaxValue() {
-        super.TestgetMaxValue(new Choir_Recall());
+        super.TestgetMaxValue(new Choir_Backtrack());
     }
 }

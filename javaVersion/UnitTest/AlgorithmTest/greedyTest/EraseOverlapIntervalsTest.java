@@ -9,7 +9,7 @@ import org.junit.Test;
  * @date 2020/6/8
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description
+ * @description 无重叠区间
  */
 public class EraseOverlapIntervalsTest {
 

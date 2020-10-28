@@ -8,7 +8,7 @@ package Algorithm.dynamic.largestSquare;
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 动态规划优化
  */
-public class LargestSquareDynamicOpt implements LargestSquare {
+public class LargestSquare_DynamicOpt implements LargestSquare {
     @Override
     public int Solution(int[][] Matrix) {
         if (check(Matrix)) {

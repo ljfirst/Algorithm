@@ -26,7 +26,7 @@ public class QuickSortSimplex implements SortInterface {
 	@Override
 	public void sortMethod(int [] array) {
 		//边界判空
-		if (array == null || array.length <= 1) {
+		if (!check(array)) {
 			return ;
 		}
 		quicksortSimplex(array, 0, array.length - 1);

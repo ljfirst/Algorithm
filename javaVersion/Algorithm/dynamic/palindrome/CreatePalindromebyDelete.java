@@ -4,8 +4,9 @@ package Algorithm.dynamic.palindrome;
  *@author liujun
  *@date 2018-8-16 下午11:19:38
  *@author—Email liujunfirst@outlook.com
- *@description  给定一个字符串s，你可以从中删除一些字符，使得剩下的串是一个回文串。
- *如何删除才能使得回文串最长呢？输出需要删除的字符个数。
+ *@description  删除构造回文串
+ * 给定一个字符串s，你可以从中删除一些字符，使得剩下的串是一个回文串。
+ * 如何删除才能使得回文串最长呢？输出需要删除的字符个数。
  *@version 1.0
  */
 

@@ -1,6 +1,5 @@
 package Logic.regular;
 
-import java.util.Scanner;
 
 /** 
  *@author liujun

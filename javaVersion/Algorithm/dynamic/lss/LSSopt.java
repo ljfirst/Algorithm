@@ -1,11 +1,12 @@
 package Algorithm.dynamic.lss;
-/** 
- *@author liujun
- *@date 2018-7-20 下午02:08:03
- *@author—Email liujunfirst@outlook.com
- *@description  已知数组A[1..n]中存放着一些实数，有正有负，
- *请写程序找出其最大求和子区间
- *@version 1.0
+/**
+ * @author liujun
+ * @version 1.0
+ * @date 2018-7-19 Time：上午10:15:35
+ * @author—Email liujunfirst@outlook.com
+ * @description 已知数组A[1..n]中存放着一些实数，有正有负，
+ * 请写程序找出其最大求和子区间
+ * @version 1.0
  */
 //最大子段和:LargestSumofSubSequence by dynamic
 public class LSSopt {

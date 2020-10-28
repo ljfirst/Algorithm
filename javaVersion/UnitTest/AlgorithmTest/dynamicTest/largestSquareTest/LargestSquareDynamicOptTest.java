@@ -1,6 +1,6 @@
 package UnitTest.AlgorithmTest.dynamicTest.largestSquareTest;
 
-import Algorithm.dynamic.largestSquare.LargestSquareDynamicOpt;
+import Algorithm.dynamic.largestSquare.LargestSquare_DynamicOpt;
 import org.junit.Test;
 
 /**
@@ -12,7 +12,7 @@ import org.junit.Test;
  * @description
  */
 public class LargestSquareDynamicOptTest extends LargestSquareTest {
-    LargestSquareDynamicOpt largestSquareDynamicOpt = new LargestSquareDynamicOpt();
+    LargestSquare_DynamicOpt largestSquareDynamicOpt = new LargestSquare_DynamicOpt();
 
     @Test
     public void testSolution() {

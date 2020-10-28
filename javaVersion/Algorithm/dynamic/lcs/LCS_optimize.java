@@ -36,7 +36,7 @@ public class LCS_optimize implements LCS_Interface {
         if(!this.flag){
             return "";
         }
-        LCS lcs = new LCS();
+        LCS_Dynamic lcs = new LCS_Dynamic();
         return lcs.count(s1, s2).getCommondString();
     }
 

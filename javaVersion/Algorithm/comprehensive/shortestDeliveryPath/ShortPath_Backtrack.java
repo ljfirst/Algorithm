@@ -10,7 +10,7 @@ import java.util.Arrays;
  * @description  送货最短路径  回溯法
  * @blogURL
  */
-public class ShortPath_Recall implements ShortPath {
+public class ShortPath_Backtrack implements ShortPath {
 
     //定义总距离 和 当前距离最小值
     int sum_temp;

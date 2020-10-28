@@ -1,7 +1,7 @@
 package UnitTest.AlgorithmTest.dynamicTest;
 
 import Algorithm.dynamic.lss.LSS;
-import Algorithm.dynamic.lss.LSS_divide;
+import Algorithm.dynamic.lss.LSS_Divide;
 import Algorithm.dynamic.lss.LSSopt;
 import org.junit.Test;
 
@@ -17,7 +17,7 @@ public class LSSTest {
 
     LSSopt lsSopt = new LSSopt();
     LSS lss = new LSS();
-    LSS_divide lss_divide = new LSS_divide();
+    LSS_Divide lss_divide = new LSS_Divide();
 
     @Test
     public void Testmethodlss(){

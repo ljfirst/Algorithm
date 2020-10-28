@@ -7,7 +7,7 @@ import DataStructure.graph.shortestPath.singleSourceShortestPath.Dijkstra;
  * @version 1.0
  * @date 2020-02-11 11:48
  * @author—Email  liujunfirst@outlook.com
- * @description 
+ * @description 迪杰斯特拉算法
  * @blogURL
  */
 public class DijkstraApply {

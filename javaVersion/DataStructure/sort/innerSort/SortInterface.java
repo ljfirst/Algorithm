@@ -14,7 +14,7 @@ public interface SortInterface {
     public void sortMethod(int[] array);
 
     default boolean check(int[] array) {
-        if (array == null || array.length == 0 || array.length == 1) {
+        if (array == null || array.length <= 1) {
             return false;
         }
         return true;

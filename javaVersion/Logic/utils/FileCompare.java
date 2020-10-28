@@ -1,6 +1,6 @@
 package Logic.utils;
 
-import Algorithm.dynamic.lcs.LCSforcompare;
+import Algorithm.dynamic.lcs.LCS_4compare;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,7 +15,7 @@ import java.util.Set;
  */
 public class FileCompare {
 
-    LCSforcompare lcsc = new LCSforcompare();
+    LCS_4compare lcsc = new LCS_4compare();
     HashMap<String,ArrayList> hashmap = new HashMap<>();
     SelectionSortforFileCompare ssfc = new SelectionSortforFileCompare();
 

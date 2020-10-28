@@ -17,8 +17,8 @@ public class MergeSort implements SortInterface {
 
     @Override
     public void sortMethod(int[] array) {
-        //�߽��п�
-        if (array == null || array.length <= 1) {
+
+        if (!check(array)) {
             return ;
         }
         int[] temp = new int[array.length];

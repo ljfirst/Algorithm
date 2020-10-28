@@ -7,9 +7,9 @@ import Logic.check.MatrixCheck;
  * @version 1.0
  * @date 2019-11-25 17:00
  * @author—Email  liujunfirst@outlook.com
- * @description  已知一个二维数组，其中存储了非负整数，
- * 找到从左上角到右下角的一条路径，
- * 使得路径上的和最小。(移动过程中只能向下或向右)
+ * @description
+ * 已知一个二维数组，其中存储了非负整数，
+ * 找到从左上角到右下角的一条路径，使得路径上的和最小。(移动过程中只能向下或向右)
  * @blogURL
  */
 public class MiniValuePathofMatrix {

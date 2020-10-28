@@ -14,7 +14,7 @@ public class ShellSort implements SortInterface {
     @Override
     public void sortMethod(int[] array) {
         //判空
-        if (array == null || array.length <= 1) {
+        if (!check(array)) {
             return ;
         }
         int length = array.length;

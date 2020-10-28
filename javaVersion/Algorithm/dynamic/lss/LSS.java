@@ -5,7 +5,8 @@ package Algorithm.dynamic.lss;
  * @version 1.0
  * @date 2019-11-25 16:36
  * @author—Email  liujunfirst@outlook.com
- * @description  最大子段和 LargestSumofSubSequence by dynamic
+ * @description  最大子段和 动态规划
+ * LargestSumofSubSequence by dynamic
  * 给定一个数组，求这个数组的连续子数组中，最大的那一段的和
  * @blogURL
  */

@@ -5,7 +5,7 @@ package Algorithm.dynamic.palindrome;
  * @version 1.0
  * @date 2019-11-07 22:42
  * @author—Email liujunfirst@outlook.com
- * @description 发现回文：
+ * @description 判定回文串
  * 判断给定字符串是否是回文，默认单个字符不够成回文
  */
 public class FindPalindrome {

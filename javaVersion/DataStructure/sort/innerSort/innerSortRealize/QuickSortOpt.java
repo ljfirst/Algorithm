@@ -13,10 +13,11 @@ import DataStructure.sort.innerSort.SortInterface;
 public class QuickSortOpt implements SortInterface {
 
 	InsertSort insertionsort = new InsertSort();
+
 	@Override
 	public void sortMethod(int [] array) {
 		//边界判空
-		if (array == null || array.length <= 1) {
+		if (!check(array)) {
 			return ;
 		}
 		// 默认k为3

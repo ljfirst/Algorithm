@@ -1,4 +1,4 @@
-package Algorithm.recall;
+package Algorithm.backtrack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,8 @@ import java.util.List;
  * @version 1.0
  * @date 2018-8-23 上午09:56:39
  * @author—Email liujunfirst@outlook.com
- * @description 将输入字符串按照全排列的方式打印输出
+ * @description 字符串全排列
+ * 将输入字符串按照全排列的方式打印输出
  * @attation 1.Java字符数组如何输出:2种方式。
  * 2.循环处i = depth
  */
@@ -24,10 +25,9 @@ public class StringCombination {
         char[] c = s.toCharArray();
         list = new ArrayList<>();
         Permutation(c, 0);
-        answer = list.toArray(new String[list.size()]);
+        answer = list.toArray(new String[0]);
         return answer;
     }
-
 
     public void Permutation(char[] c, int depth) {
 
@@ -43,6 +43,7 @@ public class StringCombination {
             char ch_temp = c[i];
             c[i] = c[depth];
             c[depth] = ch_temp;
+            //递归
             Permutation(c, depth + 1);
         }
     }

@@ -8,7 +8,7 @@ package Algorithm.dynamic.largestSquare;
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 暴力求解法
  */
-public class LargestSquareViolence implements LargestSquare {
+public class LargestSquare_Violence implements LargestSquare {
 
     @Override
     public int Solution(int[][] Matrix) {

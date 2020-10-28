@@ -15,7 +15,7 @@ public class CountSort implements SortInterface {
     public void sortMethod(int[] arrayA) {
 
         //安全性检测
-        if (arrayA == null || arrayA.length <= 1) {
+        if (!check(arrayA)) {
             return ;
         }
 
@@ -24,8 +24,8 @@ public class CountSort implements SortInterface {
         int min = arrayA[0];
 
         for (int i : arrayA) {
-            max = max > i ? max : i;
-            min = min < i ? min : i;
+            max = Math.max(max, i);
+            min = Math.min(min, i);
         }
         //2�������µ������С  min��max֮�䣬�����䣬�У�max-min+1��������
         int[] arrayB = new int[max - min + 1];

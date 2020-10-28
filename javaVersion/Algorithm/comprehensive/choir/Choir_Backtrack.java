@@ -10,7 +10,7 @@ package Algorithm.comprehensive.choir;
  * *要求相邻两个学生的位置编号的差不超过 d，使得这 k 个学生的能力值的乘积最大，你能返回最大的乘积吗？
  * @blogURL
  */
-public class Choir_Recall implements Choir {
+public class Choir_Backtrack implements Choir {
 
     //选择的数量
     int choseNum;

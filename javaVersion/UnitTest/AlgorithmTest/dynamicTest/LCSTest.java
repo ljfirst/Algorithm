@@ -1,6 +1,6 @@
 package UnitTest.AlgorithmTest.dynamicTest;
 
-import Algorithm.dynamic.lcs.LCS;
+import Algorithm.dynamic.lcs.LCS_Dynamic;
 import Algorithm.dynamic.lcs.LCS_Interface;
 import Algorithm.dynamic.lcs.LCS_optimize;
 import org.junit.Test;
@@ -17,7 +17,7 @@ public class LCSTest {
 
     @Test
     public void testLCS(){
-        testCount(new LCS());
+        testCount(new LCS_Dynamic());
     }
 
     @Test
