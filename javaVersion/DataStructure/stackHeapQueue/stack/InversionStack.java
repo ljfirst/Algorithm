@@ -8,8 +8,7 @@ import java.util.Stack;
  * @date 2020/8/3
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description 逆置栈中元素 InversionStack
- *
+ * @description 逆置栈中元素
  * 有两个相同的栈，一个里面放着自大到小排列的数，栈顶的数最小，另一个栈是空的.
  * 不允许利用其它的数据结构，只能利用这两个栈，要求把第一个栈里的数字反过来，从
  * 小到大排列，结果还放在原来的那个栈里面。

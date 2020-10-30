@@ -18,6 +18,7 @@ public class Backpack_GreedyTest extends BackpackTest {
 
     @Test
     public void testBackpack() {
+        super.testBackpack(backpack);
         int value = backpack.Backpack(goodsvalue05, weight05, packageweight05);
         assert value == targetValue05;
         value = backpack.Backpack(goodsvalue051, weight051, packageweight051);

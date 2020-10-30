@@ -4,7 +4,7 @@ package DataStructure.stackHeapQueue.stack;
  * @author liujun
  * @version 1.0
  * @date 2019-12-01 17:48
- * @authorEmail  liujunfirst@outlook.com
+ * @author-Email  liujunfirst@outlook.com
  * @description  判断最长有效括号
  * @blogURL
  */

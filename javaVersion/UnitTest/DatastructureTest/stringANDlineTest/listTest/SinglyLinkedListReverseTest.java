@@ -1,0 +1,111 @@
+package UnitTest.DatastructureTest.stringANDlineTest.listTest;
+
+import DataStructure.stringANDline.list.listrealize.SinglyLinkedListReverse;
+import org.junit.Assert;
+import org.junit.Test;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.Arrays;
+
+/**
+ * @author liujun
+ * @version 1.0
+ * @date 2020/11/1
+ * @author—Email liujunfirst@outlook.com
+ * @blogURL https://blog.csdn.net/ljfirst
+ * @description 链表反转的测试案例
+ */
+public class SinglyLinkedListReverseTest extends SinglyLinkedListTest {
+
+    SinglyLinkedListReverse sr = new SinglyLinkedListReverse();
+
+    /**
+     * 测试：利用数组来反转链表
+     * 测试：利用系统堆栈来反转链表
+     * 测试：利用堆栈来反转链表
+     */
+    @Test
+    public void testreverse() throws ClassNotFoundException, InvocationTargetException, IllegalAccessException {
+
+        Class c = Class.forName("DataStructure.stringANDline.list.listrealize.SinglyLinkedListReverse");
+        Method[] m = c.getMethods();
+        for (Method m1 : m) {
+            if (m1.getName().contains("reverse")) {
+                singlyLinkedList.clear();
+                singlyLinkedList.insert(true, array01);
+                int[] target = (int[]) m1.invoke(sr, singlyLinkedList);
+                Assert.assertArrayEquals(target, new int[]{});
+
+                singlyLinkedList.clear();
+                singlyLinkedList.insert(true, array02_1);
+                target = (int[]) m1.invoke(sr, singlyLinkedList);
+                assert target[0] == 4;
+
+                singlyLinkedList.clear();
+                singlyLinkedList.insert(true, array03);
+                target = (int[]) m1.invoke(sr, singlyLinkedList);
+                Assert.assertArrayEquals(target, array03);
+
+                singlyLinkedList.clear();
+                singlyLinkedList.insert(true, array04);
+                target = (int[]) m1.invoke(sr, singlyLinkedList);
+                Assert.assertArrayEquals(target, array04);
+
+                singlyLinkedList.clear();
+                singlyLinkedList.insert(true, array05);
+                target = (int[]) m1.invoke(sr, singlyLinkedList);
+                Assert.assertArrayEquals(target, array05);
+            }
+        }
+    }
+
+    @Test
+    public void testrevert_part() {
+        singlyLinkedList.clear();
+        singlyLinkedList.insert(false, array03);
+        int[] arr = sr.revert_part(singlyLinkedList, 0, 5);
+        Assert.assertArrayEquals(arr, array03_part);
+
+        singlyLinkedList.clear();
+        singlyLinkedList.insert(false, array03);
+        arr = sr.revert_part(singlyLinkedList, 1, 5);
+        Assert.assertArrayEquals(arr, array03_part_1);
+
+        singlyLinkedList.clear();
+        singlyLinkedList.insert(false, array04);
+        arr = sr.revert_part(singlyLinkedList, 0, 5);
+        Assert.assertArrayEquals(arr, array04_part);
+
+        singlyLinkedList.clear();
+        singlyLinkedList.insert(false, array04);
+        arr = sr.revert_part(singlyLinkedList, 5, 100);
+        Assert.assertArrayEquals(arr, array04);
+
+        singlyLinkedList.clear();
+        singlyLinkedList.insert(false, array05);
+        arr = sr.revert_part(singlyLinkedList, 99, 200);
+        Assert.assertArrayEquals(arr, array05);
+
+        singlyLinkedList.clear();
+        singlyLinkedList.insert(false, array05);
+        arr = sr.revert_part(singlyLinkedList, 5, 10);
+        Assert.assertArrayEquals(arr, array05_part);
+
+        singlyLinkedList.clear();
+        singlyLinkedList.insert(false, array05);
+        arr = sr.revert_part(singlyLinkedList, 10, singlyLinkedList.head.value - 1);
+        Assert.assertArrayEquals(arr, array05_part_1);
+    }
+
+    @Test
+    public void testrevert_partn(){
+
+    }
+
+    int[] array03_part = {598, 40, 3, 76, 54, 2, 473, 6, 2};
+    int[] array03_part_1 = {2, 598, 40, 3, 76, 54, 473, 6, 2};
+    int[] array04_part = {5, 40, 3, 76, 54, 2, 986, 56, 89, 854, 8, 9, 8, 473, 6, 2};
+    int[] array05_part = {1, 2, 3, 4, 5, 11, 10, 9, 8, 7, 6, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+    int[] array05_part_1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11};
+}

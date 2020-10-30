@@ -1,5 +1,8 @@
 package DataStructure.stringANDline.list;
 
+import DataStructure.stringANDline.list.listrealize.Nodelj;
+import DataStructure.stringANDline.list.listrealize.SinglyLinkedList;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,23 +20,22 @@ import java.util.Map;
  *@version 1.0
  */
 
-public class RangList extends SinglyLinkedList{
+public class RangList extends SinglyLinkedList {
 
 	public RangList(int value) {
 		//super(value);
 	}
 	
-	@Override
 	//β�巨��дΪ�����л�����
-	public SinglyLinkedNode insertTail(int[] list) {
+	public Nodelj insertTail(int[] list) {
 		System.out.println("β�巨��дΪ�����л�����");
-		SinglyLinkedNode point = null;
-		SinglyLinkedNode first = point;
+		Nodelj point = null;
+		Nodelj first = point;
 		//����ڽ��
-		SinglyLinkedNode temp = new SinglyLinkedNode();
+		Nodelj temp = new Nodelj();
 		//β�巨��ѭ����ֵ
 		for (int i = 0; i < list.length; i++) {
-			SinglyLinkedNode link = new SinglyLinkedNode(list[i]);
+			Nodelj link = new Nodelj(list[i]);
 			//�״��ж�
 			if (first == null) {
 				first = point = link;
@@ -52,10 +54,10 @@ public class RangList extends SinglyLinkedList{
 	}
              
 	//�жϵ������Ƿ��л�
-	public boolean FindListTail(SinglyLinkedNode first) {
+	public boolean FindListTail(Nodelj first) {
 		// TODO Auto-generated method stub
-		SinglyLinkedNode slow = first;
-		SinglyLinkedNode fast = first;
+		Nodelj slow = first;
+		Nodelj fast = first;
 		
 		while (fast.next != null && fast != null) {
 			fast = fast.next.next;
@@ -68,10 +70,10 @@ public class RangList extends SinglyLinkedList{
 	}
 	
 	//���ص�������������
-	public SinglyLinkedNode ListMeet(SinglyLinkedNode first) {
+	public Nodelj ListMeet(Nodelj first) {
 		
-		SinglyLinkedNode slow = first;
-		SinglyLinkedNode fast = first;
+		Nodelj slow = first;
+		Nodelj fast = first;
 		
 		while (fast != null && fast.next != null) {
 			fast = fast.next.next;
@@ -84,10 +86,10 @@ public class RangList extends SinglyLinkedList{
 	}
 	
 	//�ҳ���������������
-	public SinglyLinkedNode findLoopPort(SinglyLinkedNode first) {
+	public Nodelj findLoopPort(Nodelj first) {
 		// TODO Auto-generated method stub
 
-		SinglyLinkedNode point_meet = ListMeet(first);
+		Nodelj point_meet = ListMeet(first);
 		while(first != null && point_meet != null){
 			if(first == point_meet){
 				return point_meet;
@@ -99,15 +101,15 @@ public class RangList extends SinglyLinkedList{
 	}
 	
 	//�����ཻ����
-	public Map<Integer, SinglyLinkedNode> buildCrossLink(int[] array_a, int[] array_b) {
+	public Map<Integer, Nodelj> buildCrossLink(int[] array_a, int[] array_b) {
 		// TODO Auto-generated method stub
 
 		//˼·����a�������꣬���뵽b��һ�룬��Ҫa�����βָ���b�����һ��ָ��
 		//����a������β�巨
-		SinglyLinkedNode tail = null;
-		SinglyLinkedNode first_a = tail;
+		Nodelj tail = null;
+		Nodelj first_a = tail;
 		for (int i = 0; i < array_a.length; i++) {
-			SinglyLinkedNode link_a = new SinglyLinkedNode(array_a[i]);
+			Nodelj link_a = new Nodelj(array_a[i]);
 			//�״��ж�
 			if (first_a == null) {
 				first_a = tail = link_a;
@@ -116,9 +118,9 @@ public class RangList extends SinglyLinkedList{
 			tail = tail.next;
 		}
 		//����b������ͷ�巨
-		SinglyLinkedNode first_b = null;
+		Nodelj first_b = null;
 		for (int i = 0; i < array_b.length; i++) {
-			SinglyLinkedNode link_b = new SinglyLinkedNode(array_b[i]);
+			Nodelj link_b = new Nodelj(array_b[i]);
 			if(i == array_b.length/2){
 				tail.next = link_b;
 				System.out.println("����ֵ�ǣ� "+array_b[i]);
@@ -126,14 +128,14 @@ public class RangList extends SinglyLinkedList{
 			link_b.next = first_b;
 			first_b = link_b;
 		}
-		Map<Integer, SinglyLinkedNode> map = new HashMap<Integer, SinglyLinkedNode>();
+		Map<Integer, Nodelj> map = new HashMap<Integer, Nodelj>();
 		map.put(1, first_a);
 		map.put(2, first_b);
 		return map;
 	}
 	
 	//�ж����������Ƿ��ཻ
-	public boolean judgeCrossLink(SinglyLinkedNode first, SinglyLinkedNode second) {
+	public boolean judgeCrossLink(Nodelj first, Nodelj second) {
 		// TODO Auto-generated method stub
 		//�ж�βָ���Ƿ���ͬ
 		while (first.next != null) {
@@ -149,11 +151,11 @@ public class RangList extends SinglyLinkedList{
 	}
 	
 	//�ҳ���������Ľ���
-	public int getCrossPoint(SinglyLinkedNode first, SinglyLinkedNode second) {
+	public int getCrossPoint(Nodelj first, Nodelj second) {
 		// TODO Auto-generated method stub
 
-		SinglyLinkedNode p1 = first;
-		SinglyLinkedNode p2 = second;
+		Nodelj p1 = first;
+		Nodelj p2 = second;
 		int count1 = 0;
 		int count2 = 0;
 		int way = 0;
@@ -194,7 +196,7 @@ public class RangList extends SinglyLinkedList{
 		int[] array2 = {11,12,13,14,15,16,17,18,19,20};
 		RangList rl = new RangList(0);
 		System.out.println("�����л�������");
-		SinglyLinkedNode first= rl.insertTail(array1);
+		Nodelj first= rl.insertTail(array1);
 		
 		//���Ե������Ƿ��л�
 		System.out.println("�������Ƿ��л�");
@@ -203,7 +205,7 @@ public class RangList extends SinglyLinkedList{
 		System.out.println(rl.ListMeet(first).value);
 	
 		//���������������ཻ
-		Map<Integer, SinglyLinkedNode> map = rl.buildCrossLink(array1, array2);
+		Map<Integer, Nodelj> map = rl.buildCrossLink(array1, array2);
 		System.out.println("�����������Ƿ��ཻ");
 		System.out.println(rl.judgeCrossLink(map.get(1), map.get(2)));
 		System.out.println("�����������ཻ��㣺");

@@ -1,4 +1,4 @@
-package DataStructure.stringANDline.array.exclusiveor;
+package DataStructure.stringANDline.array.findNum;
 
 /**
  * @author liujun

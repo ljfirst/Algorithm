@@ -1,7 +1,5 @@
 package DataStructure.stringANDline.array.doublePoint;
 
-import DataStructure.stringANDline.list.SinglyLinkedNode;
-
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
