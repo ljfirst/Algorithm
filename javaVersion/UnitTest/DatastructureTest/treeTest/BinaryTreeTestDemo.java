@@ -19,42 +19,46 @@ public class BinaryTreeTestDemo {
     public int[] treeArray02s = {};
     public int[] treeArray03s = {1, 2, 3, 7, 6, 5, 4};
     public int[] treeArray04s = {1, 2, 3, 7, -1, -1, 4};
-    public int[] treeArray05s = {1, 2, 3, 8, 7, 6, 4, 9, -1, -1, -1, 10, 11, 12,
-            -1, -1, 5, -1, -1, 16, 15, -1, 13, 14, -1, -1, -1, 17, -1, -1, 20, -1,
-            -1, 18, -1, -1, -1, 19, -1, -1, -1};
+    public int[] treeArray05s = {1, 2, 3, 8, 7, 6, 4, 9, -1, -1, -1, 10, 11, 12, -1, -1, 5, -1, -1,
+            16, 15, -1, 13, 14, -1, -1, -1, 17, -1, -1, 20, -1, -1, 18, -1, -1, -1, 19, -1, -1, -1};
 
     //层次遍历的数组
     public int[] treeArray01 = {};
     public int[] treeArray02 = null;
     public int[] treeArray03 = {
-            1,
-            2, 3,
+                 1,
+              2,   3,
             4, 5, 6, 7};
     public int[] treeArray04 = {
-            1,
-            2, 3,
+                  1,
+               2,    3,
             4, -1, -1, 7};
 
     public int[] treeArray05 = {
-            1,
-            2, 3,
-            4, 6, 7, 8,
-            9, -1, -1, -1, 10, 11, 12, -1,
-            13, -1, 15, 16, -1, -1, 5, -1,
-            14, -1, -1, -1, 17, -1, -1, 20,
-            -1, -1, -1, 18, -1, -1,
-            19, -1,
-            -1, -1
+                            1,
+                     2,                     3,
+                 4,      6,         7,           8,
+                9, -1, -1, -1, 10,      11,    12, -1,
+              13, -1,       15,    16, -1, -1, 5, -1,
+            14, -1,      -1, -1, 17, -1,    -1, 20,
+            -1, -1,            -1, 18,        -1, -1,
+                                 19, -1,
+                               -1, -1
     };
 
     //先序遍历的数组
-    public int[] treeArrayPre03 = {
-            1,
-            2, 3,
-            4, 5, 6, 7};
+    public int[] treeArray03Preorder = {1,2,4,5,3,6,7};
+    public int[] treeArray04Preorder = {1,2,4,3,7};
+    public int[] treeArray05Preorder = {1,2,4,9,13,14,6,3,7,10,15,16,17,18,19,11,8,12,5,20};
     //中序遍历的数组
-
+    public int[] treeArray03Inorder = {4,2,5,1,6,3,7};
+    public int[] treeArray04Inorder = {4,2,1,3,7};
+    public int[] treeArray05Inorder = {14,13,9,4,2,6,1,15,10,17,19,18,16,7,11,3,5,20,12,8};
     //后序遍历的数组
+    public int[] treeArray03Postorder = {4,5,2,6,7,3,1};
+    public int[] treeArray04Postorder = {4,2,7,3,1};
+    public int[] treeArray05Postorder = {14,13,9,4,6,2,15,19,18,17,16,10,11,7,20,5,12,8,3,1};
+
 
     public BinaryTreeImpl gettreeDemo03() {
         BinaryTreeImpl binaryTree1 = new BinaryTreeImpl(1);

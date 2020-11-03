@@ -1,14 +1,16 @@
 package DataStructure.stringANDline.hashTable;
 
+import DataStructure.stringANDline.list.listrealize.Nodelj;
+
 /**
  * @author liujun
  * @version 1.0
  * @date 2019-12-26 00:12
- * @authorEmail liujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @description 为狄杰斯特拉 设计的链表 Node 节点
  * @blogURL
  */
-public class Node4Dijkstra extends Node4Simplex {
+public class Node4Dijkstra extends Nodelj {
     public boolean visit;
 
     public Node4Dijkstra(){

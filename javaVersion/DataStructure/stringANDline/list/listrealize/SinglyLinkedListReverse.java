@@ -2,6 +2,9 @@ package DataStructure.stringANDline.list.listrealize;
 
 import lombok.Singular;
 
+import javax.xml.soap.Node;
+import java.util.Arrays;
+
 /**
  * @author liujun
  * @version 1.0
@@ -92,7 +95,7 @@ public class SinglyLinkedListReverse {
         return n;
     }
 
-    //反转从index1 到 index2 之间的数据，区间是作闭右闭
+    //反转从index1 到 index2 之间的数据，区间是 左闭右闭
     public int[] revert_part(SinglyLinkedList listlj, int index1, int index2) {
         if (listlj == null) {
             return new int[]{};
@@ -130,8 +133,45 @@ public class SinglyLinkedListReverse {
         if (listlj == null) {
             return new int[]{};
         }
-        if (listlj.head.value == 0 || n > listlj.head.value ) {
+        if (listlj.head.value == 0 || n > listlj.head.value) {
             return listlj.toArray();
         }
+        if (n == 1) {
+            return listlj.toArray();
+        }
+        Nodelj head = listlj.head;
+        listlj.head.next = revertn(head.next, n);
+        int[] array = listlj.toArray();
+        return array;
+    }
+
+    private Nodelj revertn(Nodelj nodelj, int n) {
+        if (nodelj == null) {
+            return null;
+        }
+        Nodelj tail = nodelj;
+        Nodelj head = nodelj;
+        for (int i = 1; i <= n; i++) {
+            if (tail == null) {
+                return head;
+            }
+            tail = tail.next;
+        }
+        Nodelj newHead = revertHead_Tail(head, tail);
+        head.next = revertn(tail.next, n);
+        return newHead;
+    }
+
+    private Nodelj revertHead_Tail(Nodelj head, Nodelj tail) {
+        Nodelj pre = head;
+        Nodelj next;
+        head = head.next;
+        while (head != tail) {
+            next = head.next;
+            head.next = pre;
+            pre = head;
+            head = next;
+        }
+        return head;
     }
 }

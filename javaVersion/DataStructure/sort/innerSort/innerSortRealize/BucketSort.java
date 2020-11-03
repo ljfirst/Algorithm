@@ -1,7 +1,7 @@
 package DataStructure.sort.innerSort.innerSortRealize;
 
 import DataStructure.sort.innerSort.SortInterface;
-import DataStructure.stringANDline.hashTable.Node4Simplex;
+import DataStructure.stringANDline.list.listrealize.Nodelj;
 
 /**
  * @author liujun
@@ -30,9 +30,9 @@ public class BucketSort implements SortInterface {
     public void bucketsort(int[] array, int bucketsize) {
 
         //创建桶，注意对象数组初始化一定要创建对象，否则为空
-        Node4Simplex[] hashTableNodes = new Node4Simplex[bucketsize];
+        Nodelj[] hashTableNodes = new Nodelj[bucketsize];
         for (int i = 0; i < bucketsize; i++) {
-            hashTableNodes[i] = new Node4Simplex();
+            hashTableNodes[i] = new Nodelj();
         }
         //找出最大最小值(设置array[0]存数组最大值，array[1]存最小值)，并确定桶的间距
         int max = Integer.MIN_VALUE;
@@ -49,14 +49,14 @@ public class BucketSort implements SortInterface {
             int head = (i - min) / bucketgap;
             //桶内插入排序
             //新建节点
-            Node4Simplex point = new Node4Simplex(i);
+            Nodelj point = new Nodelj(i);
             //插入链表，注意新建的节点value均为Integer.MIN_VALUE
             if (Integer.MIN_VALUE == hashTableNodes[head].value) {
                 hashTableNodes[head] = point;
             } else {
                 //链表的插入排序
-                Node4Simplex pro = hashTableNodes[head];
-                Node4Simplex p = pro;
+                Nodelj pro = hashTableNodes[head];
+                Nodelj p = pro;
                 //此处需要注意 头节点 的问题
                 if(point.value < pro.value){
                     point.next = pro;
@@ -74,7 +74,7 @@ public class BucketSort implements SortInterface {
         //整理为数组并返回
         int count = 0;
         for (int i = 0; i < bucketsize; i++) {
-            Node4Simplex p = hashTableNodes[i];
+            Nodelj p = hashTableNodes[i];
             while (p != null && p.value != Integer.MIN_VALUE) {
                 array[count] = p.value;
                 p = p.next;

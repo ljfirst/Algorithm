@@ -1,7 +1,5 @@
 package DataStructure.tree.binaryTree;
 
-import DataStructure.tree.binaryTree.dede.BinaryTree1;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -52,11 +50,11 @@ public class Array2BinaryTreeImpl implements Array2BinaryTree {
     //1、将按层次遍历的方式输入的数组  构造成一个二叉树(写法二:递归)
     private volatile int count;
 
-    public BinaryTreeImpl createBinaryTreeLevel(BinaryTreeImpl root, int [] tree_num , int i){
-        if(i < tree_num.length){
-            if(tree_num[i] == -1){
+    public BinaryTreeImpl createBinaryTreeLevel(BinaryTreeImpl root, int[] tree_num, int i) {
+        if (i < tree_num.length) {
+            if (tree_num[i] == -1) {
                 return null;
-            }else{
+            } else {
                 //new root's lchild and rchild
                 BinaryTreeImpl lchild = new BinaryTreeImpl();
                 BinaryTreeImpl rchild = new BinaryTreeImpl();
@@ -76,7 +74,6 @@ public class Array2BinaryTreeImpl implements Array2BinaryTree {
         return null;
     }
 
-
     //3、将按中序遍历的方式输入的数组  构造成一个二叉树
     public BinaryTreeImpl createInOrder(BinaryTree root, int[] array) {
         return null;
@@ -88,13 +85,84 @@ public class Array2BinaryTreeImpl implements Array2BinaryTree {
     }
 
     //5、已知前序遍历序列和中序遍历序列，构建唯一一棵确定的二叉树。
-    public BinaryTree createTreePre_InOrder(BinaryTree root, int[] PreOrderarray, int[] InOrderarray) {
+    @Override
+    public BinaryTreeImpl createTreePre_InOrder(int[] PreOrderarray, int[] InOrderarray) {
+        if (check(PreOrderarray) && check(InOrderarray)) {
+            int preStart = 0;
+            int preEnd = PreOrderarray.length - 1;
+            int inStart = 0;
+            int inEnd = InOrderarray.length - 1;
+            if (preEnd == inEnd) {
+                return createTreePre_InOrder(PreOrderarray, preStart, preEnd,
+                        InOrderarray, inStart, inEnd);
+            }
+        }
+        return null;
+    }
+
+    public BinaryTreeImpl createTreePre_InOrder(int[] PreOrderarray, int preStart, int preEnd,
+                                                int[] InOrderarray, int inStart, int inEnd) {
+        if (preStart <= preEnd) {
+            //此处是PreOrderarray[preStart]，不是PreOrderarray[0]
+            int value = PreOrderarray[preStart];
+            BinaryTreeImpl node = new BinaryTreeImpl(value);
+            int index = 0;
+            //循环不是从0 到 InOrderarray.length
+            for (int i = inStart; i <= inEnd; i++) {
+                if (value == InOrderarray[i]) {
+                    index = i;
+                    break;
+                }
+            }
+            //此处length = index - inStart，而不是length = index - preStart
+            int length = index - inStart;
+            node.left = createTreePre_InOrder(PreOrderarray, preStart + 1, preStart + length,
+                    InOrderarray, inStart, index - 1);
+            node.right = createTreePre_InOrder(PreOrderarray, preStart + length + 1, preEnd,
+                    InOrderarray, index + 1, inEnd);
+            return node;
+        }
         return null;
     }
 
     //6、已知后序遍历序列和中序遍历序列，构建唯一一棵确定的二叉树。
-    public BinaryTree createTreePost_InOrder(BinaryTree root, int[] PostOrderarray, int[] InOrderarray) {
+    @Override
+    public BinaryTreeImpl createTreePost_InOrder(int[] PostOrderarray, int[] InOrderarray) {
+        if (check(PostOrderarray) && check(InOrderarray)) {
+            int postStart = 0;
+            int postEnd = PostOrderarray.length - 1;
+            int inStart = 0;
+            int inEnd = InOrderarray.length - 1;
+            if (postEnd == inEnd) {
+                return createTreePost_InOrder(PostOrderarray, postStart, postEnd,
+                        InOrderarray, inStart, inEnd);
+            }
+        }
         return null;
     }
 
+    public BinaryTreeImpl createTreePost_InOrder(int[] PostOrderarray, int postStart, int postEnd,
+                                                 int[] InOrderarray, int inStart, int inEnd) {
+        if (postStart <= postEnd) {
+            //此处是PreOrderarray[preStart]，不是PreOrderarray[0]
+            int value = PostOrderarray[postEnd];
+            BinaryTreeImpl node = new BinaryTreeImpl(value);
+            int index = 0;
+            //循环不是从0 到 InOrderarray.length
+            for (int i = inStart; i <= inEnd; i++) {
+                if (value == InOrderarray[i]) {
+                    index = i;
+                    break;
+                }
+            }
+            //此处length = index - inStart，而不是length = index - preStart
+            int length = index - inStart;
+            node.left = createTreePost_InOrder(PostOrderarray, postStart, postStart + length - 1,
+                    InOrderarray, inStart, index - 1);
+            node.right = createTreePost_InOrder(PostOrderarray, postStart + length, postEnd - 1,
+                    InOrderarray, index + 1, inEnd);
+            return node;
+        }
+        return null;
+    }
 }

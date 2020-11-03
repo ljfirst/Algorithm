@@ -99,13 +99,35 @@ public class SinglyLinkedListReverseTest extends SinglyLinkedListTest {
     }
 
     @Test
-    public void testrevert_partn(){
+    public void testrevert_partn() {
+        singlyLinkedList.clear();
+        singlyLinkedList.insert(false, array03);
+        int[] target = sr.revert_partn(singlyLinkedList, 2);
+        Assert.assertArrayEquals(target, array03_part_n);
 
+        singlyLinkedList.clear();
+        singlyLinkedList.insert(false, array04);
+        target = sr.revert_partn(singlyLinkedList, 3);
+        Assert.assertArrayEquals(target, array04_part_n);
+
+        singlyLinkedList.clear();
+        singlyLinkedList.insert(false, array05);
+        target = sr.revert_partn(singlyLinkedList, 5);
+        Assert.assertArrayEquals(target, array05_part_n);
+
+        singlyLinkedList.clear();
+        singlyLinkedList.insert(false, array05);
+        target = sr.revert_partn(singlyLinkedList, 1);
+        Assert.assertArrayEquals(target, array05_part_n_1);
     }
 
     int[] array03_part = {598, 40, 3, 76, 54, 2, 473, 6, 2};
     int[] array03_part_1 = {2, 598, 40, 3, 76, 54, 473, 6, 2};
+    int[] array03_part_n = {54, 2, 3, 76, 598, 40, 6, 473, 2};
     int[] array04_part = {5, 40, 3, 76, 54, 2, 986, 56, 89, 854, 8, 9, 8, 473, 6, 2};
+    int[] array04_part_n = {76, 54, 2, 5, 40, 3, 89, 56, 986, 9, 8, 854, 6, 473, 8, 2};
     int[] array05_part = {1, 2, 3, 4, 5, 11, 10, 9, 8, 7, 6, 12, 13, 14, 15, 16, 17, 18, 19, 20};
     int[] array05_part_1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11};
+    int[] array05_part_n = {5, 4, 3, 2, 1, 10, 9, 8, 7, 6, 15, 14, 13, 12, 11, 20, 19, 18, 17, 16};
+    int[] array05_part_n_1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
 }
