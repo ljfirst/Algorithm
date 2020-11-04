@@ -1,8 +1,8 @@
 package UnitTest.DatastructureTest.treeTest.binaryTreeTest.iku;
 
-import DataStructure.tree.binaryTree.binaryTreeApply.BTFindCertainValuePath;
-import DataStructure.tree.binaryTree.Array2BinaryTreeImpl;
-import DataStructure.tree.binaryTree.BinaryTreeImpl;
+import DataStructure.tree.binaryTree.ertyuygf.BTFindCertainValuePath;
+import DataStructure.tree.binaryTree.binaryTreeRealize.Array2BinaryTreeImpl;
+import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
 import UnitTest.DatastructureTest.treeTest.BinaryTreeTestDemo;
 import org.junit.Test;
 

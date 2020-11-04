@@ -6,7 +6,7 @@ import java.util.Random;
  * @author liujun
  * @version 1.0
  * @date 2019-7-25 ����11:59:31
- * @authorEmail liujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @CSDN Blog URL:
  * @description 跳表
  * 支持：

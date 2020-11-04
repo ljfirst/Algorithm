@@ -1,6 +1,6 @@
 package DataStructure.stringANDline.hashTable;
 
-import DataStructure.stringANDline.list.listrealize.Nodelj;
+import DataStructure.stringANDline.list.listRealize.Nodelj;
 
 /**
  * @author liujun

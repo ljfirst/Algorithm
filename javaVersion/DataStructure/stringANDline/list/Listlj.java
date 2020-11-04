@@ -1,5 +1,7 @@
 package DataStructure.stringANDline.list;
 
+import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
+
 /**
  * @author liujun
  * @version 1.0
@@ -59,4 +61,18 @@ public interface Listlj {
      */
     public int searchindex(int index);
 
+    /**
+     *
+     * @param l1 单链表
+     * @param l2 单链表
+     * @return l1和l2进行对比
+     */
+    public boolean equals(SinglyLinkedList l1, SinglyLinkedList l2);
+
+    /**
+     *
+     * @param l1
+     * @return l1和链表自身进行对比
+     */
+    public boolean equals(SinglyLinkedList l1);
 }

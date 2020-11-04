@@ -1,33 +1,31 @@
-package UnitTest.DatastructureTest.treeTest.binaryTreeTest.iku;
+package UnitTest.DatastructureTest.treeTest.binaryTreeTest.binaryTreeApplyTest;
 
-import DataStructure.tree.binaryTree.binaryTreeApply.BinaryTreeMirror;
-import DataStructure.tree.binaryTree.BinaryTreeImpl;
+import DataStructure.tree.binaryTree.binaryTreeApply.MirrorBinaryTree;
+import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
 import UnitTest.DatastructureTest.treeTest.BinaryTreeTestDemo;
 import org.junit.Test;
 
 /**
  * @author liujun
  * @date 2020-02-20 10:17
- * @description  Test of Mirror BinaryTree
+ * @description  镜像二叉树 测试案例
+ * Test of Mirror BinaryTree
  */
-public class BinaryTreeMirrorTest extends BinaryTreeTestDemo {
+public class MirrorBinaryTreeTest extends BinaryTreeTestDemo {
 
-    BinaryTreeMirror binaryTreeMirror = new BinaryTreeMirror();
+    MirrorBinaryTree mirrorBinaryTree = new MirrorBinaryTree();
 
     @Test
-    public void TestMirror() {
-
+    public void testMirror() {
         //null
-        assert binaryTreeMirror.equals(binaryTreeImplDemo1,binaryTreeMirror.Mirror(binaryTreeImplDemo1));
-
+        assert mirrorBinaryTree.equals(binaryTreeImplDemo1, mirrorBinaryTree.Mirror(binaryTreeImplDemo1));
         //empty BinaryTreeImpl
-        assert binaryTreeMirror.equals(new BinaryTreeImpl(),binaryTreeMirror.Mirror(new BinaryTreeImpl()));
+        assert mirrorBinaryTree.equals(new BinaryTreeImpl(), mirrorBinaryTree.Mirror(new BinaryTreeImpl()));
 
         binaryTreeImplDemo3 = gettreeDemo03();
-        assert binaryTreeMirror.equals(gettreeDemo03_Mirror(), binaryTreeMirror.Mirror(binaryTreeImplDemo3));
-
+        assert mirrorBinaryTree.equals(gettreeDemo03_Mirror(), mirrorBinaryTree.Mirror(binaryTreeImplDemo3));
         binaryTreeImplDemo4 = gettreeDemo04();
-        assert binaryTreeMirror.equals(gettreeDemo04_Mirror(), binaryTreeMirror.Mirror(binaryTreeImplDemo4));
+        assert mirrorBinaryTree.equals(gettreeDemo04_Mirror(), mirrorBinaryTree.Mirror(binaryTreeImplDemo4));
     }
 
     public BinaryTreeImpl gettreeDemo03_Mirror() {

@@ -1,7 +1,7 @@
-package UnitTest.DatastructureTest.treeTest.binaryTreeTest;
+package UnitTest.DatastructureTest.treeTest.binaryTreeTest.binaryTreeRealizeTest;
 
 import DataStructure.tree.binaryTree.BinaryTree2Array;
-import DataStructure.tree.binaryTree.BinaryTree2ArrayImpl;
+import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTree2ArrayImpl;
 import UnitTest.DatastructureTest.treeTest.BinaryTreeTestDemo;
 import org.junit.Test;
 
@@ -27,8 +27,7 @@ public class BinaryTree2ArrayImplTest extends BinaryTreeTestDemo {
     int[] array;
 
     @Test
-    public void TestBinary2Array() {
-
+    public void testBinary2ArrayLevel() {
         array = binaryTree2Array.Binary2ArrayLevel(gettreeDemo03());
         assert Arrays.equals(array, treeArray03);
         //�ж�����ֵ��ȵĴ���д����

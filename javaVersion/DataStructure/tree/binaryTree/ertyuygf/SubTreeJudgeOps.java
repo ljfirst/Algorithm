@@ -1,12 +1,13 @@
-package DataStructure.tree.binaryTree.binaryTreeApply;
+package DataStructure.tree.binaryTree.ertyuygf;
 
 import DataStructure.stringANDline.stringCompare.KMP;
+import DataStructure.tree.binaryTree.binaryTreeApply.SubTreeJudge;
 import DataStructure.tree.binaryTree.dede.BinaryTree1;
 
 /**
  *@author liujun
  *@date 2019-7-8 ����03:48:46
- *@author��Email liujunfirst@outlook.com
+ *@author-Email liujunfirst@outlook.com
  *@description 
  *����ƥ���Ż���1���������л�(��������+����)
  *          2�������ַ���ƥ��

@@ -1,7 +1,7 @@
 package DataStructure.stringANDline.list;
 
-import DataStructure.stringANDline.list.listrealize.Nodelj;
-import DataStructure.stringANDline.list.listrealize.SinglyLinkedList;
+import DataStructure.stringANDline.list.listRealize.Nodelj;
+import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
 
 import java.util.HashMap;
 import java.util.Map;

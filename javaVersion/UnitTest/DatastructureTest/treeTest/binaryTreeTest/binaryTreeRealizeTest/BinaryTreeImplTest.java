@@ -1,6 +1,6 @@
-package UnitTest.DatastructureTest.treeTest.binaryTreeTest;
+package UnitTest.DatastructureTest.treeTest.binaryTreeTest.binaryTreeRealizeTest;
 
-import DataStructure.tree.binaryTree.BinaryTreeImpl;
+import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
 import UnitTest.DatastructureTest.treeTest.BinaryTreeTestDemo;
 import org.junit.Test;
 
@@ -14,7 +14,7 @@ public class BinaryTreeImplTest extends BinaryTreeTestDemo {
     BinaryTreeImpl binaryTreeDemo = new BinaryTreeImpl();
 
     @Test
-    public void Testequals() {
+    public void testequals() {
 
         binaryTreeImplDemo1 = null;
         binaryTreeImplDemo2 = null;

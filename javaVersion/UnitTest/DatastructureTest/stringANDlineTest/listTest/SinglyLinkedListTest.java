@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.listTest;
 
-import DataStructure.stringANDline.list.listrealize.SinglyLinkedList;
+import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -140,6 +140,55 @@ public class SinglyLinkedListTest {
         target = singlyLinkedList.searchindex(200);
         assert target == Integer.MIN_VALUE;
     }
+
+    @Test
+    public void testequals() {
+        singlyLinkedList.clear();
+        singlyLinkedList.insert(false, array04);
+        SinglyLinkedList s1 = new SinglyLinkedList();
+        s1.insert(false, array04);
+        boolean flag = singlyLinkedList.equals(s1);
+        assert flag;
+
+        //都是04，但是插入顺序不同，链表也不同
+        singlyLinkedList.clear();
+        singlyLinkedList.insert(false, array04);
+        s1 = new SinglyLinkedList();
+        s1.insert(true, array04);
+        flag = singlyLinkedList.equals(s1);
+        assert !flag;
+
+        //04，05 链表不同
+        singlyLinkedList.clear();
+        singlyLinkedList.insert(false, array05);
+        s1 = new SinglyLinkedList();
+        s1.insert(true, array04);
+        flag = singlyLinkedList.equals(s1);
+        assert !flag;
+
+        //测试 equals()
+        SinglyLinkedList s2 = new SinglyLinkedList();
+        s2.insert(true, array04);
+        s1.clear();
+        s1.insert(true, array04);
+        flag = singlyLinkedList.equals(s1, s2);
+        assert flag;
+
+        s2.clear();
+        s2.insert(true, array04);
+        s1.clear();
+        s1.insert(true, array05);
+        flag = singlyLinkedList.equals(s1, s2);
+        assert !flag;
+
+        s2.clear();
+        s2.insert(false, array05);
+        s1.clear();
+        s1.insert(true, array05);
+        flag = singlyLinkedList.equals(s1, s2);
+        assert !flag;
+    }
+
 
     int[] array01 = null;
     int[] array02 = {};

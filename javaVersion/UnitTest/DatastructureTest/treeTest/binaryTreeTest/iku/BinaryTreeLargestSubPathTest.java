@@ -1,7 +1,7 @@
 package UnitTest.DatastructureTest.treeTest.binaryTreeTest.iku;
 
-import DataStructure.tree.binaryTree.binaryTreeApply.BinaryTreeLargestSubPath;
-import DataStructure.tree.binaryTree.BinaryTreeImpl;
+import DataStructure.tree.binaryTree.ertyuygf.BinaryTreeLargestSubPath;
+import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
 import UnitTest.DatastructureTest.treeTest.BinaryTreeTestDemo;
 import org.junit.Test;
 

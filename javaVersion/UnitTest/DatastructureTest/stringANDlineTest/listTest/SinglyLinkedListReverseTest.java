@@ -1,12 +1,11 @@
 package UnitTest.DatastructureTest.stringANDlineTest.listTest;
 
-import DataStructure.stringANDline.list.listrealize.SinglyLinkedListReverse;
+import DataStructure.stringANDline.list.listRealize.SinglyLinkedListReverse;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Arrays;
 
 /**
  * @author liujun
@@ -28,7 +27,7 @@ public class SinglyLinkedListReverseTest extends SinglyLinkedListTest {
     @Test
     public void testreverse() throws ClassNotFoundException, InvocationTargetException, IllegalAccessException {
 
-        Class c = Class.forName("DataStructure.stringANDline.list.listrealize.SinglyLinkedListReverse");
+        Class c = Class.forName("DataStructure.stringANDline.list.listRealize.SinglyLinkedListReverse");
         Method[] m = c.getMethods();
         for (Method m1 : m) {
             if (m1.getName().contains("reverse")) {

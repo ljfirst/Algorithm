@@ -1,16 +1,16 @@
 package DataStructure.tree.binaryTree.binaryTreeApply;
 
-import DataStructure.tree.binaryTree.BinaryTreeImpl;
+import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
 
 /**
  * @author liujun
  * @date 2020-02-20 10:17
- * @description
+ * @description 反转二叉树
  * 将二叉树 进行镜像操作
  */
 
 //BinaryTreeReversal
-public class BinaryTreeMirror extends BinaryTreeImpl{
+public class MirrorBinaryTree extends BinaryTreeImpl{
 
     public BinaryTreeImpl Mirror(BinaryTreeImpl root){
         if(root == null){

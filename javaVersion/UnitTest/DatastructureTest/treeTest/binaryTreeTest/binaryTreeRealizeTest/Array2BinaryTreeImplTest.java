@@ -1,9 +1,8 @@
-package UnitTest.DatastructureTest.treeTest.binaryTreeTest;
+package UnitTest.DatastructureTest.treeTest.binaryTreeTest.binaryTreeRealizeTest;
 
 import DataStructure.tree.binaryTree.Array2BinaryTree;
-import DataStructure.tree.binaryTree.Array2BinaryTreeImpl;
-import DataStructure.tree.binaryTree.BinaryTree;
-import DataStructure.tree.binaryTree.BinaryTreeImpl;
+import DataStructure.tree.binaryTree.binaryTreeRealize.Array2BinaryTreeImpl;
+import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
 import UnitTest.DatastructureTest.treeTest.BinaryTreeTestDemo;
 import org.junit.Test;
 
@@ -48,7 +47,7 @@ public class Array2BinaryTreeImplTest extends BinaryTreeTestDemo {
         assert binaryTree.equals(binaryTreeImplDemo1, binaryTreeImplDemo4);
     }
 
-    //6、按照后序遍历序列和中序遍历序列，构建唯一一棵确定的二叉树。
+    //5、已知前序遍历序列和中序遍历序列，构建唯一一棵确定的二叉树。
     @Test
     public void testcreateTreePre_InOrder() {
         binaryTreeImplDemo1 = binaryTreeCreate.createTreePre_InOrder(treeArray01, treeArray01);
@@ -70,7 +69,7 @@ public class Array2BinaryTreeImplTest extends BinaryTreeTestDemo {
         assert binaryTree.equals(binaryTreeImplDemo1, binaryTreeImplDemo2);
     }
 
-    //5、已知前序遍历序列和中序遍历序列，构建唯一一棵确定的二叉树。
+    //6、按照后序遍历序列和中序遍历序列，构建唯一一棵确定的二叉树。
     @Test
     public void testcreateTreePost_InOrder() {
         binaryTreeImplDemo1 = binaryTreeCreate.createTreePost_InOrder(treeArray01, treeArray01);

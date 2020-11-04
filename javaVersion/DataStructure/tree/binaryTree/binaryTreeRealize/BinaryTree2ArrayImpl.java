@@ -1,11 +1,14 @@
-package DataStructure.tree.binaryTree;
+package DataStructure.tree.binaryTree.binaryTreeRealize;
+
+import DataStructure.tree.binaryTree.BinaryTree2Array;
 
 import java.util.*;
 
 /**
  * @author liujun
  * @date 2020-02-18 18:46
- * @description 按层：
+ * @description
+ * 按层：
  * 1、按层遍历二叉树 输出数组（队列）
  * S形：
  * 1、S形遍历二叉树 输出数组（栈）

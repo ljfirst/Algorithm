@@ -1,4 +1,4 @@
-package DataStructure.stringANDline.list.listrealize;
+package DataStructure.stringANDline.list.listRealize;
 
 import DataStructure.stringANDline.list.Listlj;
 
@@ -11,6 +11,7 @@ import DataStructure.stringANDline.list.Listlj;
  * 单链表的插入：数组和单个元素 （头插和尾插）
  * 单链表的删除：删除特定元素和指定位置元素
  * 单链表的查找：查找特定元素和指定位置元素
+ * 单链表的相等：判断两个链表是否相等
  */
 public class SinglyLinkedList implements Listlj {
 
@@ -33,6 +34,7 @@ public class SinglyLinkedList implements Listlj {
      * 4、对本list进行操作
      *
      * @param arr
+     * @param flag true表示头插法，false表示尾插法，尾插法与数组顺序一致
      */
     @Override
     public void insert(boolean flag, int... arr) {
@@ -133,4 +135,46 @@ public class SinglyLinkedList implements Listlj {
         this.head.value = 0;
         tail = head;
     }
+
+    @Override
+    public boolean equals(SinglyLinkedList l1, SinglyLinkedList l2) {
+
+        if (l1 == null && l2 == null) {
+            return true;
+        }
+        if (l1 != null && l2 != null && l1.head.value == l2.head.value) {
+            Nodelj p1 = l1.head.next;
+            Nodelj p2 = l2.head.next;
+            while (p1 != null && p2 != null) {
+                if (p1.value != p2.value) {
+                    return false;
+                }
+                p1 = p1.next;
+                p2 = p2.next;
+            }
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean equals(SinglyLinkedList l1) {
+        if (l1 == null && this == null) {
+            return true;
+        }
+        if (l1 != null && this != null && l1.head.value == this.head.value) {
+            Nodelj p1 = l1.head.next;
+            Nodelj p2 = this.head.next;
+            while (p1 != null && p2 != null) {
+                if (p1.value != p2.value) {
+                    return false;
+                }
+                p1 = p1.next;
+                p2 = p2.next;
+            }
+            return true;
+        }
+        return false;
+    }
+
 }

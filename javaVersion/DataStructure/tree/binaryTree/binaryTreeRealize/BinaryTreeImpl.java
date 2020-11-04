@@ -1,4 +1,6 @@
-package DataStructure.tree.binaryTree;
+package DataStructure.tree.binaryTree.binaryTreeRealize;
+
+import DataStructure.tree.binaryTree.BinaryTree;
 
 /**
  * @author liujun

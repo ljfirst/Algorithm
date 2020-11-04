@@ -1,9 +1,4 @@
-package DataStructure.stringANDline.list.listrealize;
-
-import lombok.Singular;
-
-import javax.xml.soap.Node;
-import java.util.Arrays;
+package DataStructure.stringANDline.list.listRealize;
 
 /**
  * @author liujun

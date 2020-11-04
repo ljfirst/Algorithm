@@ -1,4 +1,4 @@
-package DataStructure.tree.binaryTree.binaryTreeApply;
+package DataStructure.tree.binaryTree.ertyuygf;
 
 import DataStructure.tree.binaryTree.dede.BinaryTree1;
 
