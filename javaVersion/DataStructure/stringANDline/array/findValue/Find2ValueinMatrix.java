@@ -1,6 +1,6 @@
 package DataStructure.stringANDline.array.findValue;
 
-import DataStructure.stringANDline.FindValue;
+import DataStructure.stringANDline.array.FindValue;
 
 /**
  * @author liujun

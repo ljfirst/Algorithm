@@ -1,5 +1,7 @@
 package DataStructure.stringANDline.list.listRealize;
 
+import DataStructure.stringANDline.list.Listlj;
+
 /**
  * @author liujun
  * @version 1.0
@@ -90,83 +92,73 @@ public class SinglyLinkedListReverse {
         return n;
     }
 
-    //反转从index1 到 index2 之间的数据，区间是 左闭右闭
+    /**
+     * @param listlj 链表
+     * @param index1 反转起始点，对标数组，从0计数
+     * @param index2 反转结束点，对标数组，从0计数
+     * @return 反转从index1 到 index2 之间的数据，区间是 左闭右闭
+     */
     public int[] revert_part(SinglyLinkedList listlj, int index1, int index2) {
         if (listlj == null) {
-            return new int[]{};
+            return null;
         }
-        if (listlj.head.value == 0 || index1 > listlj.head.value || index2 > listlj.head.value) {
+        if (listlj.head.value == 0 || index1 == index2 ||
+                index1 > listlj.head.value || index2 > listlj.head.value) {
             return listlj.toArray();
         }
-        int count = 0;
-        Nodelj node = listlj.head.next;
-        Nodelj preout = listlj.head;
-        while (count++ < index1) {
-            preout = node;
-            node = node.next;
-        }
-        Nodelj prein = node;
-
-        Nodelj next;
-        Nodelj pre1 = node;
-        node = node.next;
-        //node 节点需要超过 index2，在index2 的右边一位
-        while (count++ <= index2) {
-            next = node.next;
-            node.next = pre1;
-            pre1 = node;
-            node = next;
-        }
-        preout.next = pre1;
-        prein.next = node;
+        revert(listlj, index1, index2);
         int[] arr = listlj.toArray();
         return arr;
     }
 
-    //每n个数反转一次
+    private void revert(SinglyLinkedList listlj, int index1, int index2) {
+        int count = 0;
+        Nodelj node = listlj.head.next;
+        Nodelj preout = listlj.head;
+        //此处不要偷懒写 count++，即使不进入循环，也会执行count++
+        while (count < index1) {
+            preout = node;
+            node = node.next;
+            count++;
+        }
+        Nodelj prein = node;
+        Nodelj next;
+        Nodelj pre1 = node;
+        node = node.next;
+        prein.next = null;//这一步很重要，不然会引起指针循环
+        count++;
+        //node 节点需要超过 index2，在index2 的右边一位
+        while (count <= index2) {
+            next = node.next;
+            node.next = pre1;
+            pre1 = node;
+            node = next;
+            count++;
+        }
+        preout.next = pre1;
+        prein.next = node;
+    }
+
+    /**
+     *
+     * @param listlj 链表
+     * @param n 每N个数反转一次
+     * @return
+     */
     public int[] revert_partn(SinglyLinkedList listlj, int n) {
         if (listlj == null) {
             return new int[]{};
         }
-        if (listlj.head.value == 0 || n > listlj.head.value) {
+        if (listlj.head.value == 0 || n >= listlj.head.value || n == 1) {
             return listlj.toArray();
         }
-        if (n == 1) {
-            return listlj.toArray();
+        int loop = 0;
+        //注意循环的位置，因为从0开始，所以取不到 listlj.head.value
+        while (loop + n - 1 < listlj.head.value) {
+            revert(listlj, loop, loop + n - 1);
+            loop = loop + n;
         }
-        Nodelj head = listlj.head;
-        listlj.head.next = revertn(head.next, n);
         int[] array = listlj.toArray();
         return array;
-    }
-
-    private Nodelj revertn(Nodelj nodelj, int n) {
-        if (nodelj == null) {
-            return null;
-        }
-        Nodelj tail = nodelj;
-        Nodelj head = nodelj;
-        for (int i = 1; i <= n; i++) {
-            if (tail == null) {
-                return head;
-            }
-            tail = tail.next;
-        }
-        Nodelj newHead = revertHead_Tail(head, tail);
-        head.next = revertn(tail.next, n);
-        return newHead;
-    }
-
-    private Nodelj revertHead_Tail(Nodelj head, Nodelj tail) {
-        Nodelj pre = head;
-        Nodelj next;
-        head = head.next;
-        while (head != tail) {
-            next = head.next;
-            head.next = pre;
-            pre = head;
-            head = next;
-        }
-        return head;
     }
 }

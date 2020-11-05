@@ -42,6 +42,17 @@ public class BinaryTree2ArrayImplTest extends BinaryTreeTestDemo {
         assert Arrays.equals(array, treeArray05);
     }
 
+    //@Test
+    public void testBinary2ArrayLevel1() {
+        BinaryTree2ArrayImpl i = new BinaryTree2ArrayImpl();
+        i.Binary2ArrayLevel_print(gettreeDemo03());
+        System.out.println("\n");
+        i.Binary2ArrayLevel_print(gettreeDemo04());
+        System.out.println("\n");
+        i.Binary2ArrayLevel_print(gettreeDemo05());
+
+    }
+
     @Test
     public void testBinary2ArrayS() {
         array = binaryTree2Array.Binary2ArrayS(binaryTreeImplDemo1);

@@ -1,9 +1,7 @@
-package UnitTest.LogicTest.regulartest;
+package UnitTest.DatastructureTest.stringANDlineTest.sequenceANDstringTest;
 
-import Logic.regular.TransIPtoInt;
+import DataStructure.stringANDline.sequenceANDstring.TransIPtoInt;
 import org.junit.Test;
-
-import javax.swing.plaf.basic.BasicLabelUI;
 
 /**
  * @author liujun
@@ -11,11 +9,11 @@ import javax.swing.plaf.basic.BasicLabelUI;
  * @date 2020/3/16
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description 
+ * @description 将string类型的IP地址转化成int
  */
 public class TransIPtoIntTest {
 
-    TransIPtoInt transIPtoInt= new TransIPtoInt();
+    TransIPtoInt transIPtoInt = new TransIPtoInt();
 
     @Test
     public void iPToInttest() {
@@ -35,12 +33,15 @@ public class TransIPtoIntTest {
         assert value == demoIPint07;
         value = transIPtoInt.iPToInt(demoIPString08);
         assert value == demoIPint08;
-
+        //反案例
         value = transIPtoInt.iPToInt(demoIPString101);
+        long demoIPint101 = -1;
         assert value == demoIPint101;
         value = transIPtoInt.iPToInt(demoIPString102);
+        long demoIPint102 = -1;
         assert value == demoIPint102;
         value = transIPtoInt.iPToInt(demoIPString103);
+        long demoIPint103 = -1;
         assert value == demoIPint103;
     }
 
@@ -65,16 +66,20 @@ public class TransIPtoIntTest {
     }
 
     //正案例
+    //full表示255.255.255.255，计算结果为：4294967295L;
+    long full = 255L * 256L * 256L * 256L + 255L * 256L * 256L + 255L * 256L + 255L;
+    long half_full = 255L * 256L * 256L + 255L * 256L + 255L;
+
     private String demoIPString01 = "0.0.0.0";
     private long demoIPint01 = 0;
     private String demoIPString02 = "255.255.255.255";
-    private long demoIPint02 = 4294967295l;
+    private long demoIPint02 = full;
     private String demoIPString03 = "255.0.0.255";
-    private long demoIPint03 = 4294967295l - 16777215l + 255l;
+    private long demoIPint03 = full - half_full + 255L;
     private String demoIPString04 = "0.0.0.1";
     private long demoIPint04 = 1;
     private String demoIPString05 = "255.255.255.254";
-    private long demoIPint05 = 4294967294l;
+    private long demoIPint05 = full - 1;
     private String demoIPString06 = "0.0.0.255";
     private long demoIPint06 = 255;
     private String demoIPString07 = "0.0.1.0";
@@ -84,9 +89,6 @@ public class TransIPtoIntTest {
 
     //反案例
     private String demoIPString101 = "256.0.0.0";
-    private long demoIPint101 = -1;
     private String demoIPString102 = "1.2.255.256";
-    private long demoIPint102 = -1;
     private String demoIPString103 = "256.0.k.0";
-    private long demoIPint103 = -1;
 }

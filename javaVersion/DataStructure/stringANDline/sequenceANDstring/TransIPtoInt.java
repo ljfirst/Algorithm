@@ -1,5 +1,4 @@
-package Logic.regular;
-
+package DataStructure.stringANDline.sequenceANDstring;
 
 /** 
  *@author liujun
@@ -39,11 +38,9 @@ public class TransIPtoInt {
 		}
 		return ipnum;
 	}
-	
-	
+
 	//int数转IP
 	public String intToIP(long ipnum) {
-
 		if(ipnum < 0){
 			return new String("");
 		}
@@ -57,5 +54,4 @@ public class TransIPtoInt {
 		}
 		return intnum += ipnum;
 	}
-
 }

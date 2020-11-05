@@ -1,4 +1,4 @@
-package Logic.regular;
+package DataStructure.stringANDline.sequenceANDstring;
 
 /**
  * @author liujun

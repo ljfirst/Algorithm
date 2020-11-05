@@ -1,4 +1,4 @@
-package DataStructure.stringANDline;
+package DataStructure.stringANDline.array;
 
 public interface FindValue {
 

@@ -1,12 +1,12 @@
-package UnitTest.LogicTest.regulartest;
+package UnitTest.DatastructureTest.stringANDlineTest.sequenceANDstringTest;
 
-import Logic.regular.DigitalTrans;
+import DataStructure.stringANDline.sequenceANDstring.DigitalTrans;
 import org.junit.Test;
 
 /**
  * @author liujun
  * @date 2020-02-26 09:21
- * @description 
+ * @description 人民币大小写转换 测试案例
  */
 public class DigitalTransTest {
 
@@ -14,7 +14,6 @@ public class DigitalTransTest {
 
     @Test
     public void Testtrans() throws Exception {
-
         String ans = digitalTrans.trans(Demo01);
         assert ans.equals("壹仟圆零壹分");
         ans = digitalTrans.trans(Demo011);
@@ -55,7 +54,7 @@ public class DigitalTransTest {
     String Demo04 = "1";
     String Demo05 = " 349760.021 ";
     String Demo06 = "500500846.023";
-    String Demo061 = "100230000456.0003";
+    String Demo061 = "100230 000456.0003";
 
     String Demo07 = "15mkl6";
     String Demo08 = "005469.16";

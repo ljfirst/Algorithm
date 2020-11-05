@@ -7,8 +7,7 @@ import java.util.*;
 /**
  * @author liujun
  * @date 2020-02-18 18:46
- * @description
- * 按层：
+ * @description 按层：
  * 1、按层遍历二叉树 输出数组（队列）
  * S形：
  * 1、S形遍历二叉树 输出数组（栈）
@@ -42,6 +41,34 @@ public class BinaryTree2ArrayImpl implements BinaryTree2Array {
         }
         int[] binaryTrees = list.stream().mapToInt(Integer::intValue).toArray();
         return binaryTrees;
+    }
+
+    //按行打印二叉树
+    public void Binary2ArrayLevel_print(BinaryTreeImpl root) {
+        if (check(root)) {
+            return;
+        }
+        Queue<BinaryTreeImpl> queue = new LinkedList<>();
+        queue.offer(root);
+        BinaryTreeImpl front = root;
+        BinaryTreeImpl tail = root;
+
+        while (!queue.isEmpty()) {
+            BinaryTreeImpl binaryTree = queue.poll();
+            System.out.print(binaryTree.value+" ");
+            if (binaryTree.left != null) {
+                queue.offer(binaryTree.left);
+                tail = binaryTree.left;
+            }
+            if (binaryTree.right != null) {
+                queue.offer(binaryTree.right);
+                tail = binaryTree.right;
+            }
+            if(binaryTree == front){
+                front = tail;
+                System.out.println();
+            }
+        }
     }
 
     @Override

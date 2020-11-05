@@ -1,6 +1,7 @@
 package DataStructure.tree.binaryTree.ertyuygf;
 
-import DataStructure.tree.binaryTree.dede.BinaryTree1;
+
+import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -49,7 +50,7 @@ public class BTFindCertainValuePath_nonRecursion {
     }
 
 
-    public ArrayList<ArrayList<Integer>> FindPath(BinaryTree1 root, int target) {
+    public ArrayList<ArrayList<Integer>> FindPath(BinaryTreeImpl root, int target) {
         //·��list
         ArrayList<Integer> route_list = new ArrayList<Integer>();
         //����·��list��ɵ�list
@@ -58,9 +59,9 @@ public class BTFindCertainValuePath_nonRecursion {
         //�����ۼ�ֵsumƥ��target
         int sum = 0;
         //������������
-        BinaryTree1 note = root;
+        BinaryTreeImpl note = root;
         //����ջ
-        Stack<BinaryTree1> stack = new Stack<BinaryTree1>();
+        Stack<BinaryTreeImpl> stack = new Stack<BinaryTreeImpl>();
 
         //��������ǵݹ�������ۼ�ƥ��
         while (!stack.empty() || note != null) {

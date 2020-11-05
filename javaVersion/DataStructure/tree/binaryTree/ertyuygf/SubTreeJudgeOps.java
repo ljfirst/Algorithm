@@ -2,7 +2,7 @@ package DataStructure.tree.binaryTree.ertyuygf;
 
 import DataStructure.stringANDline.stringCompare.KMP;
 import DataStructure.tree.binaryTree.binaryTreeApply.SubTreeJudge;
-import DataStructure.tree.binaryTree.dede.BinaryTree1;
+import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
 
 /**
  *@author liujun
@@ -16,7 +16,7 @@ import DataStructure.tree.binaryTree.dede.BinaryTree1;
  */
 public class SubTreeJudgeOps {
 
-	public boolean treeJudgeOps(BinaryTree1 tree1, BinaryTree1 tree2) {
+	public boolean treeJudgeOps(BinaryTreeImpl tree1, BinaryTreeImpl tree2) {
 
 		String s1PreOrder = subTreePreOrderSequence(tree1);
 		String s2PreOrder = subTreePreOrderSequence(tree2);
@@ -27,7 +27,7 @@ public class SubTreeJudgeOps {
 	}
 	
 	//�������л�(����)
-	public String subTreePreOrderSequence(BinaryTree1 tree) {
+	public String subTreePreOrderSequence(BinaryTreeImpl tree) {
 
 		if(tree == null){
 			return "";
@@ -36,7 +36,7 @@ public class SubTreeJudgeOps {
 	}
 	
 	//�������л�(����)
-	public String subTreeInOrderSequence(BinaryTree1 tree) {
+	public String subTreeInOrderSequence(BinaryTreeImpl tree) {
 
 		if(tree == null){
 			return "";
