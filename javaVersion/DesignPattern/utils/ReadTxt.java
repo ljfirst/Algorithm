@@ -1,4 +1,4 @@
-package Logic.utils;
+package DesignPattern.utils;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * @author liujun
  * @version 1.0
  * @date 2019-10-22 16:03
- * @author¡ªEmail liujunfirst@outlook.com
+ * @authorï¿½ï¿½Email liujunfirst@outlook.com
  * @description read txt to list
  */
 public class ReadTxt {
@@ -25,12 +25,12 @@ public class ReadTxt {
             BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
             String strLine = null;
             while(null != (strLine = bufferedReader.readLine())){
-                System.out.println("µÚ[" + rownum + "]ÐÐÊý¾Ý:[" + strLine + "]");
+                System.out.println("ï¿½ï¿½[" + rownum + "]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:[" + strLine + "]");
                 /*strLine = strLine.replace("ÏµÍ³","");
-                strLine = strLine.replace("ÏîÄ¿","");
-                strLine = strLine.replace("¿ª·¢","");
-                strLine = strLine.replace("¹ÜÀí","");
-                strLine = strLine.replace("ÐÅÏ¢","");
+                strLine = strLine.replace("ï¿½ï¿½Ä¿","");
+                strLine = strLine.replace("ï¿½ï¿½ï¿½ï¿½","");
+                strLine = strLine.replace("ï¿½ï¿½ï¿½ï¿½","");
+                strLine = strLine.replace("ï¿½ï¿½Ï¢","");
                 strLine = strLine.replace("Æ½Ì¨","");*/
                 list.add(strLine);
                 rownum++;

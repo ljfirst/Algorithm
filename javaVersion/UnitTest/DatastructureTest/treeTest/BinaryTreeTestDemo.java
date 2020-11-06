@@ -58,7 +58,21 @@ public class BinaryTreeTestDemo {
     public int[] treeArray03Postorder = {4, 5, 2, 6, 7, 3, 1};
     public int[] treeArray04Postorder = {4, 2, 7, 3, 1};
     public int[] treeArray05Postorder = {14, 13, 9, 4, 6, 2, 15, 19, 18, 17, 16, 10, 11, 7, 20, 5, 12, 8, 3, 1};
+    //创建满二叉树
+    public int[] treeArray01full = null;
+    public int[] treeArray02full = {};
+    public int[] treeArray03full = {1};
+    public int[] treeArray04full = {1,2,3};
+    public int[] treeArray05full = {1,2,3,4,5,6,7,8,9};
 
+    public BinaryTreeImpl gettreeArray04full() {
+        BinaryTreeImpl binaryTree1 = new BinaryTreeImpl(1);
+        BinaryTreeImpl binaryTree2 = new BinaryTreeImpl(2);
+        BinaryTreeImpl binaryTree3 = new BinaryTreeImpl(3);
+        binaryTree1.left = binaryTree2;
+        binaryTree1.right = binaryTree3;
+        return binaryTree1;
+    }
 
     public BinaryTreeImpl gettreeDemo03() {
         BinaryTreeImpl binaryTree1 = new BinaryTreeImpl(1);
@@ -68,7 +82,6 @@ public class BinaryTreeTestDemo {
         BinaryTreeImpl binaryTree5 = new BinaryTreeImpl(5);
         BinaryTreeImpl binaryTree6 = new BinaryTreeImpl(6);
         BinaryTreeImpl binaryTree7 = new BinaryTreeImpl(7);
-
         binaryTree1.left = binaryTree2;
         binaryTree1.right = binaryTree3;
         binaryTree2.left = binaryTree4;
@@ -82,7 +95,6 @@ public class BinaryTreeTestDemo {
         BinaryTreeImpl binaryTree3 = new BinaryTreeImpl(3);
         BinaryTreeImpl binaryTree6 = new BinaryTreeImpl(6);
         BinaryTreeImpl binaryTree7 = new BinaryTreeImpl(7);
-
         binaryTree3.left = binaryTree6;
         binaryTree3.right = binaryTree7;
         return binaryTree3;
@@ -94,7 +106,6 @@ public class BinaryTreeTestDemo {
         BinaryTreeImpl binaryTree3 = new BinaryTreeImpl(3);
         BinaryTreeImpl binaryTree4 = new BinaryTreeImpl(4);
         BinaryTreeImpl binaryTree7 = new BinaryTreeImpl(7);
-
         binaryTree1.left = binaryTree2;
         binaryTree1.right = binaryTree3;
         binaryTree2.left = binaryTree4;
@@ -143,7 +154,6 @@ public class BinaryTreeTestDemo {
         binaryTree5.right = binaryTree20;
         binaryTree17.right = binaryTree18;
         binaryTree18.left = binaryTree19;
-
         return binaryTree1;
     }
 }

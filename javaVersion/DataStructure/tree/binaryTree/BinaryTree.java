@@ -7,10 +7,14 @@ import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
  * @author liujun
  * @date 2020-02-18 16:13
  * @description
- * 二叉树 ： 判断两个二叉树相等
+ * 二叉树 ： 判断两个二叉树相等（自身）
+ * 二叉树 ： 判断两个二叉树相等（其他两个树）
  */
 public interface BinaryTree extends Tree {
 
     //判断两个二叉树相等
     public boolean equals(BinaryTreeImpl source, BinaryTreeImpl target);
+
+    //判断两个二叉树相等
+    public boolean equals(BinaryTreeImpl target);
 }

@@ -1,16 +1,16 @@
-package Logic.utils;
+package DesignPattern.utils;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
  *@author liujun
- *@date 2018-7-19 ÉÏÎç11:55:48
- *@author¡ªEmail liujunfirst@outlook.com
- *@description  Ñ¡ÔñÅÅÐò
+ *@date 2018-7-19 ï¿½ï¿½ï¿½ï¿½11:55:48
+ *@authorï¿½ï¿½Email liujunfirst@outlook.com
+ *@description  Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  *@version 1.0
  */
-//¶ÔlistÄÚµÄÔªËØÅÅÐò
+//ï¿½ï¿½listï¿½Úµï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 public class SelectionSortforFileCompare {
 
 	public String[] selectionSort(ArrayList<String> list) {
@@ -24,12 +24,12 @@ public class SelectionSortforFileCompare {
 		}
 
 		int flag;
-		//Íâ²¿Ñ­»·´Ó0µ½n-1
+		//ï¿½â²¿Ñ­ï¿½ï¿½ï¿½ï¿½0ï¿½ï¿½n-1
 		for (int i = 0; i < length - 1; i++) {
-			//¼ÇÂ¼×îÖµÔªËØµÄÏÂ½Ç±ê
+			//ï¿½ï¿½Â¼ï¿½ï¿½ÖµÔªï¿½Øµï¿½ï¿½Â½Ç±ï¿½
 			flag = i;
 			int targetStringNum = Integer.parseInt(String.valueOf(compareStorage[i].charAt(0)));
-			//´Ó´ý½»»»ÔªËØµÄÏÂÒ»¸ö¿ªÊ¼²éÕÒ£¬Ö±µ½×îºóÒ»¸öÔªËØ
+			//ï¿½Ó´ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Øµï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Ò£ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ôªï¿½ï¿½
 			for (int j = i+1; j <= length - 1; j++) {
 				int commpStringNum = Integer.parseInt(String.valueOf(compareStorage[j].charAt(0)));
 				if(commpStringNum > targetStringNum){
@@ -37,7 +37,7 @@ public class SelectionSortforFileCompare {
 					targetStringNum = commpStringNum;
 				}
 			}
-			//ÔªËØ½»»»
+			//Ôªï¿½Ø½ï¿½ï¿½ï¿½
 			String temp = compareStorage[i];
 			compareStorage[i] = compareStorage[flag];
 			compareStorage[flag] = temp;

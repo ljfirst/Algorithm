@@ -36,7 +36,12 @@ public class BinaryTreeImpl implements BinaryTree {
         return source == null ? target == null : same(source, target);
     }
 
-    public boolean same(BinaryTreeImpl source, BinaryTreeImpl target) {
+    @Override
+    public boolean equals(BinaryTreeImpl target) {
+        return equals(this, target);
+    }
+
+    private boolean same(BinaryTreeImpl source, BinaryTreeImpl target) {
         if (target == null) {
             return false;
         }

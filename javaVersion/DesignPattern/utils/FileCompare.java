@@ -1,4 +1,4 @@
-package Logic.utils;
+package DesignPattern.utils;
 
 import Algorithm.dynamic.lcs.LCS_4compare;
 

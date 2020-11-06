@@ -1,4 +1,4 @@
-package Logic.utils;
+package DesignPattern.utils;
 
 import java.util.Random;
 
@@ -6,24 +6,24 @@ import java.util.Random;
  * @author liujun
  * @version 1.0
  * @date 2019-11-02 23:30
- * @author¡ªEmail liujunfirst@outlook.com
+ * @authorï¿½ï¿½Email liujunfirst@outlook.com
  * @description 
  */
 public class RamdomUtil {
 
     Random random = new Random();
 
-    //Ëæ»úÉú³É²»Í¬³¤¶ÈµÄ×Ö·û´®:×Ö·û´®³¤¶È£¬ÏÞÖÆÔÚ2-100
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É²ï¿½Í¬ï¿½ï¿½ï¿½Èµï¿½ï¿½Ö·ï¿½ï¿½ï¿½:ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2-100
     public String productrandomdomString(){
-        //randomd.nextInt(x)±íÊ¾Çø¼ä[0,x)
+        //randomd.nextInt(x)ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½[0,x)
         int num = random.nextInt(99)+2;
         return productRandomString(num);
     }
 
-    //Ëæ»úÉú³É¸ø¶¨³¤¶ÈµÄ×Ö·û´®
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Èµï¿½ï¿½Ö·ï¿½ï¿½ï¿½
     public String productRandomString(int num){
-        /*ÔÚascÂëÖÐ,'0'+17='A',¡°A¡±+32=¡°a¡±
-        ËùÒÔ£¬¡®0-9¡¯=¡®0¡¯+[0,9],¡®A-Z¡¯=¡®0¡¯+[17,42],¡®a-z¡¯=¡®0¡¯+[49,75]*/
+        /*ï¿½ï¿½ascï¿½ï¿½ï¿½ï¿½,'0'+17='A',ï¿½ï¿½Aï¿½ï¿½+32=ï¿½ï¿½aï¿½ï¿½
+        ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½0-9ï¿½ï¿½=ï¿½ï¿½0ï¿½ï¿½+[0,9],ï¿½ï¿½A-Zï¿½ï¿½=ï¿½ï¿½0ï¿½ï¿½+[17,42],ï¿½ï¿½a-zï¿½ï¿½=ï¿½ï¿½0ï¿½ï¿½+[49,75]*/
         char a = '0';
         int addNum;
         StringBuffer stringBuffer = new StringBuffer();
@@ -34,21 +34,21 @@ public class RamdomUtil {
         }
         return stringBuffer.toString();
     }
-    //Éú³ÉÒ»×é°üº¬´óÐ¡Ð´£¬Êý×ÖµÄ ²»Í¬³¤¶È ×Ö·û´®:×Ö·û´®³¤¶È£¬ÏÞÖÆÔÚ2-100
+    //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡Ð´ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ ï¿½Ö·ï¿½ï¿½ï¿½:ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2-100
     public String productRandomNumandString() {
 
         int num = random.nextInt(99)+2;
         return productRandomNumandString(num);
     }
 
-    //Éú³ÉÒ»×é°üº¬´óÐ¡Ð´£¬Êý×ÖµÄ ¶¨³¤ ×Ö·û´®
+    //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡Ð´ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö·ï¿½ï¿½ï¿½
     public String productRandomNumandString(int num) {
 
         String[] alpha = {"A","B","C","D","E","F","G","H","I","J","K",
                 "L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
-        //×Ö·û´®ÐòÁÐ
+        //ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         StringBuffer stringBuffer = new StringBuffer();
-        //mÈ¡Öµ1£¬2£¬3£¬±íÊ¾Ñ¡Ôñ¡°´óÐ´×ÖÄ¸¡±¡¢¡°Ð¡Ð´×ÖÄ¸¡±¡¢¡°Êý×Ö¡±
+        //mÈ¡Öµ1ï¿½ï¿½2ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½Ê¾Ñ¡ï¿½ñ¡°´ï¿½Ð´ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡Ð´ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¡ï¿½
         int choice = 0;
         while(num>0){
             choice = random.nextInt(3);
@@ -67,11 +67,11 @@ public class RamdomUtil {
             }
             num--;
         }
-        //Êä³öËæ»ú×Ö·û´®
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
         return stringBuffer.toString();
     }
     
-    //Éú³ÉÒ»¸öµÈ¸ÅÂÊµÄ[0,9],[17,42],[49,74]Ö®¼äµÄÊý
+    //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½È¸ï¿½ï¿½Êµï¿½[0,9],[17,42],[49,74]Ö®ï¿½ï¿½ï¿½ï¿½ï¿½
     public int getEqualNum(){
         int equalNum = random.nextInt(75);
         if((equalNum > 9 && equalNum < 17) || (equalNum > 42 && equalNum < 49)){

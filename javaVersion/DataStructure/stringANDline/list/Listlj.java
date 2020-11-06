@@ -12,6 +12,8 @@ import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
  * 1、链表输出为数组
  * 2、链表的插入
  * 3、链表清除函数
+ * 4、链表的相等（自身对比）
+ * 5、链表的相等（两个链表对比）
  */
 public interface Listlj {
 

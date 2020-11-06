@@ -1,9 +1,13 @@
 package DataStructure.tree.binaryTree.binaryTreeRealize;
 
+import DataStructure.stringANDline.list.Listlj;
 import DataStructure.tree.binaryTree.Array2BinaryTree;
 import DataStructure.tree.binaryTree.BinaryTree;
+import com.sun.org.apache.xpath.internal.operations.Lt;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 /**
@@ -15,9 +19,10 @@ import java.util.Queue;
  * 2、将按先序遍历的方式输入的数组  构造成一个二叉树
  * 3、将按中序遍历的方式输入的数组  构造成一个二叉树
  * 4、将按后序遍历的方式输入的数组  构造成一个二叉树
+ * 5、将一个完全二叉树的数组 构造成一个二叉树
  * 多序创建：
- * 5、已知前序遍历序列和中序遍历序列，构建唯一一棵确定的二叉树。
- * 6、已知后序遍历序列和中序遍历序列，构建唯一一棵确定的二叉树。
+ * 6、已知前序遍历序列和中序遍历序列，构建唯一一棵确定的二叉树。
+ * 7、已知后序遍历序列和中序遍历序列，构建唯一一棵确定的二叉树。
  */
 public class Array2BinaryTreeImpl implements Array2BinaryTree {
 
@@ -85,6 +90,31 @@ public class Array2BinaryTreeImpl implements Array2BinaryTree {
     //4、将按后序遍历的方式输入的数组  构造成一个二叉树
     public BinaryTreeImpl createPostOrder(BinaryTree root, int[] array) {
         return null;
+    }
+
+    @Override
+    public BinaryTreeImpl createfulltree(int[] array) {
+        if (array == null || array.length == 0) {
+            return null;
+        }
+        int length = array.length;
+        int base = 2;
+        //判断一个数是否为 2的n次方-1
+        int indexlength = String.valueOf(Math.log(length + 1) / Math.log(base)).length();
+        //double型 整数 数字转字符串长度，长度为3
+        if (indexlength > 3) {
+            return null;
+        }
+        List<BinaryTreeImpl> btlist = new ArrayList<>();
+        for (int i = 0; i < length; i++) {
+            btlist.add(new BinaryTreeImpl(array[i]));
+        }
+        //注意此处的i < (length - 1) / 2，而不是i < (length + 1) / 2
+        for (int i = 0; i < (length - 1) / 2; i++) {
+            btlist.get(i).left = btlist.get(2 * i + 1);
+            btlist.get(i).right = btlist.get(2 * i + 2);
+        }
+        return btlist.get(0);
     }
 
     //5、已知前序遍历序列和中序遍历序列，构建唯一一棵确定的二叉树。

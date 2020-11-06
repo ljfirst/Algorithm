@@ -1,4 +1,4 @@
-package UnitTest.LogicTest.utilsTest;
+package UnitTest.DesignPatternTest.utilsTest;
 
 /**
  * @author liujun

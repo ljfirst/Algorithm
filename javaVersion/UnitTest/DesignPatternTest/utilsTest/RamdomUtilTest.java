@@ -1,14 +1,14 @@
-package UnitTest.LogicTest.utilsTest;
+package UnitTest.DesignPatternTest.utilsTest;
 
 import org.junit.Test;
-import Logic.utils.RamdomUtil;
+import DesignPattern.utils.RamdomUtil;
 import java.util.regex.Pattern;
 
 /**
  * @author liujun
  * @version 1.0
  * @date 2019-11-03 00:21
- * @author¡ªEmail liujunfirst@outlook.com
+ * @authorï¿½ï¿½Email liujunfirst@outlook.com
  * @description 
  */
 public class RamdomUtilTest {
@@ -17,9 +17,9 @@ public class RamdomUtilTest {
 
     @Test
     public void productRandomStringTest(){
-        /*1¡¢ÑéÖ¤³¤¶ÈÎª5
-          2¡¢ÑéÖ¤½öÓÉ0-9/A-Z/a-z¹¹³É
-          3¡¢ÑéÖ¤×Ö·û´®ÊÇ·ñÓÉ×Ö·ûµÈ¸ÅÂÊ×é³É*/
+        /*1ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½Îª5
+          2ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½0-9/A-Z/a-zï¿½ï¿½ï¿½ï¿½
+          3ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
         int testnum = 5;
         String testString;
         String testStringandNum;
@@ -38,26 +38,26 @@ public class RamdomUtilTest {
 
     @Test
     public void getEqualNumTest(){
-        /*Éú³ÉÒ»¸öµÈ¸ÅÂÊµÄ[0,9],[17,42],[49,74]Ö®¼äµÄÊý
-        ÐèÒª×¢ÒâÁ½µã£º1¡¢µÈ¸ÅÂÊµÄÊý£»
-                   2¡¢ÊýÇø¼äÊÇ·ñÕýÈ·*/
+        /*ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½È¸ï¿½ï¿½Êµï¿½[0,9],[17,42],[49,74]Ö®ï¿½ï¿½ï¿½ï¿½ï¿½
+        ï¿½ï¿½Òª×¢ï¿½ï¿½ï¿½ï¿½ï¿½ã£º1ï¿½ï¿½ï¿½È¸ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½
+                   2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½È·*/
         int totalnum = 62;
         int power = 10;
         int[] statistic = new int[75];
         for (int j = 0; j < totalnum * power; j++) {
             int testNum = ramdomUtil.getEqualNum();
-            //2¡¢ÅÐ¶ÏÇø¼äÊÇ·ñÕýÈ·
+            //2ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½È·
             assert (testNum >= 0 && testNum <= 9) || (testNum >= 17 && testNum <= 42) || (testNum >= 49 && testNum <= 75);
             statistic[testNum]++;
         }
-        //1¡¢ÅÐ¶ÏÊÇ·ñµÈ¸ÅÂÊµÄÊý
+        //1ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Ç·ï¿½È¸ï¿½ï¿½Êµï¿½ï¿½ï¿½
         int flag = 0;
         for (int i = 0; i < statistic.length; i++) {
             if(statistic[i] > 2 * power){
                 flag++;
             }
         }
-        //³öÏÖÒì³£Çé¿öµÄÊý¾Ý´óÓÚ1/100
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ì³£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý´ï¿½ï¿½ï¿½1/100
         assert flag <= totalnum/100;
     }
 }
