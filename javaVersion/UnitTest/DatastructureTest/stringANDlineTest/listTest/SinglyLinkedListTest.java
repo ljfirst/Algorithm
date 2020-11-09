@@ -18,65 +18,65 @@ public class SinglyLinkedListTest {
 
     /**
      * 链表的插入: Testinsert
-     * 链表输出为数组 :TesttoArray
+     * 链表输出为数组 :Testtoarray
      * 链表输出: Testprint
      */
     @Test
     public void testinsert() {
         singlyLinkedList.clear();
         singlyLinkedList.insert(true, array01);
-        int[] target = singlyLinkedList.toArray();
+        int[] target = singlyLinkedList.toarray();
         Assert.assertArrayEquals(target, new int[]{});
         singlyLinkedList.clear();
 
         singlyLinkedList.insert(true, array02);
-        target = singlyLinkedList.toArray();
+        target = singlyLinkedList.toarray();
         Assert.assertArrayEquals(target, array02);
         singlyLinkedList.clear();
 
         singlyLinkedList.insert(true, array02_1);
-        target = singlyLinkedList.toArray();
+        target = singlyLinkedList.toarray();
         assert target[0] == array02_1;
         singlyLinkedList.clear();
         singlyLinkedList.insert(false, array02_1);
-        target = singlyLinkedList.toArray();
+        target = singlyLinkedList.toarray();
         assert target[0] == array02_1;
         singlyLinkedList.clear();
 
         for (int i = 0; i < array03.length; i++) {
             singlyLinkedList.insert(true, array03[i]);
         }
-        target = singlyLinkedList.toArray();
+        target = singlyLinkedList.toarray();
         Assert.assertArrayEquals(target, array03_head);
         singlyLinkedList.clear();
 
         for (int i = 0; i < array03.length; i++) {
             singlyLinkedList.insert(false, array03[i]);
         }
-        target = singlyLinkedList.toArray();
+        target = singlyLinkedList.toarray();
         Assert.assertArrayEquals(target, array03_tail);
         singlyLinkedList.clear();
 
         singlyLinkedList.insert(true, array04);
-        target = singlyLinkedList.toArray();
+        target = singlyLinkedList.toarray();
         Assert.assertArrayEquals(target, array04_head);
         singlyLinkedList.clear();
         singlyLinkedList.insert(false, array04);
-        target = singlyLinkedList.toArray();
+        target = singlyLinkedList.toarray();
         Assert.assertArrayEquals(target, array04_tail);
         singlyLinkedList.clear();
 
         singlyLinkedList.insert(false, array01);
-        target = singlyLinkedList.toArray();
+        target = singlyLinkedList.toarray();
         Assert.assertArrayEquals(target, new int[]{});
         singlyLinkedList.clear();
 
         singlyLinkedList.insert(true, array05);
-        target = singlyLinkedList.toArray();
+        target = singlyLinkedList.toarray();
         Assert.assertArrayEquals(target, array05_head);
         singlyLinkedList.clear();
         singlyLinkedList.insert(false, array05);
-        target = singlyLinkedList.toArray();
+        target = singlyLinkedList.toarray();
         Assert.assertArrayEquals(target, array05_tail);
         singlyLinkedList.clear();
     }
@@ -88,11 +88,11 @@ public class SinglyLinkedListTest {
     public void testdeletex() {
         singlyLinkedList.clear();
         singlyLinkedList.insert(true, array04);
-        boolean flag = singlyLinkedList.deletex(5);
+        boolean flag = singlyLinkedList.delete_value(5);
         assert flag;
-        flag = singlyLinkedList.deletex(986);
+        flag = singlyLinkedList.delete_value(986);
         assert flag;
-        flag = singlyLinkedList.deletex(666);
+        flag = singlyLinkedList.delete_value(666);
         assert !flag;
     }
 
@@ -103,11 +103,11 @@ public class SinglyLinkedListTest {
     public void testdeleteindex() {
         singlyLinkedList.clear();
         singlyLinkedList.insert(true, array04);
-        boolean flag = singlyLinkedList.deleteindex(5);
+        boolean flag = singlyLinkedList.delete_index(5);
         assert flag;
-        flag = singlyLinkedList.deleteindex(986);
+        flag = singlyLinkedList.delete_index(986);
         assert !flag;
-        flag = singlyLinkedList.deleteindex(10);
+        flag = singlyLinkedList.delete_index(10);
         assert flag;
     }
 
@@ -118,11 +118,11 @@ public class SinglyLinkedListTest {
     public void testsearchx() {
         singlyLinkedList.clear();
         singlyLinkedList.insert(false, array04);
-        int flag = singlyLinkedList.searchx(5);
+        int flag = singlyLinkedList.search_value(5);
         assert flag == 5;
-        flag = singlyLinkedList.searchx(986);
+        flag = singlyLinkedList.search_value(986);
         assert flag == 6;
-        flag = singlyLinkedList.searchx(666);
+        flag = singlyLinkedList.search_value(666);
         assert flag == -1;
     }
 
@@ -133,11 +133,11 @@ public class SinglyLinkedListTest {
     public void testsearchindex() {
         singlyLinkedList.clear();
         singlyLinkedList.insert(false, array04);
-        int target = singlyLinkedList.searchindex(5);
+        int target = singlyLinkedList.search_index(5);
         assert target == 5;
-        target = singlyLinkedList.searchindex(10);
+        target = singlyLinkedList.search_index(10);
         assert target == 8;
-        target = singlyLinkedList.searchindex(200);
+        target = singlyLinkedList.search_index(200);
         assert target == Integer.MIN_VALUE;
     }
 

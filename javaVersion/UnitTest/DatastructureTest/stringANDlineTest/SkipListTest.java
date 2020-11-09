@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest;
 
-import DataStructure.stringANDline.list.SkipList;
+import DataStructure.stringANDline.list.listRealize.SkipList;
 import org.junit.Test;
 
 /**

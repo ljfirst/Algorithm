@@ -7,7 +7,7 @@ import org.junit.Test;
  * @author liujun
  * @version 1.0
  * @date 2018-4-22 Time������12:04:32
- * @Email ljfirst@mail.ustc.edu.cn
+ * @author-Email ljfirst@mail.ustc.edu.cn
  * @description
  *      1.SinglePattern
  *      2.HungrySinglePattern
@@ -16,7 +16,7 @@ import org.junit.Test;
  */
 public class SinglePatternTimeTest {
 
-    @Test
+    //@Test
     public void timeTest() {
         long begintime = System.nanoTime();
         for (int i = 0; i < 100000; i++) {

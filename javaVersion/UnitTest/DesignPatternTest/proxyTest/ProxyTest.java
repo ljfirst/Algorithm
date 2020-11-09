@@ -9,7 +9,7 @@ import org.junit.Test;
  * @author liujun
  * @version 1.0
  * @date 2020/5/17
- * @author¡ªEmail liujunfirst@outlook.com
+ * @authorâ€”Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
  * @description
  */

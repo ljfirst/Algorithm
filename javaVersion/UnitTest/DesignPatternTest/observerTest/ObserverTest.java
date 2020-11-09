@@ -12,9 +12,9 @@ import org.junit.Test;
  * @description
  */
 public class ObserverTest {
-    @Test
-    public void Testobserer(){
 
+    //@Test
+    public void Testobserer(){
         //被观察者
         ObservableDemo observableDemo = new ObservableDemo();
         //观察者
@@ -27,6 +27,5 @@ public class ObserverTest {
         observableDemo.action();
         System.out.println("-----------------");
         observableDemo.normalaction();
-
     }
 }

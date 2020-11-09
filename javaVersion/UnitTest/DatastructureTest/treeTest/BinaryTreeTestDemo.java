@@ -9,6 +9,8 @@ import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
  */
 public class BinaryTreeTestDemo {
 
+    int Symbol = Integer.MIN_VALUE;
+
     public BinaryTreeImpl binaryTreeImplDemo1 = null;
     public BinaryTreeImpl binaryTreeImplDemo2 = null;
     public BinaryTreeImpl binaryTreeImplDemo3 = null;
@@ -18,9 +20,10 @@ public class BinaryTreeTestDemo {
     public int[] treeArray01s = {};
     public int[] treeArray02s = {};
     public int[] treeArray03s = {1, 2, 3, 7, 6, 5, 4};
-    public int[] treeArray04s = {1, 2, 3, 7, -1, -1, 4};
-    public int[] treeArray05s = {1, 2, 3, 8, 7, 6, 4, 9, -1, -1, -1, 10, 11, 12, -1, -1, 5, -1, -1,
-            16, 15, -1, 13, 14, -1, -1, -1, 17, -1, -1, 20, -1, -1, 18, -1, -1, -1, 19, -1, -1, -1};
+    public int[] treeArray04s = {1, 2, 3, 7, Symbol, Symbol, 4};
+    public int[] treeArray05s = {1, 2, 3, 8, 7, 6, 4, 9, Symbol, Symbol, Symbol, 10, 11, 12, Symbol, Symbol,  5,
+            Symbol,Symbol, 16, 15, Symbol,  13, 14, Symbol, Symbol, Symbol,  17, Symbol, Symbol,  20, Symbol, Symbol,
+            18, Symbol, Symbol, Symbol,  19, Symbol, Symbol, Symbol, };
 
     //层次遍历的数组
     public int[] treeArray01 = {};
@@ -35,29 +38,44 @@ public class BinaryTreeTestDemo {
             4, -1, -1, 7};
 
     public int[] treeArray05 = {
-                                 1,
-                       2,                       3,
-                     4,      6,         7,              8,
-                   9, -1, -1, -1,   10,       11,    12,  -1,
-                13, -1,         15,     16, -1, -1, 5, -1,
-              14, -1,         -1, -1, 17, -1,     -1, 20,
-            -1, -1,                 -1, 18,         -1, -1,
-                                       19, -1,
+                                      1,
+                           2,                   3,
+                       4,      6,         7,                8,
+                     9, -1, -1, -1,   10,       11,      12,  -1,
+                  13, -1,         15,     16, -1, -1,  5,  -1,
+               14, -1,         -1, -1,  17, -1,     -1,  20,
+            -1, -1,                  -1,  18,         -1, -1,
+                                        19, -1,
                                      -1, -1
     };
 
     //先序遍历的数组
     public int[] treeArray03Preorder = {1, 2, 4, 5, 3, 6, 7};
+    public int[] treeArray03Preorder_Symbol = {1, 2, 4, Symbol, Symbol,5, Symbol, Symbol, 3, 6, Symbol, Symbol, 7, Symbol, Symbol};
     public int[] treeArray04Preorder = {1, 2, 4, 3, 7};
+    public int[] treeArray04Preorder_Symbol = {1, 2, 4, Symbol, Symbol, Symbol, 3, Symbol, 7,Symbol, Symbol};
     public int[] treeArray05Preorder = {1, 2, 4, 9, 13, 14, 6, 3, 7, 10, 15, 16, 17, 18, 19, 11, 8, 12, 5, 20};
+    public int[] treeArray05Preorder_Symbol = {1, 2, 4, 9, 13, 14, Symbol, Symbol, Symbol, Symbol, Symbol, 6,Symbol, Symbol,
+            3, 7, 10, 15, Symbol, Symbol, 16, 17, Symbol, 18, 19, Symbol, Symbol, Symbol, Symbol, 11, Symbol, Symbol, 8, 12,
+            5, Symbol, 20, Symbol, Symbol, Symbol, Symbol};
     //中序遍历的数组
     public int[] treeArray03Inorder = {4, 2, 5, 1, 6, 3, 7};
+    public int[] treeArray03Inorder_Symbol = {Symbol, 4, Symbol, 2, Symbol, 5, Symbol, 1, Symbol, 6, Symbol, 3, Symbol, 7, Symbol};
     public int[] treeArray04Inorder = {4, 2, 1, 3, 7};
+    public int[] treeArray04Inorder_Symbol = {Symbol, 4, Symbol, 2, Symbol, 1, Symbol, 3, Symbol, 7, Symbol};
     public int[] treeArray05Inorder = {14, 13, 9, 4, 2, 6, 1, 15, 10, 17, 19, 18, 16, 7, 11, 3, 5, 20, 12, 8};
+    public int[] treeArray05Inorder_Symbol = {Symbol, 14, Symbol, 13, Symbol, 9, Symbol, 4, Symbol, 2, Symbol,
+            6, Symbol, 1, Symbol, 15, Symbol, 10, Symbol, 17, Symbol, 19, Symbol, 18, Symbol, 16, Symbol,
+            7, Symbol, 11, Symbol, 3, Symbol, 5, Symbol, 20, Symbol, 12, Symbol, 8, Symbol};
     //后序遍历的数组
     public int[] treeArray03Postorder = {4, 5, 2, 6, 7, 3, 1};
+    public int[] treeArray03Postorder_Symbol = {Symbol, Symbol, 4, Symbol, Symbol, 5, 2, Symbol, Symbol, 6, Symbol, Symbol, 7, 3, 1};
     public int[] treeArray04Postorder = {4, 2, 7, 3, 1};
+    public int[] treeArray04Postorder_Symbol = {Symbol, Symbol, 4, Symbol, 2, Symbol, Symbol, Symbol, 7, 3, 1};
     public int[] treeArray05Postorder = {14, 13, 9, 4, 6, 2, 15, 19, 18, 17, 16, 10, 11, 7, 20, 5, 12, 8, 3, 1};
+    public int[] treeArray05Postorder_Symbol = {Symbol, Symbol, 14, Symbol, 13, Symbol, 9, Symbol, 4,
+            Symbol, Symbol, 6, 2, Symbol, Symbol, 15, Symbol, Symbol, Symbol, 19, Symbol, 18, 17, Symbol, 16, 10,
+            Symbol, Symbol, 11, 7, Symbol, Symbol, Symbol, 20, 5, Symbol, 12, Symbol, 8, 3, 1};
     //创建满二叉树
     public int[] treeArray01full = null;
     public int[] treeArray02full = {};

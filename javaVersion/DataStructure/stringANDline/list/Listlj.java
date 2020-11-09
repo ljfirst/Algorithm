@@ -1,7 +1,5 @@
 package DataStructure.stringANDline.list;
 
-import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
-
 /**
  * @author liujun
  * @version 1.0
@@ -9,72 +7,63 @@ import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 链表
- * 1、链表输出为数组
- * 2、链表的插入
- * 3、链表清除函数
- * 4、链表的相等（自身对比）
- * 5、链表的相等（两个链表对比）
+ * 1、插入（批量插入、指定位置插入）
+ * 2、删除（删除元素、删除指定位置的元素）
+ * 3、查找（查找元素、查找指定位置的元素）
+ * 4、输出（数组）
+ * 5、相等
+ * 6、清除
  */
 public interface Listlj {
 
     /**
-     * 链表输出为数组
+     * @param HeadTail 头插法或者尾插法
+     * @param args     输入待插入数据
+     * @return 使用头插法或者尾查法进行批量插入 返回成功或者失败
      */
-    public int[] toArray();
+    public boolean insert(boolean HeadTail, int... args);
 
     /**
-     * 链表的插入
-     * 1、允许插入单个值
-     * 2、允许插入数组
-     * 3、使用头插法或者尾插法
-     * 4、对本list进行操作
+     * @param index 索引位置
+     * @param args  待插入元素
+     * @return 在索引位置插入元素
+     */
+    public boolean insert(int index, int... args);
+
+    /**
+     * @param value
+     * @return 删除指定元素
+     */
+    public boolean delete_value(int value);
+
+    /**
+     * @param index
+     * @return 删除索引位元素
+     */
+    public boolean delete_index(int index);
+
+    /**
+     * @param value
+     * @return 查找指定元素，返回该元素的索引位置
+     */
+    public int search_value(int value);
+
+    /**
+     * @param index
+     * @return 查找索引位元素，返回该索引位置的元素
+     */
+    public int search_index(int index);
+
+    /**
+     * @return 将链表输出为数组
+     */
+    public int[] toarray();
+
+
+    /**
      *
-     * @param arr
-     * @param flag true表示头插法，tail表示尾插法
-     */
-    public void insert(boolean flag, int... arr);
-
-    /**
-     * 链表清除函数
+     * @return 链表置空操作
      */
     public void clear();
 
-    /**
-     * 链表删除特定值的函数
-     */
-    public boolean deletex(int x);
-
-    /**
-     * 链表删除特定索引的函数
-     */
-    public boolean deleteindex(int index);
-
-    /**
-     * 链表查找函数
-     * 查找成功，返回该元素下标
-     * 查找失败，返回 -1
-     */
-    public int searchx(int x);
-
-    /**
-     * 链表查找函数
-     * 查找成功，返回该坐标的值
-     * 查找失败，返回 Integer.MIN_VALUE
-     */
-    public int searchindex(int index);
-
-    /**
-     *
-     * @param l1 单链表
-     * @param l2 单链表
-     * @return l1和l2进行对比
-     */
-    public boolean equals(SinglyLinkedList l1, SinglyLinkedList l2);
-
-    /**
-     *
-     * @param l1
-     * @return l1和链表自身进行对比
-     */
-    public boolean equals(SinglyLinkedList l1);
 }

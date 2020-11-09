@@ -4,7 +4,6 @@ import DataStructure.tree.binaryTree.Array2BinaryTree;
 import DataStructure.tree.binaryTree.binaryTreeRealize.Array2BinaryTreeImpl;
 import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
 import UnitTest.DatastructureTest.treeTest.BinaryTreeTestDemo;
-import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -25,7 +24,7 @@ public class Array2BinaryTreeImplTest extends BinaryTreeTestDemo {
     Array2BinaryTree binaryTreeCreate = new Array2BinaryTreeImpl();
     BinaryTreeImpl binaryTree = new BinaryTreeImpl();
 
-    //按层构建二叉树
+    //1、按层构建二叉树
     @Test
     public void testCreateBinaryTreeLevel() {
 
@@ -46,6 +45,51 @@ public class Array2BinaryTreeImplTest extends BinaryTreeTestDemo {
         binaryTreeImplDemo1 = binaryTreeCreate.createBinaryTreeLevel(treeArray05);
         binaryTreeImplDemo4 = gettreeDemo05();
         assert binaryTree.equals(binaryTreeImplDemo1, binaryTreeImplDemo4);
+    }
+
+    //2、将按先序遍历的方式输入的数组  构造成一个二叉树
+    @Test
+    public void testcreatePreOrder() {
+        binaryTreeImplDemo1 = binaryTreeCreate.createPreOrder(treeArray01);
+        assert binaryTree.equals(binaryTreeImplDemo1, null);
+        binaryTreeImplDemo1 = binaryTreeCreate.createPreOrder(treeArray02);
+        assert binaryTree.equals(binaryTreeImplDemo1, null);
+        binaryTreeImplDemo1 = binaryTreeCreate.createPreOrder(treeArray03Preorder_Symbol);
+        assert binaryTree.equals(binaryTreeImplDemo1, gettreeDemo03());
+        binaryTreeImplDemo1 = binaryTreeCreate.createPreOrder(treeArray04Preorder_Symbol);
+        assert binaryTree.equals(binaryTreeImplDemo1, gettreeDemo04());
+        binaryTreeImplDemo1 = binaryTreeCreate.createPreOrder(treeArray05Preorder_Symbol);
+        assert binaryTree.equals(binaryTreeImplDemo1, gettreeDemo05());
+    }
+
+    //3、将按中序遍历的方式输入的数组  构造成一个二叉树
+    /*@Test
+    public void testcreateInOrder() {
+        binaryTreeImplDemo1 = binaryTreeCreate.createInOrder(treeArray01);
+        assert binaryTree.equals(binaryTreeImplDemo1, null);
+        binaryTreeImplDemo1 = binaryTreeCreate.createInOrder(treeArray02);
+        assert binaryTree.equals(binaryTreeImplDemo1, null);
+        binaryTreeImplDemo1 = binaryTreeCreate.createInOrder(treeArray03Inorder_Symbol);
+        assert binaryTree.equals(binaryTreeImplDemo1, gettreeDemo03());
+        binaryTreeImplDemo1 = binaryTreeCreate.createInOrder(treeArray04Inorder_Symbol);
+        assert binaryTree.equals(binaryTreeImplDemo1, gettreeDemo04());
+        binaryTreeImplDemo1 = binaryTreeCreate.createInOrder(treeArray05Inorder_Symbol);
+        assert binaryTree.equals(binaryTreeImplDemo1, gettreeDemo05());
+    }*/
+
+    //4、将按后序遍历的方式输入的数组  构造成一个二叉树
+    @Test
+    public void testcreatePostOrder() {
+        binaryTreeImplDemo1 = binaryTreeCreate.createPostOrder(treeArray01);
+        assert binaryTree.equals(binaryTreeImplDemo1, null);
+        binaryTreeImplDemo1 = binaryTreeCreate.createPostOrder(treeArray02);
+        assert binaryTree.equals(binaryTreeImplDemo1, null);
+        binaryTreeImplDemo1 = binaryTreeCreate.createPostOrder(treeArray03Postorder_Symbol);
+        assert binaryTree.equals(binaryTreeImplDemo1, gettreeDemo03());
+        binaryTreeImplDemo1 = binaryTreeCreate.createPostOrder(treeArray04Postorder_Symbol);
+        assert binaryTree.equals(binaryTreeImplDemo1, gettreeDemo04());
+        binaryTreeImplDemo1 = binaryTreeCreate.createPostOrder(treeArray05Postorder_Symbol);
+        assert binaryTree.equals(binaryTreeImplDemo1, gettreeDemo05());
     }
 
     // 5、将一个完全二叉树的数组 构造成一个二叉树

@@ -1,6 +1,6 @@
 package DataStructure.stringANDline.list.listRealize;
 
-import DataStructure.stringANDline.list.Listlj;
+import DataStructure.stringANDline.list.Nodelj;
 
 /**
  * @author liujun
@@ -67,7 +67,7 @@ public class SinglyLinkedListReverse {
             head = node_pre;
         }
         listlj.head.next = head;
-        int[] array = listlj.toArray();
+        int[] array = listlj.toarray();
         return array;
     }
 
@@ -78,7 +78,7 @@ public class SinglyLinkedListReverse {
         }
         Nodelj node = listlj.head.next;
         listlj.head.next = SYSstack(node);
-        int[] array = listlj.toArray();
+        int[] array = listlj.toarray();
         return array;
     }
 
@@ -104,10 +104,10 @@ public class SinglyLinkedListReverse {
         }
         if (listlj.head.value == 0 || index1 == index2 ||
                 index1 > listlj.head.value || index2 > listlj.head.value) {
-            return listlj.toArray();
+            return listlj.toarray();
         }
         revert(listlj, index1, index2);
-        int[] arr = listlj.toArray();
+        int[] arr = listlj.toarray();
         return arr;
     }
 
@@ -150,7 +150,7 @@ public class SinglyLinkedListReverse {
             return new int[]{};
         }
         if (listlj.head.value == 0 || n >= listlj.head.value || n == 1) {
-            return listlj.toArray();
+            return listlj.toarray();
         }
         int loop = 0;
         //注意循环的位置，因为从0开始，所以取不到 listlj.head.value
@@ -158,7 +158,7 @@ public class SinglyLinkedListReverse {
             revert(listlj, loop, loop + n - 1);
             loop = loop + n;
         }
-        int[] array = listlj.toArray();
+        int[] array = listlj.toarray();
         return array;
     }
 }

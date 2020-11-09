@@ -1,7 +1,6 @@
-package DataStructure.stringANDline.list;
+package DataStructure.stringANDline.list.listRealize;
 
-import DataStructure.stringANDline.list.listRealize.Nodelj;
-import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
+import DataStructure.stringANDline.list.Nodelj;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,7 +8,7 @@ import java.util.Map;
 /** 
  *@author liujun
  *@date 2018-8-22 ����02:06:33
- *@author��Email liujunfirst@outlook.com
+ *@author-Email liujunfirst@outlook.com
  *@description  ������
  *1. β�巨��дΪ�����л�����
  *2. �жϵ��ı��Ƿ��л�

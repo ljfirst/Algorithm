@@ -1,7 +1,7 @@
 package DataStructure.tree.binaryTree.binaryTreeRealize;
 
 import DataStructure.stringANDline.list.Listlj;
-import DataStructure.stringANDline.list.listRealize.Nodelj;
+import DataStructure.stringANDline.list.Nodelj;
 import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
 import DataStructure.tree.binaryTree.BinaryTree2LinkedList;
 

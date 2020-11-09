@@ -8,7 +8,7 @@ import org.junit.Test;
  * @author liujun
  * @version 1.0
  * @date 2019-12-18 23:27
- * @author¡ªEmail liujunfirst@outlook.com
+ * @authorâ€”Email liujunfirst@outlook.com
  * @description 
  * @blogURL
  */
@@ -50,6 +50,6 @@ public class UnionFindTimeTest {
         assert unionFindOpt.connected(num/2+1, num/2+3);
         assert !unionFindOpt.connected(num/2, num/2+1);
         long timecount1 = System.nanoTime() - timeBegin;
-        System.out.println("unionFindOpt:"+timecount1);
+        //System.out.println("unionFindOpt:"+timecount1);
     }
 }

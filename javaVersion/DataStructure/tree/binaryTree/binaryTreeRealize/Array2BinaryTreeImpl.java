@@ -1,24 +1,20 @@
 package DataStructure.tree.binaryTree.binaryTreeRealize;
 
-import DataStructure.stringANDline.list.Listlj;
 import DataStructure.tree.binaryTree.Array2BinaryTree;
 import DataStructure.tree.binaryTree.BinaryTree;
-import com.sun.org.apache.xpath.internal.operations.Lt;
+import sun.jvm.hotspot.debugger.cdbg.Sym;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * @author liujun
  * @date 2020-02-18 16:42
  * @description 二叉树的实现
  * 单序创建：
- * 1、将按层次遍历的方式输入的数组  构造成一个二叉树
- * 2、将按先序遍历的方式输入的数组  构造成一个二叉树
- * 3、将按中序遍历的方式输入的数组  构造成一个二叉树
- * 4、将按后序遍历的方式输入的数组  构造成一个二叉树
+ * 1、将按层次遍历的方式输入的数组(特殊符号)  构造成一个二叉树
+ * 2、将按先序遍历的方式输入的数组(特殊符号)  构造成一个二叉树
+ * 3、将按中序遍历的方式输入的数组(特殊符号)  构造成一个二叉树
+ * 4、将按后序遍历的方式输入的数组(特殊符号)  构造成一个二叉树
  * 5、将一个完全二叉树的数组 构造成一个二叉树
  * 多序创建：
  * 6、已知前序遍历序列和中序遍历序列，构建唯一一棵确定的二叉树。
@@ -26,10 +22,11 @@ import java.util.Queue;
  */
 public class Array2BinaryTreeImpl implements Array2BinaryTree {
 
+    int Symbol = Integer.MIN_VALUE;
+
     //1、将按层次遍历的方式输入的数组  构造成一个二叉树(写法一：非递归，堆栈)
     @Override
     public BinaryTreeImpl createBinaryTreeLevel(int[] array) {
-
         if (!check(array)) {
             return null;
         }
@@ -42,12 +39,12 @@ public class Array2BinaryTreeImpl implements Array2BinaryTree {
         while (!queue.isEmpty()) {
             BinaryTreeImpl binaryTree = queue.poll();
             //left child exist
-            if (++depth < array.length && array[depth] != -1) {
+            if (++depth < array.length && array[depth] != Symbol) {
                 binaryTree.left = new BinaryTreeImpl(array[depth]);
                 queue.offer(binaryTree.left);
             }
             //right child exist
-            if (++depth < array.length && array[depth] != -1) {
+            if (++depth < array.length && array[depth] != Symbol) {
                 binaryTree.right = new BinaryTreeImpl(array[depth]);
                 queue.offer(binaryTree.right);
             }
@@ -60,7 +57,7 @@ public class Array2BinaryTreeImpl implements Array2BinaryTree {
 
     public BinaryTreeImpl createBinaryTreeLevel(BinaryTreeImpl root, int[] tree_num, int i) {
         if (i < tree_num.length) {
-            if (tree_num[i] == -1) {
+            if (tree_num[i] == Symbol) {
                 return null;
             } else {
                 //new root's lchild and rchild
@@ -77,19 +74,69 @@ public class Array2BinaryTreeImpl implements Array2BinaryTree {
 
     //2、将按先序遍历的方式输入的数组  构造成一个二叉树
     public BinaryTreeImpl createPreOrder(int[] array) {
+        Queue<BinaryTreeImpl> queue = new LinkedList<>();
+        if (!check(array)) {
+            return null;
+        }
+        for (int value : array) {
+            queue.add(new BinaryTreeImpl(value));
+        }
+        BinaryTreeImpl root = PreOrder(queue);
+        return root;
+    }
 
-        count = 0;
-        return null;
+    private BinaryTreeImpl PreOrder(Queue<BinaryTreeImpl> queue) {
+        if (queue == null) {
+            return null;
+        }
+        BinaryTreeImpl root = queue.poll();
+        if (root.value == Symbol) {
+            return null;
+        }
+        root.left = PreOrder(queue);
+        root.right = PreOrder(queue);
+        return root;
     }
 
     //3、将按中序遍历的方式输入的数组  构造成一个二叉树
-    public BinaryTreeImpl createInOrder(BinaryTree root, int[] array) {
+    public BinaryTreeImpl createInOrder(int[] array) {
+        /*if (!check(array)) {
+            return null;
+        }
+        Queue<BinaryTreeImpl> queue = new LinkedList<>();
+        for (int value : array) {
+            queue.add(new BinaryTreeImpl(value));
+        }
+        BinaryTreeImpl root = InOrder(queue);
+        return root;*/
+        //因为无法找到跟节点，所以无法构造
         return null;
     }
 
     //4、将按后序遍历的方式输入的数组  构造成一个二叉树
-    public BinaryTreeImpl createPostOrder(BinaryTree root, int[] array) {
-        return null;
+    public BinaryTreeImpl createPostOrder(int[] array) {
+        if (!check(array)) {
+            return null;
+        }
+        Deque<BinaryTreeImpl> queue = new LinkedList<>();
+        for (int value : array) {
+            queue.add(new BinaryTreeImpl(value));
+        }
+        BinaryTreeImpl root = PostOrder(queue);
+        return root;
+    }
+
+    private BinaryTreeImpl PostOrder(Deque<BinaryTreeImpl> queue) {
+        if (queue == null) {
+            return null;
+        }
+        BinaryTreeImpl root = queue.pollLast();
+        if (root.value == Symbol) {
+            return null;
+        }
+        root.right = PostOrder(queue);
+        root.left = PostOrder(queue);
+        return root;
     }
 
     @Override

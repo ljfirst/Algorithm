@@ -1,7 +1,7 @@
 package UnitTest.DatastructureTest.treeTest.binaryTreeTest.binaryTreeApplyTest;
 
 import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
-import DataStructure.tree.binaryTree.ertyuygf.NearestCommonParent;
+import DataStructure.tree.binaryTree.binaryTreeApply.NearestCommonParent;
 import UnitTest.DatastructureTest.treeTest.BinaryTreeTestDemo;
 import org.junit.Test;
 
@@ -14,9 +14,8 @@ import org.junit.Test;
  * @description 查找最近公共父节点 测试案例
  */
 public class NearestCommonParentTest extends BinaryTreeTestDemo {
+
     NearestCommonParent ncp = new NearestCommonParent();
-
-
 
     @Test
     public void testfindNCP() {
@@ -43,7 +42,7 @@ public class NearestCommonParentTest extends BinaryTreeTestDemo {
         assert value == 17;
     }
 
-    //@Test
+    @Test
     public void testfind() {
         BinaryTreeImpl target = ncp.findxandy(gettreeDemo03(), 5, 7);
         int value = target.value;

@@ -1,10 +1,12 @@
-package DataStructure.stringANDline.list;
+package DataStructure.stringANDline.list.listRealize;
+
+import DataStructure.stringANDline.list.Nodelj;
 
 /**
  * @author liujun
  * @version 1.0
  * @date 2019-12-07 18:17
- * @author��Email  liujunfirst@outlook.com
+ * @author-Email  liujunfirst@outlook.com
  * @description 
  * 1��˫������Ĳ���
  * 2��˫������ɾ��
@@ -14,8 +16,8 @@ package DataStructure.stringANDline.list;
  */
 public class DoubleLinkedList {
 
-    DoubleLinkedNode headpoint = null;
-    DoubleLinkedNode tailpoint = null;
+    Nodelj headpoint = null;
+    Nodelj tailpoint = null;
     int size;
 
     public DoubleLinkedList(){
@@ -29,7 +31,7 @@ public class DoubleLinkedList {
             return null;
         }
         for (int i = 0; i < array.length; i++) {
-            DoubleLinkedNode node = new DoubleLinkedNode(array[i]);
+            Nodelj node = new Nodelj(array[i]);
             //�޸� ǰ���׽ڵ�
             node.next = head.headpoint;
             node.next.front = node;

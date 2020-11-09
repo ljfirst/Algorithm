@@ -1,7 +1,7 @@
 package DataStructure.sort.innerSort.innerSortRealize;
 
 import DataStructure.sort.innerSort.SortInterface;
-import DataStructure.stringANDline.list.listRealize.Nodelj;
+import DataStructure.stringANDline.list.Nodelj;
 
 /**
  * @author liujun

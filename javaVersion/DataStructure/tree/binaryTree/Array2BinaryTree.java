@@ -26,10 +26,10 @@ public interface Array2BinaryTree extends Tree {
     public BinaryTreeImpl createPreOrder(int[] array);
 
     //3、将按中序遍历的方式输入的数组  构造成一个二叉树
-    public BinaryTreeImpl createInOrder(BinaryTree root, int[] array);
+    public BinaryTreeImpl createInOrder(int[] array);
 
     //4、将按后序遍历的方式输入的数组  构造成一个二叉树
-    public BinaryTreeImpl createPostOrder(BinaryTree root, int[] array);
+    public BinaryTreeImpl createPostOrder(int[] array);
 
     //5、将一个完全二叉树的数组 构造成一个二叉树
     public BinaryTreeImpl createfulltree(int[] array);

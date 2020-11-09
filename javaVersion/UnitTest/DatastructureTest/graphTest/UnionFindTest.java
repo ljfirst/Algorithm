@@ -7,7 +7,7 @@ import org.junit.Test;
  * @author liujun
  * @version 1.0
  * @date 2019-12-18 21:16
- * @author¡ªEmail liujunfirst@outlook.com
+ * @authorâ€”Email liujunfirst@outlook.com
  * @description 
  * @blogURL
  */

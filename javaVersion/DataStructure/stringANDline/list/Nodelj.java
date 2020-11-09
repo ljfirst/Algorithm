@@ -1,4 +1,7 @@
-package DataStructure.stringANDline.list.listRealize;
+package DataStructure.stringANDline.list;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author liujun
@@ -8,18 +11,28 @@ package DataStructure.stringANDline.list.listRealize;
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 单链表
  */
+
 public class Nodelj {
 
     public int value;
-    public Nodelj next = null;
+    public Nodelj next;
+    public Nodelj front;
+    public Nodelj down;
 
     // 单链表
     public Nodelj() {
-        this.value = 0;
+        this.value = Integer.MIN_VALUE;
+        this.next = null;
+        this.front = null;
+        this.down = null;
     }
 
-    // 单链表
+    // 单链表、双向链表、跳表
     public Nodelj(int value) {
         this.value = value;
+        this.next = null;
+        this.front = null;
+        this.down = null;
     }
+
 }

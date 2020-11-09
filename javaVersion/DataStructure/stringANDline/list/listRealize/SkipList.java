@@ -1,4 +1,6 @@
-package DataStructure.stringANDline.list;
+package DataStructure.stringANDline.list.listRealize;
+
+import DataStructure.stringANDline.list.Nodelj;
 
 import java.util.Random;
 
@@ -7,7 +9,6 @@ import java.util.Random;
  * @version 1.0
  * @date 2019-7-25 ����11:59:31
  * @author-Email liujunfirst@outlook.com
- * @CSDN Blog URL:
  * @description 跳表
  * 支持：
  * 清除(clear)、初始化(initial)
@@ -16,7 +17,7 @@ import java.util.Random;
 public class SkipList {
 
     //ͷβָ��(����ͷָ��ֵΪ��Сֵ��βָ��Ϊ���ֵ)
-    SkipListNode head, tail;
+    Nodelj head, tail;
     //��Ծ����
     public int SkipListlevel;
     //��Ծ���ܽ�����
@@ -36,10 +37,10 @@ public class SkipList {
         tail = null;
     }
 
-    public SkipListNode initial() {
+    public Nodelj initial() {
         // TODO Auto-generated method stub
-        SkipListNode phead = new SkipListNode();
-        SkipListNode ptail = new SkipListNode();
+        Nodelj phead = new Nodelj();
+        Nodelj ptail = new Nodelj();
         phead.value = HEAD_KEY;
         ptail.value = TAIL_KEY;
         phead.next = ptail;
@@ -51,8 +52,8 @@ public class SkipList {
         if (find(Value)) {
             return;
         }
-        SkipListNode insertKey;
-        SkipListNode fathersln = null;
+        Nodelj insertKey;
+        Nodelj fathersln = null;
         /* ����ʵ��֤�������� ��ʱ �� ���� ���Ӻ�ʱ��
         ����Խ�ߣ��������ݱ���Խ�࣬Խӷ�ף����ǲ��ҿ졢�����ɾ����
 		����Խ�ͣ��������ݱ���Խ�٣�      ���ǲ������������ɾ����
@@ -67,7 +68,7 @@ public class SkipList {
                 insertKey = insertKey.down;
             }
         } else {//��Ҫ�½�����
-            SkipListNode phead = initial();
+            Nodelj phead = initial();
             phead.down = head;
             phead.next.down = tail;
             head = phead;
@@ -80,7 +81,7 @@ public class SkipList {
             while (insertKey.next.value < Value) {
                 insertKey = insertKey.next;
             }
-            SkipListNode sln = new SkipListNode(Value);
+            Nodelj sln = new Nodelj(Value);
             if (fathersln != null) {
                 fathersln.down = sln;
             }
@@ -104,8 +105,8 @@ public class SkipList {
 		if (!find(x)) {
 			return false;
 		}
-        SkipListNode point = head;
-        SkipListNode prepoint = point;
+        Nodelj point = head;
+        Nodelj prepoint = point;
 
         //�������
         while (point.value != x) {
@@ -142,7 +143,7 @@ public class SkipList {
 
     public boolean find(int x) {
 
-        SkipListNode point = head;
+        Nodelj point = head;
         while (true) {
             while (point.next.value <= x) {
                 point = point.next;
@@ -163,8 +164,8 @@ public class SkipList {
     }
 
     public void print() {//������������ṹ
-        SkipListNode point;
-        SkipListNode headpoint = head;
+        Nodelj point;
+        Nodelj headpoint = head;
         while (headpoint != null) {
             point = headpoint;
             while (point.value != TAIL_KEY) {
