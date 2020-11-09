@@ -1,4 +1,4 @@
-package DataStructure.tree.binaryTree.ertyuygf;
+package DataStructure.tree.binaryTree.binaryTreeApply;
 
 import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
 
@@ -31,13 +31,13 @@ public class BinaryTreeLargestSubPath {
         return arrayValue;
     }
 
-    private List countPath(BinaryTreeImpl binaryTree) {
+    private void countPath(BinaryTreeImpl binaryTree) {
         if (binaryTree == null) {
-            return list;
+            return ;
         }
         sumTemp += binaryTree.value;
-
         listTemp.add(binaryTree.value);
+
         if (sumTemp > sum) {
             sum = sumTemp;
             //此处的list一定要重新赋值（Java值传递，但是此处是引用）
@@ -49,19 +49,20 @@ public class BinaryTreeLargestSubPath {
         sumTemp -= binaryTree.value;
         //list最好用remove对象方式，而不是值
         listTemp.remove((Integer) binaryTree.value);
-        return list;
     }
 
     public int countLargestSum(BinaryTreeImpl binaryTree) {
         if (binaryTree == null) {
             return 0;
         }
+
         sumTemp += binaryTree.value;
         if (sumTemp > sum) {
             sum = sumTemp;
         }
         countLargestSum(binaryTree.left);
         countLargestSum(binaryTree.right);
+
         sumTemp -= binaryTree.value;
         return sum;
     }

@@ -51,6 +51,7 @@ public interface Listlj {
     /**
      * @param index
      * @return 查找索引位元素，返回该索引位置的元素
+     * 失败返回 Integer.MIN_VALUE;
      */
     public int search_index(int index);
 

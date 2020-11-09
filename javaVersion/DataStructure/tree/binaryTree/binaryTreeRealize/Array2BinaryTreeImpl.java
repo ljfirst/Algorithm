@@ -30,11 +30,10 @@ public class Array2BinaryTreeImpl implements Array2BinaryTree {
         if (!check(array)) {
             return null;
         }
-        BinaryTreeImpl root = null;
         //借助队列实现
         Queue<BinaryTreeImpl> queue = new LinkedList();
         int depth = 0;
-        root = new BinaryTreeImpl(array[depth]);
+        BinaryTreeImpl root = new BinaryTreeImpl(array[depth]);
         queue.offer(root);
         while (!queue.isEmpty()) {
             BinaryTreeImpl binaryTree = queue.poll();

@@ -1,6 +1,6 @@
-package UnitTest.DatastructureTest.treeTest.binaryTreeTest.iku;
+package UnitTest.DatastructureTest.treeTest.binaryTreeTest.binaryTreeApplyTest;
 
-import DataStructure.tree.binaryTree.ertyuygf.BTFindCertainValuePath;
+import DataStructure.tree.binaryTree.binaryTreeApply.BTFindCertainValuePath;
 import DataStructure.tree.binaryTree.binaryTreeRealize.Array2BinaryTreeImpl;
 import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
 import UnitTest.DatastructureTest.treeTest.BinaryTreeTestDemo;
@@ -56,7 +56,7 @@ public class BTFindCertainValuePathTest extends BinaryTreeTestDemo {
         assert Arrays.equals(ValuePath, Demo052Result);
 
         all_list_Demo = bt.FindPath(new BinaryTreeImpl(), Demo034);
-        ValuePath = list_Demo.stream().mapToInt(x -> x.value).toArray();
+        assert all_list_Demo.size() == 0;
 
         BinaryTreeImpl b = ab.createBinaryTreeLevel(treeDemo060);
         all_list_Demo = bt.FindPath(b, Demo060);
@@ -168,13 +168,13 @@ public class BTFindCertainValuePathTest extends BinaryTreeTestDemo {
     int[] Demo034Result = {0};
 
     int Demo060 = 20;
-
     int[] treeDemo060 = {
-            1,
-            4, 9,
-            5, 5, 10, 5,
-            6, 5, -1, 10, -1, -1, 4, 5,
-            3, -1, 5, 1, -1, 12, 1, 2, -1, -1,
+                                                                 1,
+                                         4,                                               9,
+                             5,                         5,                  10,                   5,
+                 6,                      5,    Symbol,      10,       Symbol, Symbol,     4,               5,
+             3, Symbol,         5,              1,    Symbol,    12,               1,            2, Symbol, Symbol,
+        Symbol, Symbol,  Symbol, Symbol, Symbol, Symbol,   Symbol, Symbol, Symbol, Symbol, Symbol, Symbol,
     };
     int[] getDemo060Result1 = {1, 9, 10};
     int[] getDemo060Result2 = {1, 4, 5, 10};

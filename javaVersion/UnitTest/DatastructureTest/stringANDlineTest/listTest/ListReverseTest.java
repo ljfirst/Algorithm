@@ -1,5 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.listTest;
 
+import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
 import DataStructure.stringANDline.list.listRealize.SinglyLinkedListReverse;
 import org.junit.Assert;
 import org.junit.Test;
@@ -15,9 +16,10 @@ import java.lang.reflect.Method;
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 链表反转的测试案例
  */
-public class SinglyLinkedListReverseTest extends SinglyLinkedListTest {
+public class ListReverseTest extends ListljTest {
 
     SinglyLinkedListReverse sr = new SinglyLinkedListReverse();
+    SinglyLinkedList singlyLinkedList;
 
     /**
      * 测试：利用数组来反转链表

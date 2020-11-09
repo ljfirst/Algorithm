@@ -149,5 +149,6 @@ public class Array2BinaryTreeImplTest extends BinaryTreeTestDemo {
         binaryTreeImplDemo1 = binaryTreeCreate.createTreePost_InOrder(treeArray05Postorder, treeArray05Inorder);
         binaryTreeImplDemo2 = gettreeDemo05();
         assert binaryTree.equals(binaryTreeImplDemo1, binaryTreeImplDemo2);
+
     }
 }

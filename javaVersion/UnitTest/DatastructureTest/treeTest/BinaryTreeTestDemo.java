@@ -9,7 +9,7 @@ import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
  */
 public class BinaryTreeTestDemo {
 
-    int Symbol = Integer.MIN_VALUE;
+    public final static int Symbol = Integer.MIN_VALUE;
 
     public BinaryTreeImpl binaryTreeImplDemo1 = null;
     public BinaryTreeImpl binaryTreeImplDemo2 = null;

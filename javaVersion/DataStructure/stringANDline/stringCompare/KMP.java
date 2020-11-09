@@ -6,7 +6,7 @@ import DataStructure.stringANDline.StringCompare;
  * @author liujun
  * @version 1.0
  * @date 2019-7-8 ����04:57:00
- * @author��Email liujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @CSDN Blog URL:https://blog.csdn.net/ljfirst/article/details/95072616
  * @description  KMP 字符串匹配算法
  */

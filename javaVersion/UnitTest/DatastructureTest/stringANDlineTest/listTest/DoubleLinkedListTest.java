@@ -1,5 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.listTest;
 
+import DataStructure.stringANDline.list.listRealize.DoubleLinkedList;
 import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
 import org.junit.Test;
 
@@ -9,14 +10,16 @@ import org.junit.Test;
  * @date 2020/11/10
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description 单链表 测试案例
+ * @description 双向链表 测试案例
  */
-public class SinglyLinkedListTest extends ListljTest {
+public class DoubleLinkedListTest extends ListljTest {
 
-
+    /**
+     * 插入元素
+     */
     @Test
     public void test_insert() {
-        super.test_insert(new SinglyLinkedList());
+        super.test_insert(new DoubleLinkedList());
     }
 
     /**
@@ -32,7 +35,7 @@ public class SinglyLinkedListTest extends ListljTest {
      */
     @Test
     public void test_delete_value() {
-        super.test_delete_value(new SinglyLinkedList());
+        super.test_delete_value(new DoubleLinkedList());
     }
 
     /**
@@ -40,7 +43,7 @@ public class SinglyLinkedListTest extends ListljTest {
      */
     @Test
     public void test_delete_index() {
-        super.test_delete_index(new SinglyLinkedList());
+        super.test_delete_index(new DoubleLinkedList());
     }
 
     /**
@@ -48,7 +51,7 @@ public class SinglyLinkedListTest extends ListljTest {
      */
     @Test
     public void test_search_value() {
-        super.test_search_value(new SinglyLinkedList());
+        super.test_search_value(new DoubleLinkedList());
     }
 
     /**
@@ -56,16 +59,16 @@ public class SinglyLinkedListTest extends ListljTest {
      */
     @Test
     public void test_search_index() {
-        super.test_search_index(new SinglyLinkedList());
+        super.test_search_index(new DoubleLinkedList());
     }
+
+    DoubleLinkedList listlj = new DoubleLinkedList();
 
     @Test
     public void test_equals() {
-        SinglyLinkedList listlj = new SinglyLinkedList();
-
+        DoubleLinkedList s1 = new DoubleLinkedList();
         listlj.clear();
         listlj.insert(false, array04);
-        SinglyLinkedList s1 = new SinglyLinkedList();
         s1.insert(false, array04);
         boolean flag = listlj.equals(s1);
         assert flag;
@@ -73,7 +76,7 @@ public class SinglyLinkedListTest extends ListljTest {
         //都是04，但是插入顺序不同，链表也不同
         listlj.clear();
         listlj.insert(false, array04);
-        s1 = new SinglyLinkedList();
+        s1 = new DoubleLinkedList();
         s1.insert(true, array04);
         flag = listlj.equals(s1);
         assert !flag;
@@ -81,13 +84,13 @@ public class SinglyLinkedListTest extends ListljTest {
         //04，05 链表不同
         listlj.clear();
         listlj.insert(false, array05);
-        s1 = new SinglyLinkedList();
+        s1 = new DoubleLinkedList();
         s1.insert(true, array04);
         flag = listlj.equals(s1);
         assert !flag;
 
         //测试 equals()
-        SinglyLinkedList s2 = new SinglyLinkedList();
+        DoubleLinkedList s2 = new DoubleLinkedList();
         s2.insert(true, array04);
         s1.clear();
         s1.insert(true, array04);

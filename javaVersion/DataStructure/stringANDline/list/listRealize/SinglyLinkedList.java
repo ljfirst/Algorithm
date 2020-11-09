@@ -15,13 +15,8 @@ import java.util.List;
  * 单链表的插入：数组和单个元素 （头插和尾插）
  * 单链表的删除：删除特定元素和指定位置元素
  * 单链表的查找：查找特定元素和指定位置元素
- * 单链表的相等：判断两个链表是否相等
- * <p>
- * * 1、链表输出为数组
- * * 2、链表的插入
- * * 3、链表清除函数
- * * 4、链表的相等（自身对比）
- * * 5、链表的相等（两个链表对比）
+ * 单链表的相等：判断两个链表是否相等、自身对比
+ * 单链表的清除：置空单链表
  */
 public class SinglyLinkedList implements Listlj {
 
@@ -97,6 +92,7 @@ public class SinglyLinkedList implements Listlj {
         while (nodelj != null) {
             if (nodelj.value == value) {
                 pre.next = nodelj.next;
+                this.head.value--;
                 return true;
             }
             pre = nodelj;
@@ -110,17 +106,22 @@ public class SinglyLinkedList implements Listlj {
      */
     @Override
     public boolean delete_index(int index) {
-        Nodelj nodelj = this.head.next;
+        if (this.head.value < index) {
+            return false;
+        }
+        Nodelj nodelj = this.head;
         Nodelj pre = this.head;
         int count = 0;
-        while (count++ < index) {
+        while (count <= index) {
             if (nodelj == null) {
                 return false;
             }
             pre = nodelj;
             nodelj = nodelj.next;
+            count++;
         }
         pre.next = nodelj.next;
+        this.head.value--;
         return true;
     }
 
@@ -178,19 +179,7 @@ public class SinglyLinkedList implements Listlj {
         if (l1 == this) {
             return true;
         }
-        if (l1 != null && this != null && l1.head.value == this.head.value) {
-            Nodelj p1 = l1.head.next;
-            Nodelj p2 = this.head.next;
-            while (p1 != null && p2 != null) {
-                if (p1.value != p2.value) {
-                    return false;
-                }
-                p1 = p1.next;
-                p2 = p2.next;
-            }
-            return true;
-        }
-        return false;
+        return equals(this, l1);
     }
 
     /**

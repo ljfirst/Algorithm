@@ -1,5 +1,6 @@
 package UnitTest.DatastructureTest.treeTest.binaryTreeTest.binaryTreeApplyTest;
 
+import DataStructure.tree.binaryTree.binaryTreeApply.SubTreeJudgeOps;
 import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
 import DataStructure.tree.binaryTree.binaryTreeApply.SubTreeJudge;
 import UnitTest.DatastructureTest.treeTest.BinaryTreeTestDemo;
@@ -16,6 +17,7 @@ import org.junit.Test;
 public class SubTreeJudgeTest extends BinaryTreeTestDemo {
 
     SubTreeJudge sj = new SubTreeJudge();
+    SubTreeJudgeOps sjops = new SubTreeJudgeOps();
 
     @Test
     public void testjudgeTree() {
@@ -28,6 +30,20 @@ public class SubTreeJudgeTest extends BinaryTreeTestDemo {
         flag = sj.judgeTree(gettreeDemo05(), getsubtreeDemo05_3());
         assert flag;
         flag = sj.judgeTree(gettreeDemo05(), getsubtreeDemo03());
+        assert !flag;
+    }
+
+    @Test
+    public void testjudgeTreeOps() {
+        boolean flag = sjops.treeJudgeOps(gettreeDemo03(), getsubtreeDemo03());
+        assert flag;
+        flag = sjops.treeJudgeOps(gettreeDemo05(), getsubtreeDemo05_1());
+        assert flag;
+        flag = sjops.treeJudgeOps(gettreeDemo05(), getsubtreeDemo05_2());
+        assert flag;
+        flag = sjops.treeJudgeOps(gettreeDemo05(), getsubtreeDemo05_3());
+        assert flag;
+        flag = sjops.treeJudgeOps(gettreeDemo05(), getsubtreeDemo03());
         assert !flag;
     }
 
