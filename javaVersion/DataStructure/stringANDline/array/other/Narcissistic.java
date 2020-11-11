@@ -1,14 +1,14 @@
-package Logic.math;
+package DataStructure.stringANDline.array.other;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /** 
  *@author liujun
- *@date 2019-8-2 ÉÏÎç10:30:01
- *@author¡ªEmail liujunfirst@outlook.com
+ *@date 2019-8-2 ä¸Šåˆ10:30:01
+ *@authorâ€”Email liujunfirst@outlook.com
  *@CSDN Blog URL:https://blog.csdn.net/ljfirst/article/details/98177653
- *@description Ë®ÏÉ»¨ÊıµÄÊµÏÖ
+ *@description æ°´ä»™èŠ±æ•°çš„å®ç°
  *@version 1.0
  */
 public class Narcissistic {

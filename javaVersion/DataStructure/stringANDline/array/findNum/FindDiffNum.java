@@ -1,19 +1,19 @@
-package Logic.math;
+package DataStructure.stringANDline.array.findNum;
 
 /**
  * @author liujun
  * @version 1.0
  * @date 2020-01-14 14:22
- * @author¡ªEmail  liujunfirst@outlook.com
- * @description  ÕÒ³ö²»Í¬µÄÊı
+ * @authorâ€”Email  liujunfirst@outlook.com
+ * @description  æ‰¾å‡ºä¸åŒçš„æ•°
  * @blogURL
  */
 public class FindDiffNum {
 
-    //Ò»¸ö³¤¶ÈÎª99µÄÊı×é£¬Êı¾İ·¶Î§ÊÇ1-100£¬Êı×éÄÚÊı¾İ¾ù²»ÖØ¸´£¬ÕÒ³ö¶ªÊ§µÄÄÇ¸öÊı
+    //ä¸€ä¸ªé•¿åº¦ä¸º99çš„æ•°ç»„ï¼Œæ•°æ®èŒƒå›´æ˜¯1-100ï¼Œæ•°ç»„å†…æ•°æ®å‡ä¸é‡å¤ï¼Œæ‰¾å‡ºä¸¢å¤±çš„é‚£ä¸ªæ•°
     /*
-    * size:Êı¾İ·¶Î§
-    * array:Êı×é
+    * size:æ•°æ®èŒƒå›´
+    * array:æ•°ç»„
     * array.length == size -1*/
     public int findLostNum(int[] array, int begin){
         int sum = array.length + begin;
@@ -35,9 +35,9 @@ public class FindDiffNum {
         System.out.println(h);
 
     }
-    //Ò»¸ö³¤¶ÈÎª100µÄÊı×é£¬¹²100¸öÊı£¬99¸ö²»Í¬£¬ÕÒ³öÄÇ¸öÏàÍ¬µÄÊı
+    //ä¸€ä¸ªé•¿åº¦ä¸º100çš„æ•°ç»„ï¼Œå…±100ä¸ªæ•°ï¼Œ99ä¸ªä¸åŒï¼Œæ‰¾å‡ºé‚£ä¸ªç›¸åŒçš„æ•°
     public int findRepertNum(int[] array){
-        //Êı×éÄÚ½»»»
+        //æ•°ç»„å†…äº¤æ¢
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
             sum += array[i];

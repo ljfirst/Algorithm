@@ -1,4 +1,4 @@
-package Logic.logic;
+package DataStructure.stringANDline.array.other;
 
 import java.util.ArrayList;
 import java.util.List;

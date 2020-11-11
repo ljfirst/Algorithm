@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.arrayTest;
 
-import DataStructure.stringANDline.array.YHtriangle;
+import DataStructure.stringANDline.array.other.YHtriangle;
 import org.junit.Test;
 
 import java.util.Arrays;

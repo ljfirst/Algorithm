@@ -1,13 +1,13 @@
-package Logic.math;
+package DataStructure.stringANDline.array.other;
 
 /**
  * @author liujun
  * @version 1.0
  * @date 2019-12-03 20:09
- * @author¡ªEmail  liujunfirst@outlook.com
- * @description  ¼ÙÉèÓĞnÖ»Ë®Í°£¬ÖíÒûË®ÖĞ¶¾ºó»áÔÚm·ÖÖÓÄÚËÀÍö£¬
- * ÄãĞèÒª¶àÉÙÖí£¨x£©¾ÍÄÜÔÚp·ÖÖÓÄÚÕÒ³ö ¡°ÓĞ¶¾¡± Ë®Í°£¿
- * ÕânÖ»Ë®Í°ÀïÓĞÇÒ½öÓĞÒ»Ö»ÓĞ¶¾µÄÍ°¡£
+ * @authorâ€”Email  liujunfirst@outlook.com
+ * @description å……åˆ†åˆ©ç”¨äºŒè¿›åˆ¶è½¬æ¢
+ * å‡è®¾æœ‰nåªæ°´æ¡¶ï¼ŒçŒªé¥®æ°´ä¸­æ¯’åä¼šåœ¨måˆ†é’Ÿå†…æ­»äº¡ï¼Œä½ éœ€è¦å¤šå°‘çŒªï¼ˆxï¼‰å°±èƒ½åœ¨påˆ†é’Ÿå†…æ‰¾å‡º â€œæœ‰æ¯’â€ æ°´æ¡¶ï¼Ÿ
+ * è¿™nåªæ°´æ¡¶é‡Œæœ‰ä¸”ä»…æœ‰ä¸€åªæœ‰æ¯’çš„æ¡¶ã€‚
  * @blogURL
  */
 public class Poolpig {

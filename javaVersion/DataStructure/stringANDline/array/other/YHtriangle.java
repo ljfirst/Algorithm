@@ -1,4 +1,4 @@
-package DataStructure.stringANDline.array;
+package DataStructure.stringANDline.array.other;
 
 import java.util.HashMap;
 import java.util.Map;

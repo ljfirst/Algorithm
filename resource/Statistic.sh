@@ -10,7 +10,7 @@ Logic=$(find $dirpath/Logic/  -iname "*.java" |grep -v Test |wc -l)
 AlgorithmUT=$(find $dirpath/UnitTest/algorithmTest     -iname "*.java" |grep  Test |wc -l)
 DataStructureUT=$(find $dirpath/UnitTest/datastructureTest -iname "*.java" |grep  Test |wc -l)
 DesignUT=$(find $dirpath/UnitTest/DesignPatternTest    -iname "*.java" |grep  Test |wc -l)
-LogicUT=$(find $dirpath/UnitTest/logicTest        -iname "*.java" |grep  Test |wc -l)
+LogicUT=$(find $dirpath/UnitTest/LogicTest        -iname "*.java" |grep  Test |wc -l)
 
 
 Total=$((Algorithm+DataStructure+Design+Logic))

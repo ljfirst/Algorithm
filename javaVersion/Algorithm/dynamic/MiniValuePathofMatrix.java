@@ -1,6 +1,6 @@
 package Algorithm.dynamic;
 
-import Logic.check.MatrixCheck;
+import DataStructure.stringANDline.array.other.MatrixCheck;
 
 /**
  * @author liujun

@@ -1,4 +1,4 @@
-package DataStructure.stringANDline.array;
+package DataStructure.stringANDline.array.other;
 
 import org.junit.Assert;
 import org.junit.Test;

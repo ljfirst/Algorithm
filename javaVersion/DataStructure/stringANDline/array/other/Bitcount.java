@@ -1,16 +1,16 @@
-package Logic.math;
+package DataStructure.stringANDline.array.other;
 /** 
  *@author liujun
- *@date 2018-9-3 ÏÂÎç06:59:34
- *@author¡ªEmail liujunfirst@outlook.com
- *@description 
- *  1)»ñÈ¡¶ş½øÖÆÕıÊıÖĞ1Î»µÄÊıÁ¿
- *  2)»ñÈ¡¶ş½øÖÆ²¹ÂëÖĞ1Î»µÄÊıÁ¿
+ *@date 2018-9-3 ä¸‹åˆ06:59:34
+ *@authorâ€”Email liujunfirst@outlook.com
+ *@description è®¡ç®—bitä½
+ *  1)è·å–äºŒè¿›åˆ¶æ­£æ•°ä¸­1ä½çš„æ•°é‡
+ *  2)è·å–äºŒè¿›åˆ¶è¡¥ç ä¸­1ä½çš„æ•°é‡
  *@version 1.0
  */
 public class Bitcount {
 
-	//»ñÈ¡¶ş½øÖÆÕıÊıÖĞ1Î»µÄÊıÁ¿£ºÓÒÒÆ·¨
+	//è·å–äºŒè¿›åˆ¶æ­£æ•°ä¸­1ä½çš„æ•°é‡ï¼šå³ç§»æ³•
 	public void byteCountMethod1(int num) {
 		// TODO Auto-generated method stub
 		int count = 0;
@@ -18,12 +18,12 @@ public class Bitcount {
 			if ((num & 1) != 0) {
 				count++;
 			}
-			//ÎŞ·ûºÅÓÒÒÆ£¬ÇÒÖØĞÂ¸³Öµ
+			//æ— ç¬¦å·å³ç§»ï¼Œä¸”é‡æ–°èµ‹å€¼
 			num >>= 1;
 		}
 		System.out.println(count);
 	}
-	//Ä©Î²1È¡·´·¨£¬ÕıÊı
+	//æœ«å°¾1å–åæ³•ï¼Œæ­£æ•°
 	public void byteCountMethod2(int num) {
 
 		int count = 0;
@@ -34,10 +34,10 @@ public class Bitcount {
 		System.out.println(count);
 	}
 	
-	//²é±í·¨£¬ÕıÊı
+	//æŸ¥è¡¨æ³•ï¼Œæ­£æ•°
 	public void byteCountMethod3(int num) {
 
-		// ÁĞ¾ÙÁË0µ½15 µÄ±í   
+		// åˆ—ä¸¾äº†0åˆ°15 çš„è¡¨   
 	    int[] countTable = {  
 	        0,1,1,2,  
 	        1,2,2,3,  
@@ -50,14 +50,14 @@ public class Bitcount {
 	    System.out.println(countTable[num]);
 	}
 	
-	//JDK×Ô´ø²¹Âë×Ö½ÚÍ³¼Æ¹¤¾ß£¬ÊÊÓÃÕıÊıºÍ¸ºÊı
+	//JDKè‡ªå¸¦è¡¥ç å­—èŠ‚ç»Ÿè®¡å·¥å…·ï¼Œé€‚ç”¨æ­£æ•°å’Œè´Ÿæ•°
 	public void byteCountMethod4(int num) {
 		// TODO Auto-generated method stub
 
 		System.out.println(Integer.bitCount(num));
 	}
 	
-	//»ñÈ¡¶ş½øÖÆ²¹ÂëÖĞ1Î»µÄÊıÁ¿£ºÁ½Á½ºÏ²¢·¨
+	//è·å–äºŒè¿›åˆ¶è¡¥ç ä¸­1ä½çš„æ•°é‡ï¼šä¸¤ä¸¤åˆå¹¶æ³•
 	public void byteCountComplementMethod1(int i) {
 		// TODO Auto-generated method stub
 
@@ -66,7 +66,7 @@ public class Bitcount {
 		i = (i + (i >>> 4)) & 0x0f0f0f0f;
 		i = i + (i >>> 8);
 		i = i + (i >>> 16);
-		//0x3f£¬ÒòÎª32×Ö½Ú£¬×î¶à32¸ö1£¬Ê¹ÓÃ&µÄ»°£¬ÓÃµ½7Î»¡£
+		//0x3fï¼Œå› ä¸º32å­—èŠ‚ï¼Œæœ€å¤š32ä¸ª1ï¼Œä½¿ç”¨&çš„è¯ï¼Œç”¨åˆ°7ä½ã€‚
 		System.out.println(i & 0x3f);
 	}
 	
@@ -77,11 +77,11 @@ public class Bitcount {
 		i = (i + (i >>> 4)) & 0x0f0f0f0f;
 		i = i + (i >>> 8);
 		i = i + (i >>> 16);
-		//0x3f£¬ÒòÎª32×Ö½Ú£¬×î¶à32¸ö1£¬Ê¹ÓÃ&µÄ»°£¬ÓÃµ½7Î»¡£
+		//0x3fï¼Œå› ä¸º32å­—èŠ‚ï¼Œæœ€å¤š32ä¸ª1ï¼Œä½¿ç”¨&çš„è¯ï¼Œç”¨åˆ°7ä½ã€‚
 		return i & 0x3f;
 	}
 	
-	//»ñÈ¡¶ş½øÖÆ²¹ÂëÖĞ1Î»µÄÊıÁ¿£ºÄ©Î²1È¡·´·¨
+	//è·å–äºŒè¿›åˆ¶è¡¥ç ä¸­1ä½çš„æ•°é‡ï¼šæœ«å°¾1å–åæ³•
 	private void byteCountComplementMethod2(int num) {
 
 		int count = 0; 
@@ -92,7 +92,7 @@ public class Bitcount {
         System.out.println(count); 
 	}
 	
-	//×óÒÆ·¨£¬¾¡Á¿²»ÒªÊ¹ÓÃÓÒÒÆ£¬ÒòÎªÓĞ·ûºÅÎ»
+	//å·¦ç§»æ³•ï¼Œå°½é‡ä¸è¦ä½¿ç”¨å³ç§»ï¼Œå› ä¸ºæœ‰ç¬¦å·ä½
 	public void byteCountComplementMethod3(int num) {
 
 		int count = 0; 
@@ -103,10 +103,10 @@ public class Bitcount {
         System.out.println(count); 
 	}
 	
-	//Ö÷·½·¨²âÊÔ
+	//ä¸»æ–¹æ³•æµ‹è¯•
 	public static void main(String[] args) {
 		
-		//-1°üÀ¨·ûºÅÎ»£¬Ò»¸ö32¸ö1
+		//-1åŒ…æ‹¬ç¬¦å·ä½ï¼Œä¸€ä¸ª32ä¸ª1
 		int i = -1;
 		Bitcount bc = new Bitcount();
 		//bc.byteCountMethod1(i);

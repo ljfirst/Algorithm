@@ -1,7 +1,7 @@
-package DataStructure.stringANDline.array;
+package DataStructure.stringANDline.array.other;
 
 import DataStructure.tree.redBlackTree.RedBlackTree;
-import Logic.math.Bitcount;
+
 import java.util.Scanner;
 
 /**

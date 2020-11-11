@@ -1,6 +1,4 @@
-package DataStructure.stringANDline.array;
-
-import Logic.check.MatrixCheck;
+package DataStructure.stringANDline.array.other;
 
 import java.util.ArrayList;
 import java.util.List;

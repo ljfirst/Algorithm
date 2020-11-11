@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.arrayTest;
 
-import DataStructure.stringANDline.array.BuildTeambyTall;
+import DataStructure.stringANDline.array.other.BuildTeambyTall;
 import org.junit.Test;
 
 import java.util.Arrays;

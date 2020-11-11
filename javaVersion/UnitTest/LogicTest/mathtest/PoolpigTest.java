@@ -1,13 +1,13 @@
 package UnitTest.LogicTest.mathtest;
 
-import Logic.math.Poolpig;
+import DataStructure.stringANDline.array.other.Poolpig;
 import org.junit.Test;
 
 /**
  * @author liujun
  * @version 1.0
  * @date 2019-12-03 20:09
- * @author¡ªEmail  liujunfirst@outlook.com
+ * @authorï¿½ï¿½Email  liujunfirst@outlook.com
  * @description 
  * @blogURL
  */
@@ -35,37 +35,37 @@ public class PoolpigTest {
         assert needNum == 1;
     }
 
-    int bucketNum01 = 5;//¶¾Í°
-    int alivetime01 = 15;//¶¾·¢Ê±¼ä
-    int givenTime01 = 60;//¸ø¶¨µÄ²âÊÔÊ±¼ä
+    int bucketNum01 = 5;//ï¿½ï¿½Í°
+    int alivetime01 = 15;//ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+    int givenTime01 = 60;//ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 
-    int bucketNum02 = 25;//¶¾Í°
-    int alivetime02 = 15;//¶¾·¢Ê±¼ä
-    int givenTime02 = 60;//¸ø¶¨µÄ²âÊÔÊ±¼ä
+    int bucketNum02 = 25;//ï¿½ï¿½Í°
+    int alivetime02 = 15;//ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+    int givenTime02 = 60;//ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 
-    int bucketNum03 = 1000;//¶¾Í°
-    int alivetime03 = 15;//¶¾·¢Ê±¼ä
-    int givenTime03 = 60;//¸ø¶¨µÄ²âÊÔÊ±¼ä
+    int bucketNum03 = 1000;//ï¿½ï¿½Í°
+    int alivetime03 = 15;//ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+    int givenTime03 = 60;//ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 
-    //·´°¸Àý
-    int bucketNum04 = 1000;//ÓÐ¶¾Í°
-    int alivetime04 = 60;//¶¾·¢Ê±¼ä
-    int givenTime04 = 10;//¸ø¶¨µÄ²âÊÔÊ±¼ä
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    int bucketNum04 = 1000;//ï¿½Ð¶ï¿½Í°
+    int alivetime04 = 60;//ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+    int givenTime04 = 10;//ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 
-    int bucketNum05 = 1000;//ÓÐ¶¾Í°
-    int alivetime05 = -1;//¶¾·¢Ê±¼ä
-    int givenTime05 = 10;//¸ø¶¨µÄ²âÊÔÊ±¼ä
+    int bucketNum05 = 1000;//ï¿½Ð¶ï¿½Í°
+    int alivetime05 = -1;//ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+    int givenTime05 = 10;//ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 
-    //Õý°¸Àý
-    int bucketNum06 = 1000;//ÓÐ¶¾Í°
-    int alivetime06 = 11;//¶¾·¢Ê±¼ä
-    int givenTime06 = 20;//¸ø¶¨µÄ²âÊÔÊ±¼ä
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    int bucketNum06 = 1000;//ï¿½Ð¶ï¿½Í°
+    int alivetime06 = 11;//ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+    int givenTime06 = 20;//ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 
-    int bucketNum07 = 1;//ÓÐ¶¾Í°
-    int alivetime07 = 11;//¶¾·¢Ê±¼ä
-    int givenTime07 = 20;//¸ø¶¨µÄ²âÊÔÊ±¼ä
+    int bucketNum07 = 1;//ï¿½Ð¶ï¿½Í°
+    int alivetime07 = 11;//ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+    int givenTime07 = 20;//ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 
-    int bucketNum08 = 2;//ÓÐ¶¾Í°
-    int alivetime08 = 1;//¶¾·¢Ê±¼ä
-    int givenTime08 = 20;//¸ø¶¨µÄ²âÊÔÊ±¼ä
+    int bucketNum08 = 2;//ï¿½Ð¶ï¿½Í°
+    int alivetime08 = 1;//ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+    int givenTime08 = 20;//ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 }

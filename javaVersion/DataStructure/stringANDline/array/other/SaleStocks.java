@@ -1,4 +1,4 @@
-package Logic.logic;
+package DataStructure.stringANDline.array.other;
 
 /**
  * @author liujun

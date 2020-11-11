@@ -1,14 +1,14 @@
-package Logic.math;
+package DataStructure.stringANDline.array.other;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /** 
  *@author liujun
- *@date 2019-8-2 下午01:18:35
- *@author—Email liujunfirst@outlook.com
+ *@date 2019-8-2 涓嬪崍01:18:35
+ *@author鈥擡mail liujunfirst@outlook.com
  *@CSDN Blog URL:https://blog.csdn.net/ljfirst/article/details/98177653
- *@description 吸血鬼数字的实现
+ *@description 鍚歌楝兼暟瀛楃殑瀹炵幇
  *@version 1.0
  */
 public class Vampire {
@@ -35,7 +35,7 @@ public class Vampire {
 		for (int i = 10; i <= 99; i++) {
 			for (int j = i; j <= 99; j++) {
 				// Pete Hartley's theoretical result:  
-				//If x·y is a vampire number then x·y == x+y (mod 9) 
+				//If x路y is a vampire number then x路y == x+y (mod 9) 
 		        if ((i * j) % 9 != (i + j) % 9){
 		            continue;
 		        }
@@ -66,8 +66,8 @@ public class Vampire {
         for (int num1 = 10; num1 <= 99; num1++)  
             for (int num2 = num1; num2 <= 99; num2++) {  
                 // Pete Hartley's theoretical result:  
-                // If x·y is a vampire number then  
-                // x·y == x+y (mod 9)  
+                // If x路y is a vampire number then  
+                // x路y == x+y (mod 9)  
                 if ((num1 * num2) % 9 != (num1 + num2) % 9)  
                     continue;  
                 int product = num1 * num2;  

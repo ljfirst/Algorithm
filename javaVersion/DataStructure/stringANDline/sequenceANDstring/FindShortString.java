@@ -6,7 +6,8 @@ package DataStructure.stringANDline.sequenceANDstring;
  * @date 2020/8/21
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description 在给定字符串中找出最小循环的字符串
+ * @description 最小循环的字符串
+ * 在给定字符串中找出最小循环的字符串
  * 输入：abcdabcdabcd  输出：abcd
  * 考虑到最后的末尾允许添加补齐来凑齐字符串，那么存在
  * 输入：abcdabcda     输出：abcd

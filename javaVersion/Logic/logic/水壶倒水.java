@@ -1,4 +1,4 @@
-package Logic.math;
+package Logic.logic;
 
 import java.util.Scanner;
 

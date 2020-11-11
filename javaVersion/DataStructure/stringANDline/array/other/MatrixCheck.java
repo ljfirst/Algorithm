@@ -1,4 +1,4 @@
-package Logic.check;
+package DataStructure.stringANDline.array.other;
 
 import java.util.Arrays;
 

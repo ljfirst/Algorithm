@@ -1,17 +1,17 @@
 package DataStructure.graph.mst;
 
-import Logic.check.MatrixCheck;
+import DataStructure.stringANDline.array.other.MatrixCheck;
 
 /**
  *@author liujun
- *@date 2018-8-2 ÏÂÎç04:43:06
- *@author¡ªEmail liujunfirst@outlook.com
- *@description ¿ËÂ³Ë¹¿¨¶ûËã·¨
+ *@date 2018-8-2 ï¿½ï¿½ï¿½ï¿½04:43:06
+ *@authorï¿½ï¿½Email liujunfirst@outlook.com
+ *@description ï¿½ï¿½Â³Ë¹ï¿½ï¿½ï¿½ï¿½ï¿½ã·¨
  *@version 1.0
  */
 public class Kruskal implements mst{
 
-    //Êä³ö ×îÐ¡Éú³ÉÊ÷µÄ ×Ü³¤¶È¡¢×îÐ¡±ß¼¯ºÏ¡¢×îÐ¡Éú³ÉÊ÷¾ØÕó
+    //ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ü³ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ð¡ï¿½ß¼ï¿½ï¿½Ï¡ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public int mstTotalValue;
     public int[] mstEdgeSet;
     public int[][] mstMatrix;
@@ -22,30 +22,30 @@ public class Kruskal implements mst{
         if(!MatrixCheck.judgeisSquare(matrix)){
             return;
         }
-        //»ñÈ¡±ßÊý¾Ý½á¹¹
+        //ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ý½á¹¹
         mstEdgeSet = buildEdgeSet(matrix);
-        //±ßÅÅÐò
-        //±ßÄÉÈë
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-        //¼ÆËã×Ü³¤¶È
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Ü³ï¿½ï¿½ï¿½
         mstTotalValue = 0;
-        //¸ù¾Ý×îÐ¡±ß¼¯ºÏ¹¹½¨×îÐ¡Éú³ÉÊ÷¾ØÕó
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ß¼ï¿½ï¿½Ï¹ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     }
 
-    //¸ù¾Ý¾ØÕó¹¹Ôì ±ßÊý¾Ý½á¹¹
+    //ï¿½ï¿½ï¿½Ý¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ý½á¹¹
     private int[] buildEdgeSet(int[][] matrix){
         int length = matrix.length;
-        //ÕâÀïÓÃtreemap¶ø²»ÓÃÊý×é£¬
-        // ÓÃÊý×é£¬ÐèÒªÈý´ÎË«²ãÑ­»·£¬µÚÒ»´ÎÔ¤ÏÈ»ñÈ¡±ßÊý£¬²ÅÄÜ³õÊ¼»¯±ßÊý¾Ý½á¹¹£¬
-        // µÚ¶þ´Î×°ÔØ±ßÊý¾Ý£¬µÚÈý´ÎÅÅÐò£¬
-        // ÓÃtreemap£¬Ö»ÐèÒªÒ»´ÎË«²ãÑ­»·£¬ÎÞÐèÔ¤ÏÈ»ñÈ¡±ßÊý£¬
-        // ²ÉÓÃºìºÚÊéÅÅÐò£¬±ß³õÊ¼»¯£¬±ßÅÅÐò£¬²»È¥ÖØ£¬ÇÒÅÅÐò
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½treemapï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é£¬
+        // ï¿½ï¿½ï¿½ï¿½ï¿½é£¬ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ë«ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ô¤ï¿½È»ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü³ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý½á¹¹ï¿½ï¿½
+        // ï¿½Ú¶ï¿½ï¿½ï¿½×°ï¿½Ø±ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        // ï¿½ï¿½treemapï¿½ï¿½Ö»ï¿½ï¿½ÒªÒ»ï¿½ï¿½Ë«ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¤ï¿½È»ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        // ï¿½ï¿½ï¿½Ãºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò£¬±ß³ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò£¬²ï¿½È¥ï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         //TreeMap<Integer, KruskalEdgeNode> map = new TreeMap<Integer, KruskalEdgeNode>();
         for (int i = 0; i < length; i++) {
-            //×ÔÉí²»×öÅÐ¶Ï£¬ËùÓÐj=i+1
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶Ï£ï¿½ï¿½ï¿½ï¿½ï¿½j=i+1
             for (int j = i + 1; j < length; j++) {
-                //Êý¾ÝÔÊÐí¸ºÖµ£¬µ«ÊÇ²»ÔÊÐí0
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½Ç²ï¿½ï¿½ï¿½ï¿½ï¿½0
                 if(matrix[i][j] != 0){
                     KruskalEdgeNode kruskalEdgeNode = new KruskalEdgeNode(matrix[i][j], i, j);
                     //map.put(matrix[i][j], kruskalEdgeNode);
@@ -55,19 +55,19 @@ public class Kruskal implements mst{
         return mstEdgeSet;
     }
 
-    //±ßÅÅÐò
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     private int[] sortEdgeSet(int[] mstEdgeSet){
 
         return mstEdgeSet;
     }
 
-    //¾ø¶ÔÖÕµãÅÐ¶Ï
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½ï¿½Ð¶ï¿½
     private boolean judgeTerminal(KruskalEdgeNode kruskalEdgeNode){
 
         return false;
     }
 
-    //¸ù¾Ý×îÐ¡±ß¼¯ºÏ¹¹½¨×îÐ¡Éú³ÉÊ÷¾ØÕó
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ß¼ï¿½ï¿½Ï¹ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     private int[][] buildmstMatrix(){
         mstMatrix = null;
         return mstMatrix;

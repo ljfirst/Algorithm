@@ -1,15 +1,15 @@
-package Logic.regular;
+package DataStructure.stringANDline.array.other;
 
 import java.util.Scanner;
 
 /**
  *@author liujun
  *@date 2018-5-2 Time������09:34:09
- *@author��Email liujunfirst@outlook.com
- *@description �����ַ������һ�����ʵĳ��ȣ������Կո������
+ *@author-Email liujunfirst@outlook.com
+ *@description 统计最后一个字母的长度
  *@version 1.0
  */
-public class 统计最后一个单词长度 {
+public class StatisticLastWordLength {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
