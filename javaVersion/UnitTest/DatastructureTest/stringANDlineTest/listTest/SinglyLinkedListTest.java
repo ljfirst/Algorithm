@@ -22,7 +22,7 @@ public class SinglyLinkedListTest extends ListljTest {
     /**
      * @return 在索引位置插入元素
      */
-    //@Test
+    @Test
     public void test_insert_index() {
         super.test_insert_index(new SinglyLinkedList());
     }
@@ -60,52 +60,7 @@ public class SinglyLinkedListTest extends ListljTest {
     }
 
     @Test
-    public void test_equals() {
-        SinglyLinkedList listlj = new SinglyLinkedList();
-
-        listlj.clear();
-        listlj.insert(false, array04);
-        SinglyLinkedList s1 = new SinglyLinkedList();
-        s1.insert(false, array04);
-        boolean flag = listlj.equals(s1);
-        assert flag;
-
-        //都是04，但是插入顺序不同，链表也不同
-        listlj.clear();
-        listlj.insert(false, array04);
-        s1 = new SinglyLinkedList();
-        s1.insert(true, array04);
-        flag = listlj.equals(s1);
-        assert !flag;
-
-        //04，05 链表不同
-        listlj.clear();
-        listlj.insert(false, array05);
-        s1 = new SinglyLinkedList();
-        s1.insert(true, array04);
-        flag = listlj.equals(s1);
-        assert !flag;
-
-        //测试 equals()
-        SinglyLinkedList s2 = new SinglyLinkedList();
-        s2.insert(true, array04);
-        s1.clear();
-        s1.insert(true, array04);
-        flag = listlj.equals(s1, s2);
-        assert flag;
-
-        s2.clear();
-        s2.insert(true, array04);
-        s1.clear();
-        s1.insert(true, array05);
-        flag = listlj.equals(s1, s2);
-        assert !flag;
-
-        s2.clear();
-        s2.insert(false, array05);
-        s1.clear();
-        s1.insert(true, array05);
-        flag = listlj.equals(s1, s2);
-        assert !flag;
+    public void test_listequals() {
+        super.testlistequals(new SinglyLinkedList());
     }
 }

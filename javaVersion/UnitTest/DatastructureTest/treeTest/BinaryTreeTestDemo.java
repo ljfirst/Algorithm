@@ -29,24 +29,27 @@ public class BinaryTreeTestDemo {
     public int[] treeArray01 = {};
     public int[] treeArray02 = null;
     public int[] treeArray03 = {
-                 1,
-              2,   3,
-            4, 5, 6, 7};
+                                        1,
+                          2,                         3,
+                  4,            5,            6,            7,
+            Symbol,Symbol,Symbol,Symbol,Symbol,Symbol,Symbol,Symbol
+    };
     public int[] treeArray04 = {
-                   1,
-               2,    3,
-            4, -1, -1, 7};
+                            1,
+                     2,           3,
+                  4, Symbol, Symbol, 7,
+            Symbol,Symbol,     Symbol,Symbol};
 
     public int[] treeArray05 = {
                                       1,
-                           2,                   3,
-                       4,      6,         7,                8,
-                     9, -1, -1, -1,   10,       11,      12,  -1,
-                  13, -1,         15,     16, -1, -1,  5,  -1,
-               14, -1,         -1, -1,  17, -1,     -1,  20,
-            -1, -1,                  -1,  18,         -1, -1,
-                                        19, -1,
-                                     -1, -1
+                           2,                                          3,
+                          4,           6,            7,                           8,
+                        9,Symbol,Symbol,Symbol,10,         11,                 12,  Symbol,
+                     13, Symbol,            15,          16,Symbol, Symbol,  5,  Symbol,
+                  14, Symbol,            Symbol,Symbol,17, Symbol,     Symbol,  20,
+            Symbol, Symbol,                       Symbol,18,              Symbol,Symbol,
+                                                       19, Symbol,
+                                                  Symbol,Symbol
     };
 
     //先序遍历的数组

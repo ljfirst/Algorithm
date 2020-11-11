@@ -62,9 +62,23 @@ public interface Listlj {
 
 
     /**
-     *
      * @return 链表置空操作
      */
     public void clear();
+
+    /**
+     *
+     * @param listlj
+     * @return 链表判断相等
+     */
+    public boolean listequals(Listlj listlj);
+
+    /**
+     *
+     * @param l1
+     * @param l2
+     * @return 链表判断相等
+     */
+    public boolean listequals(Listlj l1, Listlj l2);
 
 }

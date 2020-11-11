@@ -1,7 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.listTest;
 
 import DataStructure.stringANDline.list.listRealize.DoubleLinkedList;
-import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
 import org.junit.Test;
 
 /**
@@ -25,9 +24,9 @@ public class DoubleLinkedListTest extends ListljTest {
     /**
      * @return 在索引位置插入元素
      */
-    //@Test
+    @Test
     public void test_insert_index() {
-        super.test_insert_index(new SinglyLinkedList());
+        super.test_insert_index(new DoubleLinkedList());
     }
 
     /**
@@ -62,53 +61,8 @@ public class DoubleLinkedListTest extends ListljTest {
         super.test_search_index(new DoubleLinkedList());
     }
 
-    DoubleLinkedList listlj = new DoubleLinkedList();
-
     @Test
-    public void test_equals() {
-        DoubleLinkedList s1 = new DoubleLinkedList();
-        listlj.clear();
-        listlj.insert(false, array04);
-        s1.insert(false, array04);
-        boolean flag = listlj.equals(s1);
-        assert flag;
-
-        //都是04，但是插入顺序不同，链表也不同
-        listlj.clear();
-        listlj.insert(false, array04);
-        s1 = new DoubleLinkedList();
-        s1.insert(true, array04);
-        flag = listlj.equals(s1);
-        assert !flag;
-
-        //04，05 链表不同
-        listlj.clear();
-        listlj.insert(false, array05);
-        s1 = new DoubleLinkedList();
-        s1.insert(true, array04);
-        flag = listlj.equals(s1);
-        assert !flag;
-
-        //测试 equals()
-        DoubleLinkedList s2 = new DoubleLinkedList();
-        s2.insert(true, array04);
-        s1.clear();
-        s1.insert(true, array04);
-        flag = listlj.equals(s1, s2);
-        assert flag;
-
-        s2.clear();
-        s2.insert(true, array04);
-        s1.clear();
-        s1.insert(true, array05);
-        flag = listlj.equals(s1, s2);
-        assert !flag;
-
-        s2.clear();
-        s2.insert(false, array05);
-        s1.clear();
-        s1.insert(true, array05);
-        flag = listlj.equals(s1, s2);
-        assert !flag;
+    public void test_listequals() {
+        super.testlistequals(new DoubleLinkedList());
     }
 }

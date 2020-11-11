@@ -1,4 +1,4 @@
-package DesignPattern.utils;
+package Logic.utils;
 
 import jxl.Workbook;
 import jxl.write.Label;

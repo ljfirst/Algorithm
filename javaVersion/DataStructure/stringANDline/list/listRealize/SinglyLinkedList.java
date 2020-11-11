@@ -3,9 +3,6 @@ package DataStructure.stringANDline.list.listRealize;
 import DataStructure.stringANDline.list.Listlj;
 import DataStructure.stringANDline.list.Nodelj;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @author liujun
  * @version 1.0
@@ -77,9 +74,27 @@ public class SinglyLinkedList implements Listlj {
         return true;
     }
 
+    /**
+     * @param index 索引位置
+     * @param args  待插入元素
+     * @return 支持在某点批量插入、单值插入
+     */
     @Override
     public boolean insert(int index, int... args) {
-        return false;
+        if (index > this.head.value) {
+            return false;
+        }
+        Nodelj pre = this.head;
+        for (int i = 0; i < index; i++) {
+            pre = pre.next;
+        }
+        for (int arg : args) {
+            Nodelj nodelj1 = new Nodelj(arg);
+            nodelj1.next = pre.next;
+            pre.next = nodelj1;
+            this.head.value++;//这一步总是会遗忘
+        }
+        return true;
     }
 
     /**
@@ -172,22 +187,22 @@ public class SinglyLinkedList implements Listlj {
     }
 
     /**
-     * @param l1
      * @return l1和链表自身进行对比
      */
-    public boolean equals(SinglyLinkedList l1) {
+    public boolean listequals(Listlj l2) {
+        SinglyLinkedList l1 = (SinglyLinkedList) l2;
         if (l1 == this) {
             return true;
         }
-        return equals(this, l1);
+        return listequals(this, l1);
     }
 
     /**
-     * @param l1 单链表
-     * @param l2 单链表
      * @return l1和l2进行对比
      */
-    public boolean equals(SinglyLinkedList l1, SinglyLinkedList l2) {
+    public boolean listequals(Listlj l3, Listlj l4) {
+        SinglyLinkedList l1 = (SinglyLinkedList) l3;
+        SinglyLinkedList l2 = (SinglyLinkedList) l4;
         if (l1 == l2) {
             return true;
         }

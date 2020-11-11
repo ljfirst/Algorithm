@@ -1,4 +1,4 @@
-package DesignPattern.utils;
+package Logic.utils;
 
 import java.util.Random;
 
@@ -6,7 +6,7 @@ import java.util.Random;
  * @author liujun
  * @version 1.0
  * @date 2019-11-02 23:30
- * @author��Email liujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @description 
  */
 public class RamdomUtil {
@@ -18,6 +18,13 @@ public class RamdomUtil {
         //randomd.nextInt(x)��ʾ����[0,x)
         int num = random.nextInt(99)+2;
         return productRandomString(num);
+    }
+
+    public static void main(String[] args) {
+        String s = "rfSFTdfEes";
+        System.out.println(s.toLowerCase().contains("dfE".toLowerCase()));
+        System.out.println(s.toLowerCase().contains("dfe".toLowerCase()));
+
     }
 
     //������ɸ������ȵ��ַ���
@@ -79,6 +86,5 @@ public class RamdomUtil {
         }
         return equalNum;
     }
-
 
 }

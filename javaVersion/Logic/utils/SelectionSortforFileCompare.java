@@ -1,4 +1,4 @@
-package DesignPattern.utils;
+package Logic.utils;
 
 import java.util.ArrayList;
 import java.util.Iterator;

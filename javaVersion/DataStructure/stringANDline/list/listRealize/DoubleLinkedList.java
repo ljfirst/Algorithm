@@ -68,12 +68,40 @@ public class DoubleLinkedList implements Listlj {
      */
     @Override
     public boolean insert(int index, int... args) {
-        return false;
+        if (index > this.size) {
+            return false;
+        }
+        if (this.size == 0) {
+            insert(false, args);
+            return true;
+        }
+        Nodelj cur = this.headpoint;
+        Nodelj pre = this.tailpoint;
+        for (int i = 0; i < index; i++) {
+            pre = cur;
+            cur = cur.next;
+        }
+        for (int arg : args) {
+            Nodelj nodelj = new Nodelj(arg);
+            //节点关系
+            pre.next = nodelj;
+            nodelj.front = pre;
+            cur.front = nodelj;
+            nodelj.next = cur;
+            //node = nodelj;//头插法
+            pre = nodelj;//尾插法
+            this.size++;
+        }
+        if (index == 0) {
+            this.headpoint = pre;
+        }
+
+        return true;
     }
 
     @Override
     public boolean delete_value(int value) {
-        if(this.size==0){
+        if (this.size == 0) {
             return false;
         }
         if (this.size == 1) {
@@ -144,11 +172,11 @@ public class DoubleLinkedList implements Listlj {
         }
         Nodelj nodelj = this.headpoint;
         int count = 0;
-        do {
+        while (count < index) {
             nodelj = nodelj.next;
             count++;
-        } while (count < index && nodelj != this.headpoint);
-        return nodelj != this.headpoint ? nodelj.value : Integer.MIN_VALUE;
+        }
+        return nodelj.value;
     }
 
     @Override
@@ -175,14 +203,17 @@ public class DoubleLinkedList implements Listlj {
         this.size = 0;
     }
 
-    public boolean equals(DoubleLinkedList l1) {
+    public boolean listequals(Listlj l2) {
+        DoubleLinkedList l1 = (DoubleLinkedList) l2;
         if (l1 == this) {
             return true;
         }
-        return equals(this, l1);
+        return listequals(this, l1);
     }
 
-    public boolean equals(DoubleLinkedList l1, DoubleLinkedList l2) {
+    public boolean listequals(Listlj l3, Listlj l4) {
+        DoubleLinkedList l1 = (DoubleLinkedList) l3;
+        DoubleLinkedList l2 = (DoubleLinkedList) l4;
         if (l1 == l2) {
             return true;
         }

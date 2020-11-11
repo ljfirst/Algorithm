@@ -25,22 +25,23 @@ public class BinaryTree2LinkedListImplTest extends BinaryTreeTestDemo {
         list = bt.BinaryTree2LinkedList(gettreeDemo03());
         SinglyLinkedList listlj = new SinglyLinkedList();
         listlj.insert(false, tree2list_gettreeDemo03);
-        assert list.equals(listlj);
+        boolean f = list.listequals(listlj);
+        assert f;
 
         list = bt.BinaryTree2LinkedList(gettreeDemo04());
         listlj.clear();
         listlj.insert(false, tree2list_gettreeDemo04);
-        assert list.equals(listlj);
+        assert list.listequals(listlj);
 
         list = bt.BinaryTree2LinkedList(gettreeDemo05());
         listlj.clear();
         listlj.insert(false, tree2list_gettreeDemo05);
-        assert list.equals(listlj);
+        assert list.listequals(listlj);
 
         list = bt.BinaryTree2LinkedList(gettreeDemo05());
         listlj.clear();
         listlj.insert(false, tree2list_gettreeDemo05_fake);
-        assert !list.equals(listlj);
+        assert !list.listequals(listlj);
     }
 
     int[] tree2list_gettreeDemo03 = {1, 2, 4, 5, 3, 6, 7};

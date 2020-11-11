@@ -10,6 +10,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * @author liujun
@@ -33,14 +34,14 @@ public class BinaryTree2ArrayImplTest extends BinaryTreeTestDemo {
     @Test
     public void testBinary2ArrayLevel() {
         array = binaryTree2Array.Binary2ArrayLevel(gettreeDemo03());
-        assert Arrays.equals(array, treeArray03);
+        assert Arrays.equals(array, Arrays.stream(treeArray03).filter(x->x!=Integer.MIN_VALUE).toArray());
         //assert array.equals(treeDemo03);
         //Assert.assertEquals(array,treeDemo03);
         array = binaryTree2Array.Binary2ArrayLevel(gettreeDemo04());
-        treeArray04 = Arrays.stream(treeArray04).filter(x -> x != -1).toArray();
+        treeArray04 = Arrays.stream(treeArray04).filter(x->x!=Integer.MIN_VALUE).toArray();
         assert Arrays.equals(array, treeArray04);
         array = binaryTree2Array.Binary2ArrayLevel(gettreeDemo05());
-        treeArray05 = Arrays.stream(treeArray05).filter(x -> x != -1).toArray();
+        treeArray05 = Arrays.stream(treeArray05).filter(x->x!=Integer.MIN_VALUE).toArray();
         assert Arrays.equals(array, treeArray05);
     }
 
@@ -64,9 +65,9 @@ public class BinaryTree2ArrayImplTest extends BinaryTreeTestDemo {
         assert Arrays.equals(array, treeArray03s);
         array = binaryTree2Array.Binary2ArrayS(gettreeDemo04());
         treeArray04s = Arrays.stream(treeArray04s).filter(x -> x != -1).toArray();
-        assert Arrays.equals(array, treeArray04s);
+        assert Arrays.equals(array, Arrays.stream(treeArray04s).filter(x->x!=Integer.MIN_VALUE).toArray());
         array = binaryTree2Array.Binary2ArrayS(gettreeDemo05());
-        treeArray05s = Arrays.stream(treeArray05s).filter(x -> x != -1).toArray();
+        treeArray05s = Arrays.stream(treeArray05s).filter(x->x!=Integer.MIN_VALUE).toArray();
         assert Arrays.equals(array, treeArray05s);
     }
 

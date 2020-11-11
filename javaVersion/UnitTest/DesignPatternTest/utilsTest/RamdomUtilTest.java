@@ -1,14 +1,14 @@
 package UnitTest.DesignPatternTest.utilsTest;
 
 import org.junit.Test;
-import DesignPattern.utils.RamdomUtil;
+import Logic.utils.RamdomUtil;
 import java.util.regex.Pattern;
 
 /**
  * @author liujun
  * @version 1.0
  * @date 2019-11-03 00:21
- * @author��Email liujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @description 
  */
 public class RamdomUtilTest {

@@ -19,7 +19,7 @@ import java.lang.reflect.Method;
 public class ListReverseTest extends ListljTest {
 
     SinglyLinkedListReverse sr = new SinglyLinkedListReverse();
-    SinglyLinkedList singlyLinkedList;
+    SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
 
     /**
      * 测试：利用数组来反转链表

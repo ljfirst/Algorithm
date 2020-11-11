@@ -1,4 +1,4 @@
-package DesignPattern.utils;
+package Logic.utils;
 
 import java.io.BufferedReader;
 import java.io.File;
