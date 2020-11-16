@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.sequenceANDstringTest;
 
-import DataStructure.stringANDline.sequenceANDstring.PermutationinString;
+import DataStructure.stringANDline.slidingWindow.PermutationinString;
 import org.junit.Test;
 
 /**

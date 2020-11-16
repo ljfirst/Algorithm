@@ -41,6 +41,13 @@ public class SkipList implements Listlj {
         this.SkipListnum = 0;
     }
 
+    /**
+     *
+     *  经过实验证明：查找 耗时 比 插入 更加耗时。
+     *  层数越高，整个数据备份越多，越臃肿，但是查找快
+     *  层数越低，整个数据备份越少，      但是插入和删除快
+     * 	综合考虑，建议层数高
+     */
     @Override
     public boolean insert(boolean HeadTail, int... args) {
         if (args == null || args.length == 0) {
@@ -114,7 +121,7 @@ public class SkipList implements Listlj {
             point = point.down;
             prepoint.next = prepoint.next.next;
             prepoint = prepoint.down;
-            //ѭ������͵����
+            //prepoint 向 point 靠近
             while (prepoint != null && prepoint.next != point) {
                 prepoint = prepoint.next;
             }

@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.arrayTest;
 
-import DataStructure.stringANDline.array.other.HoldWater1;
+import DataStructure.stringANDline.array.arrayApply.HoldWater1;
 import org.junit.Test;
 
 /**

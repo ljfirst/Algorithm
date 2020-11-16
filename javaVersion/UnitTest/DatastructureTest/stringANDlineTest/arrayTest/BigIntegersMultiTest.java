@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.arrayTest;
 
-import DataStructure.stringANDline.array.other.BigIntegersMulti;
+import DataStructure.stringANDline.array.arrayApply.BigIntegersMulti;
 import org.junit.Test;
 
 /**

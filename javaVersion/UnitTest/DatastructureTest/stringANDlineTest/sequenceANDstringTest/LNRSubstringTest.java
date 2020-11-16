@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.sequenceANDstringTest;
 
-import DataStructure.stringANDline.sequenceANDstring.LNRSubstring;
+import DataStructure.stringANDline.slidingWindow.LNRSubstring;
 import org.junit.Test;
 
 /**

@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.sequenceANDstringTest;
 
-import DataStructure.stringANDline.sequenceANDstring.ProdealString;
+import DataStructure.stringANDline.slidingWindow.ProdealString;
 import UnitTest.DatastructureTest.stringANDlineTest.sequenceTestDemo;
 import org.junit.Test;
 

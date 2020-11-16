@@ -1,6 +1,6 @@
 package UnitTest.LogicTest.logictest;
 
-import DataStructure.stringANDline.array.other.SaleStocks;
+import DataStructure.stringANDline.array.arrayApply.SaleStocks;
 import org.junit.Test;
 
 /**

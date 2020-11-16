@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.sequenceANDstringTest;
 
-import DataStructure.stringANDline.sequenceANDstring.SequenceExist;
+import DataStructure.stringANDline.slidingWindow.SequenceExist;
 import UnitTest.DatastructureTest.stringANDlineTest.sequenceTestDemo;
 import org.junit.Test;
 

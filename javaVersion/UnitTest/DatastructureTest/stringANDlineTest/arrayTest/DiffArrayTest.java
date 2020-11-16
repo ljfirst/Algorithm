@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.arrayTest;
 
-import DataStructure.stringANDline.array.other.DiffArray;
+import DataStructure.stringANDline.array.arrayApply.DiffArray;
 import org.junit.Assert;
 import org.junit.Test;
 

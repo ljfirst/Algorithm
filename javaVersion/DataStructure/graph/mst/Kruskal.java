@@ -1,6 +1,6 @@
 package DataStructure.graph.mst;
 
-import DataStructure.stringANDline.array.other.MatrixCheck;
+import DataStructure.stringANDline.array.arrayApply.MatrixCheck;
 
 /**
  *@author liujun

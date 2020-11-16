@@ -5,10 +5,10 @@ import java.util.*;
  * @author liujun
  * @version 1.0
  * @date 2019-3-7 ����01:45:09
- * @authorEmail liujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @description 游戏组件
- * @URL
  */
+
 public class Tiger_Game_Utils {
 
 

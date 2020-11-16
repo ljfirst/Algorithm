@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.sequenceANDstringTest;
 
-import DataStructure.stringANDline.sequenceANDstring.MinimumWindowSubstring;
+import DataStructure.stringANDline.slidingWindow.MinimumWindowSubstring;
 import org.junit.Test;
 
 /**

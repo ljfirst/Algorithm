@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.sequenceANDstringTest;
 
-import DataStructure.stringANDline.sequenceANDstring.FindallAnagrams;
+import DataStructure.stringANDline.slidingWindow.FindallAnagrams;
 import org.junit.Test;
 
 import java.util.Arrays;

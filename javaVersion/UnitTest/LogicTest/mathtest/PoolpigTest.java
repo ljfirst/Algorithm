@@ -1,6 +1,6 @@
 package UnitTest.LogicTest.mathtest;
 
-import DataStructure.stringANDline.array.other.Poolpig;
+import DataStructure.stringANDline.array.arrayApply.Poolpig;
 import org.junit.Test;
 
 /**

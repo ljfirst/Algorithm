@@ -1,7 +1,7 @@
 package DataStructure.graph.shortestPath.singleSourceShortestPath;
 
 import DataStructure.stringANDline.hashTable.Node4Dijkstra;
-import DataStructure.stringANDline.array.other.MatrixCheck;
+import DataStructure.stringANDline.array.arrayApply.MatrixCheck;
 
 /**
  * @author liujun
