@@ -4,7 +4,6 @@ import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
 import DataStructure.stringANDline.list.listRealize.SinglyLinkedListReverse;
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 

@@ -1,8 +1,10 @@
 package UnitTest.DatastructureTest.stringANDlineTest.listTest;
 
+import DataStructure.sort.innerSort.innerSortRealize.QuickSortSimplex;
 import DataStructure.stringANDline.list.Listlj;
 import DataStructure.stringANDline.list.listRealize.DoubleLinkedList;
 import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
+import DataStructure.stringANDline.list.listRealize.SkipList;
 import org.junit.Assert;
 
 import java.util.Arrays;
@@ -26,6 +28,7 @@ public class ListljTest {
      * 3、测试使用头插法或者尾查法进行 数组插入 返回成功或者失败
      */
     public void test_insert(Listlj listlj) {
+
         listlj.clear();
         listlj.insert(true, array01);
         target = listlj.toarray();
@@ -50,23 +53,40 @@ public class ListljTest {
             listlj.insert(true, array03[i]);
         }
         target = listlj.toarray();
-        Assert.assertArrayEquals(target, array03_head);
+        if (listlj instanceof SkipList) {
+            Assert.assertArrayEquals(target, array03_delete_skip_value());
+        } else {
+            Assert.assertArrayEquals(target, array03_head);
+        }
 
         listlj.clear();
         for (int i = 0; i < array03.length; i++) {
             listlj.insert(false, array03[i]);
         }
         target = listlj.toarray();
-        Assert.assertArrayEquals(target, array03_tail);
+        if (listlj instanceof SkipList) {
+            Assert.assertArrayEquals(target, array03_delete_skip_value());
+        } else {
+            Assert.assertArrayEquals(target, array03_tail);
+        }
 
         listlj.clear();
         listlj.insert(true, array04);
         target = listlj.toarray();
-        Assert.assertArrayEquals(target, array04_head);
+        if (listlj instanceof SkipList) {
+            Assert.assertArrayEquals(target, array04_skip_value());
+        } else {
+            Assert.assertArrayEquals(target, array04_head);
+        }
+
         listlj.clear();
         listlj.insert(false, array04);
         target = listlj.toarray();
-        Assert.assertArrayEquals(target, array04_tail);
+        if (listlj instanceof SkipList) {
+            Assert.assertArrayEquals(target, array04_skip_value());
+        } else {
+            Assert.assertArrayEquals(target, array04_tail);
+        }
 
         listlj.clear();
         listlj.insert(false, array01);
@@ -76,7 +96,12 @@ public class ListljTest {
 
         listlj.insert(true, array05);
         target = listlj.toarray();
-        Assert.assertArrayEquals(target, array05_head);
+        if (listlj instanceof SkipList) {
+            Assert.assertArrayEquals(target, array05_skip_value());
+        } else {
+            Assert.assertArrayEquals(target, array05_head);
+        }
+
         listlj.clear();
         listlj.insert(false, array05);
         target = listlj.toarray();
@@ -149,7 +174,11 @@ public class ListljTest {
         flag = listlj.delete_value(666);
         assert !flag;
         target = listlj.toarray();
-        assert Arrays.equals(target, array04_delete_value);
+        if (listlj instanceof SkipList) {
+            assert Arrays.equals(target, array04_delete_skip_value());
+        } else {
+            assert Arrays.equals(target, array04_delete_value);
+        }
 
         listlj.clear();
         flag = listlj.delete_value(45);
@@ -192,22 +221,22 @@ public class ListljTest {
         listlj.clear();
         listlj.insert(false, array04);
         int index = listlj.search_value(5);
-        assert index == 5;
+        assert listlj instanceof SkipList ? index != -1 : index == 5;
         index = listlj.search_value(986);
-        assert index == 6;
+        assert listlj instanceof SkipList ? index != -1 : index == 6;
         index = listlj.search_value(666);
         assert index == -1;
 
         listlj.clear();
         listlj.insert(false, array05);
         index = listlj.search_value(5);
-        assert index == 4;
+        assert listlj instanceof SkipList ? index != -1 : index == 4;
         index = listlj.search_value(20);
-        assert index == 19;
+        assert listlj instanceof SkipList ? index != -1 : index == 19;
         index = listlj.search_value(21);
         assert index == -1;
         index = listlj.search_value(13);
-        assert index == 12;
+        assert listlj instanceof SkipList ? index != -1 : index == 12;
     }
 
     /**
@@ -220,9 +249,9 @@ public class ListljTest {
         listlj.clear();
         listlj.insert(false, array04);
         target = listlj.search_index(5);
-        assert target == 5;
+        assert target == (listlj instanceof SkipList ? array04_skip_value()[5] : 5);
         target = listlj.search_index(10);
-        assert target == 8;
+        assert target == (listlj instanceof SkipList ? array04_skip_value()[10] : 8);
         target = listlj.search_index(200);
         assert target == Integer.MIN_VALUE;
     }
@@ -230,9 +259,13 @@ public class ListljTest {
     public void testlistequals(Listlj listlj) {
         Listlj listTest;
         Listlj listTest2;
+
         if (listlj instanceof DoubleLinkedList) {
             listTest = new DoubleLinkedList();
             listTest2 = new DoubleLinkedList();
+        } else if (listlj instanceof SkipList) {
+            listTest = new SkipList();
+            listTest2 = new SkipList();
         } else {
             listTest = new SinglyLinkedList();
             listTest2 = new SinglyLinkedList();
@@ -241,8 +274,11 @@ public class ListljTest {
         listlj.clear();
         listTest.clear();
         listlj.insert(false, array04);
+        boolean flag = listlj.listequals(null);
+        assert !flag;
+
         listTest.insert(false, array04);
-        boolean flag = listlj.listequals(listTest);
+        flag = listlj.listequals(listTest);
         assert flag;
         //都是04，但是插入顺序不同，链表也不同
         listlj.clear();
@@ -250,7 +286,11 @@ public class ListljTest {
         listlj.insert(false, array04);
         listTest.insert(true, array04);
         flag = listlj.listequals(listTest);
-        assert !flag;
+        if (listlj instanceof SkipList) {
+            assert flag;
+        } else {
+            assert !flag;
+        }
         //04，05 链表不同
         listlj.clear();
         listTest.clear();
@@ -285,19 +325,47 @@ public class ListljTest {
     int array02_1 = 4;
 
     int[] array03 = {2, 54, 76, 3, 40, 598, 473, 6, 2};
+
+    public int[] array03_delete_skip_value() {
+        int[] u = Arrays.copyOfRange(array03, 0, array03.length);
+        Arrays.sort(u);
+        return u;
+    }
+
     int[] array03_04 = {2, 54, 76, 3, 40, 598, 473, 6, 2, 2, 54, 76, 3, 40, 5, 986, 56, 89, 854, 8, 9, 8, 473, 6, 2};
     int[] array03_head = {2, 6, 473, 598, 40, 3, 76, 54, 2};
     int[] array03_tail = {2, 54, 76, 3, 40, 598, 473, 6, 2};
-
     int[] array04 = {2, 54, 76, 3, 40, 5, 986, 56, 89, 854, 8, 9, 8, 473, 6, 2};
+
+    public int[] array04_skip_value() {
+        int[] u = Arrays.copyOfRange(array04, 0, array04.length);
+        Arrays.sort(u);
+        return u;
+    }
+
     int[] array04_insert_3_30 = {2, 54, 76, 30, 3, 40, 5, 986, 56, 89, 854, 8, 9, 8, 473, 6, 2};
     int[] array04_insert_11_12 = {2, 54, 76, 3, 40, 5, 986, 56, 89, 854, 8, 12, 9, 8, 473, 6, 2};
     int[] array04_delete_value = {2, 54, 76, 3, 40, 56, 89, 854, 8, 9, 8, 473, 6, 2};
+    QuickSortSimplex q = new QuickSortSimplex();
+
+    public int[] array04_delete_skip_value() {
+        int[] u = Arrays.copyOfRange(array04_delete_value, 0, array04_delete_value.length);
+        Arrays.sort(u);
+        return u;
+    }
+
     int[] array04_delete_value_5 = {};
     int[] array04_head = {2, 6, 473, 8, 9, 8, 854, 89, 56, 986, 5, 40, 3, 76, 54, 2};
     int[] array04_tail = {2, 54, 76, 3, 40, 5, 986, 56, 89, 854, 8, 9, 8, 473, 6, 2};
-
     int[] array05 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+
+    public int[] array05_skip_value() {
+        int[] u = Arrays.copyOfRange(array05, 0, array05.length);
+        Arrays.sort(u);
+        return u;
+    }
+
+    int[] array05_double = {1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 18, 19, 19, 20, 20};
     int[] array05_insert_0_1000 = {1000, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
     int[] array05_insert_100_100 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 100};
     int[] array05_head = {20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};

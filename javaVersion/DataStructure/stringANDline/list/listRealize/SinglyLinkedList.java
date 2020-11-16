@@ -20,6 +20,7 @@ public class SinglyLinkedList implements Listlj {
     //头节点、尾节点，头节点的值为单链表的长度
     public Nodelj head;
     public Nodelj tail;
+    private static final int error = Integer.MIN_VALUE;
 
     public SinglyLinkedList() {
         this.head = new Nodelj();
@@ -179,7 +180,7 @@ public class SinglyLinkedList implements Listlj {
         int count = 0;
         while (count++ < index) {
             if (nodelj == null) {
-                return Integer.MIN_VALUE;
+                return this.error;
             }
             nodelj = nodelj.next;
         }
@@ -190,11 +191,7 @@ public class SinglyLinkedList implements Listlj {
      * @return l1和链表自身进行对比
      */
     public boolean listequals(Listlj l2) {
-        SinglyLinkedList l1 = (SinglyLinkedList) l2;
-        if (l1 == this) {
-            return true;
-        }
-        return listequals(this, l1);
+        return listequals(this, l2);
     }
 
     /**

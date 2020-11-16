@@ -3,6 +3,8 @@ package DataStructure.stringANDline.list.listRealize;
 import DataStructure.stringANDline.list.Listlj;
 import DataStructure.stringANDline.list.Nodelj;
 
+import java.util.Arrays;
+
 /**
  * @author liujun
  * @version 1.0
@@ -16,6 +18,7 @@ public class DoubleLinkedList implements Listlj {
     Nodelj headpoint;
     Nodelj tailpoint;
     int size;
+    private static final int error = Integer.MIN_VALUE;
 
     public DoubleLinkedList() {
         this.headpoint = null;
@@ -168,7 +171,7 @@ public class DoubleLinkedList implements Listlj {
     @Override
     public int search_index(int index) {
         if (index > this.size) {
-            return Integer.MIN_VALUE;
+            return this.error;
         }
         Nodelj nodelj = this.headpoint;
         int count = 0;
@@ -204,11 +207,7 @@ public class DoubleLinkedList implements Listlj {
     }
 
     public boolean listequals(Listlj l2) {
-        DoubleLinkedList l1 = (DoubleLinkedList) l2;
-        if (l1 == this) {
-            return true;
-        }
-        return listequals(this, l1);
+        return listequals(this, l2);
     }
 
     public boolean listequals(Listlj l3, Listlj l4) {
@@ -218,7 +217,7 @@ public class DoubleLinkedList implements Listlj {
             return true;
         }
         if (l1 != null && l2 != null && l1.headpoint.value == l2.headpoint.value) {
-            Nodelj l1node = l1.headpoint.next;
+            /*Nodelj l1node = l1.headpoint.next;
             Nodelj l2node = l2.headpoint.next;
             while (l1node != l1.headpoint) {
                 if (l1node.value != l2node.value) {
@@ -226,8 +225,8 @@ public class DoubleLinkedList implements Listlj {
                 }
                 l1node = l1node.next;
                 l2node = l2node.next;
-            }
-            return true;
+            }*/
+            return Arrays.equals(l1.toarray(), l2.toarray());
         }
         return false;
     }
