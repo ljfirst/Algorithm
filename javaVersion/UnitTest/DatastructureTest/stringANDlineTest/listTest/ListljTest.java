@@ -323,7 +323,6 @@ public class ListljTest {
     int[] array01 = null;
     int[] array02 = {};
     int array02_1 = 4;
-
     int[] array03 = {2, 54, 76, 3, 40, 598, 473, 6, 2};
 
     public int[] array03_delete_skip_value() {

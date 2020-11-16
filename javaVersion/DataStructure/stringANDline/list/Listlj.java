@@ -1,5 +1,7 @@
 package DataStructure.stringANDline.list;
 
+import UnitTest.DesignPatternTest.templateTest.TemplateTest;
+
 /**
  * @author liujun
  * @version 1.0
@@ -15,6 +17,18 @@ package DataStructure.stringANDline.list;
  * 6、清除
  */
 public interface Listlj {
+
+    /**
+     *
+     * @param array
+     * @return 判断 array不为空
+     */
+    default boolean checkArray(int[] array) {
+        if (array == null || array.length == 0) {
+            return false;
+        }
+        return true;
+    }
 
     /**
      * @param HeadTail 头插法或者尾插法
@@ -67,14 +81,12 @@ public interface Listlj {
     public void clear();
 
     /**
-     *
      * @param listlj
      * @return 链表判断相等
      */
     public boolean listequals(Listlj listlj);
 
     /**
-     *
      * @param l1
      * @param l2
      * @return 链表判断相等

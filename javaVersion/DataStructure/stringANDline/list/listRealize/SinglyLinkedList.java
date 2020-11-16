@@ -57,7 +57,7 @@ public class SinglyLinkedList implements Listlj {
      * @param flag true表示头插法，tail表示尾插法
      */
     public boolean insert(boolean flag, int... arr) {
-        if (arr == null || arr.length == 0) {
+        if (!checkArray(arr)) {
             return false;
         }
         Nodelj nodehead = this.head;
