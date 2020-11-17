@@ -6,8 +6,8 @@ import java.util.Arrays;
  * @author liujun
  * @version 1.0
  * @date 2020-02-11 16:06
- * @author—Email  liujunfirst@outlook.com
- * @description  送货最短路径  回溯法
+ * @author—Email liujunfirst@outlook.com
+ * @description 送货最短路径  回溯法
  * @blogURL
  */
 public class ShortPath_Backtrack implements ShortPath {
@@ -32,7 +32,7 @@ public class ShortPath_Backtrack implements ShortPath {
         this.position_column = position_column;
         positionNum = position_row.length;
         visitFlag = new boolean[positionNum];
-        Arrays.fill(visitFlag,false);
+        Arrays.fill(visitFlag, false);
         sum_best = Integer.MAX_VALUE;
 
         for (int position = 0; position < positionNum; position++) {
@@ -50,7 +50,7 @@ public class ShortPath_Backtrack implements ShortPath {
         if (depth == positionNum) {
             //最后一个点需要加上 返回起点的值
             sum_temp = sum_temp + position_column[position] + position_row[position];
-            if(sum_temp < sum_best){
+            if (sum_temp < sum_best) {
                 sum_best = sum_temp;
             }
             sum_temp = sum_temp - (position_column[position] + position_row[position]);

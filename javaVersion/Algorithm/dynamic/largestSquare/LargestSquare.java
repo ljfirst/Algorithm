@@ -27,7 +27,7 @@ public interface LargestSquare {
 
         //校验矩阵：仅含0,1,否则输出-3
         for (int i = 0; i < Matrix.length; i++) {
-            for (int j = 0; j < Matrix[0].length; j++) {
+            for (int j = 0; j < Matrix[i].length; j++) {
                 if (Matrix[i][j] != 0 && Matrix[i][j] != 1) {
                     return false;
                 }

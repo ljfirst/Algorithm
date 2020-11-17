@@ -11,7 +11,7 @@ import org.openjdk.jmh.annotations.Mode;
  * @author liujun
  * @version 1.0
  * @date 2020/5/2
- * @author��Email liujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
  * @description
  */

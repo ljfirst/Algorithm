@@ -7,6 +7,7 @@ import DataStructure.tree.binaryTree.BinaryTree;
  * @date 2020-02-18 16:09
  * 二叉树 ： 判断两个二叉树相等
  */
+
 public class BinaryTreeImpl implements BinaryTree {
 
     public BinaryTreeImpl left;    //左孩子

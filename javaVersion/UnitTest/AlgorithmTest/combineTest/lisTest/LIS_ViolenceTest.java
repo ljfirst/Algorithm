@@ -1,6 +1,5 @@
 package UnitTest.AlgorithmTest.combineTest.lisTest;
 
-import Algorithm.comprehensive.lis.LIS_Lcs;
 import Algorithm.comprehensive.lis.LIS_Violence;
 import org.junit.Test;
 
@@ -12,7 +11,7 @@ import org.junit.Test;
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 最长递增子序列 暴力法测试案例
  */
-public class TestLIS_Violence extends TestLISDemo{
+public class LIS_ViolenceTest extends LISTestDemo {
 
     @Test
     public void testLIS_Violence(){

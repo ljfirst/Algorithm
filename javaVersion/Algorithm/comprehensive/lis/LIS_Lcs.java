@@ -4,6 +4,7 @@ import Algorithm.dynamic.lcs.LCS_Dynamic;
 import DataStructure.sort.innerSort.innerSortRealize.QuickSortDuplexing;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author liujun
@@ -11,32 +12,30 @@ import java.util.HashMap;
  * @date 2020/6/6
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description 最长递增子序列 字符串对比法，利用最长公共子序列，本质是动态规划
+ * @description 最长递增子序列
+ * 对字符串进行排序，去重，再利用最长公共子序列，本质是动态规划
  */
-public class LIS_Lcs implements LisInterface {
+public class LIS_Lcs implements LIS {
 
     @Override
     public int longestIncreasingSubsequence(String sequence) {
         if (!check(sequence)) {
             return 0;
         }
-       /* ArrayList l = (ArrayList) Arrays.asList(sequence.toCharArray());
-        int[] arrayValue = l.stream().mapToInt(x -> (int) x).toArray();*/
-
-        char[] c = sequence.toCharArray();
-        int[] ints = new int[c.length];
-        for (int i = 0; i < c.length; i++) {
-            ints[i] = Integer.parseInt(String.valueOf(c[i]));
-        }
+        int[] ints = sequence2intArray(sequence);
         //进行快速排序
-        QuickSortDuplexing q = new QuickSortDuplexing();
-        q.sortMethod(ints);
-        //因为是递增序列，所以要去重
-        HashMap hashMap = new HashMap();
-        for (int i = 0; i < c.length; i++) {
+        /*QuickSortDuplexing q = new QuickSortDuplexing();
+        q.sortMethod(ints);*/
+        //因为是递增序列，所以要去重，HashMap自带排序
+        Map hashMap = new HashMap();
+        for (int i = 0; i < sequence.length(); i++) {
             hashMap.put(ints[i], 1);
         }
-        String temp = hashMap.keySet().toString().replace(",", "").replace("[", "").replace("]", "").replace(" ", "");
+        String temp = hashMap.keySet().toString()
+                .replace(",", "")
+                .replace("[", "")
+                .replace("]", "")
+                .replace(" ", "");
         //再进行最长子序列比较
         LCS_Dynamic lcs = new LCS_Dynamic();
         int length = lcs.count(temp, sequence).getCommondLength();

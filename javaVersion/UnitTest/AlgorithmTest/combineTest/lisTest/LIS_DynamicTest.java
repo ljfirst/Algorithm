@@ -11,7 +11,7 @@ import org.junit.Test;
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 最长递增子序列 动态规划法测试案例
  */
-public class TestLIS_Dynamic extends TestLISDemo{
+public class LIS_DynamicTest extends LISTestDemo {
 
     @Test
     public void testLIS_Dynamic(){

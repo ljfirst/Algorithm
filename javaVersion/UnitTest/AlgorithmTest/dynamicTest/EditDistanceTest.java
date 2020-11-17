@@ -16,11 +16,23 @@ public class EditDistanceTest {
 
     @Test
     public void editDistanceTest() {
-        int count = editDistance.countDistance(demo011, demo012);
+        int count = editDistance.countDistance(demo01_1, demo01_2);
         assert count == 3;
+        count = editDistance.countDistance(demo02_1, demo02_2);
+        assert count == 1;
+        count = editDistance.countDistance(demo03_1, demo03_2);
+        assert count == 4;
+        count = editDistance.countDistance(demo04_1, demo04_2);
+        assert count == 2;
     }
 
-    String demo011 = "kitten";
-    String demo012 = "sitting";
+    String demo01_1 = "kitten";
+    String demo01_2 = "sitting";
+    String demo02_1 = "liujun";
+    String demo02_2 = "liuju";
+    String demo03_1 = "ljfirst";
+    String demo03_2 = "firstll";
+    String demo04_1 = "ljfirst";
+    String demo04_2 = "ljfeirrt";
 
 }

@@ -18,17 +18,18 @@ public class Find2ValueinArray {
         if (array == null || array.length <= 1) {
             return false;
         }
-        Arrays.sort(array);
+        int[] newarray = Arrays.copyOf(array, array.length);
+        Arrays.sort(newarray);
         int left = 0;
         int right = array.length - 1;
         while (left < right) {
-            while ((left < right) && (array[left] + array[right] < value)) {
+            while ((left < right) && (newarray[left] + newarray[right] < value)) {
                 left++;
             }
-            while ((left < right) && (array[left] + array[right] > value)) {
+            while ((left < right) && (newarray[left] + newarray[right] > value)) {
                 right--;
             }
-            if (array[left] + array[right] == value) {
+            if ((left < right) && (newarray[left] + newarray[right] == value)) {
                 return true;
             }
         }
@@ -43,17 +44,38 @@ public class Find2ValueinArray {
         int[] a = {-1, -1};
         int left = 0;
         int right = array.length - 1;
+        int[] newarray = Arrays.copyOf(array, array.length);
+        Arrays.sort(newarray);
         while (left < right) {
-            while ((left < right) && (array[left] + array[right] < value)) {
+            while ((left < right) && (newarray[left] + newarray[right] < value)) {
                 left++;
             }
-            while ((left < right) && (array[left] + array[right] > value)) {
+            while ((left < right) && (newarray[left] + newarray[right] > value)) {
                 right--;
             }
-            if (array[left] + array[right] == value) {
-                return new int[]{left, right};
+            if ((left < right) && (newarray[left] + newarray[right] == value)) {
+                return transvalue2position(array, newarray[left], newarray[right]);
             }
         }
-        return a;
+        return Arrays.equals(a, new int[]{-1, -1}) ? new int[]{} : a;
+    }
+
+    private int[] transvalue2position(int[] array, int value1, int value2) {
+        int p1 = 0;
+        int p2 = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == value1) {
+                p1 = i;
+            }
+            if (array[i] == value2) {
+                p2 = i;
+            }
+        }
+        if (p1 > p2) {
+            int temp = p1;
+            p1 = p2;
+            p2 = temp;
+        }
+        return new int[]{p1, p2};
     }
 }

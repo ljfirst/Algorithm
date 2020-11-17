@@ -6,13 +6,13 @@ package Algorithm.comprehensive.lis;
  * @date 2020/6/7
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description 分治法，但是局限于测试连续的递增子串
+ * @description 最长递增子序列
+ * 分治法，但是局限于测试连续的递增子串
  */
-public class LIS_Divide implements LisInterface {
+public class LIS_Divide implements LIS {
 
     int length;
     int count_best;
-    int[] StringArray;
 
     @Override
     public int longestIncreasingSubsequence(String sequence) {
@@ -21,13 +21,13 @@ public class LIS_Divide implements LisInterface {
         }
         length = sequence.length();
         count_best = 0;
-        String2intarray(sequence);
+        int[] StringArray = sequence2intArray(sequence);
         int bestLength = divide(StringArray, 0, sequence.length() - 1);
         return bestLength;
     }
 
     //分治
-    public int divide(int[] stringArr, int left, int right) {
+    private int divide(int[] stringArr, int left, int right) {
         if (left < right) {
             int mid = (left + right) / 2;
             int leftValue = divide(stringArr, left, mid);
@@ -38,8 +38,7 @@ public class LIS_Divide implements LisInterface {
         return 0;
     }
 
-    public int middleHandle(int[] stringArr, int left, int right) {
-
+    private int middleHandle(int[] stringArr, int left, int right) {
         int midd = (left + right) / 2;
         int leftPoint = midd;
         int rightPoint = midd;
@@ -57,12 +56,4 @@ public class LIS_Divide implements LisInterface {
         return count;
     }
 
-    public int[] String2intarray(String s) {
-        char[] d = s.toCharArray();
-        StringArray = new int[d.length];
-        for (int i = 0; i < d.length; i++) {
-            StringArray[i] = Integer.parseInt(String.valueOf(d[i]));
-        }
-        return StringArray;
-    }
 }

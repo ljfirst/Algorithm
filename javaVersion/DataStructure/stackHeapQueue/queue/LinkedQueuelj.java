@@ -1,28 +1,21 @@
 package DataStructure.stackHeapQueue.queue;
 
+import DataStructure.stringANDline.list.Nodelj;
+
 /**
  * @author liujun
  * @version 1.0
  * @date 2019-11-09 22:56
- * @authorEmail liujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @description 链队列
  */
 public class LinkedQueuelj implements Queuelj {
 
-    public int QueueRealsize;
-    public int QueueMaxsize;
-    public LinkedQueueNode front;
-    public LinkedQueueNode tail;
-
-    private class LinkedQueueNode {
-        int value;
-        LinkedQueueNode next;
-
-        LinkedQueueNode(int value) {
-            this.value = value;
-            this.next = null;
-        }
-    }
+    public int queueRealsize;
+    public int queueMaxsize;
+    public Nodelj front;
+    public Nodelj tail;
+    
 
     public LinkedQueuelj() {
         //默认初始值为50
@@ -30,26 +23,26 @@ public class LinkedQueuelj implements Queuelj {
     }
 
     public LinkedQueuelj(int num) {
-        QueueRealsize = 0;
-        QueueMaxsize = num;
-        front = tail = null;
+        this.queueRealsize = 0;
+        this.queueMaxsize = num;
+        this.front = this.tail = null;
     }
 
     @Override
     public boolean offer(int value) {
         //队空判断
-        if (QueueRealsize == QueueMaxsize) {
+        if (this.queueRealsize == this.queueMaxsize) {
             resize();
         }
-        LinkedQueueNode linkedQueueNode = new LinkedQueueNode(value);
+        Nodelj linkedQueueNode = new Nodelj(value);
         //��һ�����
-        if (QueueRealsize == 0) {
-            front = linkedQueueNode;
+        if (this.queueRealsize == 0) {
+            this.front = linkedQueueNode;
         } else {
-            tail.next = linkedQueueNode;
+            this.tail.next = linkedQueueNode;
         }
-        tail = linkedQueueNode;
-        QueueRealsize++;
+        this.tail = linkedQueueNode;
+        this.queueRealsize++;
         return true;
     }
 
@@ -58,9 +51,9 @@ public class LinkedQueuelj implements Queuelj {
         int value = -1;
         //判空
         if (!empty()) {
-            value = front.value;
-            front = front.next;
-            QueueRealsize--;
+            value = this.front.value;
+            this.front = front.next;
+            this.queueRealsize--;
         }
         return value;
     }
@@ -70,30 +63,30 @@ public class LinkedQueuelj implements Queuelj {
         int value = -1;
         //判空
         if (!empty()) {
-            value = front.value;
+            value = this.front.value;
         }
         return value;
     }
 
     @Override
     public int getRealsize() {
-        return QueueRealsize;
+        return this.queueRealsize;
     }
 
     @Override
     public int getMaxsize() {
-        return QueueMaxsize;
+        return this.queueMaxsize;
     }
 
     @Override
     public void resize() {
-        QueueRealsize <<= 1;
+        this.queueMaxsize <<= 1;
     }
 
     @Override
     public boolean search(int x) {
         if (!empty()) {
-            LinkedQueueNode node = front;
+            Nodelj node = this.front;
             while (node.next != null) {
                 if (node.value == x) {
                     return true;
@@ -106,9 +99,6 @@ public class LinkedQueuelj implements Queuelj {
 
     @Override
     public boolean empty() {
-        if (QueueRealsize == 0) {
-            return true;
-        }
-        return false;
+        return this.queueRealsize == 0;
     }
 }

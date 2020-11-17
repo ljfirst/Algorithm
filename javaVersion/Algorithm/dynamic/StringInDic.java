@@ -19,20 +19,7 @@ import java.util.stream.Collectors;
 public class StringInDic {
 
     public boolean findWord(String s, String[] wordDict) {
-        boolean flag = false;
-
-        //字符串不是空串，字典部位空
-        if (s == null || s.length() == 0 || wordDict == null || wordDict.length == 0) {
-            return false;
-        }
-
-        /*for (String s1 : wordDict) {
-            if (s1 == null || s1.length() == 0) {
-                return false;
-            }
-        }*/
-        //stream 写法
-        if(wordDict.length != Arrays.stream(wordDict).filter(s1 -> (s1 != null || s1.length() != 0)).count()){
+        if (!check(s, wordDict)) {
             return false;
         }
         //位置0是起始点，真正对比是在1号位开始，所以总体长度是s.length() + 1
@@ -55,12 +42,24 @@ public class StringInDic {
     public boolean findWordinwordDict(String s1, String[] wordDict) {
 
         List l = Arrays.stream(wordDict).filter(x -> x.equals(s1)).collect(Collectors.toList());
-        return l.size() == 0 ? false : true;
+        return l.size() != 0;
         /*for (String ss : wordDict) {
             if (ss.equals(s1)) {
                 return true;
             }
         }
         return false;*/
+    }
+
+    private boolean check(String s, String[] wordDict) {
+        //字符串不是空串，字典部位空
+        if (s == null || s.length() == 0 || wordDict == null || wordDict.length == 0) {
+            return false;
+        }
+        //stream 写法
+        if (wordDict.length != Arrays.stream(wordDict).filter(s1 -> (s1 != null || s1.length() != 0)).count()) {
+            return false;
+        }
+        return true;
     }
 }

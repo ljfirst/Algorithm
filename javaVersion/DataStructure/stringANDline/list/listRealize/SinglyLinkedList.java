@@ -93,6 +93,12 @@ public class SinglyLinkedList implements Listlj {
             Nodelj nodelj1 = new Nodelj(arg);
             nodelj1.next = pre.next;
             pre.next = nodelj1;
+            //update tail
+            if (pre == this.tail) {
+                this.tail = nodelj1;
+            }
+            //update ahead point
+            pre = nodelj1;
             this.head.value++;//这一步总是会遗忘
         }
         return true;

@@ -23,7 +23,7 @@ public class LargestSquare_Dynamic implements LargestSquare {
                 for (int j = 1; j <= column_bound; j++) {
                     if (Matrix[i - 1][j - 1] == 1) {
                         statusMatrix[i][j] = Math.min(Math.min(statusMatrix[i - 1][j - 1], statusMatrix[i - 1][j]), statusMatrix[i][j - 1]) + 1;
-                        MaxSideLength = MaxSideLength > statusMatrix[i][j] ? MaxSideLength : statusMatrix[i][j];
+                        MaxSideLength = Math.max(MaxSideLength, statusMatrix[i][j]);
                     }
                 }
             }

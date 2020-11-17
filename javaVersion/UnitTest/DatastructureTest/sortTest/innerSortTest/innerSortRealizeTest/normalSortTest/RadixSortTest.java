@@ -11,7 +11,7 @@ import org.openjdk.jmh.annotations.Mode;
  * @author liujun
  * @version 1.0
  * @date 2020-02-11 15:08
- * @authorEmail liujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @description 
  * @blogURL
  */

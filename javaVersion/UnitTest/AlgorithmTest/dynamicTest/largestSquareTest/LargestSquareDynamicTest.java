@@ -9,14 +9,12 @@ import org.junit.Test;
  * @date 2020/6/3
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description
+ * @description 最大正方形的测试案例
  */
 public class LargestSquareDynamicTest extends LargestSquareTest{
 
-    LargestSquare_Dynamic largestSquareDynamic = new LargestSquare_Dynamic();
-
     @Test
     public void testSolution(){
-        super.testSolution(largestSquareDynamic);
+        super.testSolution(new LargestSquare_Dynamic());
     }
 }

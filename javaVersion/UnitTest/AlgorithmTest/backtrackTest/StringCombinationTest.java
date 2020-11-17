@@ -2,10 +2,7 @@ package UnitTest.AlgorithmTest.backtrackTest;
 
 import Algorithm.backtrack.StringCombination;
 import org.junit.Test;
-
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * @author liujun
@@ -22,19 +19,19 @@ public class StringCombinationTest {
     @Test
     public void test() {
         String[] target = sc.print(demo01);
-        Arrays.equals(target, answer01);
+        assert Arrays.equals(target, answer01);
         target = sc.print(demo02);
-        Arrays.equals(target, answer02);
+        assert Arrays.equals(target, answer02);
         target = sc.print(demo03);
-        Arrays.equals(target, answer03);
+        assert Arrays.equals(target, answer03);
         target = sc.print(demo04);
-        Arrays.equals(target, answer04);
+        assert Arrays.equals(target, answer04);
         target = sc.print(demo05);
-        Arrays.equals(target, answer05);
+        assert Arrays.equals(target, answer05);
         target = sc.print(demo06);
-        Arrays.equals(target, answer06);
+        assert Arrays.equals(target, answer06);
         target = sc.print(demo07);
-        Arrays.equals(target, answer07);
+        assert Arrays.equals(target, answer07);
     }
 
     String demo01 = "";

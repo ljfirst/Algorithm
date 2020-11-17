@@ -4,8 +4,9 @@ package Algorithm.dynamic.lcs;
  * @author liujun
  * @version 1.0
  * @date 2018-7-19 Time：上午10:15:35
- * @author—Email @mail.ustc.edu.cn
- * @description longest common Sequence 最长公共子序列
+ * @author—Email ljfirst@mail.ustc.edu.cn
+ * @description 最长公共子序列
+ * longest common Sequence
  * LCS算法，找出两个字符串最大匹配子串。
  */
 

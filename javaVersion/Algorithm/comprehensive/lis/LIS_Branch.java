@@ -9,9 +9,10 @@ import java.util.List;
  * @date 2020/6/7
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description 最长递增子序列 分支限界法
+ * @description 最长递增子序列
+ * 分支限界法
  */
-public class LIS_Branch implements LisInterface {
+public class LIS_Branch implements LIS {
 
     //用于存放数据
     public List<Integer> list_temp;
@@ -28,7 +29,7 @@ public class LIS_Branch implements LisInterface {
         }
         length = sequence.length();
         count_best = 0;
-        String2intarray(sequence);
+        StringArray = sequence2intArray(sequence);
         //剩下的待遍历距离小于当前的最优解，就没有必要再继续下去了。
         for (int i = 1; count_best <= length - i; i++) {
             list_temp = new ArrayList();
@@ -40,11 +41,10 @@ public class LIS_Branch implements LisInterface {
     }
 
     public void count(int depth) {
-        //当前temp的值加上剩下待遍历的距离，小于等于最优值的时候，就没有必要再继续下去了。
+        //剪枝条件：当前temp的值加上剩下待遍历的距离，小于等于最优值的时候，就没有必要再继续下去了。
         if ((length - 1) - depth + (count_temp + 1) <= count_best) {
             return;
         }
-
         if (count_temp > count_best || depth == length - 1) {
             //更新最优解，并继续下去
             if (count_temp > count_best) {
@@ -55,7 +55,6 @@ public class LIS_Branch implements LisInterface {
             if (depth == length - 1) {
                 return;
             }
-
         }
         //分支递归
         for (int i = depth; i < length; i++) {
@@ -66,14 +65,5 @@ public class LIS_Branch implements LisInterface {
                 list_temp.remove(list_temp.get(--count_temp));
             }
         }
-    }
-
-    public int[] String2intarray(String s) {
-        char[] d = s.toCharArray();
-        StringArray = new int[d.length];
-        for (int i = 0; i < d.length; i++) {
-            StringArray[i] = Integer.parseInt(String.valueOf(d[i]));
-        }
-        return StringArray;
     }
 }

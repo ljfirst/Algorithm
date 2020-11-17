@@ -4,7 +4,7 @@ package DataStructure.stackHeapQueue.queue;
  * @author liujun
  * @version 1.0
  * @date 2020-01-13 21:52
- * @authorEmail liujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @description 队列的基本方法
  * @blogURL
  */

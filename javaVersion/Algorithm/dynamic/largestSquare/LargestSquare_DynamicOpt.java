@@ -6,7 +6,7 @@ package Algorithm.dynamic.largestSquare;
  * @date 2020/6/3
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description 动态规划优化
+ * @description 动态规划优化 ： 一维矩阵
  */
 public class LargestSquare_DynamicOpt implements LargestSquare {
     @Override
@@ -25,7 +25,7 @@ public class LargestSquare_DynamicOpt implements LargestSquare {
                     now = statusMatrix[j];
                     if (Matrix[i - 1][j - 1] == 1) {
                         statusMatrix[j] = Math.min(Math.min(now, pre), statusMatrix[j - 1]) + 1;
-                        MaxSideLength = MaxSideLength > statusMatrix[j] ? MaxSideLength : statusMatrix[j];
+                        MaxSideLength = Math.max(MaxSideLength, statusMatrix[j]);
                     } else {
                         statusMatrix[j] = 0;
                     }

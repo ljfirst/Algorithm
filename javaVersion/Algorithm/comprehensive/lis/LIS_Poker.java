@@ -8,7 +8,7 @@ package Algorithm.comprehensive.lis;
  * @description  最长递增子序列 分治法
  * @blogURL
  */
-public class LIS_Poker implements LisInterface{
+public class LIS_Poker implements LIS {
     public int longestIncreasingSubsequence(String sequence) {
 
         if (!check(sequence)) {

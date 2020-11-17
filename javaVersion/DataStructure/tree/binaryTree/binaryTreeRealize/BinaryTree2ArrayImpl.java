@@ -57,7 +57,6 @@ public class BinaryTree2ArrayImpl implements BinaryTree2Array {
         queue.offer(root);
         BinaryTreeImpl front = root;
         BinaryTreeImpl tail = root;
-
         while (!queue.isEmpty()) {
             BinaryTreeImpl binaryTree = queue.poll();
             System.out.print(binaryTree.value + " ");

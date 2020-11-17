@@ -12,7 +12,6 @@ public class ShortPath_Greedy implements ShortPath {
 
     @Override
     public int shortPath(int[] position_row, int[] position_column) {
-
         return check(position_row, position_column) ? shortPath_greedy(position_row, position_column) : -1;
     }
 
@@ -61,7 +60,6 @@ public class ShortPath_Greedy implements ShortPath {
 
     //最短距离数组的更新函数
     private int[] update(int p, int[] shortRouteValue, int[] position_row, int[] position_column) {
-
         //定义距离
         int row_value = 0;
         int column_value = 0;

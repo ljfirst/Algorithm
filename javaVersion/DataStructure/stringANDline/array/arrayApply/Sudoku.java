@@ -1,6 +1,6 @@
 package DataStructure.stringANDline.array.arrayApply;
 
-import DataStructure.tree.redBlackTree.RedBlackTree;
+import DataStructure.tree.redBlackTree.RedBlackTreeImpl;
 
 import java.util.Scanner;
 
@@ -17,11 +17,11 @@ public class Sudoku {
 	int testValue = 0;
 	int movePoint = 1;
 	int[] arr = {1,2,4,8,16,32,64,128,256};
-	RedBlackTree rbt = new RedBlackTree();
+	RedBlackTreeImpl rbt = new RedBlackTreeImpl();
 	Bitcount bc = new Bitcount();
 	
 	public Sudoku(int row, int column) {
-		rbt = rbt.add(arr);
+		rbt.put(1,2);
 		input(row, column);
 		while(!sudokuStillHaveEmpty(suduNum)){
 			checkSudu(suduNum);
@@ -29,7 +29,7 @@ public class Sudoku {
 				for (int j = 0; j < column; j++) {
 					if(suduNum[i][j].value == 0){
 						full(i,j);
-						if(rbt.containsKey(testValue)){
+						if(rbt.contain(testValue)){
 							suduNum[i][j].value = rbt.get(testValue);
 							backStep(i, j, testValue);
 						}else{
@@ -119,7 +119,7 @@ public class Sudoku {
 	}
 	
 	public void setValue(int rowi, int columnj, SudokuNode valueNode){
-		if(rbt.containsKey(valueNode.tempValue)){
+		if(rbt.contain(valueNode.tempValue)){
 			valueNode.value = valueNode.tempValue;
 			backStep(rowi, columnj, valueNode.value);
 		}

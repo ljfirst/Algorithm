@@ -1,6 +1,6 @@
 package UnitTest.AlgorithmTest.combineTest.lisTest;
 
-import Algorithm.comprehensive.lis.LIS_Branch;
+import Algorithm.comprehensive.lis.LIS_Poker;
 import org.junit.Test;
 
 /**
@@ -9,12 +9,12 @@ import org.junit.Test;
  * @date 2020/6/7
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description 最长递增子序列 分支限界法测试案例
+ * @description 扑克法
  */
-public class TestLIS_Branch extends TestLISDemo{
+public class LIS_PokerTest extends LISTestDemo {
 
     @Test
-    public void testLIS_Branch(){
-        super.TestDemo(new LIS_Branch());
+    public void testLIS_Poker(){
+        super.TestDemo(new LIS_Poker());
     }
 }

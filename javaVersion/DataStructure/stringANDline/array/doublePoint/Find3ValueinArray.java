@@ -41,9 +41,9 @@ public class Find3ValueinArray {
         int[] b;
         int[] sd;
         for (int i = 0; i < array.length; i++) {
-            a[0] = array[i];
-            //防重复选值
+            a[0] = i;
             sd = Arrays.copyOf(array, array.length);
+            //防重复选值
             sd[i] = Integer.MIN_VALUE;
             if (f.exist(array, value - array[i])) {
                 b = f.getValuePosition(sd, value - array[i]);
@@ -52,6 +52,8 @@ public class Find3ValueinArray {
                 return a;
             }
         }
+        //查找失败
+        a[0] = -1;
         return a;
     }
 }

@@ -4,16 +4,17 @@ package Algorithm.dynamic.lss;
  * @author liujun
  * @version 1.0
  * @date 2019-11-30 00:08
- * @author—Email  liujunfirst@outlook.com
- * @description  最大字段和 分治法
+ * @author—Email liujunfirst@outlook.com
+ * @description 最大字段和 分治法
+ * LargestSumofSubSequence by divide
  * 给定一个数组，求这个数组的连续子数组中，最大的那一段的和
  * @blogURL
  */
-//LargestSumofSubSequence by divide
-public class LSS_Divide {
+
+public class LSS_Divide implements LargestSumofSubSequence {
 
     public int LargestSumofSubSequence(int[] Sequence) {
-        if(Sequence == null || Sequence.length == 0){
+        if (Sequence == null || Sequence.length == 0) {
             return 0;
         }
         int sum = divide(Sequence, 0, Sequence.length - 1);
@@ -26,27 +27,26 @@ public class LSS_Divide {
             int leftValue = divide(Sequence, left, mid);
             int rightValue = divide(Sequence, mid + 1, right);
             int midValue = mid(Sequence, left, right);
-            return Math.max(Math.max(leftValue,rightValue),midValue);
+            return Math.max(Math.max(leftValue, rightValue), midValue);
         }
         return Sequence[left];
     }
 
     public int mid(int[] Sequence, int left, int right) {
-
         int sum_temp = 0;
         int sum_best = Sequence[left];
         int mid = (left + right) / 2;
         int leftpoint = mid;
         int rightpoint = mid + 1;
-        while(leftpoint >= left){
+        while (leftpoint >= left) {
             sum_temp += Sequence[leftpoint];
-            sum_best = sum_best > sum_temp ? sum_best : sum_temp;
+            sum_best = Math.max(sum_best, sum_temp);
             leftpoint--;
         }
         sum_temp = sum_best;
-        while(rightpoint <= right){
+        while (rightpoint <= right) {
             sum_temp += Sequence[rightpoint];
-            sum_best = sum_best > sum_temp ? sum_best : sum_temp;
+            sum_best = Math.max(sum_best, sum_temp);
             rightpoint++;
         }
         return sum_best;

@@ -12,7 +12,7 @@ import java.util.TreeMap;
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 找所有字母异位词
- * 输入一个串S，一个串T，找到S中所有T的排列，返回它们的起始索引
+ * 输入一个源串S，一个目标串T，找到S中所有T的连续排列，返回它们的起始索引
  */
 public class FindallAnagrams {
 

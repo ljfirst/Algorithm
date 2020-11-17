@@ -11,7 +11,7 @@ package Algorithm.dynamic.lss;
  * @blogURL
  */
 
-public class LSS {
+public class LSS implements LargestSumofSubSequence{
 
     public int LargestSumofSubSequence(int [] Sequence){
         int sum = 0;
