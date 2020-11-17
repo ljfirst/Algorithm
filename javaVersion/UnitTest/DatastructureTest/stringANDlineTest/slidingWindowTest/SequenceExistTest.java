@@ -1,4 +1,4 @@
-package UnitTest.DatastructureTest.stringANDlineTest.sequenceANDstringTest;
+package UnitTest.DatastructureTest.stringANDlineTest.slidingWindowTest;
 
 import DataStructure.stringANDline.slidingWindow.SequenceExist;
 import UnitTest.DatastructureTest.stringANDlineTest.sequenceTestDemo;

@@ -1,6 +1,7 @@
-package UnitTest.DatastructureTest.stringANDlineTest.sequenceANDstringTest;
+package UnitTest.DatastructureTest.stringANDlineTest.slidingWindowTest;
 
 import DataStructure.stringANDline.slidingWindow.PermutationinString;
+import UnitTest.DatastructureTest.stringANDlineTest.StringData4Test;
 import org.junit.Test;
 
 /**
@@ -11,7 +12,7 @@ import org.junit.Test;
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 测试用例： 字符串排列
  */
-public class PermutationinStringTest extends StringData4Test{
+public class PermutationinStringTest extends StringData4Test {
 
     PermutationinString p = new PermutationinString();
 
