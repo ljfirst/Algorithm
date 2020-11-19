@@ -2,6 +2,7 @@ package DataStructure.sort.innerSort.innerSortRealize;
 
 import Algorithm.comprehensive.backpack.Goods;
 import DataStructure.sort.innerSort.SortInterface;
+import DataStructure.stringANDline.list.Listlj;
 
 /**
  * @author liujun
@@ -16,7 +17,6 @@ public class InsertSort implements SortInterface {
     //插入排序
     @Override
     public void sortMethod(int[] array) {
-
         //输入检查
         if (!check(array)) {
             return ;
@@ -68,6 +68,10 @@ public class InsertSort implements SortInterface {
                 array[j] = temp;
             }
         }
+    }
+
+    public void sortMethod(Listlj array) {
+
     }
 
     public static void sortMethodT(Goods[] array) {

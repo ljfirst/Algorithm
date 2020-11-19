@@ -1,5 +1,7 @@
 package DataStructure.tree.redBlackTree;
 
+import DataStructure.stringANDline.list.Nodelj;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -11,8 +13,8 @@ import java.util.Queue;
  * @date 2018-8-29 10:29:42
  * @author-Email liujunfirst@outlook.com
  * @description 红黑树
- * 1、插入 insert(int key, int value)(是否去重)
- * 2、删除 delete(int key)
+ * 1、插入 put(int key, int value)(是否去重)
+ * 2、删除 remove(int key)
  * 3、查找 contain(int key)
  * 4、获取 get(int key)
  * 5、获取 getBelowKey(int key)   获取map内比这个key值小的元素个数
@@ -36,7 +38,22 @@ public class RedBlackTreeImpl implements RedBlackTree {
 
     @Override
     public boolean put(int key, int value) {
-        return put(false, key, value);
+        return put(true, key, value);
+    }
+
+    // 数据排序
+    public boolean put(int[] key) {
+        clear();
+        if (key == null || key.length == 0) {
+            return false;
+        }
+        for (int i = 0; i < key.length; i++) {
+            boolean f = put(false, key[i], 0);
+            if (!f) {
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
@@ -219,7 +236,30 @@ public class RedBlackTreeImpl implements RedBlackTree {
 
     @Override
     public int getBelowKey(int key) {
+        if (!contain(key)) {
+            return 0;
+        }
+        RedBlackNode root = this.root;
+        int count = 0;
+        while (root != null) {
+            if (root.key == key) {
+                return count + countNodeNum(root.left);
+            } else if (root.key < key) {
+                count = 1 + count + countNodeNum(root.left);
+                root = root.right;
+            } else {
+                root = root.left;
+            }
+        }
         return 0;
+    }
+
+    private int countNodeNum(RedBlackNode node) {
+        if (node == null) {
+            return 0;
+        }
+        int count = countNodeNum(node.left) + countNodeNum(node.right) + 1;
+        return count;
     }
 
     //调整插入节点周围的颜色

@@ -5,6 +5,7 @@ import DataStructure.stringANDline.list.Listlj;
 import DataStructure.stringANDline.list.listRealize.DoubleLinkedList;
 import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
 import DataStructure.stringANDline.list.listRealize.SkipList;
+import lombok.Data;
 import org.junit.Assert;
 
 import java.util.Arrays;
@@ -17,9 +18,11 @@ import java.util.Arrays;
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 链表 测试案例
  */
+
+@Data
 public class ListljTest {
 
-    int[] target;
+    public int[] target;
     int value;
 
     /**
@@ -322,10 +325,10 @@ public class ListljTest {
         assert flag;
     }
 
-    int[] array01 = null;
-    int[] array02 = {};
+    public int[] array01 = null;
+    public int[] array02 = {};
     int array02_1 = 4;
-    int[] array03 = {2, 54, 76, 3, 40, 598, 473, 6, 2};
+    public int[] array03 = {2, 54, 76, 3, 40, 598, 473, 6, 2};
 
     public int[] array03_delete_skip_value() {
         int[] u = Arrays.copyOfRange(array03, 0, array03.length);
@@ -333,10 +336,10 @@ public class ListljTest {
         return u;
     }
 
-    int[] array03_04 = {2, 54, 76, 3, 40, 598, 473, 6, 2, 2, 54, 76, 3, 40, 5, 986, 56, 89, 854, 8, 9, 8, 473, 6, 2};
-    int[] array03_head = {2, 6, 473, 598, 40, 3, 76, 54, 2};
-    int[] array03_tail = {2, 54, 76, 3, 40, 598, 473, 6, 2};
-    int[] array04 = {2, 54, 76, 3, 40, 5, 986, 56, 89, 854, 8, 9, 8, 473, 6, 2};
+    public int[] array03_04 = {2, 54, 76, 3, 40, 598, 473, 6, 2, 2, 54, 76, 3, 40, 5, 986, 56, 89, 854, 8, 9, 8, 473, 6, 2};
+    public int[] array03_head = {2, 6, 473, 598, 40, 3, 76, 54, 2};
+    public int[] array03_tail = {2, 54, 76, 3, 40, 598, 473, 6, 2};
+    public int[] array04 = {2, 54, 76, 3, 40, 5, 986, 56, 89, 854, 8, 9, 8, 473, 6, 2};
 
     public int[] array04_skip_value() {
         int[] u = Arrays.copyOfRange(array04, 0, array04.length);
@@ -344,9 +347,9 @@ public class ListljTest {
         return u;
     }
 
-    int[] array04_insert_3_30 = {2, 54, 76, 30, 3, 40, 5, 986, 56, 89, 854, 8, 9, 8, 473, 6, 2};
-    int[] array04_insert_11_12 = {2, 54, 76, 3, 40, 5, 986, 56, 89, 854, 8, 12, 9, 8, 473, 6, 2};
-    int[] array04_delete_value = {2, 54, 76, 3, 40, 56, 89, 854, 8, 9, 8, 473, 6, 2};
+    public int[] array04_insert_3_30 = {2, 54, 76, 30, 3, 40, 5, 986, 56, 89, 854, 8, 9, 8, 473, 6, 2};
+    public int[] array04_insert_11_12 = {2, 54, 76, 3, 40, 5, 986, 56, 89, 854, 8, 12, 9, 8, 473, 6, 2};
+    public int[] array04_delete_value = {2, 54, 76, 3, 40, 56, 89, 854, 8, 9, 8, 473, 6, 2};
     QuickSortSimplex q = new QuickSortSimplex();
 
     public int[] array04_delete_skip_value() {
@@ -355,10 +358,10 @@ public class ListljTest {
         return u;
     }
 
-    int[] array04_delete_value_5 = {};
-    int[] array04_head = {2, 6, 473, 8, 9, 8, 854, 89, 56, 986, 5, 40, 3, 76, 54, 2};
-    int[] array04_tail = {2, 54, 76, 3, 40, 5, 986, 56, 89, 854, 8, 9, 8, 473, 6, 2};
-    int[] array05 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+    public int[] array04_delete_value_5 = {};
+    public int[] array04_head = {2, 6, 473, 8, 9, 8, 854, 89, 56, 986, 5, 40, 3, 76, 54, 2};
+    public int[] array04_tail = {2, 54, 76, 3, 40, 5, 986, 56, 89, 854, 8, 9, 8, 473, 6, 2};
+    public int[] array05 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
 
     public int[] array05_skip_value() {
         int[] u = Arrays.copyOfRange(array05, 0, array05.length);
@@ -366,9 +369,9 @@ public class ListljTest {
         return u;
     }
 
-    int[] array05_double = {1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 18, 19, 19, 20, 20};
-    int[] array05_insert_0_1000 = {1000, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
-    int[] array05_insert_100_100 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 100};
-    int[] array05_head = {20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
-    int[] array05_tail = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+    public int[] array05_double = {1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 18, 19, 19, 20, 20};
+    public int[] array05_insert_0_1000 = {1000, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+    public int[] array05_insert_100_100 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 100};
+    public int[] array05_head = {20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+    public int[] array05_tail = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
 }

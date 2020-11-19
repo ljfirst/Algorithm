@@ -7,8 +7,8 @@ package DataStructure.tree.redBlackTree;
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 红黑树
- * 1、插入 insert(int key, int value)(是否去重)
- * 2、删除 delete(int key)
+ * 1、插入 put(int key, int value)(是否去重)
+ * 2、删除 remove(int key)
  * 3、查找 contain(int key)
  * 4、获取 get(int key)
  * 5、获取 getBelowKey(int key)   获取map内比这个key值小的元素个数

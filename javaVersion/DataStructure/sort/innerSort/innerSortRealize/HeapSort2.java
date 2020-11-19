@@ -8,9 +8,10 @@ import DataStructure.sort.innerSort.SortInterface;
  * @date 2020/6/21
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description
+ * @description 堆排序
  */
 public class HeapSort2 implements SortInterface {
+
     @Override
     public void sortMethod(int[] array) {
         //输入检查

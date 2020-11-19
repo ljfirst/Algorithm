@@ -28,7 +28,7 @@
 
 # 具体的项目目录结构
 
-#### $\color{7f1A8A}Algorithm 算法专题$
+#### $\color{7f1A8A}Algorithm/算法专题$
  ****
 + <font color=#Af2233 size=4 >**综合解法题**</font>
   + **背包问题**
@@ -59,7 +59,7 @@
   + [无重叠区间](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/Algorithm/greedy/EraseOverlapIntervals) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/AlgorithmTest/greedyTest/EraseOverlapIntervalsTest.java)
   + 迪杰斯特拉算法
 
-#### $\color{7f1A8A}DataStructure 数据结构专题$
+#### $\color{7f1A8A}DataStructure /数据结构专题$
  ****
 + <font color=#Af2233 size=4 >**图专题**</font>
   + BellmanFord.java
@@ -77,14 +77,15 @@
     + **哈希专题**
     + **链表专题**
       + [单链表的插入、删除、查找、相等](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/DataStructure/stringANDline/list/listRealize/SinglyLinkedList.java)	和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/listTest/SinglyLinkedListTest.java)
-      + [链表反转]()
-      + [带环链表的实现](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/DataStructure/stringANDline/list/listRealize/RangList.java)	和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/listTest/RangListTest.java)
+      + [链表的反转有多少种方式](https://blog.csdn.net/ljfirst/article/details/109508557)
+      + [有环链表和相交链表](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/DataStructure/stringANDline/list/listRealize/RingList.java)	和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/listTest/RingListTest.java)
       + [双向链表的插入、删除、查找、相等](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/DataStructure/stringANDline/list/listRealize/DoubleLinkedList.java)	 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/listTest/DoubleLinkedListTest.java)
       + [Redis底层数据结构：跳表的实现](https://blog.csdn.net/ljfirst/article/details/104504763)	
     + **序列和字符串题目集锦**
       + [人民币大小写转换、找所有字母异位词、最小循环的字符串、最长无重复子串、最小覆盖子串、IP地址转化、反转字符串](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stringANDline/sequenceANDstring) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/sequenceANDstringTest)
-    + [五大经典字符串匹配算法的Java代码实现](https://blog.csdn.net/ljfirst/article/details/104448266)
-      + BF、BM、RK、KMP、Sunday
+    + **字符串匹配专题**
+      + [五大经典字符串匹配算法的Java代码实现](https://blog.csdn.net/ljfirst/article/details/104448266)
+        + BF、BM、RK、KMP、Sunday
 + <font color=#Af2233 size=4 >**排序专题**</font>
     + 外部排序
     + 内部排序
@@ -108,7 +109,7 @@
     + [赫夫曼树]()  和 [测试案例]()
     + [红黑树]()  和 [测试案例]()
 
-#### $\color{7f1A8A}Design Pattern 设计模式专题$
+#### $\color{7f1A8A}Design Pattern /设计模式专题$
  ****
   + [Singleton 单例模式](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DesignPattern/single) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DesignPatternTest/singleTest)
   + [Proxy 代理模式](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DesignPattern/proxy) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DesignPatternTest/proxyTest)

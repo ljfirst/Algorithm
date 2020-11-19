@@ -18,5 +18,5 @@ LogicUT=$(   find  $dirpath/UnitTest/LogicTest      -iname "*.java" |grep  Test 
 Total=$((Algorithm+DS+Design+Logic))
 TotalUT=$((AlgorithmUT+DSUT+DesignUT+LogicUT))
 echo "      Total - Algorithm  - DataStructure  - DesignPattern"
-echo "Code: $Total   -$Algorithm    -  $DataStructure      -  $Design "
-echo "UT  : $TotalUT   - $AlgorithmUT   -  $DataStructureUT      -  $DesignUT"
+echo "Code: $Total   - $Algorithm   -  $DS      -  $Design "
+echo "UT  : $TotalUT   - $AlgorithmUT   -  $DSUT      -  $DesignUT"

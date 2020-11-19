@@ -40,6 +40,8 @@ public class RedBlackTreeTest {
             flag = rbt.put(i, i);
             assert flag;
         }
+        int below = rbt.getBelowKey(5);
+        assert below == 5;
         array = rbt.toarray();
         assert Arrays.equals(array, array01);
         assert rbt.size == 10;
@@ -69,6 +71,16 @@ public class RedBlackTreeTest {
         array = rbt.toarray();
         int[] array100 = list.stream().distinct().mapToInt(Integer::intValue).sorted().toArray();
         assert Arrays.equals(array, array100);
+
+        //测试 getBelowKey
+        int pointnum = 23;
+        below = rbt.getBelowKey(pointnum);
+        int targetnum = (int) list.stream().distinct().filter(x -> x < pointnum).count();
+        assert below == targetnum;
+        int pointnum1 = 87;
+        below = rbt.getBelowKey(pointnum1);
+        targetnum = (int) list.stream().distinct().filter(x -> x < pointnum1).count();
+        assert below == targetnum;
 
         /*assert rbt.remove(3);
         assert !rbt.remove(30);

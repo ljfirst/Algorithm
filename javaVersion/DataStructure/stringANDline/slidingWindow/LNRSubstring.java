@@ -9,23 +9,20 @@ import java.util.TreeMap;
  * @date 2018-12-17 下午02:14:33
  * @author—Email liujunfirst@outlook.com
  * @description 最长无重复子串
+ * LongestnoRepeatSubstring
  * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
  * @URLhttps: //leetcode-cn.com/explore/interview/card/bytedance/242/string/1012/
  */
-//LongestnoRepeatSubstring
-//含有重复字符的 最长子串 的长度内存
 
 public class LNRSubstring {
 
     public int lengthOfLongestSubstring(String s) {
-
         if (s == null || s.length() == 0) {
             return 0;
         }
         //用于记录的桶
         int[] bottle = new int[128];
         int count = 0;
-
         for (int begin = 0, j = 0; j < s.length(); j++) {
             //找出子串起始位置，通过重复值来判断
             begin = Math.max(bottle[s.charAt(j)], begin);
@@ -50,7 +47,7 @@ public class LNRSubstring {
             char c = s.charAt(right);
             if (!windows.containsKey(c)) {
                 windows.put(c, right);
-                count = windows.size() > count ? windows.size() : count;
+                count = Math.max(windows.size(), count);
             } else {
                 int temp = windows.get(c);
                 while (left <= temp) {
@@ -73,12 +70,11 @@ public class LNRSubstring {
         int count = 0;
         //记录元素及其坐标
         Map<Character, Integer> windows = new TreeMap<>();
-
         while(right < s.length()){
             Character c = s.charAt(right);
             if(!windows.containsKey(c)){
                 windows.put(c,right);
-                count = windows.size() > count ? windows.size() : count;
+                count = Math.max(windows.size(), count);
             }else {
                 while (left < right && windows.containsKey(c)){
                     windows.remove(s.charAt(left));
