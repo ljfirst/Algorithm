@@ -12,6 +12,7 @@ package Algorithm.backtrack;
 
 public class OptimalSchedule_Dynamic implements OptimalSchedule {
 
+    
     //最优解
     int bestTime;
     //机器花费的时间序列、任务数量
