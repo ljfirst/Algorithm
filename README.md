@@ -45,18 +45,18 @@
   + **最大正方形**
     + [暴力法、动态规划、动态规划优化](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/Algorithm/dynamic/largestSquare) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/AlgorithmTest/dynamicTest/largestSquareTest)
   + **最长公共子序列**
-    + [动态规划、动态规划优化](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/Algorithm/dynamic/dynamicPrimary/lcs)  和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/AlgorithmTest/dynamicTest/LCSTest.java)
+    + [动态规划、动态规划优化](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/Algorithm/dynamic/lcs/)  和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/AlgorithmTest/dynamicTest/LCSTest.java)
   + **最大子段和**
-    + [动态规划、分治法](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/Algorithm/dynamic/dynamicPrimary/lss)  和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/AlgorithmTest/dynamicTest/LSSTest.java)
+    + [动态规划、分治法](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/Algorithm/dynamic/lss)  和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/AlgorithmTest/dynamicTest/LSSTest.java)
   + **回文串**
-    + [添加构造回文串、删除构造回文串、回文串判定、回文串判定优化](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/Algorithm/dynamic/dynamicPrimary/palindrome)  和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/AlgorithmTest/dynamicTest/PalindromeTest)
+    + [添加构造回文串、删除构造回文串、回文串判定、回文串判定优化](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/Algorithm/dynamic/palindrome)  和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/AlgorithmTest/dynamicTest/PalindromeTest)
   + **其他**
     + [交换零钱、斐不拉楔数列、编辑距离、矩形的最小路径和、三角形的最小路径和、数字的最大乘积、字符组成判断、打家劫舍](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/Algorithm/dynamic) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/AlgorithmTest/dynamicTest)
 + <font color=#Af2233 size=4 >**回溯专题**</font>
-  + [最佳调度问题](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/Algorithm/backtrack/OptimalSchedule) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/AlgorithmTest/backtrackTest/OptimalScheduleTest)
-  + [字符串全排列](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/Algorithm/backtrack/StringCombination) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/AlgorithmTest/backtrackTest/StringCombinationTest)
+  + [最佳调度问题](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/Algorithm/comprehensive/optimalSchedule) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/AlgorithmTest/combineTest/optimalScheduleTest)
+  + [字符串全排列](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/Algorithm/backtrack/StringCombination.java) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/AlgorithmTest/backtrackTest/StringCombinationTest.java)
 + <font color=#Af2233 size=4 >**贪心专题**</font>
-  + [无重叠区间](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/Algorithm/greedy/EraseOverlapIntervals) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/AlgorithmTest/greedyTest/EraseOverlapIntervalsTest.java)
+  + [无重叠区间](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/Algorithm/greedy/EraseOverlapIntervals.java) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/AlgorithmTest/greedyTest/EraseOverlapIntervalsTest.java)
   + 迪杰斯特拉算法
 
 #### $\color{7f1A8A}DataStructure /数据结构专题$
@@ -106,8 +106,8 @@
         + 二叉树转链表
       + [镜像二叉树、平衡二叉树判断、二叉树子树判读、最近公共祖先、二叉树中和为某值的节点路径]()  和 [测试案例]()
     + [b树]()
-    + [赫夫曼树]()  和 [测试案例]()
-    + [红黑树]()  和 [测试案例]()
+    + [赫夫曼树](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/tree/huffman)  和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/treeTest/huffmanTest)
+    + [红黑树](https://blog.csdn.net/ljfirst/article/details/108357052)  和 [测试案例]()
 
 #### $\color{7f1A8A}Design Pattern /设计模式专题$
  ****

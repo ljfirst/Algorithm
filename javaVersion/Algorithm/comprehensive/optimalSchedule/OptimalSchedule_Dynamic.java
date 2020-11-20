@@ -1,4 +1,4 @@
-package Algorithm.backtrack;
+package Algorithm.comprehensive.optimalSchedule;
 
 /**
  * @author liujun
