@@ -5,7 +5,6 @@ import DataStructure.stringANDline.list.Listlj;
 import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
 import UnitTest.DatastructureTest.sortTest.innerSortTest.InnerSortRealizeTestData;
 import UnitTest.DatastructureTest.stringANDlineTest.listTest.ListljTest;
-import com.google.common.collect.Maps;
 import org.junit.Test;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
@@ -13,9 +12,7 @@ import org.openjdk.jmh.annotations.Mode;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -23,7 +20,7 @@ import java.util.stream.Collectors;
  * @version 1.0
  * @date 2020-02-11 15:12
  * @author-Email liujunfirst@outlook.com
- * @description
+ * @description 插入排序的测试案例
  * @blogURL
  */
 public class InsertSortTest extends InnerSortRealizeTestData {
@@ -39,20 +36,39 @@ public class InsertSortTest extends InnerSortRealizeTestData {
     InsertSort insertSort = new InsertSort();
 
     @Test
-    public void TestInsertSortLinkedList() throws Exception {
+    public void TestInnerSortRealize1() throws Exception {
+        //两者不同获取反射结果的方式
+        //Map<String, int[]> arrayMap = getSortTestData1();
+        Map<String, int[]> arrayMap = getSortTestData2();
+
+        for (String s : arrayMap.keySet()) {
+            int[] arr = arrayMap.get(s);
+            int[] arrCopy = Arrays.copyOf(arr, arr.length);
+            insertSort.sortMethod(arr);
+            listlj.clear();
+            listlj.insert(false, arrCopy);
+            insertSort.sortMethod(listlj);
+            int[] targetArr = listlj.toarray();
+            assert Arrays.equals(targetArr, arr);
+        }
+    }
+
+    private Map getSortTestData1() throws Exception {
+        Map<String, int[]> map = new HashMap<>();
         Class c = Class.forName("UnitTest.DatastructureTest.stringANDlineTest.listTest.ListljTest");
-        ListljTest gg = (ListljTest) c.newInstance();
+        Object gg =  c.newInstance();
         Field[] f = c.getDeclaredFields();
         for (Field f1 : f) {
             if (f1.getName().contains("array0")) {
                 Method m = c.getMethod("get" + getMethodName(f1.getName()));
                 Object o = m.invoke(gg);
-                if (o != null && o instanceof int[]) {
-                    int[] array = (int[]) m.invoke(gg);
-                    testEquals(array);
+                if (o instanceof int[]) {
+                    int[] array = (int[]) o;
+                    map.put(f1.getName(), array);
                 }
             }
         }
+        return map;
     }
 
     //将首字母大写
@@ -62,31 +78,15 @@ public class InsertSortTest extends InnerSortRealizeTestData {
         return new String(items);
     }
 
-    @Test
-    public void TestInsertSortLinkedList1() throws Exception {
-        Map map = getSortTestData();
-        for (Object o : map.keySet()) {
-            int[] array = (int[]) map.get(o);
-            testEquals(array);
-        }
-    }
 
-    private boolean testEquals(int[] array) {
-        int[] Arr = Arrays.copyOf(array, array.length);
-        insertSort.sortMethod(Arr);
-        listlj.clear();
-        listlj.insert(true, array);
-        insertSort.sortMethod(listlj);
-        int[] targetArr = listlj.toarray();
-        return Arrays.equals(targetArr, Arr);
-    }
-
-    private Map getSortTestData() throws Exception {
+    private Map getSortTestData2() throws Exception {
         Class c = Class.forName("UnitTest.DatastructureTest.stringANDlineTest.listTest.ListljTest");
         ListljTest gg = (ListljTest) c.newInstance();
         Field[] f = c.getDeclaredFields();
         Map<String, Object> map = Arrays.stream(f)
                 .filter(x -> x.getName().contains("array0"))
+                //此处添加了方法的返回值判断
+                .filter(x -> x.getType().getName().equals("[I"))
                 .collect(Collectors.toMap(Field::getName, field -> {
                     Object resultObj = null;
                     field.setAccessible(true);
@@ -97,7 +97,7 @@ public class InsertSortTest extends InnerSortRealizeTestData {
                     } catch (IllegalAccessException e) {
                         e.printStackTrace();
                     }
-                    return Optional.ofNullable(resultObj).orElse(0);
+                    return Optional.ofNullable(resultObj).orElse(new int[]{});
                 }, (k1, k2) -> k2));
         return map;
     }

@@ -7,7 +7,7 @@ package DataStructure.sort.innerSort;
  * @author—Email liujunfirst@outlook.com
  * @description
  */
-public interface SortInterface {
+public interface SortInterface<T> {
 
     //所有排序算法的接口
     //输入一个无序数组，输出一个有序的数组

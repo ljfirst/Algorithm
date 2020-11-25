@@ -3,6 +3,9 @@ package DataStructure.sort.innerSort.innerSortRealize;
 import Algorithm.comprehensive.backpack.Goods;
 import DataStructure.sort.innerSort.SortInterface;
 import DataStructure.stringANDline.list.Listlj;
+import DataStructure.stringANDline.list.Nodelj;
+import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
+import sun.nio.ch.Net;
 
 /**
  * @author liujun
@@ -12,14 +15,14 @@ import DataStructure.stringANDline.list.Listlj;
  * @description 插入排序
  * @blogURL
  */
-public class InsertSort implements SortInterface {
+public class InsertSort<T> implements SortInterface {
 
     //插入排序
     @Override
     public void sortMethod(int[] array) {
         //输入检查
         if (!check(array)) {
-            return ;
+            return;
         }
         int temp = 0;
         //外部循环从1开始，直到最后
@@ -50,8 +53,8 @@ public class InsertSort implements SortInterface {
     //插入排序（指定范围的插入排序）
     public void insertionsort(int[] array, int left, int right) {
         //越界检查
-        if (left < 0 || right >= array.length) {
-            return ;
+        if (!check(array)) {
+            return;
         }
         int temp = 0;
         //外部循环从1开始，直到最后
@@ -70,14 +73,40 @@ public class InsertSort implements SortInterface {
         }
     }
 
+    //链表的插入排序
     public void sortMethod(Listlj array) {
-
+        SinglyLinkedList l = (SinglyLinkedList) array;
+        if (array == null || l.head == l.tail) {
+            return;
+        }
+        Nodelj next_pre = l.head.next;
+        Nodelj next = l.head.next.next;
+        while (next != null) {
+            Nodelj point = l.head;
+            while (point.next != next) {
+                if (next.value >= point.next.value) {
+                    point = point.next;
+                } else {
+                    //替换出next
+                    next_pre.next = next.next;
+                    next.next = null;
+                    //插入合适位置
+                    next.next=point.next;
+                    point.next=next;
+                    //更新 新的 next
+                    next = next_pre;
+                    break;
+                }
+            }
+            next_pre = next;
+            next = next.next;
+        }
     }
 
     public static void sortMethodT(Goods[] array) {
         //输入检查
         if (array == null || array.length <= 1) {
-            return ;
+            return;
         }
         Goods temp;
         //外部循环从1开始，直到最后

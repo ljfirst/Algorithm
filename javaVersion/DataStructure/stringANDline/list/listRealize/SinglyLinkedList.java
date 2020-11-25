@@ -60,13 +60,12 @@ public class SinglyLinkedList implements Listlj {
         if (!checkArray(arr)) {
             return false;
         }
-        Nodelj nodehead = this.head;
         for (int i : arr) {
             Nodelj node = new Nodelj(i);
-            head.value++;
+            this.head.value++;
             if (flag) {//头插法
-                node.next = nodehead.next;
-                nodehead.next = node;
+                node.next = this.head.next;
+                this.head.next = node;
             } else {//尾插法
                 tail.next = node;
             }

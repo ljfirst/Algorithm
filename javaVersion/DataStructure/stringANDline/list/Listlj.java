@@ -31,7 +31,7 @@ public interface Listlj {
     }
 
     /**
-     * @param HeadTail 头插法或者尾插法
+     * @param HeadTail true表示头插法，false尾插法
      * @param args     输入待插入数据
      * @return 使用头插法或者尾查法进行批量插入 返回成功或者失败
      */

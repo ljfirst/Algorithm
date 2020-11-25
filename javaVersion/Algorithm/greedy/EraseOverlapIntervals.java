@@ -39,6 +39,7 @@ public class EraseOverlapIntervals {
         Arrays.sort(intvs, new Comparator<int[]>() {
             @Override
             public int compare(int[] o1, int[] o2) {
+                //按照 end time 来排序
                 return o1[1] - o2[1];
             }
         });
