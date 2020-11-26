@@ -9,10 +9,10 @@ import java.util.ArrayList;
  * @author liujun
  * @version 1.0
  * @date 2019-10-22 16:03
- * @author��Email liujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @description read txt to list
  */
-public class ReadTxt {
+public class Txt2List {
 
     ArrayList list;
     int rownum;

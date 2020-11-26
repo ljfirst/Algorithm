@@ -10,20 +10,20 @@ import java.util.Set;
  * @author liujun
  * @version 1.0
  * @date 2019-10-22 16:32
- * @author��Emailliujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @description 
  */
 public class FileCompare {
 
     LCS_4compare lcsc = new LCS_4compare();
     HashMap<String,ArrayList> hashmap = new HashMap<>();
-    SelectionSortforFileCompare ssfc = new SelectionSortforFileCompare();
+    SelectionSort4FileCompare ssfc = new SelectionSort4FileCompare();
 
     //compare source string and target string,
     // similarity means how many same character in the two string
     public void compareComponent(String source, String target, int similarity){
 
-        ReadTxt rt = new ReadTxt();
+        Txt2List rt = new Txt2List();
         ArrayList list1 = rt.ReadTxttoList(source);
         ArrayList list2 = rt.ReadTxttoList(target);
 

@@ -7,23 +7,16 @@ import DataStructure.stringANDline.array.arrayApply.MatrixCheck;
  * @author liujun
  * @version 1.0
  * @date 2019-12-25 21:11
- * @author��Email  liujunfirst@outlook.com
- * @description  ĳԴ�㵽;�����������·��
- * ���룺һ�� �ڽӾ��� ���� �ڽӱ� �������ͼ��
- *      ���ͼ��·��Ȩֵ����ȫ��Ϊ����
- *      ָ��ĳ����㡣
- * �����һ��ɢ�б�
- *      ������������㵽�������е����̾��룬
- *      �б��ֱ�ʾ����㵽��ǰ���·����
+ * @author-Email liujunfirst@outlook.com
+ * @description 狄杰斯特拉算法
  * @blogURL
  */
-//̰���㷨
+
 public class Dijkstra {
 
-    public Node4Dijkstra[] getShortestPath(int startPoint, int[][] matrix){
+    public Node4Dijkstra[] getShortestPath(int startPoint, int[][] matrix) {
 
-        //����Ƿ�Ϊ������
-        if(!MatrixCheck.judgeisSquare(matrix)){
+        if (!MatrixCheck.judgeisSquare(matrix)) {
             return null;
         }
         int length = matrix.length;
@@ -44,13 +37,13 @@ public class Dijkstra {
 
             //find the min path
             for (int j = 0; j < length; j++) {
-                if(!hashTableNode4Dijkstras[j].visit && hashTableNode4Dijkstras[j].value < minvalue){
+                if (!hashTableNode4Dijkstras[j].visit && hashTableNode4Dijkstras[j].value < minvalue) {
                     minvalue = hashTableNode4Dijkstras[j].value;
                     findpoint = j;
                 }
             }
             //fail to find min path,then break
-            if(minvalue == Integer.MAX_VALUE){
+            if (minvalue == Integer.MAX_VALUE) {
                 break;
             }
             hashTableNode4Dijkstras[findpoint].visit = true;
@@ -58,7 +51,7 @@ public class Dijkstra {
 
             //update the hashTableNode4Dijkstras
             for (int j = 0; j < length; j++) {
-                    if(!hashTableNode4Dijkstras[j].visit && matrix[findpoint][j] != Integer.MAX_VALUE && hashTableNode4Dijkstras[j].value > matrix[findpoint][j] + minvalue){
+                if (!hashTableNode4Dijkstras[j].visit && matrix[findpoint][j] != Integer.MAX_VALUE && hashTableNode4Dijkstras[j].value > matrix[findpoint][j] + minvalue) {
                     hashTableNode4Dijkstras[j].value = matrix[findpoint][j] + minvalue;
                 }
             }

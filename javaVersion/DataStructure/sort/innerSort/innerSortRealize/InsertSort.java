@@ -15,7 +15,7 @@ import sun.nio.ch.Net;
  * @description 插入排序
  * @blogURL
  */
-public class InsertSort<T> implements SortInterface {
+public class InsertSort implements SortInterface {
 
     //插入排序
     @Override

@@ -4,8 +4,8 @@ package DataStructure.graph.graphConnection.unionFind;
  * @author liujun
  * @version 1.0
  * @date 2019-12-18 21:16
- * @author—Email  liujunfirst@outlook.com
- * @description  Union-Find 并查集算法
+ * @author—Email liujunfirst@outlook.com
+ * @description Union-Find 并查集算法
  * @blogURL
  */
 public class UnionFind {
@@ -14,7 +14,7 @@ public class UnionFind {
     //联通分量
     int count;
 
-    public UnionFind(int n){
+    public UnionFind(int n) {
         this.count = n;
         parent = new int[n];
         for (int i = 0; i < n; i++) {

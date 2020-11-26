@@ -24,7 +24,6 @@ public class RamdomUtil {
         String s = "rfSFTdfEes";
         System.out.println(s.toLowerCase().contains("dfE".toLowerCase()));
         System.out.println(s.toLowerCase().contains("dfe".toLowerCase()));
-
     }
 
     //������ɸ������ȵ��ַ���

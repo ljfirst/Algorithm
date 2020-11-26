@@ -3,7 +3,7 @@ package UnitTest.DatastructureTest.sortTest.innerSortTest.innerSortRealizeTest;
 import DataStructure.sort.innerSort.innerSortRealize.InsertSort;
 import DataStructure.stringANDline.list.Listlj;
 import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
-import UnitTest.DatastructureTest.sortTest.innerSortTest.InnerSortRealizeTestData;
+import UnitTest.DatastructureTest.sortTest.innerSortTest.SortTest;
 import UnitTest.DatastructureTest.stringANDlineTest.listTest.ListljTest;
 import org.junit.Test;
 import org.openjdk.jmh.annotations.Benchmark;
@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
  * @description 插入排序的测试案例
  * @blogURL
  */
-public class InsertSortTest extends InnerSortRealizeTestData {
+public class InsertSortTest extends SortTest {
 
     @Test
     @Benchmark

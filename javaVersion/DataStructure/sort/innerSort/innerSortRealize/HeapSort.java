@@ -30,7 +30,7 @@ public class HeapSort implements SortInterface {
             return;
         }
         //初试化建堆
-        for (int i = heap.length - 1 / 2; i >= 0; i--) {
+        for (int i = (heap.length - 1) / 2; i >= 0; i--) {
             heapify_big(heap, i, heap.length - 1);
         }
         //交换堆顶和数组末尾元素，循环整堆,注意边界值
@@ -65,9 +65,16 @@ public class HeapSort implements SortInterface {
         }
     }
 
-    //整堆函数——大顶堆
+    /**
+     * @param heap   整堆函数——大顶堆
+     * @param parent 父节点的位置
+     * @param border 边界（包含）
+     */
     public void heapify_big(int[] heap, int parent, int border) {
 
+        if (border >= heap.length || border <= 0) {
+            return;
+        }
         //左孩子，最大值标记
         int flag = parent * 2 + 1;
         //越界判断：如果左孩子存在

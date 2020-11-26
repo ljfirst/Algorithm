@@ -43,11 +43,11 @@ public class RedBlackTreeImpl implements RedBlackTree {
 
     // 数据排序
     public boolean put(int[] key) {
-        clear();
         if (key == null || key.length == 0) {
             return false;
         }
         for (int i = 0; i < key.length; i++) {
+            //不允许重复
             boolean f = put(false, key[i], 0);
             if (!f) {
                 return false;

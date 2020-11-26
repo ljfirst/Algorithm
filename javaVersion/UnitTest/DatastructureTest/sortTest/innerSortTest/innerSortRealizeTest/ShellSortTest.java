@@ -1,7 +1,7 @@
 package UnitTest.DatastructureTest.sortTest.innerSortTest.innerSortRealizeTest;
 
 import DataStructure.sort.innerSort.innerSortRealize.ShellSort;
-import UnitTest.DatastructureTest.sortTest.innerSortTest.InnerSortRealizeTestData;
+import UnitTest.DatastructureTest.sortTest.innerSortTest.SortTest;
 import org.junit.Test;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
@@ -13,9 +13,9 @@ import org.openjdk.jmh.annotations.Mode;
  * @date 2020/5/2
  * @author-Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description
+ * @description shell排序  测试案例
  */
-public class ShellSortTest extends InnerSortRealizeTestData {
+public class ShellSortTest extends SortTest {
     @Test
     @Benchmark
     @BenchmarkMode(Mode.Throughput)

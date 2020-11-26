@@ -5,13 +5,13 @@ import java.util.Iterator;
 
 /**
  *@author liujun
- *@date 2018-7-19 ����11:55:48
- *@author��Email liujunfirst@outlook.com
+ *@date 2018-7-19 11:55:48
+ *@author-Email liujunfirst@outlook.com
  *@description  ѡ������
  *@version 1.0
  */
 //��list�ڵ�Ԫ������
-public class SelectionSortforFileCompare {
+public class SelectionSort4FileCompare {
 
 	public String[] selectionSort(ArrayList<String> list) {
 

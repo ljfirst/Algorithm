@@ -1,12 +1,11 @@
 package UnitTest.DatastructureTest.treeTest.radBlackTreeTest;
 
 import DataStructure.tree.redBlackTree.RedBlackTreeImpl;
+import UnitTest.DatastructureTest.ArrayTestDemoData;
+import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 /**
  * @author liujun
@@ -20,6 +19,25 @@ public class RedBlackTreeTest {
 
     RedBlackTreeImpl rbt = new RedBlackTreeImpl();
     List<Integer> list;
+
+    int[] arraydata;
+    int[] arraydataSorted;
+    int[] expected;
+
+    @Test
+    public void testRedBlackTree_Insert() throws Exception {
+        List list = ArrayTestDemoData.getDataArray();
+        Map<String, int[]> mapArray = (Map<String, int[]>) list.get(0);
+        Map<String, int[]> mapExpected = (Map<String, int[]>) list.get(1);
+        for (String arrayKey : mapArray.keySet()) {
+            arraydata = mapArray.get(arrayKey);
+            rbt.clear();
+            rbt.put(arraydata);
+            arraydataSorted = rbt.toarray();
+            expected = mapExpected.get(arrayKey);
+            Assert.assertArrayEquals(arraydataSorted, expected);
+        }
+    }
 
     /**
      * put:         在map 中插入key的节点
@@ -54,7 +72,7 @@ public class RedBlackTreeTest {
         assert rbt.get(5) == 5;
         rbt.put(3, 30);
         int value30 = rbt.get(3);
-        assert value30 == 3;
+        assert value30 == 30;
 
         rbt.put(22, 66);
         array = rbt.toarray();
@@ -111,6 +129,6 @@ public class RedBlackTreeTest {
     }
 
     int[] array01 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-    int[] array02 = {0, 1, 2, 3, 3, 4, 5, 6, 7, 8, 9, 22};
+    int[] array02 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 22};
     int[] array03 = {0, 1, 2, 3, 4, 5, 90, 7, 8, 9, 22};
 }

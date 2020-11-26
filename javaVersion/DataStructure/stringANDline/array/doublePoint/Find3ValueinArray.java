@@ -1,8 +1,7 @@
 package DataStructure.stringANDline.array.doublePoint;
 
-import DataStructure.stringANDline.array.doublePoint.Find2ValueinArray;
-
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author liujun
@@ -10,11 +9,15 @@ import java.util.Arrays;
  * @date 2020/7/20
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description 给定一个数 a，在一维数组中，找出某两个数相加得 a。
- * 要求一：判断是否存在这样的三个数，存在返回true，否则返回false。
- * 要求二：返回这三个数在数组中的位置
+ * @description 3数之和
+ * 给定一个数 target，在一维数组中，找出某 3 个数相加得 target。
+ * 要求一：如果存在这个 3 个数，返回true，反则返回false。
+ * 要求二：返回存在的这 3 个值
+ * 要求三：返回存在的这 3 个值在数组中的原位置
+ * 要求四：返回所有的 3 数之和的组合
+ * 要求五：返回所有的 3 数之和在数组中原位置的组合
  */
-public class Find3ValueinArray {
+public class Find3ValueinArray implements FindValueinArray{
 
     Find2ValueinArray f = new Find2ValueinArray();
 
@@ -30,6 +33,26 @@ public class Find3ValueinArray {
             }
         }
         return false;
+    }
+
+    @Override
+    public int[] getValue(int[] array, int target) {
+        return new int[0];
+    }
+
+    @Override
+    public int[] getPosition(int[] array, int target) {
+        return new int[0];
+    }
+
+    @Override
+    public List getValues(int[] array, int target) {
+        return null;
+    }
+
+    @Override
+    public List getPositions(int[] array, int target) {
+        return null;
     }
 
     //要求二：返回这三个数在数组中的位置

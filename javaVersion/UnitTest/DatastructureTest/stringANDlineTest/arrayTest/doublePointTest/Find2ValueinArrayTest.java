@@ -4,6 +4,7 @@ import DataStructure.stringANDline.array.doublePoint.Find2ValueinArray;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author liujun
@@ -11,71 +12,131 @@ import java.util.Arrays;
  * @date 2020/7/22
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description
+ * @description 2数之和 测试案例
+ * 给定一个数 target，在一维数组中，找出某 2 个数相加得 target。
+ * 要求一：如果存在这个 2 个数，返回true，反则返回false。
+ * 要求二：返回存在的这 2 个值
+ * 要求三：返回存在的这 2 个值在数组中的原位置
+ * 要求四：返回所有的 2 数之和的组合
+ * 要求五：返回所有的 2 数之和在数组中原位置的组合
  */
-public class Find2ValueinArrayTest {
+public class Find2ValueinArrayTest extends FindValueinArrayTest {
 
     Find2ValueinArray f = new Find2ValueinArray();
 
+    /**
+     * @return 如果存在这个 n 个数，返回true，反则返回false。
+     */
     @Test
-    public void testExist() {
-        boolean flag = f.exist(source01, findValue01);
+    public void testexist() {
+        boolean flag = f.exist(demoArray01_y, target01_2_y);
         assert flag;
-        int[] target = f.getValuePosition(source01, findValue01);
-        assert Arrays.equals(target, position01);
-
-        flag = f.exist(source02, findValue02);
-        assert !flag;
-        target = f.getValuePosition(source02, findValue02);
-        assert Arrays.equals(target, position02);
-
-        flag = f.exist(source03, findValue03);
-        assert !flag;
-        target = f.getValuePosition(source03, findValue03);
-        assert Arrays.equals(target, position03);
-
-        flag = f.exist(source04, findValue04);
+        flag = f.exist(demoArray02_y, target01_2_y);
         assert flag;
-        target = f.getValuePosition(source04, findValue04);
-        assert Arrays.equals(target, position04);
-
-        flag = f.exist(source05, findValue05);
+        flag = f.exist(demoArray03_y, target03_2_y);
         assert flag;
-        target = f.getValuePosition(source05, findValue05);
-        assert Arrays.equals(target, position05);
 
-        flag = f.exist(source06, findValue06);
+        flag = f.exist(demoArray01_n, target01_n_all);
         assert !flag;
-        target = f.getValuePosition(source06, findValue06);
-        assert Arrays.equals(target, position06);
-
-        flag = f.exist(source07, findValue07);
+        flag = f.exist(demoArray02_n, target02_n_all);
         assert !flag;
-        target = f.getValuePosition(source07, findValue07);
-        assert Arrays.equals(target, position07);
+        flag = f.exist(demoArray03_n, target03_n_all);
+        assert !flag;
     }
 
-    int[] source01 = {34, 6, 78, 7, 5, 65, 43, 4, 56, 789, 65, 41};
-    int[] position01 = {3, 7};
-    int findValue01 = 11;
-    int[] source02 = {};
-    int[] position02 = {};
-    int findValue02 = 20;
-    int[] source03 = null;
-    int[] position03 = {};
-    int findValue03 = 20;
+    /**
+     * @return 返回存在的这 n 个值
+     */
+    @Test
+    public void testgetValue() {
+        int[] values = f.getValue(demoArray01_y, target01_2_y);
+        assert Arrays.equals(values, value01_2_y);
+        values = f.getValue(demoArray02_y, target02_2_y);
+        assert Arrays.equals(values, value02_2_y);
+        values = f.getValue(demoArray03_y, target03_2_y);
+        assert Arrays.equals(values, value03_2_y);
 
-    int[] source04 = {5, 46, 78, 9, 6, 5, 67, 68, 95, 657, 89};
-    int[] position04 = {4, 9};
-    int findValue04 = 663;
-    int[] source05 = {654, 5, 67, 86, 54, 56, 78, 65, 44, 56, 789, 765, 44, 56, 78, 98, 76, 54, 3};
-    int[] position05 = {1, 18};
-    int findValue05 = 8;
-    int[] source06 = {2};
-    int[] position06 = {};
-    int findValue06 = 8;
+        values = f.getValue(demoArray01_n, target01_n_all);
+        assert Arrays.equals(values, value01_2_all);
+        values = f.getValue(demoArray02_n, target02_n_all);
+        assert Arrays.equals(values, value01_2_all);
+        values = f.getValue(demoArray03_n, target03_n_all);
+        assert Arrays.equals(values, value01_2_all);
+    }
 
-    int[] source07 = {654, 5, 67, 86, 54, 56, 78, 65, 44, 56, 789, 765, 44, 56, 78, 98, 76, 54, 3};
-    int[] position07 = {};
-    int findValue07 = 4566;
+    /**
+     * @return 返回存在的这 n 个值在数组中的原位置
+     */
+    @Test
+    public void getPosition() {
+        int[] position = f.getValue(demoArray01_y, target01_2_y);
+        assert Arrays.equals(position, position01_2_y);
+        position = f.getValue(demoArray02_y, target02_2_y);
+        assert Arrays.equals(position, position02_2_y);
+        position = f.getValue(demoArray03_y, target03_2_y);
+        assert Arrays.equals(position, position03_2_y);
+
+        position = f.getValue(demoArray01_n, target01_n_all);
+        assert Arrays.equals(position, position01_2_all);
+        position = f.getValue(demoArray02_n, target02_n_all);
+        assert Arrays.equals(position, position01_2_all);
+        position = f.getValue(demoArray03_n, target03_n_all);
+        assert Arrays.equals(position, position01_2_all);
+    }
+
+    /**
+     * @return 返回所有的 n 数之和的组合
+     */
+    @Test
+    public void getValues() {
+        List list = f.getValues(demoArray01_y, target01_2s_y);
+        Object[] arr = list.stream().sorted().toArray();
+        Object[] arr1 = value01_2s_y.stream().sorted().toArray();
+        assert Arrays.equals(arr, arr1);
+
+        list = f.getValues(demoArray02_y, target02_2s_y);
+        arr = list.stream().sorted().toArray();
+        arr1 = value02_2s_y.stream().sorted().toArray();
+        assert Arrays.equals(arr, arr1);
+
+        list = f.getValues(demoArray03_y, target03_2s_y);
+        arr = list.stream().sorted().toArray();
+        arr1 = value03_2s_y.stream().sorted().toArray();
+        assert Arrays.equals(arr, arr1);
+
+        list = f.getValues(demoArray01_n, target01_n_all);
+        assert list == value01_2s_all;
+        list = f.getValues(demoArray02_n, target02_n_all);
+        assert list == value01_2s_all;
+        list = f.getValues(demoArray03_n, target03_n_all);
+        assert list == value01_2s_all;
+    }
+
+    /**
+     * @return 返回所有的 n 数之和在数组中原位置的组合
+     */
+    @Test
+    public void getPositions() {
+        List list = f.getPositions(demoArray01_y, target01_2s_y);
+        Object[] arr = list.stream().sorted().toArray();
+        Object[] arr1 = position01_2s_y.stream().sorted().toArray();
+        assert Arrays.equals(arr, arr1);
+
+        list = f.getPositions(demoArray02_y, target02_2s_y);
+        arr = list.stream().sorted().toArray();
+        arr1 = position02_2s_y.stream().sorted().toArray();
+        assert Arrays.equals(arr, arr1);
+
+        list = f.getPositions(demoArray03_y, target03_2s_y);
+        arr = list.stream().sorted().toArray();
+        arr1 = position03_2s_y.stream().sorted().toArray();
+        assert Arrays.equals(arr, arr1);
+
+        list = f.getPositions(demoArray01_n, target01_2s_y);
+        assert list == position03_2s_all;
+        list = f.getPositions(demoArray02_n, target02_2s_y);
+        assert list == position03_2s_all;
+        list = f.getPositions(demoArray03_n, target03_2s_y);
+        assert list == position03_2s_all;
+    }
 }

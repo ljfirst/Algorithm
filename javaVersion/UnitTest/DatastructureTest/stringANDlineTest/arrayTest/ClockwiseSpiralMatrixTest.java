@@ -1,7 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.arrayTest;
 
 import DataStructure.stringANDline.array.arrayApply.ClockwiseSpiralMatrix;
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;

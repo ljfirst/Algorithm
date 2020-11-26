@@ -1,7 +1,7 @@
 package UnitTest.DatastructureTest.sortTest.innerSortTest.innerSortRealizeTest;
 
 import DataStructure.sort.innerSort.innerSortRealize.QuickSortDuplexing;
-import UnitTest.DatastructureTest.sortTest.innerSortTest.InnerSortRealizeTestData;
+import UnitTest.DatastructureTest.sortTest.innerSortTest.SortTest;
 import org.junit.Test;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
@@ -12,10 +12,10 @@ import org.openjdk.jmh.annotations.Mode;
  * @version 1.0
  * @date 2020-02-11 15:09
  * @author-Email liujunfirst@outlook.com
- * @description
+ * @description 双向快排 测试案例
  * @blogURL
  */
-public class QuickSortDuplexingTest extends InnerSortRealizeTestData {
+public class QuickSortDuplexingTest extends SortTest {
 
     @Test
     @Benchmark

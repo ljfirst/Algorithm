@@ -7,8 +7,7 @@ import DataStructure.sort.innerSort.SortInterface;
  * @version 1.0
  * @date 2019-3-23 ����12:09:48
  * @author-Email liujunfirst@outlook.com
- * @description
- * @URL
+ * @description 基数排序
  */
 public class RadixSort implements SortInterface {
 
@@ -16,7 +15,7 @@ public class RadixSort implements SortInterface {
     public void sortMethod(int[] array) {
         //检查
         if (!check(array)) {
-            return ;
+            return;
         }
         //�ҳ����λ��
         int max = Integer.MIN_VALUE;
