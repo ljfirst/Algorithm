@@ -19,7 +19,7 @@ public class LargestSquare_Violence implements LargestSquare {
                     if (Matrix[i][j] != 0) {
                         //逐层扫描法
                         int num = getMaxSideLengthScanner(Matrix, i, j);
-                        MaxSideLength = MaxSideLength > num ? MaxSideLength : num;
+                        MaxSideLength = Math.max(MaxSideLength, num);
                     }
                 }
             }

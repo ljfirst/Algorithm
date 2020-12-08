@@ -105,7 +105,7 @@ public class Sudoku {
 
 		for (int i = 0; i < suduNum.length; i++) {
 			for (int j = 0; j < suduNum[0].length; j++) {
-				if(bc.byteCountComplementMethod11(suduNum[i][j].tempValue) == 2){
+				if(bc.byteCountComplementMethod1(suduNum[i][j].tempValue) == 2){
 					int k = 1;
 					while((suduNum[i][j].tempValue & k) == 0){
 						k <<= 1;

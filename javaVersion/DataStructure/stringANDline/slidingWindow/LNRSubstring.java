@@ -1,6 +1,8 @@
 package DataStructure.stringANDline.slidingWindow;
 
+import java.util.LinkedList;
 import java.util.Map;
+import java.util.Queue;
 import java.util.TreeMap;
 
 /**
@@ -11,11 +13,12 @@ import java.util.TreeMap;
  * @description 最长无重复子串
  * LongestnoRepeatSubstring
  * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
- * @URLhttps: //leetcode-cn.com/explore/interview/card/bytedance/242/string/1012/
+ * @URL https: //leetcode-cn.com/explore/interview/card/bytedance/242/string/1012/
  */
 
 public class LNRSubstring {
 
+    //桶排序
     public int lengthOfLongestSubstring(String s) {
         if (s == null || s.length() == 0) {
             return 0;
@@ -54,13 +57,14 @@ public class LNRSubstring {
                     windows.remove(s.charAt(left));
                     left++;
                 }
-                windows.put(c,right);
+                windows.put(c, right);
             }
             right++;
         }
         return count;
     }
 
+    //use map
     public int lengthOfLongestSubstring3(String s) {
         if (s == null || s.length() == 0) {
             return 0;
@@ -70,17 +74,42 @@ public class LNRSubstring {
         int count = 0;
         //记录元素及其坐标
         Map<Character, Integer> windows = new TreeMap<>();
-        while(right < s.length()){
+        while (right < s.length()) {
             Character c = s.charAt(right);
-            if(!windows.containsKey(c)){
-                windows.put(c,right);
+            if (!windows.containsKey(c)) {
+                windows.put(c, right);
                 count = Math.max(windows.size(), count);
-            }else {
-                while (left < right && windows.containsKey(c)){
+            } else {
+                while (left < right && windows.containsKey(c)) {
                     windows.remove(s.charAt(left));
                     left++;
                 }
-                windows.put(c,right);
+                windows.put(c, right);
+            }
+            right++;
+        }
+        return count;
+    }
+
+    //use queue
+    public int lengthOfLongestSubstring4(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+        int right = 0;
+        //记录元素及其坐标
+        Queue<Character> windows = new LinkedList<>();
+        int count = windows.size();
+        while (right < s.length()) {
+            char c = s.charAt(right);
+            if (!windows.contains(c)) {
+                windows.add(c);
+                count = Math.max(windows.size(), count);
+            } else {
+                while (windows.contains(c)) {
+                    windows.poll();
+                }
+                windows.add(c);
             }
             right++;
         }

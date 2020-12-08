@@ -1,6 +1,5 @@
 package DataStructure.stringANDline.array.arrayApply;
 
-import java.util.Scanner;
 
 /**
  * @author liujun
@@ -12,26 +11,29 @@ import java.util.Scanner;
  */
 public class AlphaCaseSwap {
 
-    public void trans(String s) {
-        // TODO Auto-generated method stub
-
+    public String trans(String s) {
+        if (s == null || s.length() == 0) {
+            return "";
+        }
         String[] c1 = s.split("[a-z]");
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < c1.length; i++) {
             sb.append(c1[i].toLowerCase());
         }
-        String[] c2 = s.split("[A-Z]");
+        String[] c2 = s.replaceAll("[0-9]", "").split("[A-Z]");
         for (int j = 0; j < c2.length; j++) {
             sb.append(c2[j].toUpperCase());
         }
-        System.out.println(sb);
+        return sb.toString();
     }
 
-    //主方法测试
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        String s = scan.nextLine();
-        AlphaCaseSwap d = new AlphaCaseSwap();
-        d.trans(s);
+    public String trans1(String s) {
+        if (s == null || s.length() == 0) {
+            return "";
+        }
+        String s1 = s;
+        String s2 = s.replaceAll("[a-z]", "").toLowerCase();
+        String s3 = s1.replaceAll("[A-Z]", "").replaceAll("[0-9]","").toUpperCase();
+        return s2 + s3;
     }
 }

@@ -1,5 +1,6 @@
 package DataStructure.stringANDline.array.doublePoint;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -12,23 +13,22 @@ import java.util.List;
  * @description 3数之和
  * 给定一个数 target，在一维数组中，找出某 3 个数相加得 target。
  * 要求一：如果存在这个 3 个数，返回true，反则返回false。
- * 要求二：返回存在的这 3 个值
- * 要求三：返回存在的这 3 个值在数组中的原位置
- * 要求四：返回所有的 3 数之和的组合
- * 要求五：返回所有的 3 数之和在数组中原位置的组合
+ * 要求二：返回所有的 3 数之和的组合
+ * 要求三：返回所有的 3 数之和在数组中原位置的组合
  */
-public class Find3ValueinArray implements FindValueinArray{
 
-    Find2ValueinArray f = new Find2ValueinArray();
+public class Find3ValueinArray implements FindValueinArray {
+
+    Find2ValueinArray find2Value = new Find2ValueinArray();
 
     //要求一：判断是否存在这样的三个数，存在返回true，否则返回false。
     public boolean exist(int[] array, int value) {
-        if (array == null || array.length == 0) {
+        if (array == null || array.length <= 2) {
             return false;
         }
         for (int i = 0; i < array.length; i++) {
             int target = value - array[i];
-            if (f.exist(array, target)) {
+            if (find2Value.exist(array, target)) {
                 return true;
             }
         }
@@ -36,18 +36,26 @@ public class Find3ValueinArray implements FindValueinArray{
     }
 
     @Override
-    public int[] getValue(int[] array, int target) {
-        return new int[0];
-    }
-
-    @Override
-    public int[] getPosition(int[] array, int target) {
-        return new int[0];
-    }
-
-    @Override
-    public List getValues(int[] array, int target) {
-        return null;
+    public List<int[]> getValues(int[] array, int target) {
+        if(array == null || array.length <= 2){
+            return null;
+        }
+        int[] arraycopy = Arrays.copyOf(array, array.length);
+        Arrays.sort(arraycopy);
+        List<int[]> lists = new ArrayList<>();
+        for (int i = 0; i < arraycopy.length; i++) {
+            int u = arraycopy[i];
+            arraycopy[i] = Integer.MIN_VALUE;
+            int subtarget = target - u;
+            List<int[]> list = find2Value.getValues(arraycopy, subtarget);
+            if (list != null) {
+                for (int j = 0; j < list.size(); j++) {
+                    lists.add(new int[]{u, list.get(j)[0], list.get(j)[1]});
+                }
+            }
+            // arraycopy[i] = u;
+        }
+        return lists.size() == 0 ? null : lists;
     }
 
     @Override
@@ -68,10 +76,10 @@ public class Find3ValueinArray implements FindValueinArray{
             sd = Arrays.copyOf(array, array.length);
             //防重复选值
             sd[i] = Integer.MIN_VALUE;
-            if (f.exist(array, value - array[i])) {
-                b = f.getValuePosition(sd, value - array[i]);
-                a[1] = b[0];
-                a[2] = b[1];
+            if (find2Value.exist(array, value - array[i])) {
+                //b = f.getValuePosition(sd, value - array[i]);
+                //a[1] = b[0];
+                //a[2] = b[1];
                 return a;
             }
         }

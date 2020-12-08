@@ -17,7 +17,7 @@ import DataStructure.stringANDline.list.Nodelj;
  * 部分反转：
  * 1、反转从index1 到 index2 之间的数据
  */
-public class SinglyLinkedListReverse {
+public class ListReverse {
 
     //利用数组 来反转链表
     public int[] reverse_array(SinglyLinkedList listlj) {
@@ -140,9 +140,8 @@ public class SinglyLinkedListReverse {
     }
 
     /**
-     *
      * @param listlj 链表
-     * @param n 每N个数反转一次
+     * @param n      每N个数反转一次
      * @return
      */
     public int[] revert_partn(SinglyLinkedList listlj, int n) {

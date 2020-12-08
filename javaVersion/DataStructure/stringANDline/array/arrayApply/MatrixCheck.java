@@ -6,25 +6,25 @@ import java.util.Arrays;
  * @author liujun
  * @version 1.0
  * @date 2019-12-25 22:44
- * @author—Email  liujunfirst@outlook.com
- * @description 
+ * @author—Email liujunfirst@outlook.com
+ * @description 矩阵检查函数
  * @blogURL
  */
 //矩阵检测
 public class MatrixCheck {
 
     //检测是否为空矩阵
-    public static boolean judgeisNull(int[][] matrix){
-        if(matrix == null || matrix.length == 0 || matrix[0].length == 0){
+    public static boolean judgeisNull(int[][] matrix) {
+        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
             return true;
         }
         return false;
     }
 
     //检测是否为正方形
-    public static boolean judgeisSquare(int[][] matrix){
+    public static boolean judgeisSquare(int[][] matrix) {
 
-        if(judgeisNull(matrix)){
+        if (judgeisNull(matrix)) {
             return false;
         }
         //检查矩阵是否为正方形
@@ -34,8 +34,8 @@ public class MatrixCheck {
     }
 
     //检测是否为长方形
-    public static boolean judgeisRectangle(int[][] matrix){
-        if(judgeisNull(matrix)){
+    public static boolean judgeisRectangle(int[][] matrix) {
+        if (judgeisNull(matrix)) {
             return false;
         }
         //检查矩阵是否为长方形
@@ -45,13 +45,13 @@ public class MatrixCheck {
     }
 
     //检测是否为三角形
-    public static boolean judgeisTriangle(int[][] matrix){
-        if(judgeisNull(matrix)){
+    public static boolean judgeisTriangle(int[][] matrix) {
+        if (judgeisNull(matrix)) {
             return false;
         }
         //检查数组是否为三角形
         for (int i = 0; i < matrix.length; i++) {
-            if(matrix[i].length != i + 1){
+            if (matrix[i].length != i + 1) {
                 return false;
             }
         }

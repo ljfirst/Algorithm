@@ -5,11 +5,15 @@ package DataStructure.stringANDline.array.arrayApply;
  * @version 1.0
  * @date 2018-7-19 下午03:07:41
  * @author—Email liujunfirst@outlook.com
- * @description  矩阵相乘。
+ * @description 矩阵相乘。
  */
 public class Matrix_Multiply {
 
     public int[][] MatrixMultiply(int[][] materix_a, int[][] materix_b) {
+
+        if(!MatrixCheck.judgeisRectangle(materix_a)|| !MatrixCheck.judgeisRectangle(materix_b)){
+            return null;
+        }
 
         //定义相乘后的矩阵
         int row = materix_a.length;//获取矩阵的行
@@ -17,6 +21,9 @@ public class Matrix_Multiply {
         int[][] materix_c = new int[row][column];
         int k = materix_b.length;//矩阵相乘的中间元素个数
 
+        if (k != materix_a[0].length) {
+            return null;
+        }
         //矩阵相乘
         //首先循环A矩阵的行,时间复杂度：O(materix_a.length)
         for (int i = 0; i < row; i++) {
@@ -29,18 +36,18 @@ public class Matrix_Multiply {
                 }
             }
         }
-		return materix_c;
+        return materix_c;
     }
 
-    public void printMatrix(int[][] materix_c){
-		int row = materix_c.length;//获取矩阵的行
-		int column = materix_c[0].length;//获取矩阵的列
-		//打印输出c矩阵
-		for (int i = 0; i < row; i++) {
-			for (int j = 0; j < column; j++) {
-				System.out.print(materix_c[i][j] + " ");
-			}
-			System.out.println();
-		}
-	}
+    public void printMatrix(int[][] materix_c) {
+        int row = materix_c.length;//获取矩阵的行
+        int column = materix_c[0].length;//获取矩阵的列
+        //打印输出c矩阵
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                System.out.print(materix_c[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
 }

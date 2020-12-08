@@ -1,7 +1,6 @@
 package DataStructure.stringANDline.slidingWindow;
 
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
  * @author liujun
@@ -15,7 +14,7 @@ import java.util.TreeMap;
  * 比如在 sx65ytguhuihuba9d08cuygf4e5f3wsedc89faojinbfre43wedcfgv
  * 中查找 abcdeff 的 最小覆盖子串 是 edc89faojinbf
  */
-public class MinimumWindowSubstring {
+public class MinCoverSubstring {
 
     Map<Character, Integer> windowsMap;
     Map<Character, Integer> targetMap;
@@ -53,7 +52,6 @@ public class MinimumWindowSubstring {
             }
             //判断左侧窗口是否进行收缩，注意此处是个循环，不是if
             while (count == targetMap.size()) {
-
                 //更新数据
                 if (right - left < subLength) {
                     begin = left;

@@ -22,8 +22,12 @@ public class FindValueinArrayTest {
     //正案例
     int[] demoArray01_y = {1, 100, 22, 39, 43, 58, 64, 77, 79, 85, 96, 58};
     int target01_2_y = 99;
-    int[] value01_2_y = {22, 77};
-    int[] position01_2_y = {2, 7};
+    List<int[]> value01_2_y = new ArrayList() {{
+        this.add(new int[]{22, 77});
+    }};
+    List<int[]> position01_2_y = new ArrayList() {{
+        this.add(new int[]{2, 7});
+    }};
     int target01_2s_y = 101;
     List<int[]> value01_2s_y = new ArrayList() {{
         this.add(new int[]{1, 100});
@@ -36,27 +40,34 @@ public class FindValueinArrayTest {
         this.add(new int[]{4, 11});
     }};
 
-    int target01_3_y = 199;
-    int[] value01_3_y = {58, 67, 77};
-    int[] position01_3_y = {5, 6, 7};
     int target01_3s_y = 199;
     List<int[]> value01_3s_y = new ArrayList() {{
-        this.add(new int[]{58, 67, 77});
+        this.add(new int[]{22, 77, 100});
+        this.add(new int[]{39, 64, 96});
+        this.add(new int[]{43, 77, 79});
+        this.add(new int[]{58, 64, 77});
+        this.add(new int[]{58, 64, 77});
     }};
     List<int[]> position01_3s_y = new ArrayList() {{
         this.add(new int[]{5, 6, 7});
     }};
 
-
+    /**
+     * =======
+     */
     int[] demoArray02_y = {34, 5, 6, 78, 7, 68, 43, 4, 56, 136, 789, 65, 139, 41, 60};
     int target02_2_y = 13;
-    int[] position02_2_y = {2, 4};
-    int[] value02_2_y = {6, 7};
+    List<int[]> value02_2_y = new ArrayList() {{
+        this.add(new int[]{6, 7});
+    }};
+    List<int[]> position02_2_y = new ArrayList() {{
+        this.add(new int[]{2, 4});
+    }};
     int target02_2s_y = 143;
     List<int[]> value02_2s_y = new ArrayList() {{
-        this.add(new int[]{78, 65});
-        this.add(new int[]{7, 136});
         this.add(new int[]{4, 139});
+        this.add(new int[]{7, 136});
+        this.add(new int[]{65, 78});
     }};
     List<int[]> position02_2s_y = new ArrayList() {{
         this.add(new int[]{3, 5});
@@ -65,43 +76,54 @@ public class FindValueinArrayTest {
     }};
 
     int target02_3_y = 990;
-    int[] value02_3_y = {136, 789, 65};
-    int[] position02_3_y = {9, 10, 11};
+    List<int[]> value02_3_y = new ArrayList() {{
+        this.add(new int[]{65, 136, 789});
+    }};
+    List<int[]> position02_3_y = new ArrayList() {{
+        this.add(new int[]{9, 10, 11});
+    }};
     int target02_3s_y = 168;
     List<int[]> value02_3s_y = new ArrayList() {{
-        this.add(new int[]{78, 34, 56});
-        this.add(new int[]{43, 65, 60});
+        this.add(new int[]{34, 56, 78});
+        this.add(new int[]{43, 60, 65});
     }};
     List<int[]> position02_3s_y = new ArrayList() {{
         this.add(new int[]{0, 3, 8});
         this.add(new int[]{6, 11, 14});
     }};
 
-
+    /**
+     * =======
+     */
     int[] demoArray03_y = {34, 5, 6, 78, 7, 56, 432, 56, 78, 79,
             56, 8, 675, 64, 65, 43, 4, 56, 789, 65,
             41, 799, 469};
     int target03_2_y = 112;
-    int[] value03_2_y = {56, 56};
-    int[] position03_2_y = {5, 7};
-    int target03_2s_y = 112;
-    List<int[]> value03_2s_y = new ArrayList() {{
+    List<int[]> value03_2_y = new ArrayList() {{
+        this.add(new int[]{34, 78});
         this.add(new int[]{56, 56});
         this.add(new int[]{56, 56});
     }};
-    List<int[]> position03_2s_y = new ArrayList() {{
+    List<int[]> position03_2_y = new ArrayList() {{
         this.add(new int[]{5, 10});
         this.add(new int[]{5, 7});
         this.add(new int[]{7, 10});
     }};
 
     int target03_3_y = 1238;
-    int[] value03_3_y = {7, 432, 799};
-    int[] position03_3_y = {4, 6, 21};
+    List<int[]> value03_3_y = new ArrayList() {{
+        this.add(new int[]{7, 432, 799});
+    }};
+    List<int[]> position03_3_y = new ArrayList() {{
+        this.add(new int[]{4, 6, 21});
+    }};
+
     int target03_3s_y = 554;
     List<int[]> value03_3s_y = new ArrayList() {{
-        this.add(new int[]{432, 79, 43});
         this.add(new int[]{6, 79, 469});
+        this.add(new int[]{7, 78, 469});
+        this.add(new int[]{43, 79, 432});
+
     }};
     List<int[]> position03_3s_y = new ArrayList() {{
         this.add(new int[]{6, 9, 15});
@@ -116,11 +138,6 @@ public class FindValueinArrayTest {
     int target01_n_all = 112;
     int target02_n_all = 112;
     int target03_n_all = 4567;
-
-    int[] value01_2_all = {-1, -1};
-    int[] position01_2_all = {-1, -1};
-    int[] value01_3_all = {-1, -1, -1};
-    int[] position01_3_all = {-1, -1, -1};
 
     List<int[]> value01_2s_all = null;
     List<int[]> position03_2s_all = null;

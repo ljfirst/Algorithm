@@ -9,7 +9,7 @@ import java.util.TreeMap;
  * @date 2020/6/23
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description 字符串子串包含检测
+ * @description 子串检测
  * 一个S和一个T，请问你S中是否存在一个子串，包含T中所有字符且不包含其他字符
  * <p>
  * 注意：这道题要注意区别是字符串，不是序列，因此最好是用滑动窗口，而不是仅仅map之间的对比

@@ -57,13 +57,13 @@ public class SaleStocks {
         int count = 0;
         int flag = 0;
         while (flag < prices.length) {
-            //波谷判断
+            //先找波谷
             while (flag < prices.length && prices[flag] < valley) {
                 valley = prices[flag];
                 peak = prices[flag];//刷新波峰
                 flag++;
             }
-            //波峰判断
+            //再找波峰
             while (flag < prices.length && prices[flag] > peak) {
                 peak = prices[flag];
                 flag++;

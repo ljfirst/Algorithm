@@ -6,6 +6,14 @@ package DataStructure.stackHeapQueue.stack;
  * @date 2020-01-13 22:01
  * @author—Email liujunfirst@outlook.com
  * @description 栈
+ * 1、出栈
+ * 2、入栈
+ * 3、获取栈顶元素
+ * 4、判空
+ * 5、查找值
+ * 6、获取栈中实际容量
+ * 7、获取栈中最大容量
+ * 8、扩容
  * @blogURL
  */
 public interface Stacklj {

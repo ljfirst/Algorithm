@@ -20,17 +20,17 @@ public class ClockwiseSpiralMatrixTest {
     public void Testprint() {
         int[] target;
         //点位计算法
-        target = clockwiseSpiralMatrix.print(Demo01);
+        target = clockwiseSpiralMatrix.pointCount(Demo01);
         assert Arrays.equals(target, Answer01);
-        target = clockwiseSpiralMatrix.print(Demo02);
+        target = clockwiseSpiralMatrix.pointCount(Demo02);
         assert Arrays.equals(target, Answer02);
-        target = clockwiseSpiralMatrix.print(Demo03);
+        target = clockwiseSpiralMatrix.pointCount(Demo03);
         assert Arrays.equals(target, Answer03);
-        target = clockwiseSpiralMatrix.print(Demo04);
+        target = clockwiseSpiralMatrix.pointCount(Demo04);
         assert Arrays.equals(target, Answer04);
-        target = clockwiseSpiralMatrix.print(Demo05);
+        target = clockwiseSpiralMatrix.pointCount(Demo05);
         assert Arrays.equals(target, Answer05);
-        target = clockwiseSpiralMatrix.print(Demo06);
+        target = clockwiseSpiralMatrix.pointCount(Demo06);
         assert Arrays.equals(target, Answer06);
 
         //转置法

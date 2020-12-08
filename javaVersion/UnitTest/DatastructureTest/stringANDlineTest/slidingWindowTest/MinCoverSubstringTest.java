@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.slidingWindowTest;
 
-import DataStructure.stringANDline.slidingWindow.MinimumWindowSubstring;
+import DataStructure.stringANDline.slidingWindow.MinCoverSubstring;
 import UnitTest.DatastructureTest.stringANDlineTest.StringData4Test;
 import org.junit.Test;
 
@@ -12,9 +12,9 @@ import org.junit.Test;
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 测试用例： 最小覆盖子串
  */
-public class MinimumWindowSubstringTest extends StringData4Test {
+public class MinCoverSubstringTest extends StringData4Test {
 
-    MinimumWindowSubstring m = new MinimumWindowSubstring();
+    MinCoverSubstring m = new MinCoverSubstring();
 
     @Test
     public void testfindMinSubString(){

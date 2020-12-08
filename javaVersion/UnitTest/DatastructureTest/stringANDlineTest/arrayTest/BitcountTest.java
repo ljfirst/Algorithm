@@ -9,7 +9,7 @@ import org.junit.Test;
  * @date 2020/11/30
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description
+ * @description 计算bit位 测试案例
  */
 public class BitcountTest {
 
@@ -17,16 +17,24 @@ public class BitcountTest {
 
     @Test
     public void testmethod() {
-        //-1 包括符号位，一个32个1
+        //-1 包括符号位，一共32个1
         int i = -1;
-        bitcount.byteCountComplementMethod1(i);
-        bitcount.byteCountComplementMethod2(i);
-        bitcount.byteCountComplementMethod3(i);
+        int count = bitcount.byteCountComplementMethod1(i);
+        assert  count == 32;
+        count = bitcount.byteCountComplementMethod2(i);
+        assert count == 32;
+        count = bitcount.byteCountComplementMethod3(i);
+        assert count == 32;
 
-        System.out.println((1 >>> 1));
-        System.out.println((15 >>> 1));
-        System.out.println((3 >>> 1));
-        System.out.println((5 >>> 1));
-        System.out.println((9 >>> 1));
+        //7，一共3个1
+        i = 7;
+        count = bitcount.byteCountComplementMethod1(i);
+        assert  count == 3;
+        count = bitcount.byteCountComplementMethod2(i);
+        assert count == 3;
+        count = bitcount.byteCountComplementMethod3(i);
+        assert count == 3;
+
+
     }
 }

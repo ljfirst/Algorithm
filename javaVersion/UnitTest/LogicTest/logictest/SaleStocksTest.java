@@ -45,6 +45,20 @@ public class SaleStocksTest {
         assert answer == answerMany05;
     }
 
+    @Test
+    public void testallowMany1(){
+        //many
+        int answer = saleStocks.allowMany1(demo01);
+        assert answer == answerMany01;
+        answer = saleStocks.allowMany1(demo02);
+        assert answer == answerMany02;
+        answer = saleStocks.allowMany1(demo03);
+        assert answer == answerMany03;
+        answer = saleStocks.allowMany1(demo04);
+        assert answer == answerMany04;
+        answer = saleStocks.allowMany1(demo05);
+        assert answer == answerMany05;
+    }
     //Demo
     int[] demo01 = {1,2,3,4,5,6,7};
     int answerOnce01 = 6;

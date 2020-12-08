@@ -4,7 +4,7 @@ import java.util.Stack;
 
 /** 
  *@author liujun
- *@date 2018-8-25 ����03:47:41
+ *@date 2018-8-25 03:47:41
  *@author-Email liujunfirst@outlook.com
  *@description  最小栈
  * 实现一个这样的栈，这个栈除了可以进行普通的push、pop操作以外，还可以进行getMin的操作，
@@ -13,7 +13,7 @@ import java.util.Stack;
  * 附加：如果空间复杂度也能O(1)的话可加分。
  *@version 1.0
  */
-public class MinValueStack extends Stack<Integer>{
+public class MinValueStack extends Stack<Integer> {
 
 	private static final long serialVersionUID = 1224463164541339165L;
 
@@ -24,12 +24,10 @@ public class MinValueStack extends Stack<Integer>{
 	}
 	
 	public synchronized Integer getMinValue() {
-		// TODO Auto-generated method stub
 		return ministack.peek();
 	}
 
 	public Integer push(int item) {
-
         super.push(item);
 		if (ministack.size() == 0 || item < ministack.peek()) {
 			return ministack.push(item);

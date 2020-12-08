@@ -7,7 +7,7 @@ import org.junit.Test;
  * @author liujun
  * @version 1.0
  * @date 2020/5/15
- * @authorEmail liujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 大整数乘法 测试案例
  */
@@ -34,6 +34,8 @@ public class BigIntegersMultiTest {
         for (int i = 1; i < 20; i++) {
             sb.append(9);
             s3 = bigIntegersMulti.multi(sb.toString(), sb.toString());
+
+            //规律
             for (int j = 0; j < i; j++) {
                 sb1.append(9);
             }
@@ -42,6 +44,7 @@ public class BigIntegersMultiTest {
                 sb1.append(0);
             }
             sb1.append(1);
+
             assert s3.equals(sb1.toString());
             sb1 = new StringBuffer();
         }

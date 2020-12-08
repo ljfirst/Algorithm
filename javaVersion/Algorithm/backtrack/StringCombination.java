@@ -13,6 +13,7 @@ import java.util.List;
  * @attation 1.Java字符数组如何输出:2种方式。
  * 2.循环处i = depth
  */
+
 public class StringCombination {
 
     List<String> list;

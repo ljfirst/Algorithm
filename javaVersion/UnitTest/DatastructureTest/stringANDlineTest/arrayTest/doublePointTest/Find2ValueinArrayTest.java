@@ -45,31 +45,51 @@ public class Find2ValueinArrayTest extends FindValueinArrayTest {
     }
 
     /**
-     * @return 返回存在的这 n 个值
+     * @return 返回所有的 n 数之和的组合
      */
     @Test
-    public void testgetValue() {
-        int[] values = f.getValue(demoArray01_y, target01_2_y);
-        assert Arrays.equals(values, value01_2_y);
-        values = f.getValue(demoArray02_y, target02_2_y);
-        assert Arrays.equals(values, value02_2_y);
-        values = f.getValue(demoArray03_y, target03_2_y);
-        assert Arrays.equals(values, value03_2_y);
+    public void getValues() {
 
-        values = f.getValue(demoArray01_n, target01_n_all);
-        assert Arrays.equals(values, value01_2_all);
-        values = f.getValue(demoArray02_n, target02_n_all);
-        assert Arrays.equals(values, value01_2_all);
-        values = f.getValue(demoArray03_n, target03_n_all);
-        assert Arrays.equals(values, value01_2_all);
+        List list = f.getValues(demoArray01_y, target01_2_y);
+        for (int i = 0; i < list.size(); i++) {
+            assert Arrays.equals((int[]) list.get(i), value01_2_y.get(i));
+        }
+
+        list = f.getValues(demoArray01_y, target01_2s_y);
+        for (int i = 0; i < list.size(); i++) {
+            assert Arrays.equals((int[]) list.get(i), value01_2s_y.get(i));
+        }
+
+        list = f.getValues(demoArray02_y, target02_2_y);
+        for (int i = 0; i < list.size(); i++) {
+            assert Arrays.equals((int[]) list.get(i), value02_2_y.get(i));
+        }
+
+        list = f.getValues(demoArray02_y, target02_2s_y);
+        for (int i = 0; i < list.size(); i++) {
+            assert Arrays.equals((int[]) list.get(i), value02_2s_y.get(i));
+        }
+
+        list = f.getValues(demoArray03_y, target03_2_y);
+        for (int i = 0; i < list.size(); i++) {
+            assert Arrays.equals((int[]) list.get(i), value03_2_y.get(i));
+        }
+
+        list = f.getValues(demoArray01_n, target01_n_all);
+        assert list == null;
+        list = f.getValues(demoArray02_n, target02_n_all);
+        assert list == null;
+        list = f.getValues(demoArray03_n, target03_n_all);
+        assert list == null;
     }
 
     /**
-     * @return 返回存在的这 n 个值在数组中的原位置
+     * @return 返回所有的 n 数之和在数组中原位置的组合
      */
     @Test
-    public void getPosition() {
-        int[] position = f.getValue(demoArray01_y, target01_2_y);
+    public void getPositions() {
+
+       /* int[] position = f.getValue(demoArray01_y, target01_2_y);
         assert Arrays.equals(position, position01_2_y);
         position = f.getValue(demoArray02_y, target02_2_y);
         assert Arrays.equals(position, position02_2_y);
@@ -81,42 +101,7 @@ public class Find2ValueinArrayTest extends FindValueinArrayTest {
         position = f.getValue(demoArray02_n, target02_n_all);
         assert Arrays.equals(position, position01_2_all);
         position = f.getValue(demoArray03_n, target03_n_all);
-        assert Arrays.equals(position, position01_2_all);
-    }
-
-    /**
-     * @return 返回所有的 n 数之和的组合
-     */
-    @Test
-    public void getValues() {
-        List list = f.getValues(demoArray01_y, target01_2s_y);
-        Object[] arr = list.stream().sorted().toArray();
-        Object[] arr1 = value01_2s_y.stream().sorted().toArray();
-        assert Arrays.equals(arr, arr1);
-
-        list = f.getValues(demoArray02_y, target02_2s_y);
-        arr = list.stream().sorted().toArray();
-        arr1 = value02_2s_y.stream().sorted().toArray();
-        assert Arrays.equals(arr, arr1);
-
-        list = f.getValues(demoArray03_y, target03_2s_y);
-        arr = list.stream().sorted().toArray();
-        arr1 = value03_2s_y.stream().sorted().toArray();
-        assert Arrays.equals(arr, arr1);
-
-        list = f.getValues(demoArray01_n, target01_n_all);
-        assert list == value01_2s_all;
-        list = f.getValues(demoArray02_n, target02_n_all);
-        assert list == value01_2s_all;
-        list = f.getValues(demoArray03_n, target03_n_all);
-        assert list == value01_2s_all;
-    }
-
-    /**
-     * @return 返回所有的 n 数之和在数组中原位置的组合
-     */
-    @Test
-    public void getPositions() {
+        assert Arrays.equals(position, position01_2_all);*/
         List list = f.getPositions(demoArray01_y, target01_2s_y);
         Object[] arr = list.stream().sorted().toArray();
         Object[] arr1 = position01_2s_y.stream().sorted().toArray();
@@ -127,16 +112,10 @@ public class Find2ValueinArrayTest extends FindValueinArrayTest {
         arr1 = position02_2s_y.stream().sorted().toArray();
         assert Arrays.equals(arr, arr1);
 
-        list = f.getPositions(demoArray03_y, target03_2s_y);
-        arr = list.stream().sorted().toArray();
-        arr1 = position03_2s_y.stream().sorted().toArray();
-        assert Arrays.equals(arr, arr1);
 
         list = f.getPositions(demoArray01_n, target01_2s_y);
         assert list == position03_2s_all;
         list = f.getPositions(demoArray02_n, target02_2s_y);
-        assert list == position03_2s_all;
-        list = f.getPositions(demoArray03_n, target03_2s_y);
         assert list == position03_2s_all;
     }
 }

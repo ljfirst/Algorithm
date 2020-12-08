@@ -12,10 +12,8 @@ import java.util.List;
  * @description n数之和
  * 给定一个数 target，在一维数组中，找出某 n 个数相加得 target。
  * 要求一：如果存在这个 n 个数，返回true，反则返回false。
- * 要求二：返回存在的这 n 个值
- * 要求三：返回存在的这 n 个值在数组中的原位置
- * 要求四：返回所有的 n 数之和的组合
- * 要求五：返回所有的 n 数之和在数组中原位置的组合
+ * 要求二：返回所有的 n 数之和的组合
+ * 要求三：返回所有的 n 数之和在数组中原位置的组合
  */
 
 public interface FindValueinArray {
@@ -28,16 +26,6 @@ public interface FindValueinArray {
     boolean exist(int[] array, int target);
 
     /**
-     * @return 返回存在的这 n 个值
-     */
-    int[] getValue(int[] array, int target);
-
-    /**
-     * @return 返回存在的这 n 个值在数组中的原位置
-     */
-    int[] getPosition(int[] array, int target);
-
-    /**
      * @return 返回所有的 n 数之和的组合
      */
     List getValues(int[] array, int target);
@@ -47,10 +35,4 @@ public interface FindValueinArray {
      */
     List getPositions(int[] array, int target);
 
-    /**
-     * @return 检查数组
-     */
-    default boolean check(int[] array, int target) {
-        return (array == null || array.length <= 0);
-    }
 }

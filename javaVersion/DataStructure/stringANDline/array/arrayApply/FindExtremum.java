@@ -24,7 +24,6 @@ public class FindExtremum {
         if (array == null || array.length <= 1) {
             return Integer.MIN_VALUE;
         }
-
         int min = array[0];
         int max = array[0];
         max = Arrays.stream(array).max().getAsInt();
@@ -77,7 +76,8 @@ public class FindExtremum {
         int[] LargestSum = new int[length];
         min = LargestSum[0] = array_b[0];
         for (int i = 1; i < length; i++) {
-            LargestSum[i] = Math.abs(LargestSum[i - 1] + array_b[i]) < Math.abs(array_b[i]) ? (LargestSum[i - 1] + array_b[i]) : array_b[i];
+            LargestSum[i] = Math.abs(LargestSum[i - 1] + array_b[i]) < Math.abs(array_b[i]) ?
+                    (LargestSum[i - 1] + array_b[i]) : array_b[i];
             if (Math.abs(LargestSum[i]) < Math.abs(min)) {
                 min = Math.abs(LargestSum[i]);
             }

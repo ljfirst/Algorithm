@@ -28,6 +28,19 @@ public class MirrorBinaryTreeTest extends BinaryTreeTestDemo {
         assert mirrorBinaryTree.equals(gettreeDemo04_Mirror(), mirrorBinaryTree.Mirror(binaryTreeImplDemo4));
     }
 
+    @Test
+    public void testMirror1() {
+        //null
+        assert mirrorBinaryTree.equals(binaryTreeImplDemo1, mirrorBinaryTree.Mirror1(binaryTreeImplDemo1));
+        //empty BinaryTreeImpl
+        assert mirrorBinaryTree.equals(new BinaryTreeImpl(), mirrorBinaryTree.Mirror1(new BinaryTreeImpl()));
+
+        binaryTreeImplDemo3 = gettreeDemo03();
+        assert mirrorBinaryTree.equals(gettreeDemo03_Mirror(), mirrorBinaryTree.Mirror1(binaryTreeImplDemo3));
+        binaryTreeImplDemo4 = gettreeDemo04();
+        assert mirrorBinaryTree.equals(gettreeDemo04_Mirror(), mirrorBinaryTree.Mirror1(binaryTreeImplDemo4));
+    }
+
     public BinaryTreeImpl gettreeDemo03_Mirror() {
         BinaryTreeImpl binaryTree1 = new BinaryTreeImpl(1);
         BinaryTreeImpl binaryTree2 = new BinaryTreeImpl(2);
