@@ -11,7 +11,7 @@ import java.util.Arrays;
  * @date 2020/12/9
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description 奇数左边偶数右边
+ * @description 奇数左边偶数右边 测试案例
  */
 public class OddLeftEvenRightTest {
 

@@ -1,4 +1,4 @@
-package UnitTest.DatastructureTest.stringANDlineTest.arrayTest;
+package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.arrayApplyTest;
 
 import DataStructure.stringANDline.array.arrayApply.Bitcount;
 import org.junit.Test;

@@ -33,7 +33,7 @@ public class TransIPtoInt {
                 return -1;
             }
             long f = Integer.parseInt(iparray[i]);
-            //注意：先乘除,确定移位数，再移位
+            //注意：先乘除,确定移位数，再移位，hex是8的倍数，每次移动8，16，24位
             f = f << (iparray.length - i - 1) * hex;
             ipnum += f;
         }

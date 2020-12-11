@@ -106,9 +106,11 @@ public class LNRSubstring {
                 windows.add(c);
                 count = Math.max(windows.size(), count);
             } else {
-                while (windows.contains(c)) {
+                //windows.size() 是为了放置 windows.peek()出现空指针
+                while (windows.size() != 0 && windows.peek() != c) {
                     windows.poll();
                 }
+                windows.poll();
                 windows.add(c);
             }
             right++;

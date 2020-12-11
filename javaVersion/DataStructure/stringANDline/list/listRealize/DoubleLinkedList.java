@@ -11,6 +11,12 @@ import java.util.Arrays;
  * @date 2019-12-07 18:17
  * @author-Email liujunfirst@outlook.com
  * @description 双向链表
+ * 1、插入（批量插入、指定位置插入）
+ * 2、删除（删除元素、删除指定位置的元素）
+ * 3、查找（查找元素、查找指定位置的元素）
+ * 4、输出（数组）
+ * 5、相等
+ * 6、清除
  * @blogURL
  */
 public class DoubleLinkedList implements Listlj {
