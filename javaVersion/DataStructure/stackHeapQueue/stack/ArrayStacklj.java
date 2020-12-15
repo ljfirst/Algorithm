@@ -47,12 +47,10 @@ public class ArrayStacklj implements Stacklj {
     }
 
     public boolean empty() {
-        return this.stackTop == 0 ? true : false;
+        return this.stackTop == 0;
     }
 
     public boolean search(int value) {
-        //��Ϊ��ջ��ʱ��û�ж�ջ�������
-        // ����search��ʱ����Ҫ���޶���Χ�ڲ�ѯ
         for (int i = 0; i < stackTop; i++) {
             if (value == stackValue[i]) {
                 return true;
@@ -66,7 +64,7 @@ public class ArrayStacklj implements Stacklj {
     }
 
     public int getMaxsize() {
-        return maxSize;
+        return this.maxSize;
     }
 
     @Override

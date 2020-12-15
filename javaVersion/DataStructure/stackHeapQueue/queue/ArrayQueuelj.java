@@ -4,8 +4,8 @@ package DataStructure.stackHeapQueue.queue;
  * @author liujun
  * @version 1.0
  * @date 2019-11-09 22:56
- * @authorEmail liujunfirst@outlook.com
- * @description 数组队列
+ * @author-Email liujunfirst@outlook.com
+ * @description 数组队列  循环队列
  */
 public class ArrayQueuelj implements Queuelj {
 
@@ -17,28 +17,32 @@ public class ArrayQueuelj implements Queuelj {
 
     public ArrayQueuelj() {
         //默认初始值为50
-        new ArrayQueuelj(50);
+        this.QueueMaxsize = 32;
+        this.QueueRealsize = 0;
+        this.queue = new int[QueueMaxsize];
+        this.front = this.tail = 0;
     }
 
     public ArrayQueuelj(int num) {
         //指定初始值
-        QueueMaxsize = num;
-        queue = new int[QueueMaxsize];
-        QueueRealsize = 0;
-        front = tail = 0;
+        this.QueueMaxsize = num;
+        this.QueueRealsize = 0;
+        this.queue = new int[QueueMaxsize];
+        this.front = this.tail = 0;
     }
 
     @Override
     //插入元素
     public boolean offer(int value) {
-        if (QueueMaxsize == tail + 1) {
+
+        if ((tail + 1 + QueueMaxsize) % QueueMaxsize == front) {
             resize();
         }
         //循环队列
         if (tail + 1 != front) {
             queue[tail] = value;
             tail = (++tail) % QueueMaxsize;
-            QueueRealsize++;
+            this.QueueRealsize++;
             return true;
         }
         return false;
@@ -46,7 +50,7 @@ public class ArrayQueuelj implements Queuelj {
 
     @Override
     public int poll() {
-        int value = -1;
+        int value = Integer.MIN_VALUE;
         //判空，元素出队
         if (!empty()) {
             value = queue[front];
@@ -59,7 +63,7 @@ public class ArrayQueuelj implements Queuelj {
     //获取队首元素，不删除元素
     @Override
     public int peek() {
-        int value = -1;
+        int value = Integer.MIN_VALUE;
         //判空
         if (!empty()) {
             value = queue[front];
@@ -69,50 +73,43 @@ public class ArrayQueuelj implements Queuelj {
 
     @Override
     public int getRealsize() {
-        return QueueRealsize;
+        return this.QueueRealsize;
     }
 
     @Override
     public int getMaxsize() {
-        return QueueMaxsize;
+        return this.QueueMaxsize;
     }
 
     @Override
     public void resize() {
         //QueueMaxsize扩大一倍
+        int before = QueueMaxsize;
         QueueMaxsize <<= 1;
         int[] copy = new int[QueueMaxsize];
-        int copyLength = tail - front;
-        System.arraycopy(queue, front, copy, 0, copyLength);
-        queue = copy;
-        front = 0;
-        tail = copyLength;
-        /*if (front < tail) {
-            for (int i = front; i < tail; i++) {
-                queue1[point] = queue[(i + QueueMaxsize) / QueueMaxsize];
+        int point = 0;
+        if (tail < front) {
+            while (front < tail + before) {
+                copy[point] = queue[(front + before) % before];
+                front++;
                 point++;
             }
         } else {
-            for (int i = front; i < QueueMaxsize; i++) {
-                queue1[point] = queue[i];
-                point++;
+            for (int i = front; i < tail; i++) {
+                System.arraycopy(queue, front, copy, 0, tail - front);
             }
-            for (int i = 0; i < tail; i++) {
-                queue1[point] = queue[i];
-                point++;
-            }
+            point = tail;
         }
-
         front = 0;
-        tail = point;*/
-
+        tail = point;
+        queue = copy;
     }
 
     @Override
     public boolean search(int x) {
         if (!empty()) {
-            int point = front;
-            while (point != tail) {
+            int point = this.front;
+            while (point != this.tail) {
                 if (queue[point] == x) {
                     return true;
                 }
@@ -124,6 +121,6 @@ public class ArrayQueuelj implements Queuelj {
 
     @Override
     public boolean empty() {
-        return tail == front;
+        return this.tail == this.front;
     }
 }

@@ -1,6 +1,8 @@
 package UnitTest.DatastructureTest.stackHeapQueueTest.heapTest;
 
 import DataStructure.stackHeapQueue.heap.PriorityQueuelj;
+import DataStructure.stackHeapQueue.queue.ArrayQueuelj;
+import UnitTest.DatastructureTest.stackHeapQueueTest.queueTest.QueueljTest;
 import org.junit.Test;
 
 /**
@@ -11,13 +13,16 @@ import org.junit.Test;
  * @blogURL https://blog.csdn.net/ljfirst
  * @description
  */
-public class PriorityQueueljTest {
+public class PriorityQueueljTest extends QueueljTest {
 
-    PriorityQueuelj p = new PriorityQueuelj(5);
 
     @Test
-    public void test() {
+    public void testArrayQueue(){
+        super.testQueue(new PriorityQueuelj());
+        //methodTest(new PriorityQueuelj(10));
+    }
 
+    public void methodTest(PriorityQueuelj p) {
         //测试队列基本功能
         assert p.empty();
         assert 5 == p.getMaxsize();

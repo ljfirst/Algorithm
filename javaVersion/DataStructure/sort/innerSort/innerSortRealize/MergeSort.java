@@ -5,12 +5,9 @@ import DataStructure.sort.innerSort.SortInterface;
 /**
  * @author liujun
  * @version 1.0
- * @date 2019-3-23 ����12:09:20
- * @author��Email liujunfirst@outlook.com
+ * @date 2019-3-23 12:09:20
+ * @author-Email liujunfirst@outlook.com
  * @description 归并排序
- * 1������ֳ����Σ�ÿ��ȥ����
- * 2������ʱ�ж��������Ƿ�Խ�磬Խ��ֹͣ����
- * 3��ʵ�й鲢
  * @URL
  */
 public class MergeSort implements SortInterface {
@@ -35,7 +32,6 @@ public class MergeSort implements SortInterface {
         }
     }
 
-    //������ϲ�
     public void sort(int[] array, int left, int mid, int right, int[] temp) {
 
         int l = left;
@@ -54,7 +50,6 @@ public class MergeSort implements SortInterface {
         while (r <= right) {
             temp[j++] = array[r++];
         }
-        //��װ����
         for (int i = left; i <= right; i++) {
             array[i] = temp[i];
         }

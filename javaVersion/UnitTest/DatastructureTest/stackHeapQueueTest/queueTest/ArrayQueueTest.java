@@ -8,30 +8,28 @@ import org.junit.Test;
  * @author liujun
  * @version 1.0
  * @date 2019-11-09 22:56
- * @authorEmail liujunfirst@outlook.com
- * @description 
+ * @author-Email liujunfirst@outlook.com
+ * @description 数组队列的测试案例
  */
-public class ArrayQueueTest {
+public class ArrayQueueTest extends QueueljTest{
 
     @Test
     public void testArrayQueue(){
+        super.testQueue(new ArrayQueuelj());
         methodTest(new ArrayQueuelj(10));
     }
 
-
     public void methodTest(Queuelj arrayQueue){
-
         boolean flag = arrayQueue.empty();
         assert flag;
         int value = arrayQueue.poll();
-        assert value == -1;
+        assert value == Integer.MIN_VALUE;
         value = arrayQueue.peek();
-        assert value == -1;
+        assert value == Integer.MIN_VALUE;
         value = arrayQueue.getRealsize();
         assert value == 0;
         flag = arrayQueue.offer(0);
         assert flag;
-        //��Ӳ���
         for (int i = 1; i <= 9; i++) {
             arrayQueue.offer(i);
             if(i == 5){
@@ -70,7 +68,7 @@ public class ArrayQueueTest {
         value = arrayQueue.poll();
         assert value == 11;
         value = arrayQueue.peek();
-        assert value == -1;
+        assert value == Integer.MIN_VALUE;
         value = arrayQueue.getRealsize();
         assert value == 0;
 

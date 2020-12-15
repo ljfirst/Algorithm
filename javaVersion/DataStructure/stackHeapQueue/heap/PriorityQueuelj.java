@@ -17,15 +17,15 @@ public class PriorityQueuelj implements Queuelj {
     public int QueueMaxsize;
 
     public PriorityQueuelj() {
-        QueueRealsize = 0;
-        QueueMaxsize = 50;
-        queue = new int[QueueMaxsize];
+        this.QueueRealsize = 0;
+        this.QueueMaxsize = 32;
+        this.queue = new int[QueueMaxsize];
     }
 
     public PriorityQueuelj(int num) {
-        QueueRealsize = 0;
-        QueueMaxsize = num;
-        queue = new int[QueueMaxsize];
+        this.QueueRealsize = 0;
+        this.QueueMaxsize = num;
+        this.queue = new int[QueueMaxsize];
     }
 
     @Override
@@ -39,13 +39,17 @@ public class PriorityQueuelj implements Queuelj {
             queue[QueueRealsize] = value;
         } else {
             //插入值并进行调整
-            insert_up(value);
+            insert_up_small(value);
         }
         return false;
     }
 
+    /**
+     * >>： 带符号右移。正数右移高位补0，负数右移高位补1。比如：4 >> 1，结果是2；-4 >> 1，结果是-2。-2 >> 1，结果是-1。
+     * >>>：无符号右移。无论是正数还是负数，高位通通补0。
+     */
     //大顶堆
-    public void insert_up(int value) {
+    private void insert_up_big(int value) {
         int position = QueueRealsize;
         while (position > 0) {
             int parent = (position - 1) >> 1;
@@ -58,10 +62,24 @@ public class PriorityQueuelj implements Queuelj {
         queue[position] = value;
     }
 
+    //小顶堆
+    private void insert_up_small(int value) {
+        int position = QueueRealsize;
+        while (position > 0) {
+            int parent = (position - 1) >> 1;
+            if (queue[parent] < value) {
+                break;
+            }
+            queue[position] = queue[parent];
+            position = parent;
+        }
+        queue[position] = value;
+    }
+
     @Override
     //出队判空
     public int poll() {
-        int value = -1;
+        int value = Integer.MIN_VALUE;
         if (!empty()) {
             value = queue[0];
             int x = queue[QueueRealsize];
@@ -69,11 +87,6 @@ public class PriorityQueuelj implements Queuelj {
             QueueRealsize--;
         }
         return value;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(8>>1+1);
-        System.out.println(8>>1);
     }
 
     public void insert_down(int position, int value) {
@@ -84,7 +97,7 @@ public class PriorityQueuelj implements Queuelj {
             if (leftchild + 1 <= QueueRealsize) {
                 leftchild = queue[leftchild] > queue[leftchild + 1] ? leftchild : leftchild + 1;
             }
-            if(value > queue[leftchild]){
+            if (value > queue[leftchild]) {
                 break;
             }
             queue[position] = queue[leftchild];
@@ -95,7 +108,7 @@ public class PriorityQueuelj implements Queuelj {
 
     @Override
     public int peek() {
-        int value = -1;
+        int value = Integer.MIN_VALUE;
         if (!empty()) {
             value = queue[0];
         }
@@ -129,9 +142,9 @@ public class PriorityQueuelj implements Queuelj {
 
     @Override
     public boolean search(int x) {
-        if(!empty()){
+        if (!empty()) {
             for (int i = 0; i < QueueRealsize; i++) {
-                if(queue[i]==x){
+                if (queue[i] == x) {
                     return true;
                 }
             }

@@ -39,8 +39,13 @@ public class QuickSortDuplexing implements SortInterface {
 
         if (left < right) {
             while (low < high) {
-                //注意1：两个while必须有一个=，不然会导致死循环
-                //注意2：下方两个while互换顺序，会导致出错，需要注意"="的顺序
+                /**
+                 * 注意1：两个while必须有一个=，不然会导致死循环
+                 *
+                 * 注意2：下方两个while循环可以互相换顺序，
+                 * 但是如果是从小到大排序，"="号必须给high
+                 * 但是如果是从大到小排序，"="号必须给low
+                 */
                 //高指针从右往左找小于标杆的元素
                 while ((low < high) && (sortNum[high] >= sortNum[left])) {
                     high--;
@@ -57,10 +62,11 @@ public class QuickSortDuplexing implements SortInterface {
                 }
             }
             //中位数与标杆，交换元素
-            temp = sortNum[low];
-            sortNum[low] = sortNum[left];
-            sortNum[left] = temp;
-
+            if(low!=left){
+                temp = sortNum[low];
+                sortNum[low] = sortNum[left];
+                sortNum[left] = temp;
+            }
             //递归
             quicksortDuplexing(sortNum, left, low - 1);
             quicksortDuplexing(sortNum, low + 1, right);

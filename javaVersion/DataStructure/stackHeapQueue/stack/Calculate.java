@@ -9,7 +9,7 @@ import java.util.Stack;
  * @author liujun
  * @version 1.0
  * @date 2018-5-13 10:29:49
- * @authorEmail liujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @description Calculate 计算器
  * 代码第一部分，处理输入的计算式，处理完输出list: 具体见 JudgeExpress
  * 代码第二部分，中缀表达式转化为后缀表达式
@@ -70,13 +70,8 @@ public class Calculate {
             if ("(".equals(s) || "*".equals(s) || "/".equals(s)) {
                 stackTemp.push(s);
             } else if ("+".equals(s) || "-".equals(s)) {
-                if (!stackTemp.empty()) {
-                    while (!stackTemp.peek().equals("(")) {
-                        suffixList.add(stackTemp.pop());
-                        if (stackTemp.empty()) {
-                            break;
-                        }
-                    }
+                while (!stackTemp.empty() && !stackTemp.peek().equals("(")) {
+                    suffixList.add(stackTemp.pop());
                 }
                 stackTemp.push(s);
             } else if (")".equals(s)) {//右括号出栈

@@ -115,7 +115,7 @@ public class ListReverse {
         int count = 0;
         Nodelj node = listlj.head.next;
         Nodelj preout = listlj.head;
-        //此处不要偷懒写 count++，即使不进入循环，也会执行count++
+        //此处不要偷懒在while中写 count++，即使不进入循环，也会执行count++
         while (count < index1) {
             preout = node;
             node = node.next;

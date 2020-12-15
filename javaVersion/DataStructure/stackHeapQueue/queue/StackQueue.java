@@ -11,14 +11,18 @@ import DataStructure.stackHeapQueue.stack.Stacklj;
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 使用栈实现队列的功能
  */
-public class StackQueue extends ArrayQueuelj {
+public class StackQueue implements Queuelj {
 
     Stacklj stack1;
     Stacklj stack2;
+    public int QueueRealsize;
+    public int QueueMaxsize;
+    int top = 0;
 
     public StackQueue() {
-        stack1 = new ArrayStacklj();
-        stack2 = new ArrayStacklj();
+        this.QueueMaxsize = 32;
+        stack1 = new ArrayStacklj(this.QueueMaxsize);
+        stack2 = new ArrayStacklj(this.QueueMaxsize);
     }
 
     public StackQueue(int num) {
@@ -28,46 +32,82 @@ public class StackQueue extends ArrayQueuelj {
 
     @Override
     public boolean offer(int value) {
-        stack1.push(value);
+        this.QueueRealsize++;
+        this.stack1.push(value);
+        if (QueueRealsize == 1) {
+            top = value;
+        }
         return true;
     }
 
     @Override
     public int poll() {
-        int count = stack1.getRealsize();
-        for (int i = 0; i < count - 1; i++) {
-            stack2.push(stack1.pop());
-        }
-        int value = stack1.pop();
-        int real = stack2.getRealsize();
-        for (int i = 0; i < real; i++) {
-            stack1.push(stack2.pop());
+        int value = Integer.MIN_VALUE;
+        if (!empty()) {
+            int count = stack1.getRealsize();
+            for (int i = 0; i < count - 1; i++) {
+                stack2.push(stack1.pop());
+            }
+            value = stack1.pop();
+            this.QueueRealsize--;
+            int real = stack2.getRealsize();
+            for (int i = 0; i < real; i++) {
+                if (i == 0) {
+                    top = stack2.pop();
+                    stack1.push(top);
+                } else {
+                    stack1.push(stack2.pop());
+                }
+            }
         }
         return value;
     }
 
     @Override
     public int peek() {
-        //因为stack1本身在变化，此处判断条件不可以用stack1.getRealsize()；
-        int count = stack1.getRealsize();
-        for (int i = 0; i < count - 1; i++) {
-            stack2.push(stack1.pop());
+        int value = Integer.MIN_VALUE;
+        //判空
+        if (!empty()) {
+            //因为stack1本身在变化，此处判断条件不可以用stack1.getRealsize()；
+            /*int count = stack1.getRealsize();
+            for (int i = 0; i < count - 1; i++) {
+                stack2.push(stack1.pop());
+            }
+            value = stack1.peek();
+            int real = stack2.getRealsize();
+            for (int i = 0; i < real; i++) {
+                stack1.push(stack2.pop());
+            }*/
+            return top;
         }
-        int value = stack1.peek();
-        int real = stack2.getRealsize();
-        for (int i = 0; i < real; i++) {
-            stack1.push(stack2.pop());
-        }
+
         return value;
     }
 
     @Override
     public boolean empty() {
-        return stack1.empty();
+        return this.stack1.empty();
     }
 
     @Override
-    public int getRealsize(){
-        return stack1.getRealsize();
+    public int getRealsize() {
+        return this.stack1.getRealsize();
+    }
+
+    @Override
+    public int getMaxsize() {
+        return this.stack1.getMaxsize();
+    }
+
+    @Override
+    public void resize() {
+        this.QueueMaxsize <<= 1;
+        this.stack1.resize();
+        this.stack2.resize();
+    }
+
+    @Override
+    public boolean search(int x) {
+        return this.stack1.search(x);
     }
 }

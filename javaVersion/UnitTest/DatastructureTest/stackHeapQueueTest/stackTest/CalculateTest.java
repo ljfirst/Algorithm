@@ -9,7 +9,7 @@ import java.text.DecimalFormat;
  * @author liujun
  * @version 1.0
  * @date 2019-11-09 12:53
- * @authorEmail liujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @description
  */
 public class CalculateTest {
@@ -91,7 +91,7 @@ public class CalculateTest {
     String calNum045 = "2*(1.2d3+0j4)";//非仅含数字和运算符
     double ans045 = Integer.MIN_VALUE;
 
-    String calNum05 = "2 + 3 * 6 / 2 + 8";
+    String calNum05 = "2 + 3 * 6 / 2 + 8";//36*2/2+8+
     double ans05 = 19;
     String calNum051 = "2 + 03 * 6 / 002 + 8";
     double ans051 = 19;
@@ -112,6 +112,6 @@ public class CalculateTest {
     double ans12 = 60;
     String calNum13 = "1*2*3*4*5";
     double ans13 = 120;
-    String calNum14 = "6*6*6*6*6/36/216";
+    String calNum14 = "6*6*6*6*6/36/216";//66*6*6*6*36/216/
     double ans14 = 1;
 }

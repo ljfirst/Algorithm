@@ -24,18 +24,16 @@ public class HeapSort implements SortInterface {
 
     @Override
     public void sortMethod(int[] heap) {
-        int temp;
-        //输入检查
         if (!check(heap)) {
             return;
         }
-        //初试化建堆
-        for (int i = (heap.length - 1) / 2; i >= 0; i--) {
+        //初试化建堆,数组的左孩子/2 一定是父节点
+        for (int i = heap.length / 2; i >= 0; i--) {
             heapify_big(heap, i, heap.length - 1);
         }
         //交换堆顶和数组末尾元素，循环整堆,注意边界值
         for (int i = heap.length - 1; i > 0; i--) {
-            temp = heap[0];
+            int temp = heap[0];
             heap[0] = heap[i];
             heap[i] = temp;
             heapify_big(heap, 0, i - 1);
@@ -51,9 +49,8 @@ public class HeapSort implements SortInterface {
         if (flag > border) {
             return;
         }
-        //如果右孩子存在
+        //如果右孩子存在，左右孩子对比，找最大值
         if (flag + 1 <= border) {
-            //左右孩子对比，找最大值
             flag = heap[flag] > heap[flag + 1] ? flag + 1 : flag;
         }
         //对比父节点和孩子结点，找最大值,发生交换,并递归其最大值孩子结点

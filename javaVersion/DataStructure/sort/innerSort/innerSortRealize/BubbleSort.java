@@ -16,11 +16,11 @@ public class BubbleSort implements SortInterface {
     @Override
     public void sortMethod(int[] array) {
         if (!check(array)) {
-            return ;
+            return;
         }
         //交换变量：temp
         int temp;
-        //当某次内部排序无数据交换发送时，flag不变，则此时数组有序，无序再循环对比
+        //当某次内部排序无数据交换发送时，flag不变，则此时数组有序，无需再循环对比
         boolean flag = false;
         //外部循环：循环元素个数减一次，因为最后一次默认有序
         for (int i = 0; i < array.length - 1; i++) {

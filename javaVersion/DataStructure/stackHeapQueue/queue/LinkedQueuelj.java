@@ -15,11 +15,12 @@ public class LinkedQueuelj implements Queuelj {
     public int queueMaxsize;
     public Nodelj front;
     public Nodelj tail;
-    
+
 
     public LinkedQueuelj() {
-        //默认初始值为50
-        new LinkedQueuelj(50);
+        //默认初始值为32
+        this.queueMaxsize = 32;
+        new LinkedQueuelj(queueMaxsize);
     }
 
     public LinkedQueuelj(int num) {
@@ -35,7 +36,6 @@ public class LinkedQueuelj implements Queuelj {
             resize();
         }
         Nodelj linkedQueueNode = new Nodelj(value);
-        //��һ�����
         if (this.queueRealsize == 0) {
             this.front = linkedQueueNode;
         } else {
@@ -48,7 +48,7 @@ public class LinkedQueuelj implements Queuelj {
 
     @Override
     public int poll() {
-        int value = -1;
+        int value = Integer.MIN_VALUE;
         //判空
         if (!empty()) {
             value = this.front.value;
@@ -60,7 +60,7 @@ public class LinkedQueuelj implements Queuelj {
 
     @Override
     public int peek() {
-        int value = -1;
+        int value = Integer.MIN_VALUE;
         //判空
         if (!empty()) {
             value = this.front.value;

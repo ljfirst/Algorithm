@@ -4,7 +4,7 @@ package DataStructure.stackHeapQueue.stack;
  * @author liujun
  * @version 1.0
  * @date 2019-10-21 12:17
- * @authorEmail liujunfirst@outlook.com
+ * @author-Email liujunfirst@outlook.com
  * @description  链式栈
  */
 public class LinkedStacklj implements Stacklj {

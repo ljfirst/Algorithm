@@ -1,6 +1,7 @@
 package UnitTest.DatastructureTest.stackHeapQueueTest.queueTest;
 
 import DataStructure.stackHeapQueue.queue.LinkedQueuelj;
+import DataStructure.stackHeapQueue.queue.Queuelj;
 import org.junit.Test;
 
 /**
@@ -10,63 +11,66 @@ import org.junit.Test;
  * @author-Email liujunfirst@outlook.com
  * @description
  */
-public class LinkedQueueTest {
-
-    LinkedQueuelj linkedQueue = new LinkedQueuelj(10);
+public class LinkedQueueTest extends QueueljTest {
 
     @Test
-    public void methodTest() {
-        boolean flag = linkedQueue.empty();
+    public void testArrayQueue() {
+        super.testQueue(new LinkedQueuelj());
+        methodTest(new LinkedQueuelj(10));
+    }
+
+    public void methodTest(Queuelj queuelj) {
+        boolean flag = queuelj.empty();
         assert flag;
-        int value = linkedQueue.poll();
-        assert value == -1;
-        value = linkedQueue.peek();
-        assert value == -1;
-        value = linkedQueue.getRealsize();
+        int value = queuelj.poll();
+        assert value == Integer.MIN_VALUE;
+        value = queuelj.peek();
+        assert value == Integer.MIN_VALUE;
+        value = queuelj.getRealsize();
         assert value == 0;
-        flag = linkedQueue.offer(0);
+        flag = queuelj.offer(0);
         assert flag;
         //��Ӳ���
         for (int i = 1; i <= 9; i++) {
-            linkedQueue.offer(i);
+            queuelj.offer(i);
             if (i == 5) {
-                flag = linkedQueue.empty();
+                flag = queuelj.empty();
                 assert !flag;
-                value = linkedQueue.poll();
+                value = queuelj.poll();
                 assert value == 0;
-                value = linkedQueue.peek();
+                value = queuelj.peek();
                 assert value == 1;
-                value = linkedQueue.getRealsize();
+                value = queuelj.getRealsize();
                 assert value == 5;
             }
         }
-        flag = linkedQueue.offer(10);
+        flag = queuelj.offer(10);
         assert flag;
-        flag = linkedQueue.offer(11);
+        flag = queuelj.offer(11);
         assert flag;
         //目前队内的值 [1,2,3,4,5,6,7,8,9,10,11]
         for (int i = 1; i <= 9; i++) {
-            linkedQueue.poll();
+            queuelj.poll();
             if (i == 5) {
-                flag = linkedQueue.empty();
+                flag = queuelj.empty();
                 assert !flag;
-                value = linkedQueue.poll();
+                value = queuelj.poll();
                 assert value == 6;
-                value = linkedQueue.peek();
+                value = queuelj.peek();
                 assert value == 7;
-                value = linkedQueue.getRealsize();
+                value = queuelj.getRealsize();
                 assert value == 5;
             }
         }
-        value = linkedQueue.poll();
+        value = queuelj.poll();
         assert value == 11;
-        flag = linkedQueue.empty();
+        flag = queuelj.empty();
         assert flag;
-        value = linkedQueue.poll();
-        assert value == -1;
-        value = linkedQueue.peek();
-        assert value == -1;
-        value = linkedQueue.getRealsize();
+        value = queuelj.poll();
+        assert value == Integer.MIN_VALUE;
+        value = queuelj.peek();
+        assert value == Integer.MIN_VALUE;
+        value = queuelj.getRealsize();
         assert value == 0;
     }
 }

@@ -12,28 +12,14 @@ import org.junit.Test;
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 使用栈实现队列的功能 测试用例
  */
-public class StackQueueTest {
+public class StackQueueTest extends QueueljTest{
 
     Queuelj queue = new StackQueue(5);
-
     ArrayQueueTest aqt = new ArrayQueueTest();
 
     @Test
     public void testStackQueue(){
+        super.testQueue(new StackQueue());
         aqt.methodTest(queue);
-    }
-
-    @Test
-    public void testqueue() {
-        for (int i = 1; i <= 9; i++) {
-            queue.offer(i);
-        }
-        assert 1 == queue.peek();
-        assert 1 == queue.poll();
-        for (int i = 1; i <= 5; i++) {
-            queue.poll();
-        }
-        assert 7 == queue.peek();
-        assert 7 == queue.poll();
     }
 }

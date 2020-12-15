@@ -8,7 +8,7 @@ import DataStructure.sort.innerSort.SortInterface;
  * @date 2020/5/2
  * @author-Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description
+ * @description 希尔排序
  */
 public class ShellSort implements SortInterface {
     @Override
@@ -26,7 +26,8 @@ public class ShellSort implements SortInterface {
                 for (int j = i + gap; j < length; j += gap) {
                     int temp = array[j];
                     int k = j;
-                    while ((k - gap) >= 0 && (array[k - gap] > temp)) {//k-gap 要判断越界
+                    //k-gap 要判断越界
+                    while ((k - gap) >= 0 && (array[k - gap] > temp)) {
                         array[k] = array[k - gap];
                         k -= gap;
                     }

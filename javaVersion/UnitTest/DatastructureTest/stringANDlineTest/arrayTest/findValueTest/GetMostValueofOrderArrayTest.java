@@ -21,6 +21,10 @@ public class GetMostValueofOrderArrayTest {
     public void testgetmin() {
         int value = find.getmin(demoarray01);
         assert value == target01;
+        value = find.getmin(demoarray011);
+        assert value == target011;
+        value = find.getmin(demoarray012);
+        assert value == target012;
         value = find.getmin(demoarray02);
         assert value == target02;
         value = find.getmin(demoarray03);
@@ -51,6 +55,10 @@ public class GetMostValueofOrderArrayTest {
 
     int[] demoarray01 = {1, 2, 3, 4, 5, 6, 7};
     int target01 = 1;
+    int[] demoarray011 = {1};
+    int target011 = 1;
+    int[] demoarray012 = {3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
+    int target012 = 3;
     int[] demoarray02 = {5, 6, 7, 1, 2, 3, 4};
     int target02 = 1;
     int[] demoarray03 = {7, 1, 2, 3, 4, 5, 6,};

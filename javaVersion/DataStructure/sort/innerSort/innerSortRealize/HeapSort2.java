@@ -29,8 +29,8 @@ public class HeapSort2 implements SortInterface {
 
     //小顶堆
     public void heapify_big(int[] array, int bound) {
-        //数组从0开始，因此中间值是 (bound - 1) / 2
-        int mid = (bound - 1) / 2;
+        //数组从0开始，因此中间值是 bound / 2
+        int mid = bound / 2;
         int temp;
         for (int i = mid; i >= 0; i--) {
             int flag = 2 * i + 1;
