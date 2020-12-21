@@ -74,4 +74,5 @@ public class MirrorBinaryTreeTest extends BinaryTreeTestDemo {
         binaryTree3.right = null;
         return binaryTree1;
     }
+
 }

@@ -33,7 +33,6 @@ public class BinaryTreeImpl implements BinaryTree {
     //判断两个二叉树相等
     @Override
     public boolean equals(BinaryTreeImpl source, BinaryTreeImpl target) {
-
         return source == null ? target == null : same(source, target);
     }
 

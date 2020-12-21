@@ -6,6 +6,14 @@ package DataStructure.stackHeapQueue.queue;
  * @date 2020-01-13 21:52
  * @author-Email liujunfirst@outlook.com
  * @description 队列的基本方法
+ * 1、元素入队
+ * 2、元素出队
+ * 3、弹出队首元素（不删除）
+ * 4、队列判空
+ * 5、获取真实队列长度
+ * 6、获取最大队列长度
+ * 7、队列扩容
+ * 8、查找函数
  * @blogURL
  */
 public interface Queuelj {
