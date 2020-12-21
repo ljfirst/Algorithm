@@ -3,8 +3,6 @@ package UnitTest.DatastructureTest.stringANDlineTest.slidingWindowTest;
 import DataStructure.stringANDline.slidingWindow.MinCoverSubstring1;
 import org.junit.Test;
 
-import java.util.Scanner;
-
 /**
  * @author liujun
  * @version 1.0
@@ -19,19 +17,19 @@ public class MinCoverSubstring1Test {
 
     @Test
     public void test() {
-        int target = mc.deal(demo01);
-        assert target == 3;
-        target = mc.deal(demo02);
-        assert target == 0;
-        target = mc.deal(demo03);
-        assert target == 0;
-        target = mc.deal(demo04);
-        assert target == 1;
-        target = mc.deal(demo05);
-        assert target == 5;
-        target = mc.deal(demo06);
+        int target = mc.findMinSubString(demo01);
         assert target == 2;
-        target = mc.deal(demo07);
+        target = mc.findMinSubString(demo02);
+        assert target == 0;
+        target = mc.findMinSubString(demo03);
+        assert target == 3;
+        target = mc.findMinSubString(demo04);
+        assert target == 1;
+        target = mc.findMinSubString(demo05);
+        assert target == 5;
+        target = mc.findMinSubString(demo06);
+        assert target == 2;
+        target = mc.findMinSubString(demo07);
         assert target == 11;
     }
 

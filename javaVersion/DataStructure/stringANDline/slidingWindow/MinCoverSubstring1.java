@@ -14,34 +14,46 @@ import java.util.*;
  */
 public class MinCoverSubstring1 {
 
-    public int deal(String s) {
+    public int findMinSubString(String s) {
         int alphaNum = 0;
         int num = 0;
         Character point = null;
-        Queue queue = new LinkedList();
+        Queue<Character> queue = new LinkedList();
         for (int i = 0; i < s.length(); i++) {
             Character c = s.charAt(i);
-            if ((c > 'A' && c < 'Z') || (c > 'a' && c < 'z')) {
+            if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')) {
+                if (point!=null && !queue.contains(point)) {
+                    alphaNum = 0;
+                }
                 alphaNum++;
+                if (alphaNum > 1) {
+                    num = Math.max(num, queue.size());
+                    sub(queue, point, false);
+                    alphaNum--;
+                }
                 point = c;
                 queue.offer(c);
+                num = Math.max(num, queue.size());
+                continue;
             }
-            if (alphaNum <= 1 && !queue.contains(c)) {
+            if (!queue.contains(c)) {
                 queue.offer(c);
                 num = Math.max(num, queue.size());
-            } else if (alphaNum > 1) {
-                while (queue.peek() != point) {
-                    queue.poll();
-                }
-                queue.poll();
             } else {
-                while (queue.peek() != c) {
-                    queue.poll();
-                }
-                queue.poll();
-                queue.offer(c);
+                sub(queue, c, true);
             }
         }
         return num;
+    }
+
+
+    private void sub(Queue<Character> queue, Character c, boolean flag) {
+        while (queue.peek() != c) {
+            queue.poll();
+        }
+        queue.poll();
+        if (flag) {
+            queue.offer(c);
+        }
     }
 }
