@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.exclusiveorTest;
 
-import DataStructure.stringANDline.array.findNum.FindSingleValueOpss;
+import DataStructure.stringANDline.array.exclusiveor.FindNum_DOuble_One_One;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -13,9 +13,9 @@ import org.junit.Test;
  * @description 找数字 测试案例
  * 一个整型数组里除了两个数字之外，其他的数字都出现了两次。请写程序找出这两个只出现一次的数字
  */
-public class FindSingleValueOpssTest {
+public class FindNum_DOuble_One_OneTest {
 
-    FindSingleValueOpss fvops = new FindSingleValueOpss();
+    FindNum_DOuble_One_One fvops = new FindNum_DOuble_One_One();
 
     @Test
     public void testget() {

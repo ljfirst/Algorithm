@@ -1,4 +1,4 @@
-package DataStructure.stringANDline.array.findNum;
+package DataStructure.stringANDline.array.exclusiveor;
 
 /**
  * @author liujun
@@ -10,9 +10,9 @@ package DataStructure.stringANDline.array.findNum;
  * 数组中只出现一次的数字，其他出现3次
  * 参考博客：https://blog.csdn.net/yjw19901214/article/details/83416280
  */
-public class FindSingleValueOps {
+public class FindNum_Treble_One implements FindNum {
 
-    public int get(int[] array) {
+    public int findvalue(int[] array) {
         if (array == null || array.length == 0) {
             return Integer.MIN_VALUE;
         }

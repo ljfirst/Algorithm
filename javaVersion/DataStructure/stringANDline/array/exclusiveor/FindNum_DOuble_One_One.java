@@ -1,4 +1,4 @@
-package DataStructure.stringANDline.array.findNum;
+package DataStructure.stringANDline.array.exclusiveor;
 
 /**
  * @author liujun
@@ -9,7 +9,7 @@ package DataStructure.stringANDline.array.findNum;
  * @description 找数字
  * 一个整型数组里除了两个数字之外，其他的数字都出现了两次。请写程序找出这两个只出现一次的数字
  */
-public class FindSingleValueOpss {
+public class FindNum_DOuble_One_One {
 
     public int[] get(int[] array) {
         if (array == null || array.length == 0) {

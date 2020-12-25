@@ -1,5 +1,6 @@
-package DataStructure.stringANDline.array.findNum;
+package DataStructure.stringANDline.array.exclusiveor;
 
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -12,22 +13,25 @@ import java.util.Map;
  * @description 找数字
  * 在一组数中，其他每个数都只出现一次，仅有一个数，出现了两次，找出这个数。
  */
-public class FindSingleValueOpsss {
-    public int get(int[] array) {
+public class FindNum_One_Double implements FindNum {
+
+    public int findvalue(int[] array) {
         if (array == null || array.length == 0) {
             return Integer.MIN_VALUE;
         }
         return method(array);
     }
 
-    public int method(int[] array) {
+    private int method(int[] array) {
         int num = Integer.MIN_VALUE;
         Map<Integer, Integer> map = new LinkedHashMap<>();
         int count = 0;
         for (int x : array) {
             count = map.get(x) == null ? 1 : map.get(x) + 1;
             map.put(x, count);
-            num = count == 2 ? x : num;
+            if (count == 2) {
+                return x;
+            }
         }
         return num;
     }

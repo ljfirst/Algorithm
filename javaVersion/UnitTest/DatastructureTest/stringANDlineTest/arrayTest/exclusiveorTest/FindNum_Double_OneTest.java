@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.exclusiveorTest;
 
-import DataStructure.stringANDline.array.findNum.FindSingleValue;
+import DataStructure.stringANDline.array.exclusiveor.FindNum_Double_One;
 import org.junit.Test;
 
 /**
@@ -12,24 +12,24 @@ import org.junit.Test;
  * @description 找数字 测试案例
  * 在一组数中，每个数都出现了两次，但是出现了唯独一个数，仅出现一次，找出这个数
  */
-public class FindSingleValueTest {
+public class FindNum_Double_OneTest {
 
-    FindSingleValue fv = new FindSingleValue();
+    FindNum_Double_One fv = new FindNum_Double_One();
 
     @Test
-    public void testget() {
-        int target = fv.get(array01);
-        assert target == value01;
-        target = fv.get(array02);
-        assert target == value02;
-        target = fv.get(array03);
-        assert target == value03;
-        target = fv.get(array04);
-        assert target == value04;
-        target = fv.get(array05);
-        assert target == value05;
-        target = fv.get(array06);
-        assert target == value06;
+    public void testfindvalue() {
+        int tarfindvalue = fv.findvalue(array01);
+        assert tarfindvalue == value01;
+        tarfindvalue = fv.findvalue(array02);
+        assert tarfindvalue == value02;
+        tarfindvalue = fv.findvalue(array03);
+        assert tarfindvalue == value03;
+        tarfindvalue = fv.findvalue(array04);
+        assert tarfindvalue == value04;
+        tarfindvalue = fv.findvalue(array05);
+        assert tarfindvalue == value05;
+        tarfindvalue = fv.findvalue(array06);
+        assert tarfindvalue == value06;
     }
 
     int[] array01 = {};

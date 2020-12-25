@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.exclusiveorTest;
 
-import DataStructure.stringANDline.array.findNum.FindSingleValueOps;
+import DataStructure.stringANDline.array.exclusiveor.FindNum_Treble_One;
 import org.junit.Test;
 
 /**
@@ -12,22 +12,22 @@ import org.junit.Test;
  * @description 找数字 测试案例
  * 数组中只出现一次的数字，其他出现3次
  */
-public class FindSingleValueOpsTest {
+public class FindNum_Treble_OneTest {
 
-    FindSingleValueOps fvo = new FindSingleValueOps();
+    FindNum_Treble_One fvo = new FindNum_Treble_One();
 
     @Test
-    public void testget(){
-        int target = fvo.get(array01);
-        assert target == value01;
-        target = fvo.get(array02);
-        assert target == value02;
-        target = fvo.get(array03);
-        assert target == value03;
-        target = fvo.get(array04);
-        assert target == value04;
-        target = fvo.get(array05);
-        assert target == value05;
+    public void testfindvalue(){
+        int tarfindvalue = fvo.findvalue(array01);
+        assert tarfindvalue == value01;
+        tarfindvalue = fvo.findvalue(array02);
+        assert tarfindvalue == value02;
+        tarfindvalue = fvo.findvalue(array03);
+        assert tarfindvalue == value03;
+        tarfindvalue = fvo.findvalue(array04);
+        assert tarfindvalue == value04;
+        tarfindvalue = fvo.findvalue(array05);
+        assert tarfindvalue == value05;
     }
 
     int[] array01 = {};

@@ -1,4 +1,6 @@
-package DataStructure.stringANDline.array.findNum;
+package DataStructure.stringANDline.array.exclusiveor;
+
+import java.util.Arrays;
 
 /**
  * @author liujun
@@ -9,9 +11,10 @@ package DataStructure.stringANDline.array.findNum;
  * @description 找数字
  * 在一组数中，每个数都出现了两次，但是出现了唯独一个数，仅出现一次，找出这个数
  */
-public class FindSingleValue {
+public class FindNum_Double_One implements FindNum {
 
-    public int get(int[] array) {
+    @Override
+    public int findvalue(int[] array) {
         if (array == null || array.length == 0) {
             return Integer.MIN_VALUE;
         }
