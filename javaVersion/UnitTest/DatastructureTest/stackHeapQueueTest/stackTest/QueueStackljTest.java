@@ -1,7 +1,6 @@
 package UnitTest.DatastructureTest.stackHeapQueueTest.stackTest;
 
-import DataStructure.stackHeapQueue.stack.QueueStack;
-import DataStructure.stackHeapQueue.stack.Stacklj;
+import DataStructure.stackHeapQueue.stack.QueueStacklj;
 import org.junit.Test;
 
 /**
@@ -10,17 +9,13 @@ import org.junit.Test;
  * @date 2020/7/23
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description
+ * @description 队列栈 测试案例
  */
-public class QueueStackTest {
-
-    Stacklj stack = new QueueStack(5);
+public class QueueStackljTest extends StackljTest {
 
     @Test
     public void test() {
-        ArrayStackTest test = new ArrayStackTest();
-        test.methodTest(stack);
+        super.testStack(new QueueStacklj());
     }
-
 
 }

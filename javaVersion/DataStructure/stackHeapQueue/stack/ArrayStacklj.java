@@ -14,16 +14,16 @@ public class ArrayStacklj implements Stacklj {
     public int maxSize;
 
     public ArrayStacklj(int num) {
-        maxSize = num;
-        stackTop = 0;
-        stackValue = new int[maxSize];
+        this.maxSize = num;
+        this.stackTop = 0;
+        this.stackValue = new int[maxSize];
     }
 
     public ArrayStacklj() {
-        //default size is 50
-        maxSize = 50;
-        stackTop = 0;
-        stackValue = new int[maxSize];
+        //default size is 32
+        this.maxSize = 32;
+        this.stackTop = 0;
+        this.stackValue = new int[maxSize];
     }
 
     public int pop() {
@@ -31,7 +31,7 @@ public class ArrayStacklj implements Stacklj {
         if (!this.empty()) {
             return stackValue[--stackTop];
         }
-        return -1;
+        return Integer.MIN_VALUE;
     }
 
     public boolean push(int value) {
@@ -43,7 +43,7 @@ public class ArrayStacklj implements Stacklj {
     }
 
     public int peek() {
-        return this.empty() ? -1 : stackValue[stackTop - 1];
+        return this.empty() ? Integer.MIN_VALUE : stackValue[stackTop - 1];
     }
 
     public boolean empty() {
@@ -60,7 +60,7 @@ public class ArrayStacklj implements Stacklj {
     }
 
     public int getRealsize() {
-        return stackTop;
+        return this.stackTop;
     }
 
     public int getMaxsize() {
@@ -69,9 +69,9 @@ public class ArrayStacklj implements Stacklj {
 
     @Override
     public void resize() {
-        maxSize <<= 1;
+        this.maxSize <<= 1;
         int[] copy = new int[maxSize];
         System.arraycopy(stackValue, 0, copy, 0, stackValue.length);
-        stackValue = copy;
+        this.stackValue = copy;
     }
 }

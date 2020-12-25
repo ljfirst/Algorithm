@@ -8,21 +8,21 @@ package DataStructure.stringANDline.hashTable;
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 双向链表的 Node 节点
  */
-public class Node4DoublyLinked {
+public class Node4Cache {
 
     int key;
     String value;
-    Node4DoublyLinked pre;
-    Node4DoublyLinked next;
+    Node4Cache pre;
+    Node4Cache next;
 
-    public Node4DoublyLinked() {
+    public Node4Cache() {
         key = Integer.MIN_VALUE;
         value = null;
         pre = null;
         next = null;
     }
 
-    public Node4DoublyLinked(int key, String value) {
+    public Node4Cache(int key, String value) {
         this.key = key;
         this.value = value;
         pre = null;

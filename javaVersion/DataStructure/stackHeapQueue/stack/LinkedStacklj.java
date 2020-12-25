@@ -1,74 +1,66 @@
 package DataStructure.stackHeapQueue.stack;
 
+import DataStructure.stringANDline.list.Nodelj;
+
 /**
  * @author liujun
  * @version 1.0
  * @date 2019-10-21 12:17
  * @author-Email liujunfirst@outlook.com
- * @description  链式栈
+ * @description 链式栈
  */
 public class LinkedStacklj implements Stacklj {
 
-    public Node stackTop;
+    public Nodelj stackTop;
     public int stackRealSize;
     public int stackMaxSize;
 
-    public LinkedStacklj(int num){
-        stackRealSize = 0;
-        stackMaxSize = num;
-        stackTop = null;
+    public LinkedStacklj(int num) {
+        this.stackRealSize = 0;
+        this.stackMaxSize = num;
+        this.stackTop = null;
     }
 
-    public LinkedStacklj(){
-        //Ĭ��ջ������50
-        new LinkedStacklj(50);
+    public LinkedStacklj() {
+        //init size 32
+        this.stackRealSize = 0;
+        this.stackMaxSize = 32;
+        this.stackTop = null;
     }
 
-    private class Node{
-        int vlaue;
-        Node next;
-        Node(int value){
-            this.vlaue = value;
-            this.next = null;
-        }
-    }
-
-    public int pop(){
-        //��ջ�п�
-        if(!this.empty()){
-            stackRealSize--;
-            int value = stackTop.vlaue;
-            stackTop = stackTop.next;
+    public int pop() {
+        if (!this.empty()) {
+            this.stackRealSize--;
+            int value = this.stackTop.value;
+            this.stackTop = this.stackTop.next;
             return value;
         }
-        return -1;
+        return Integer.MIN_VALUE;
     }
 
-    public boolean push(int value){
-        //��ջ����
-        Node node = new Node(value);
-        if(stackRealSize == stackMaxSize){
-            return false;
-        }else{
-            node.next = stackTop;
+    public boolean push(int value) {
+        Nodelj node = new Nodelj(value);
+        if (this.stackRealSize == this.stackMaxSize) {
+            resize();
         }
-        stackTop = node;
-        stackRealSize++;
+        node.next = this.stackTop;
+        this.stackTop = node;
+        this.stackRealSize++;
         return true;
     }
 
-    public int peek(){
-        return (stackTop == null && stackRealSize ==0) ? -1 : stackTop.vlaue;
+    public int peek() {
+        return (stackTop == null && stackRealSize == 0) ? Integer.MIN_VALUE : stackTop.value;
     }
 
-    public boolean empty(){
-        return (stackTop == null && stackRealSize ==0) ? true : false;
+    public boolean empty() {
+        return (stackTop == null && stackRealSize == 0);
     }
 
-    public boolean search(int value){
-        Node test = stackTop;
-        while (test != null){
-            if(test.vlaue == value){
+    public boolean search(int value) {
+        Nodelj test = stackTop;
+        while (test != null) {
+            if (test.value == value) {
                 return true;
             }
             test = test.next;
@@ -76,17 +68,17 @@ public class LinkedStacklj implements Stacklj {
         return false;
     }
 
-    public int getRealsize(){
-        return stackRealSize;
+    public int getRealsize() {
+        return this.stackRealSize;
     }
 
-    public int getMaxsize(){
-        return stackMaxSize;
+    public int getMaxsize() {
+        return this.stackMaxSize;
     }
 
     @Override
     public void resize() {
-
+        this.stackMaxSize <<= 1;
     }
 
 }

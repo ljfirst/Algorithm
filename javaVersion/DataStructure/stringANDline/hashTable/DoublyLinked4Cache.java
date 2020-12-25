@@ -6,25 +6,25 @@ package DataStructure.stringANDline.hashTable;
  * @date 2020/7/28
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description 双向链表
+ * @description cache 双向链表
  */
-public class DoublyLinked {
+public class DoublyLinked4Cache {
 
     //链表头尾指针，链表的实际长度
-    Node4DoublyLinked head;
-    Node4DoublyLinked tail;
+    Node4Cache head;
+    Node4Cache tail;
     int linkedSize;
 
     //初始化 双向链表
-    public DoublyLinked() {
-        head = new Node4DoublyLinked();
-        tail = new Node4DoublyLinked();
-        head.next = tail;
-        tail.pre = head;
+    public DoublyLinked4Cache() {
+        this.head = new Node4Cache();
+        this.tail = new Node4Cache();
+        this.head.next = this.tail;
+        this.tail.pre = this.head;
     }
 
     //增加元素（链表尾部）
-    public boolean insertLast(Node4DoublyLinked node) {
+    public boolean insertLast(Node4Cache node) {
         //空链表的处理方法
         if (head.next == tail) {
             head.next = node;
@@ -40,7 +40,7 @@ public class DoublyLinked {
     }
 
     //删除元素
-    public boolean delete(Node4DoublyLinked node) {
+    public boolean delete(Node4Cache node) {
         node.next.pre = node.pre;
         node.pre.next = node.next;
         linkedSize--;
@@ -48,17 +48,17 @@ public class DoublyLinked {
     }
 
     //删除并返回 首元素
-    public Node4DoublyLinked deleteFirst() {
+    public Node4Cache deleteFirst() {
         if (head.next == tail) {
             return null;
         }
-        Node4DoublyLinked first = head.next;
+        Node4Cache first = head.next;
         delete(first);
         return first;
     }
 
     //获取双向链表的长度
     public int getsize() {
-        return linkedSize;
+        return this.linkedSize;
     }
 }

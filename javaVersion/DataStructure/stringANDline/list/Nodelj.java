@@ -1,15 +1,12 @@
 package DataStructure.stringANDline.list;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @author liujun
  * @version 1.0
  * @date 2020/11/1
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description 单链表
+ * @description 链表结构（单双链表）
  */
 
 public class Nodelj {
