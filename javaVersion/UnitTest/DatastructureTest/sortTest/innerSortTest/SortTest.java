@@ -18,7 +18,7 @@ import java.util.Map;
  * @description
  * @blogURL
  */
-@State(Scope.Thread)
+//@State(Scope.Thread)
 public class SortTest {
 
     int[] arraydata;

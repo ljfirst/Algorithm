@@ -1,10 +1,7 @@
 package DataStructure.stringANDline.hashTable;
 
-import sun.misc.Cache;
-
 import java.util.HashMap;
 import java.util.LinkedHashSet;
-import java.util.List;
 
 /**
  * @author liujun

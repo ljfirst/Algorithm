@@ -18,8 +18,8 @@ public class MonotonousStack {
         }
         Stacklj stack = new ArrayStacklj();
         int[] ans = new int[array.length];
-        for (int i = array.length - 1; i >= 0; i++) {
-            while (!stack.empty() && stack.peek() < array[i]) {
+        for (int i = array.length - 1; i >= 0; i--) {
+            while (!stack.empty() && stack.peek() <= array[i]) {
                 stack.pop();
             }
             ans[i] = stack.empty() ? -1 : stack.peek();

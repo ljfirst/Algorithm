@@ -31,17 +31,17 @@ public class PriorityQueuelj implements Queuelj {
     @Override
     //入队判满
     public boolean offer(int value) {
-        if (QueueRealsize + 1 > QueueMaxsize) {
+        if (QueueRealsize + 1 >= QueueMaxsize) {
             resize();
         }
-        QueueRealsize++;
         if (QueueRealsize == 0) {
             queue[QueueRealsize] = value;
         } else {
             //插入值并进行调整
             insert_up_small(value);
         }
-        return false;
+        QueueRealsize++;
+        return true;
     }
 
     /**
@@ -82,14 +82,14 @@ public class PriorityQueuelj implements Queuelj {
         int value = Integer.MIN_VALUE;
         if (!empty()) {
             value = queue[0];
-            int x = queue[QueueRealsize];
-            insert_down(0, x);
+            int x = queue[QueueRealsize - 1];
+            insert_down_small(0, x);
             QueueRealsize--;
         }
         return value;
     }
 
-    public void insert_down(int position, int value) {
+    public void insert_down_big(int position, int value) {
         int half = QueueRealsize >> 1;
         while (position < half) {
             //注意：此处不可以写成 position << 1 + 1;
@@ -98,6 +98,23 @@ public class PriorityQueuelj implements Queuelj {
                 leftchild = queue[leftchild] > queue[leftchild + 1] ? leftchild : leftchild + 1;
             }
             if (value > queue[leftchild]) {
+                break;
+            }
+            queue[position] = queue[leftchild];
+            position = leftchild;
+        }
+        queue[position] = value;
+    }
+
+    public void insert_down_small(int position, int value) {
+        int half = QueueRealsize >> 1;
+        while (position < half) {
+            //注意：此处不可以写成 position << 1 + 1;
+            int leftchild = (position << 1) + 1;
+            if (leftchild + 1 < QueueRealsize) {
+                leftchild = queue[leftchild] < queue[leftchild + 1] ? leftchild : leftchild + 1;
+            }
+            if (value <= queue[leftchild]) {
                 break;
             }
             queue[position] = queue[leftchild];
@@ -134,7 +151,7 @@ public class PriorityQueuelj implements Queuelj {
     @Override
     public void resize() {
         //QueueMaxsize扩大一倍
-        QueueMaxsize <<= 1;
+        this.QueueMaxsize <<= 1;
         int[] copy = new int[QueueMaxsize];
         System.arraycopy(queue, 0, copy, 0, queue.length);
         queue = copy;

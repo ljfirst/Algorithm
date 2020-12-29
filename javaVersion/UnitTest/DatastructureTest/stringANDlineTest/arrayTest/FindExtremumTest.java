@@ -100,4 +100,9 @@ public class FindExtremumTest {
     int[] demo06 = {-2345, -356, -7654, -5667, 6_5435, 100_0000, -100, 244, 544, -2, 2, 45, 90, 4567, 76};
     int valuemin06 = 4;
     int valuemax06 = 100_7654;
+    //期望输出10 - 7 = 3
+    int[] demo07 = {15, 7, -640, 10, 80, -2, 33, 25, 41, -5, 84, 22};
+    int valuemin07 = 3;
+    int valuemax07 = 100_7654;
+
 }

@@ -39,13 +39,16 @@ public class StringCombination {
             return;
         }
         //注意：此处i = depth。i之前的元素已经有序，只对后续元素进行全排列
-        for (int i = depth + 1; i < c.length; i++) {
+        for (int i = depth; i < c.length; i++) {
             //数组元素交换
             char ch_temp = c[i];
             c[i] = c[depth];
             c[depth] = ch_temp;
             //递归
             Permutation(c, depth + 1);
+            ch_temp = c[i];
+            c[i] = c[depth];
+            c[depth] = ch_temp;
         }
     }
 

@@ -18,8 +18,8 @@ import org.openjdk.jmh.annotations.Mode;
 public class HeapSort2Test extends SortTest {
 
     @Test
-    @Benchmark
-    @BenchmarkMode(Mode.Throughput)
+    //@Benchmark
+    //@BenchmarkMode(Mode.Throughput)
     public void TestInnerSortRealize(){
         super.TestInnerSortRealize(new HeapSort2());
     }

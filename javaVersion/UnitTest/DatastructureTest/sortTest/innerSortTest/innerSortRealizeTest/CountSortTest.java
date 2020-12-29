@@ -18,8 +18,8 @@ import org.openjdk.jmh.annotations.Mode;
 public class CountSortTest extends SortTest {
 
     @Test
-    @Benchmark
-    @BenchmarkMode(Mode.Throughput)
+    //@Benchmark
+    //@BenchmarkMode(Mode.Throughput)
     public void TestInnerSortRealize(){
         super.TestInnerSortRealize(new CountSort());
     }

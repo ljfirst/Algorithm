@@ -2,6 +2,8 @@ package UnitTest.AlgorithmTest.backtrackTest;
 
 import Algorithm.backtrack.StringCombination;
 import org.junit.Test;
+
+import javax.smartcardio.ATR;
 import java.util.Arrays;
 
 /**
@@ -23,15 +25,40 @@ public class StringCombinationTest {
         target = sc.print(demo02);
         assert Arrays.equals(target, answer02);
         target = sc.print(demo03);
-        assert Arrays.equals(target, answer03);
+        Arrays.sort(target);
+        Arrays.sort(answer03);
+        for (int i = 0; i < target.length; i++) {
+            assert target[i].equals(answer03[i]);
+        }
+        //assert Arrays.equals(target, answer03);
         target = sc.print(demo04);
-        assert Arrays.equals(target, answer04);
+        Arrays.sort(target);
+        Arrays.sort(answer04);
+        for (int i = 0; i < target.length; i++) {
+            assert target[i].equals(answer04[i]);
+        }
+        //assert Arrays.equals(target, answer04);
         target = sc.print(demo05);
-        assert Arrays.equals(target, answer05);
+        Arrays.sort(target);
+        Arrays.sort(answer05);
+        for (int i = 0; i < target.length; i++) {
+            assert target[i].equals(answer05[i]);
+        }
+        //assert Arrays.equals(target, answer05);
         target = sc.print(demo06);
-        assert Arrays.equals(target, answer06);
+        Arrays.sort(target);
+        Arrays.sort(answer06);
+        for (int i = 0; i < target.length; i++) {
+            assert target[i].equals(answer06[i]);
+        }
+        //assert Arrays.equals(target, answer06);
         target = sc.print(demo07);
-        assert Arrays.equals(target, answer07);
+        Arrays.sort(target);
+        Arrays.sort(answer07);
+        for (int i = 0; i < target.length; i++) {
+            assert target[i].equals(answer07[i]);
+        }
+        //assert Arrays.equals(target, answer07);
     }
 
     String demo01 = "";
@@ -41,27 +68,27 @@ public class StringCombinationTest {
     String demo03 = "abcd";
     String[] answer03 = {
             "abcd", "abdc", "acdb", "acbd", "adcb", "adbc",
-            "bcad", "bcda", "bdac", "dbca", "bacd", "badc",
+            "bcad", "bcda", "bdac", "bdca", "bacd", "badc",
             "cadb", "cabd", "cdab", "cdba", "cbda", "cbad",
-            "dadc", "dacb", "dcba", "dcab", "dbca", "dbac",};
+            "dacb", "dabc", "dcba", "dcab", "dbca", "dbac"};
     String demo06 = "dcab";
     String[] answer06 = {
             "abcd", "abdc", "acdb", "acbd", "adcb", "adbc",
-            "bcad", "bcda", "bacd", "badc", "bdac", "dbca",
+            "bcad", "bcda", "bdac", "bdca", "bacd", "badc",
             "cadb", "cabd", "cdab", "cdba", "cbda", "cbad",
-            "dadc", "dacb", "dcba", "dcab", "dbca", "dbac",};
+            "dacb", "dabc", "dcba", "dcab", "dbca", "dbac"};
     String demo04 = "1234";
     String[] answer04 = {
             "1234", "1243", "1324", "1342", "1423", "1432",
             "2143", "2134", "2314", "2341", "2413", "2431",
             "3124", "3142", "3421", "3412", "3214", "3241",
-            "4321", "4312", "4231", "4213", "4123", "4132",};
+            "4321", "4312", "4231", "4213", "4123", "4132"};
     String demo05 = "2314";
     String[] answer05 = {
             "1234", "1243", "1324", "1342", "1423", "1432",
             "2143", "2134", "2314", "2341", "2413", "2431",
             "3124", "3142", "3421", "3412", "3214", "3241",
-            "4321", "4312", "4231", "4213", "4123", "4132",};
+            "4321", "4312", "4231", "4213", "4123", "4132"};
     String demo07 = "liu";
     String[] answer07 = {"liu", "lui", "iul", "ilu", "uil", "uli",};
 }

@@ -26,8 +26,8 @@ import java.util.stream.Collectors;
 public class InsertSortTest extends SortTest {
 
     @Test
-    @Benchmark
-    @BenchmarkMode(Mode.Throughput)
+    //@Benchmark
+    //@BenchmarkMode(Mode.Throughput)
     public void TestInnerSortRealize() {
         super.TestInnerSortRealize(new InsertSort());
     }

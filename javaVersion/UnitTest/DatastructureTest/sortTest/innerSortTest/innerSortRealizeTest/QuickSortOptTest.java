@@ -18,8 +18,8 @@ import org.openjdk.jmh.annotations.Mode;
 public class QuickSortOptTest extends SortTest {
 
     @Test
-    @Benchmark
-    @BenchmarkMode(Mode.Throughput)
+    //@Benchmark
+    //@BenchmarkMode(Mode.Throughput)
     public void TestInnerSortRealize(){
         super.TestInnerSortRealize(new QuickSortOpt());
     }
