@@ -18,7 +18,7 @@ public interface Choir {
      * @param array 学生的能力值
      * @param choseNum 挑选的学生数量
      * @param intervald 间隔数量（相邻两个学生的位置编号的差）
-     * @return
+     * @return 能力值最大的乘积
      */
     public int getMaxValue(int[] array, int choseNum, int intervald);
 

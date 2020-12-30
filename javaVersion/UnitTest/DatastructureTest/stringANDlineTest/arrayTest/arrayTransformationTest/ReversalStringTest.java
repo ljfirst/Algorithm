@@ -1,6 +1,6 @@
-package UnitTest.DatastructureTest.stringANDlineTest.sequenceANDstringTest;
+package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.arrayTransformationTest;
 
-import DataStructure.stringANDline.sequenceANDstring.ReversalString;
+import DataStructure.stringANDline.array.arrayTransformation.ReversalString;
 import org.junit.Test;
 
 /**

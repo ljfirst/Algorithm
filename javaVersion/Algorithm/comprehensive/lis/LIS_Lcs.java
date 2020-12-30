@@ -27,15 +27,21 @@ public class LIS_Lcs implements LIS {
         /*QuickSortDuplexing q = new QuickSortDuplexing();
         q.sortMethod(ints);*/
         //因为是递增序列，所以要去重，HashMap自带排序
-        Map hashMap = new HashMap();
+        Map<Integer, Integer> hashMap = new HashMap();
         for (int i = 0; i < sequence.length(); i++) {
-            hashMap.put(ints[i], 1);
+            hashMap.putIfAbsent(ints[i], 1);
         }
-        String temp = hashMap.keySet().toString()
+        String temp;
+        /*String temp = hashMap.keySet().toString()
                 .replace(",", "")
                 .replace("[", "")
                 .replace("]", "")
-                .replace(" ", "");
+                .replace(" ", "");*/
+        StringBuffer sb = new StringBuffer();
+        for (int h : hashMap.keySet()) {
+            sb.append(h);
+        }
+        temp = sb.toString();
         //再进行最长子序列比较
         LCS_Dynamic lcs = new LCS_Dynamic();
         int length = lcs.count(temp, sequence).getCommondLength();

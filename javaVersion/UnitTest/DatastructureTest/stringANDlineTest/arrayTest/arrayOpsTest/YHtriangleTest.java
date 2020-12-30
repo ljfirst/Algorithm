@@ -1,6 +1,6 @@
-package UnitTest.DatastructureTest.stringANDlineTest.arrayTest;
+package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.arrayOpsTest;
 
-import DataStructure.stringANDline.array.arrayApply.YHtriangle;
+import DataStructure.stringANDline.array.arrayOps.YHtriangle;
 import org.junit.Test;
 
 import java.util.Arrays;

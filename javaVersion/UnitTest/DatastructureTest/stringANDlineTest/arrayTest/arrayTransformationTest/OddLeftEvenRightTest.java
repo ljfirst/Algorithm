@@ -1,6 +1,6 @@
-package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.arrayApplyTest;
+package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.arrayTransformationTest;
 
-import DataStructure.stringANDline.array.arrayApply.OddLeftEvenRight;
+import DataStructure.stringANDline.array.arrayTransformation.OddLeftEvenRight;
 import org.junit.Test;
 
 import java.util.Arrays;

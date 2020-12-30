@@ -1,6 +1,6 @@
-package UnitTest.DatastructureTest.stringANDlineTest.arrayTest;
+package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.arrayOpsTest;
 
-import DataStructure.stringANDline.array.arrayApply.Matrix_Multiply;
+import DataStructure.stringANDline.array.arrayOps.Matrix_Multiply;
 import org.junit.Test;
 
 import java.util.Arrays;

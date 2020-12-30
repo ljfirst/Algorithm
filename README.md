@@ -16,8 +16,13 @@
 ### 目前的代码量
 |             | Total  | Algorithm | DataStructure | DesignPattern | 
 | --------  |:-----:   |  :----:         |    :-----:           |    :-----:             |
-| Code   |  249   |    52          |      151          |     36                 | 
-| UT       |  171   |    43          |      116          |    10                  | 
+| Code(代码)   |  239   |    52          |      151          |     36                 | 
+| UT(测试用例)       |  170   |    43          |      117          |    10                  | 
+| CodeNum(代码行数)|  15338|   3019 |      11324      |    995                |
+| TestNum(测试代码行数)|  10126  |   2214 |      7559      |    353                |
+
+代码总数量：409
+代码总行数  :   25617
 
 ## 特色合集
 + [常见动态规划的解题思路及Java实现](https://blog.csdn.net/ljfirst/article/details/103082359)
@@ -78,15 +83,17 @@
       + [查找数值](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stringANDline/array/findValue) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/arrayTest/findValueTest)
       + [大整数乘法、根据身高重建队列、顺时针打印螺旋矩阵、前缀和/差分数组、盛水问题、矩阵相乘、找出重复数组中不重复的个数、杨辉三角](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stringANDline/array) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/arrayTest)
     + **哈希专题**
+      + [LFU和LRU](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stringANDline/hashTable) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/hashTableTest)
     + **链表专题**
       + [单链表的插入、删除、查找、相等](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/DataStructure/stringANDline/list/listRealize/SinglyLinkedList.java)	和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/listTest/SinglyLinkedListTest.java)
       + [链表的反转有多少种方式](https://blog.csdn.net/ljfirst/article/details/109508557)
       + [有环链表和相交链表、环入口判读](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/DataStructure/stringANDline/list/listRealize/RingList.java)	和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/listTest/RingListTest.java)
       + [双向链表的插入、删除、查找、相等](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/DataStructure/stringANDline/list/listRealize/DoubleLinkedList.java)	 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/listTest/DoubleLinkedListTest.java)
       + [Redis底层数据结构：跳表的实现](https://blog.csdn.net/ljfirst/article/details/104504763)	
-    + **序列和字符串题目集锦**
+    + **滑动窗口**
+      + [找所有字母异位词、最长无重复子串、最小覆盖子串、最小覆盖字串1、子串检测、字符串预处理法、序列匹配](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stringANDline/slidingWindow) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/slidingWindowTest)
+    + **序列和字符串**
       + [人民币大小写转换、最小循环的字符串、IP地址转化、反转字符串](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stringANDline/sequenceANDstring/array/arrayApply) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/sequenceANDstringTest)
-      + [滑动窗口：找所有字母异位词、最长无重复子串、最小覆盖子串、子串检测、字符串预处理法、序列匹配](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stringANDline/slidingWindow) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/slidingWindowTest)
     + **字符串匹配专题**
       + [五大经典字符串匹配算法的Java代码实现](https://blog.csdn.net/ljfirst/article/details/104448266)
         + BF、BM、RK、KMP、Sunday
@@ -94,7 +101,7 @@
     + 外部排序
     + 内部排序
       + [十大经典内部排序算法的设计思路及应用](https://blog.csdn.net/ljfirst/article/details/102762758)
-        + 冒泡、堆排、插入、选择、桶排、
+        + 冒泡、堆排、插入、选择、桶排
         + 计数、归并、基数、希尔、快排及其改进
       + [链表的插入排序、指定区间的插入排序](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/DataStructure/sort/innerSort/innerSortRealize/InsertSort.java) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/UnitTest/DatastructureTest/sortTest/innerSortTest/innerSortRealizeTest/InsertSortTest.java)
 
@@ -107,7 +114,8 @@
     + **二叉树**
       + [二叉树的序列化和反序列化](https://blog.csdn.net/ljfirst/article/details/109466318)
         + 二叉树按层(S形、先序、中序、后序)遍历 ==输出==
-        + 数组按层(先序、中序、后序)遍历、前序和中序序列(后序和中序) ==构造==成一个二叉树
+        + 数组按层(先序、中序、后序)遍历==构造==成一个二叉树
+        + 数组按前序和中序(后序和中序) ==构造==成一个二叉树
         + 二叉树转链表
       + [最近公共祖先、二叉树中和为某值的节点路径](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/tree/binaryTree/binaryTreeApply)  和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/treeTest/binaryTreeTest/binaryTreeApplyTest)
       + [镜像二叉树(递归和非递归)、平衡二叉树判断、二叉树子树判读](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/tree/binaryTree/binaryTreeApply)  和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/treeTest/binaryTreeTest/binaryTreeApplyTest)

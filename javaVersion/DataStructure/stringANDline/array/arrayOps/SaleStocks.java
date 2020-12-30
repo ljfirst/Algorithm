@@ -1,4 +1,4 @@
-package DataStructure.stringANDline.array.arrayApply;
+package DataStructure.stringANDline.array.arrayOps;
 
 /**
  * @author liujun
@@ -11,7 +11,7 @@ package DataStructure.stringANDline.array.arrayApply;
  * 设计一个算法来计算你所能获取的最大利润。注意你不能在买入股票前卖出股票。
  * @URL https://leetcode-cn.com/explore/interview/card/bytedance/246/dynamic-programming-or-greedy/1042/
  */
-//买卖股票的最佳时机
+
 public class SaleStocks {
 
     //只允许买卖一次股票
@@ -33,7 +33,7 @@ public class SaleStocks {
     }
 
 
-	//允许买卖多次股票
+    //允许买卖多次股票
     public int allowMany(int[] prices) {
         if (prices == null || prices.length < 2) {
             return 0;

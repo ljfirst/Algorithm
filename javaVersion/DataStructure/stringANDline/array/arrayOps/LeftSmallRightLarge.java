@@ -1,4 +1,4 @@
-package DataStructure.stringANDline.array.arrayApply;
+package DataStructure.stringANDline.array.arrayOps;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ import java.util.List;
  * 非array[i]的max较大，并且等于min_right[i]？
  * 不成立，如果max = min_right[i] > array[i]，不满足第三问的大于不成立。
  */
-public class SpecialNum {
+public class LeftSmallRightLarge {
 
     //找出其左边的数都小于等于它，右边的数都大于等于它
     public int[] findSpecialNum(int[] array) {

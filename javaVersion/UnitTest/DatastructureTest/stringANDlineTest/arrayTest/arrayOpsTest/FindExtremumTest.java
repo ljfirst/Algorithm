@@ -1,6 +1,6 @@
-package UnitTest.DatastructureTest.stringANDlineTest.arrayTest;
+package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.arrayOpsTest;
 
-import DataStructure.stringANDline.array.arrayApply.FindExtremum;
+import DataStructure.stringANDline.array.arrayOps.FindExtremum;
 import org.junit.Test;
 
 import java.lang.reflect.Constructor;
@@ -52,7 +52,7 @@ public class FindExtremumTest {
     }
 
     public void testMin(String method0) throws Exception {
-        Class clz = Class.forName("DataStructure.stringANDline.array.arrayApply.FindExtremum");
+        Class clz = Class.forName("DataStructure.stringANDline.array.arrayOps.FindExtremum");
         //反射获取方法，需要注意属性：int[].class
         Method method = clz.getMethod(method0, int[].class);
         Constructor appleConstructor = clz.getConstructor();

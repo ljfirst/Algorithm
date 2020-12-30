@@ -1,6 +1,6 @@
 package DataStructure.stringANDline.slidingWindow;
 
-import DataStructure.stringANDline.StringCompare;
+import DataStructure.stringANDline.stringCompare.StringCompare;
 
 import java.util.ArrayList;
 

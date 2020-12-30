@@ -1,4 +1,6 @@
-package DataStructure.stringANDline.array.arrayApply;
+package DataStructure.stringANDline.array.arrayOps;
+
+import DataStructure.stringANDline.array.arrayApply.MatrixCheck;
 
 /**
  * @author liujun

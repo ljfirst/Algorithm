@@ -1,4 +1,6 @@
-package DataStructure.stringANDline.array.arrayApply;
+package DataStructure.stringANDline.array.arrayTransformation;
+
+import DataStructure.stringANDline.array.arrayApply.MatrixCheck;
 
 import java.util.ArrayList;
 import java.util.List;

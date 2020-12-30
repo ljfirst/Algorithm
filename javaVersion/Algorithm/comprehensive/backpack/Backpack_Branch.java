@@ -25,11 +25,11 @@ public class Backpack_Branch implements Backpack {
         if (!check(goodsvalue, weight, packageweight)) {
             return -1;
         }
-        BackpackValue = 0;
-        tempValue = 0;
-        BackpackRealWeight = 0;
-        BackpackWeight = packageweight;
-        goods = getGoods(goodsvalue, weight);
+        this.BackpackValue = 0;
+        this.tempValue = 0;
+        this.BackpackRealWeight = 0;
+        this.BackpackWeight = packageweight;
+        this.goods = getGoods(goodsvalue, weight);
         count(0);
         return BackpackValue;
     }

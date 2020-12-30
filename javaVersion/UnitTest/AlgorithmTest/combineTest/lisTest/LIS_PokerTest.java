@@ -9,7 +9,7 @@ import org.junit.Test;
  * @date 2020/6/7
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description 扑克法
+ * @description 最长递增子序列 分治法 扑克法 测试案例
  */
 public class LIS_PokerTest extends LISTestDemo {
 

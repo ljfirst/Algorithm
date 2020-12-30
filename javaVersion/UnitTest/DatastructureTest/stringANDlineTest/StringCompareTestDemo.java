@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.stringANDlineTest;
 
-import DataStructure.stringANDline.StringCompare;
+import DataStructure.stringANDline.stringCompare.StringCompare;
 
 /**
  * @author liujun

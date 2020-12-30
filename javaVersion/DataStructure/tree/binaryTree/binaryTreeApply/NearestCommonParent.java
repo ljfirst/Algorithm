@@ -2,10 +2,12 @@ package DataStructure.tree.binaryTree.binaryTreeApply;
 
 import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
 
+import java.util.Stack;
+
 /**
  * @author liujun
  * @version 1.0
- * @date 2019-3-23 ����02:54:10
+ * @date 2019-3-23 02:54:10
  * @author-Email liujunfirst@outlook.com
  * @description 查找最近公共父节点
  * 思路一
@@ -13,7 +15,6 @@ import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
  * @URL
  */
 public class NearestCommonParent {
-
 
     //思路一
     public BinaryTreeImpl findNCP(BinaryTreeImpl root, int x1, int x2) {

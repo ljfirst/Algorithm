@@ -8,7 +8,7 @@ import Algorithm.comprehensive.lis.LIS;
  * @date 2020/6/7
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description
+ * @description 最长底层子序列 测试案例
  */
 public class LISTestDemo {
 

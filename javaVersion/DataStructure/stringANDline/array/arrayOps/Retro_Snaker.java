@@ -1,6 +1,4 @@
-package DataStructure.stringANDline.array.arrayApply;
-
-import java.util.Scanner;
+package DataStructure.stringANDline.array.arrayOps;
 
 /**
  * @author liujun
@@ -13,6 +11,7 @@ import java.util.Scanner;
  * U表示蛇向上行走一格，D表示蛇向下行走一格，判断输入的操作方式会不会导致蛇在自身上发生碰撞，
  * 会发生输出legal，不会发生输出illegal。
  */
+
 public class Retro_Snaker {
 
     public Retro_Snaker() {
@@ -70,14 +69,5 @@ public class Retro_Snaker {
 
         System.out.println("legal");
         return true;
-    }
-
-    //主方法测试
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        String opera = scan.next();
-        //贪吃蛇
-        Retro_Snaker sn = new Retro_Snaker();
-        sn.Retro_Snaker_opera(opera);
     }
 }

@@ -1,4 +1,4 @@
-package DataStructure.stringANDline.array.findValue;
+package DataStructure.stringANDline.array.arrayTransformation;
 
 /**
  * @author liujun

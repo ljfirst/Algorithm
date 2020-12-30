@@ -8,8 +8,8 @@ import org.junit.Test;
  * @author liujun
  * @version 1.0
  * @date 2019-12-25 21:37
- * @author��Email liujunfirst@outlook.com
- * @description 
+ * @author-Email liujunfirst@outlook.com
+ * @description 狄杰斯特拉算法 测试案例
  * @blogURL
  */
 public class DijkstraTest {

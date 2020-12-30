@@ -1,6 +1,5 @@
 package DataStructure.stringANDline.stringCompare;
 
-import DataStructure.stringANDline.StringCompare;
 import java.util.Map;
 import java.util.TreeMap;
 

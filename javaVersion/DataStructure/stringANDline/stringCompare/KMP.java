@@ -1,7 +1,5 @@
 package DataStructure.stringANDline.stringCompare;
 
-import DataStructure.stringANDline.StringCompare;
-
 /**
  * @author liujun
  * @version 1.0

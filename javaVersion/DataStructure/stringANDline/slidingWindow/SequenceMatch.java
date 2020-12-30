@@ -1,9 +1,6 @@
 package DataStructure.stringANDline.slidingWindow;
 
-import DataStructure.stringANDline.StringCompare;
-
-import java.util.HashMap;
-import java.util.Map;
+import DataStructure.stringANDline.stringCompare.StringCompare;
 
 /**
  * @author liujun

@@ -6,7 +6,7 @@ package Algorithm.comprehensive.backpack;
  * @date 2020/10/29
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description
+ * @description 背包问题
  */
 public interface Backpack {
 
@@ -14,7 +14,7 @@ public interface Backpack {
      * @param goodsvalue    物品的价值
      * @param weight        物品的重量
      * @param packageweight 背包能容纳的重量
-     * @return
+     * @return 当前背包下，能装载的最大价值
      */
     public int Backpack(Integer[] goodsvalue, Integer[] weight, int packageweight);
 

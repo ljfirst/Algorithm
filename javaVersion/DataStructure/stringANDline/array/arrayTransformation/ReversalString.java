@@ -1,4 +1,4 @@
-package DataStructure.stringANDline.sequenceANDstring;
+package DataStructure.stringANDline.array.arrayTransformation;
 
 /**
  * @author liujun

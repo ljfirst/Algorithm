@@ -1,6 +1,6 @@
-package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.findValueTest;
+package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.arrayTransformationTest;
 
-import DataStructure.stringANDline.array.findValue.GetMostValueofOrderArray;
+import DataStructure.stringANDline.array.arrayTransformation.GetMostValueofOrderArray;
 import org.junit.Test;
 
 /**

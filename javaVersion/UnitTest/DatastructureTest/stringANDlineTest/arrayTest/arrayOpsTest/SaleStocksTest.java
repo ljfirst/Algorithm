@@ -1,6 +1,6 @@
-package UnitTest.LogicTest.logictest;
+package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.arrayOpsTest;
 
-import DataStructure.stringANDline.array.arrayApply.SaleStocks;
+import DataStructure.stringANDline.array.arrayOps.SaleStocks;
 import org.junit.Test;
 
 /**
@@ -8,7 +8,7 @@ import org.junit.Test;
  * @version 1.0
  * @date 2020-02-08 19:41
  * @author—Email liujunfirst@outlook.com
- * @description 
+ * @description 买卖股票的最佳时机 测试案例
  * @blogURL
  */
 public class SaleStocksTest {

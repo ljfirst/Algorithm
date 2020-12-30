@@ -1,6 +1,6 @@
-package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.arrayApplyTest;
+package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.arrayOpsTest;
 
-import DataStructure.stringANDline.array.arrayApply.Bitcount;
+import DataStructure.stringANDline.array.arrayOps.Bitcount;
 import org.junit.Test;
 
 /**

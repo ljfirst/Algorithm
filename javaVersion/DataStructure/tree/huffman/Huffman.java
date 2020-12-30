@@ -8,7 +8,7 @@ import java.util.Queue;
  * @version 1.0
  * @date 2018-8-27 下午09:37:31
  * @author—Email liujunfirst@outlook.com
- * @description  将数组转化为赫夫曼树。
+ * @description 将数组转化为赫夫曼树。
  */
 public class Huffman {
 

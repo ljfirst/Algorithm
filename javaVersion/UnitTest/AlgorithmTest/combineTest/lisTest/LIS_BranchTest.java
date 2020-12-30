@@ -9,7 +9,7 @@ import org.junit.Test;
  * @date 2020/6/7
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description 最长递增子序列 分支限界法测试案例
+ * @description 最长递增子序列 分支限界法 测试案例
  */
 public class LIS_BranchTest extends LISTestDemo {
 

@@ -5,7 +5,7 @@ package Algorithm.comprehensive.backpack;
  * @version 1.0
  * @date 2018-7-19 上午11:55:33
  * @author—Email liujunfirst@outlook.com
- * @description 动态规划法
+ * @description 背包问题的动态规划法
  * 1.状态转换方程
  * 2.如何找出所选物品
  */

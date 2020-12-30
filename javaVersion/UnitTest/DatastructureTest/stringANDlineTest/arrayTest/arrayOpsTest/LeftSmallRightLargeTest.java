@@ -1,6 +1,6 @@
-package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.arrayApplyTest;
+package UnitTest.DatastructureTest.stringANDlineTest.arrayTest.arrayOpsTest;
 
-import DataStructure.stringANDline.array.arrayApply.SpecialNum;
+import DataStructure.stringANDline.array.arrayOps.LeftSmallRightLarge;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -13,9 +13,9 @@ import java.util.Arrays;
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 左小右大的数 测试案例
  */
-public class SpecialNumTest {
+public class LeftSmallRightLargeTest {
 
-    SpecialNum sp = new SpecialNum();
+    LeftSmallRightLarge sp = new LeftSmallRightLarge();
 
     @Test
     public void testfindSpecialNum() {
