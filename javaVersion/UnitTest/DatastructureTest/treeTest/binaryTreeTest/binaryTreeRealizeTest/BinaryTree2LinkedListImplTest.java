@@ -1,7 +1,7 @@
 package UnitTest.DatastructureTest.treeTest.binaryTreeTest.binaryTreeRealizeTest;
 
-import DataStructure.stringANDline.list.Listlj;
-import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
+import DataStructure.arrayANDlist.list.Listlj;
+import DataStructure.arrayANDlist.list.listRealize.SinglyLinkedList;
 import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTree2LinkedListImpl;
 import UnitTest.DatastructureTest.treeTest.BinaryTreeTestDemo;
 import org.junit.Test;

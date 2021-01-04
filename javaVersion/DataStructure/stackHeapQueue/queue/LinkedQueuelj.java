@@ -1,6 +1,6 @@
 package DataStructure.stackHeapQueue.queue;
 
-import DataStructure.stringANDline.list.Nodelj;
+import DataStructure.arrayANDlist.list.Nodelj;
 
 /**
  * @author liujun

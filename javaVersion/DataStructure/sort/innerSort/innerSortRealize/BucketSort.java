@@ -1,10 +1,9 @@
 package DataStructure.sort.innerSort.innerSortRealize;
 
 import DataStructure.sort.innerSort.SortInterface;
-import DataStructure.stringANDline.list.Nodelj;
+import DataStructure.arrayANDlist.list.Nodelj;
 
 import java.util.Arrays;
-import java.util.OptionalInt;
 
 /**
  * @author liujun

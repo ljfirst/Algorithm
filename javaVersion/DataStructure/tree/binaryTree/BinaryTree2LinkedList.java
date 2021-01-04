@@ -1,6 +1,6 @@
 package DataStructure.tree.binaryTree;
 
-import DataStructure.stringANDline.list.Listlj;
+import DataStructure.arrayANDlist.list.Listlj;
 import DataStructure.tree.binaryTree.binaryTreeRealize.BinaryTreeImpl;
 
 /**

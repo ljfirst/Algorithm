@@ -1,14 +1,11 @@
 package UnitTest.DatastructureTest.sortTest.innerSortTest.innerSortRealizeTest;
 
 import DataStructure.sort.innerSort.innerSortRealize.InsertSort;
-import DataStructure.stringANDline.list.Listlj;
-import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
+import DataStructure.arrayANDlist.list.Listlj;
+import DataStructure.arrayANDlist.list.listRealize.SinglyLinkedList;
 import UnitTest.DatastructureTest.sortTest.innerSortTest.SortTest;
-import UnitTest.DatastructureTest.stringANDlineTest.listTest.ListljTest;
+import UnitTest.DatastructureTest.arrayANDlistTest.listTest.ListljTest;
 import org.junit.Test;
-import org.openjdk.jmh.annotations.Benchmark;
-import org.openjdk.jmh.annotations.BenchmarkMode;
-import org.openjdk.jmh.annotations.Mode;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -55,7 +52,7 @@ public class InsertSortTest extends SortTest {
 
     private Map getSortTestData1() throws Exception {
         Map<String, int[]> map = new HashMap<>();
-        Class c = Class.forName("UnitTest.DatastructureTest.stringANDlineTest.listTest.ListljTest");
+        Class c = Class.forName("UnitTest.DatastructureTest.arrayANDlistTest.listTest.ListljTest");
         Object gg =  c.newInstance();
         Field[] f = c.getDeclaredFields();
         for (Field f1 : f) {
@@ -80,7 +77,7 @@ public class InsertSortTest extends SortTest {
 
 
     private Map getSortTestData2() throws Exception {
-        Class c = Class.forName("UnitTest.DatastructureTest.stringANDlineTest.listTest.ListljTest");
+        Class c = Class.forName("UnitTest.DatastructureTest.arrayANDlistTest.listTest.ListljTest");
         ListljTest gg = (ListljTest) c.newInstance();
         Field[] f = c.getDeclaredFields();
         Map<String, Object> map = Arrays.stream(f)

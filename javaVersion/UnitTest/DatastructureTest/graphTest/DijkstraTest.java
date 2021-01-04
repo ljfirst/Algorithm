@@ -1,7 +1,7 @@
 package UnitTest.DatastructureTest.graphTest;
 
 import DataStructure.graph.shortestPath.singleSourceShortestPath.Dijkstra;
-import DataStructure.stringANDline.hashTable.Node4Dijkstra;
+import DataStructure.arrayANDlist.hashTable.Node4Dijkstra;
 import org.junit.Test;
 
 /**

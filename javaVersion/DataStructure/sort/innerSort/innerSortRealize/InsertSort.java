@@ -2,10 +2,9 @@ package DataStructure.sort.innerSort.innerSortRealize;
 
 import Algorithm.comprehensive.backpack.Goods;
 import DataStructure.sort.innerSort.SortInterface;
-import DataStructure.stringANDline.list.Listlj;
-import DataStructure.stringANDline.list.Nodelj;
-import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
-import sun.nio.ch.Net;
+import DataStructure.arrayANDlist.list.Listlj;
+import DataStructure.arrayANDlist.list.Nodelj;
+import DataStructure.arrayANDlist.list.listRealize.SinglyLinkedList;
 
 /**
  * @author liujun

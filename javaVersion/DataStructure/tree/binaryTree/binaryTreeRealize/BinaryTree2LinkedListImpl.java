@@ -1,8 +1,8 @@
 package DataStructure.tree.binaryTree.binaryTreeRealize;
 
-import DataStructure.stringANDline.list.Listlj;
-import DataStructure.stringANDline.list.Nodelj;
-import DataStructure.stringANDline.list.listRealize.SinglyLinkedList;
+import DataStructure.arrayANDlist.list.Listlj;
+import DataStructure.arrayANDlist.list.Nodelj;
+import DataStructure.arrayANDlist.list.listRealize.SinglyLinkedList;
 import DataStructure.tree.binaryTree.BinaryTree2LinkedList;
 
 /**

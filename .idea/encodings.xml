@@ -2,16 +2,16 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/javaVersion/Algorithm/comprehensive/backpack/Backpack_Greedy.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaVersion/DataStructure/arrayANDlist/arrayApply/AlphaTranstoNum.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaVersion/DataStructure/arrayANDlist/arrayApply/Narcissistic.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaVersion/DataStructure/arrayANDlist/arrayApply/Poolpig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaVersion/DataStructure/arrayANDlist/arrayApply/Vampire.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaVersion/DataStructure/arrayANDlist/arrayOps/Bitcount.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaVersion/DataStructure/arrayANDlist/exclusiveor/FindDiffNum.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javaVersion/DataStructure/graph/BellmanFord.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javaVersion/DataStructure/graph/Floyd.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javaVersion/DataStructure/graph/mst/KruskalEdgeNode.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javaVersion/DataStructure/graph/mst/mst.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javaVersion/DataStructure/stringANDline/array/arrayApply/AlphaTranstoNum.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javaVersion/DataStructure/stringANDline/array/arrayApply/Narcissistic.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javaVersion/DataStructure/stringANDline/array/arrayApply/Poolpig.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javaVersion/DataStructure/stringANDline/array/arrayApply/Vampire.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javaVersion/DataStructure/stringANDline/array/arrayOps/Bitcount.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javaVersion/DataStructure/stringANDline/array/exclusiveor/FindDiffNum.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javaVersion/DataStructure/tree/redBlackTree/NoRepeatRandomNo.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javaVersion/Logic/regular/查找单词个数.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/javaVersion/Logic/utils/Txt2Excel.java" charset="UTF-8" />
