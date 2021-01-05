@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.arrayANDlistTest.exclusiveorTest;
 
-import DataStructure.arrayANDlist.exclusiveor.FindDiffNum;
+import DataStructure.arrayANDlist.xor.FindDiffNum;
 import org.junit.Test;
 
 /**

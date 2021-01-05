@@ -9,6 +9,7 @@ import java.util.Arrays;
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
  * @description 去除指定元素
+ * 给定数组，去除指定元素，返回不含指定元素的数组
  */
 public class ReduceNum {
 

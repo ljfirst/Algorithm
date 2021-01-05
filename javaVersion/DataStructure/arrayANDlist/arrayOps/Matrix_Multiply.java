@@ -7,7 +7,7 @@ import DataStructure.arrayANDlist.arrayApply.MatrixCheck;
  * @version 1.0
  * @date 2018-7-19 下午03:07:41
  * @author—Email liujunfirst@outlook.com
- * @description 矩阵相乘。
+ * @description 矩阵相乘
  */
 public class Matrix_Multiply {
 

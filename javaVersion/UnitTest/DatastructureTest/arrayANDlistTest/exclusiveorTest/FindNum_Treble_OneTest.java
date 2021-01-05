@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.arrayANDlistTest.exclusiveorTest;
 
-import DataStructure.arrayANDlist.exclusiveor.FindNum_Treble_One;
+import DataStructure.arrayANDlist.xor.FindNum_Treble_One;
 import org.junit.Test;
 
 /**

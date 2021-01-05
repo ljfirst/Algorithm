@@ -6,8 +6,8 @@ package DataStructure.arrayANDlist.arrayTransformation;
  * @date 2020/8/20
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description 一个有序数组，比如[1,2,3,4,5,6,7],
- * 后面部分被替换到前面，比如[5,6,7,1,2,3,4],找出替换后的数组的最小值
+ * @description 旋转数组的最小值
+ * 一个有序数组，比如[1,2,3,4,5,6,7],后面部分被替换到前面，比如[5,6,7,1,2,3,4],找出替换后的数组的最小值
  */
 
 public class GetMostValueofOrderArray {

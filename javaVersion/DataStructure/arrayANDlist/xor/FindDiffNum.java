@@ -1,4 +1,4 @@
-package DataStructure.arrayANDlist.exclusiveor;
+package DataStructure.arrayANDlist.xor;
 
 /**
  * @author liujun

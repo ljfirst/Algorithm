@@ -1,6 +1,6 @@
 package UnitTest.DatastructureTest.arrayANDlistTest.exclusiveorTest;
 
-import DataStructure.arrayANDlist.exclusiveor.FindNum_One_Double;
+import DataStructure.arrayANDlist.xor.FindNum_One_Double;
 import org.junit.Test;
 
 /**
