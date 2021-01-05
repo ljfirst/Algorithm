@@ -15,7 +15,7 @@ import java.util.Scanner;
  */
 public class Retro_SnakerTest {
 
-    @Test
+    //@Test
     public void test(){
         Scanner scan = new Scanner(System.in);
         String opera = scan.next();
