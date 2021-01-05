@@ -67,7 +67,28 @@
   + 迪杰斯特拉算法
 
 #### $\color{7f1A8A}DataStructure /数据结构专题$
- ****
+ **** 
++ <font color=#Af2233 size=4 >**数组和链表**</font>
+  + **数组应用**
+    + [前缀和/差分数组、盛水问题、字符扩展、细菌扩展、吸血鬼数字、水仙花数、数独、大小写互换](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/arrayANDlist/arrayApply) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/arrayANDlistTest/arrayApplyTest)
+  + **数组操作**
+    + [大整数乘法、计算bit位、根据身高重建队列、查找给定值的数组区间、寻找极值、左小右大的数、矩阵相乘、贪吃蛇、买卖股票的最佳时机、杨辉三角](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/arrayANDlist/arrayOps) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/arrayANDlistTest/arrayOpsTest)
+  + **数组变换**
+    + [顺时针打印螺旋矩阵、旋转数组的最小值、奇数左边偶数右边、反转字符串](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/arrayANDlist/arrayTransformation) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/arrayANDlistTest/arrayTransformationTest)
+  + **双指针问题**
+    + [两数之和、三数之和、找出重复数组中不重复的个数、去除指定元素](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/arrayANDlist/doublePoint) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/arrayANDlistTest/doublePointTest)
+  + **查找值**
+    + [返回数组的最值、矩阵中找值](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/arrayANDlist/findValue) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/arrayANDlistTest/xorTest)
+  + **哈希专题**
+    + [LFU和LRU](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/arrayANDlist/hashTable) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/arrayANDlistTest/hashTableTest)
+  + **链表**
+    + [单链表的插入、删除、查找、相等](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/arrayANDlist/list/listRealize/SinglyLinkedList.java) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/arrayANDlistTest/listTest/SinglyLinkedListTest.java)
+    + [链表的反转有多少种方式](https://blog.csdn.net/ljfirst/article/details/109508557)
+    + [有环链表和相交链表、环入口判读](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/arrayANDlist/list/listRealize/RingList.java)	 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/arrayANDlistTest/listTest/RingListTest.java)
+    + [双向链表的插入、删除、查找、相等](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/arrayANDlist/list/listRealize/DoubleLinkedList.java) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/arrayANDlistTest/listTest/DoubleLinkedListTest.java)	
+    + [Redis底层数据结构：跳表的实现](https://blog.csdn.net/ljfirst/article/details/104504763)	
+  + **异或操作**
+    + [异或问题](https://blog.csdn.net/ljfirst/article/details/108328921) 
 + <font color=#Af2233 size=4 >**图专题**</font>
   + BellmanFord.java
   + Floyd.java
@@ -75,28 +96,13 @@
   + graphConnection
   + mst
   + shortestPath
-+ <font color=#Af2233 size=4 >**字符串和数组专题**</font>
-    + **数组专题**
-      + [计算bit位、奇数左边偶数右边、大小写互换、左小右大的数](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stringANDline/array/arrayApply) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/arrayTest/arrayApplyTest)
-      + [双指针问题](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stringANDline/array/doublePoint) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/arrayTest/doublePointTest) 
-      + [异或问题](https://blog.csdn.net/ljfirst/article/details/108328921) 
-      + [查找数值](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stringANDline/array/findValue) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/arrayTest/findValueTest)
-      + [大整数乘法、根据身高重建队列、顺时针打印螺旋矩阵、前缀和/差分数组、盛水问题、矩阵相乘、找出重复数组中不重复的个数、杨辉三角](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stringANDline/array) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/arrayTest)
-    + **哈希专题**
-      + [LFU和LRU](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stringANDline/hashTable) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/hashTableTest)
-    + **链表专题**
-      + [单链表的插入、删除、查找、相等](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/DataStructure/stringANDline/list/listRealize/SinglyLinkedList.java)	和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/listTest/SinglyLinkedListTest.java)
-      + [链表的反转有多少种方式](https://blog.csdn.net/ljfirst/article/details/109508557)
-      + [有环链表和相交链表、环入口判读](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/DataStructure/stringANDline/list/listRealize/RingList.java)	和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/listTest/RingListTest.java)
-      + [双向链表的插入、删除、查找、相等](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/DataStructure/stringANDline/list/listRealize/DoubleLinkedList.java)	 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/blob/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/listTest/DoubleLinkedListTest.java)
-      + [Redis底层数据结构：跳表的实现](https://blog.csdn.net/ljfirst/article/details/104504763)	
++ <font color=#Af2233 size=4 >**字符串和序列**</font>      
     + **滑动窗口**
       + [找所有字母异位词、最长无重复子串、最小覆盖子串、最小覆盖字串1、子串检测、字符串预处理法、序列匹配](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stringANDline/slidingWindow) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/slidingWindowTest)
     + **序列和字符串**
-      + [人民币大小写转换、最小循环的字符串、IP地址转化、反转字符串](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stringANDline/sequenceANDstring/array/arrayApply) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/sequenceANDstringTest)
+      + [人民币大小写转换、最小循环的字符串、IP地址转化](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/DataStructure/stringANDline/sequenceANDstring/array/arrayApply) 和 [测试案例](https://gitee.com/ljfirst/AlgorithmPractice/tree/master/javaVersion/UnitTest/DatastructureTest/stringANDlineTest/sequenceANDstringTest)
     + **字符串匹配专题**
-      + [五大经典字符串匹配算法的Java代码实现](https://blog.csdn.net/ljfirst/article/details/104448266)
-        + BF、BM、RK、KMP、Sunday
+      + [五大经典字符串匹配算法的Java代码实现](https://blog.csdn.net/ljfirst/article/details/104448266)（BF、BM、RK、KMP、Sunday）
 + <font color=#Af2233 size=4 >**排序专题**</font>
     + 外部排序
     + 内部排序

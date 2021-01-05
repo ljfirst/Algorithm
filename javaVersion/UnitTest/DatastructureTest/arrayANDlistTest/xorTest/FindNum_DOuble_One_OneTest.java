@@ -1,4 +1,4 @@
-package UnitTest.DatastructureTest.arrayANDlistTest.exclusiveorTest;
+package UnitTest.DatastructureTest.arrayANDlistTest.xorTest;
 
 import DataStructure.arrayANDlist.xor.FindNum_DOuble_One_One;
 import org.junit.Assert;
