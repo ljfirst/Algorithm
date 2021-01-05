@@ -1,6 +1,6 @@
-package UnitTest.DatastructureTest.arrayANDlistTest;
+package UnitTest.DatastructureTest.arrayANDlistTest.arrayApplyTest;
 
-import DataStructure.arrayANDlist.arrayApply.HoldWater1;
+import DataStructure.arrayANDlist.arrayApply.HoldWater2;
 import org.junit.Test;
 
 /**
@@ -9,11 +9,11 @@ import org.junit.Test;
  * @date 2020/7/1
  * @author—Email liujunfirst@outlook.com
  * @blogURL https://blog.csdn.net/ljfirst
- * @description 盛水问题 测试用例
+ * @description 接雨水 测试用例
+ * 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水
  */
-public class HoldWater1Test {
-
-    HoldWater1 h = new HoldWater1();
+public class HoldWater2Test {
+    HoldWater2 h = new HoldWater2();
 
     @Test
     public void testcalculate() {
@@ -22,11 +22,10 @@ public class HoldWater1Test {
         value = h.calculate(demo02);
         assert value == 0;
         value = h.calculate(demo03);
-        assert value == 49;
+        assert value == 6;
     }
 
     int[] demo01 = null;
     int[] demo02 = {};
-    int[] demo03 = {3,8,6,2,5,4,8,3,7};
-
+    int[] demo03 = {0,1,0,2,1,0,1,3,2,1,2,1};
 }

@@ -1,4 +1,4 @@
-package UnitTest.DatastructureTest.arrayANDlistTest;
+package UnitTest.DatastructureTest.arrayANDlistTest.arrayApplyTest;
 
 import DataStructure.arrayANDlist.arrayApply.DiffArray;
 import org.junit.Assert;
